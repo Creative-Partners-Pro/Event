@@ -1,4 +1,5 @@
 let configData;
+let imageData;
 let currentLang = localStorage.getItem('lang') || 'en'; // Default to English
 
 function setLanguage(lang) {
@@ -11,12 +12,21 @@ function setLanguage(lang) {
         .then(data => {
             configData = data;
             renderApp(); // Re-render the app with the new language
-            startCountdown();
         });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    setLanguage(currentLang);
+    Promise.all([
+        fetch(`data/${currentLang}.json`).then(res => res.json()),
+        fetch('data/images.json').then(res => res.json())
+    ])
+    .then(([langData, images]) => {
+        configData = langData;
+        imageData = images.images;
+        renderApp();
+        startCountdown();
+    })
+    .catch(error => console.error("Error loading initial data:", error));
 });
 
 function renderApp() {
@@ -34,7 +44,7 @@ function renderApp() {
 
 function renderHeader() {
     const header = document.getElementById('header-section');
-    header.style.backgroundImage = `url('${configData.event.coverImage}')`;
+    header.style.backgroundImage = `url('${imageData.coverImage}')`;
     header.classList.add('cover-image');
     header.innerHTML = `
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/90"></div>
@@ -87,31 +97,37 @@ function renderMainInfo() {
 function renderSocialIcons() {
     const container = document.getElementById('social-icons');
     container.innerHTML = '';
+    const fragment = document.createDocumentFragment();
     configData.socials.forEach(social => {
-        // ВАЖНОЕ ИСПРАВЛЕНИЕ: Добавлен класс 'ph' перед названием иконки
-        container.innerHTML += `
-            <a href="${social.url}" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform border border-white/10">
-                <i class="ph ${social.icon} text-2xl ${social.color}"></i>
-            </a>
-        `;
+        const a = document.createElement('a');
+        a.href = social.url;
+        a.className = "w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform border border-white/10";
+        a.innerHTML = `<i class="ph ${social.icon} text-2xl ${social.color}"></i>`;
+        fragment.appendChild(a);
     });
+    container.appendChild(fragment);
 }
 
 function renderArtists() {
     const container = document.getElementById('artists-container');
-    configData.participants.forEach(person => {
-        container.innerHTML += `
-            <div class="flex-shrink-0 w-32 snap-center text-center group cursor-pointer" onclick="window.location.href='${person.instagram}'">
-                <div class="w-24 h-24 mx-auto rounded-full p-1 bg-gradient-to-tr from-indigo-500 to-pink-500 mb-3 group-active:scale-95 transition-transform">
-                    <img src="${person.image}" class="w-full h-full object-cover rounded-full border-2 border-black" alt="${person.name}">
-                </div>
-                <h4 class="font-semibold text-sm truncate flex items-center justify-center gap-1">
-                    ${person.name} <i class="ph-fill ph-instagram-logo text-xs text-gray-500"></i>
-                </h4>
-                <p class="text-xs text-gray-400 truncate">${person.role}</p>
+    container.innerHTML = ''; // Clear existing content
+    const fragment = document.createDocumentFragment();
+    configData.participants.forEach((person, index) => {
+        const div = document.createElement('div');
+        div.className = "flex-shrink-0 w-32 snap-center text-center group cursor-pointer";
+        div.onclick = () => window.location.href = person.instagram;
+        div.innerHTML = `
+            <div class="w-24 h-24 mx-auto rounded-full p-1 bg-gradient-to-tr from-indigo-500 to-pink-500 mb-3 group-active:scale-95 transition-transform">
+                <img src="${imageData.participants[index]}" class="w-full h-full object-cover rounded-full border-2 border-black" alt="${person.name}">
             </div>
+            <h4 class="font-semibold text-sm truncate flex items-center justify-center gap-1">
+                ${person.name} <i class="ph-fill ph-instagram-logo text-xs text-gray-500"></i>
+            </h4>
+            <p class="text-xs text-gray-400 truncate">${person.role}</p>
         `;
+        fragment.appendChild(div);
     });
+    container.appendChild(fragment);
 }
 
 let activeCategory;
@@ -137,22 +153,26 @@ function renderMenu() {
     // Items
     const itemsContainer = document.getElementById('menu-container');
     itemsContainer.innerHTML = '';
+    const fragment = document.createDocumentFragment();
     const filteredItems = configData.menu.items.filter(item => item.category === activeCategory);
     
-    filteredItems.forEach(item => {
-        itemsContainer.innerHTML += `
-            <div class="bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5">
-                <img src="${item.img}" class="w-16 h-16 rounded-xl object-cover bg-gray-800" alt="${item.name}">
-                <div class="flex-1">
-                    <div class="flex justify-between items-start">
-                        <h4 class="font-medium text-sm text-white">${item.name}</h4>
-                        <span class="font-bold text-sm text-indigo-300">${item.price}</span>
-                    </div>
-                    <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc}</p>
+    filteredItems.forEach((item) => {
+        const originalIndex = configData.menu.items.findIndex(originalItem => originalItem.name === item.name && originalItem.desc === item.desc);
+        const div = document.createElement('div');
+        div.className = "bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5";
+        div.innerHTML = `
+            <img src="${imageData.menu[originalIndex]}" class="w-16 h-16 rounded-xl object-cover bg-gray-800" alt="${item.name}">
+            <div class="flex-1">
+                <div class="flex justify-between items-start">
+                    <h4 class="font-medium text-sm text-white">${item.name}</h4>
+                    <span class="font-bold text-sm text-indigo-300">${item.price}</span>
                 </div>
+                <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc}</p>
             </div>
         `;
+        fragment.appendChild(div);
     });
+    itemsContainer.appendChild(fragment);
 }
 
 function renderLocation() {
@@ -163,7 +183,7 @@ function renderLocation() {
             <a href="${configData.location.mapLink}" target="_blank" class="text-xs bg-white text-black px-3 py-1 rounded-full font-semibold">Google Maps</a>
         </div>
         <div class="rounded-2xl overflow-hidden h-32 mb-4 relative group">
-            <img src="${configData.location.image}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Map">
+            <img src="${imageData.location}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Map">
             <a href="${configData.location.mapLink}" target="_blank" class="absolute inset-0 bg-black/20 flex items-center justify-center">
                  <div class="w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center">
                     <i class="ph-fill ph-navigation-arrow text-white"></i>
