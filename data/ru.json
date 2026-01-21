@@ -5,7 +5,6 @@
         "date": "24 января, 22:00",
         "eventDateISO": "2026-01-24T22:00:00",
         "description": "Погрузитесь в атмосферу будущего. Глубокий звук, генеративная графика и лучшие коктейли города.",
-        "coverImage": "/img/SerraKankaya.png",
         "ticketLink": "https://tkt.ge",
         "price": "45 GEL",
         "whatsappContact": "https://wa.me/+995577258874"
@@ -19,36 +18,32 @@
         {
             "name": "Serra Kankaya",
             "role": "Артист",
-            "image": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=400&auto=format&fit=crop&q=60",
             "instagram": "https://instagram.com/djcybermist"
         },
         {
             "name": "Alice Void",
             "role": "Визуальный художник",
-            "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60",
             "instagram": "https://instagram.com/alicevoid"
         },
         {
             "name": "Grey Mike Prod.",
             "role": "Организатор",
-            "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=60",
             "instagram": "https://instagram.com/alexeyroo"
         }
     ],
     "menu": {
         "categories": ["Коктейли", "Кухня", "Безалкогольные"],
         "items": [
-            { "category": "Коктейли", "name": "Электрик Блю", "price": "750₽", "desc": "Джин, тоник, ликер блю кюрасао", "img": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=200&auto=format&fit=crop&q=60" },
-            { "category": "Коктейли", "name": "Неоновый закат", "price": "850₽", "desc": "Ром, апельсин, гранат, мята", "img": "https://images.unsplash.com/photo-1536935338788-843bb528a346?w=200&auto=format&fit=crop&q=60" },
-            { "category": "Кухня", "name": "Татаки из тунца", "price": "900₽", "desc": "Свежий тунец, соус понзу", "img": "https://images.unsplash.com/photo-1582294154832-7203d920392f?w=200&auto=format&fit=crop&q=60" },
-            { "category": "Кухня", "name": "Брускетта", "price": "550₽", "desc": "Томаты, базилик, страчателла", "img": "https://images.unsplash.com/photo-1572695157369-24d29ca1653d?w=200&auto=format&fit=crop&q=60" },
-            { "category": "Безалкогольные", "name": "Девственный Мохито", "price": "450₽", "desc": "Лайм, мята, содовая, сахар", "img": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=200&auto=format&fit=crop&q=60" }
+            { "category": "Коктейли", "name": "Электрик Блю", "price": "750₽", "desc": "Джин, тоник, ликер блю кюрасао" },
+            { "category": "Коктейли", "name": "Неоновый закат", "price": "850₽", "desc": "Ром, апельсин, гранат, мята" },
+            { "category": "Кухня", "name": "Татаки из тунца", "price": "900₽", "desc": "Свежий тунец, соус понзу" },
+            { "category": "Кухня", "name": "Брускетта", "price": "550₽", "desc": "Томаты, базилик, страчателла" },
+            { "category": "Безалкогольные", "name": "Девственный Мохито", "price": "450₽", "desc": "Лайм, мята, содовая, сахар" }
         ]
     },
     "location": {
         "name": "Drunk Owl Bar",
         "address": "21 Samghebro St, Tbilisi",
-        "mapLink": "https://www.google.com/maps/place/Drunk+Owl+Bar/@41.6889226,44.8073664,17z/data=!3m1!4b1!4m6!3m5!1s0x40440cf71e4e7ea1:0x1c7f75224dc96f48!8m2!3d41.6889186!4d44.8099413!16s%2Fg%2F11b5ymggwq?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%2D%3D",
-        "image": "https://maps.app.goo.gl/HwSZ6esmW1qkw3hCA"
+        "mapLink": "https://www.google.com/maps/place/Drunk+Owl+Bar/@41.6889226,44.8073664,17z/data=!3m1!4b1!4m6!3m5!1s0x40440cf71e4e7ea1:0x1c7f75224dc96f48!8m2!3d41.6889186!4d44.8099413!16s%2Fg%2F11b5ymggwq?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
     }
 }
