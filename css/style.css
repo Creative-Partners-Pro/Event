@@ -1,5 +1,4 @@
 
-/* Language Switcher */
-#lang-switcher .hidden {
-    display: none;
+#header-section {
+    height: 560px;
 }
