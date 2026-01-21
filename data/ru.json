@@ -5,7 +5,7 @@
         "date": "24 января, 22:00",
         "eventDateISO": "2026-01-24T22:00:00",
         "description": "Погрузитесь в атмосферу будущего. Глубокий звук, генеративная графика и лучшие коктейли города.",
-        "coverImage": "img/SerraKankaya.png",
+        "coverImage": "/img/SerraKankaya.png",
         "ticketLink": "https://tkt.ge",
         "price": "45 GEL",
         "whatsappContact": "https://wa.me/+995577258874"

@@ -11,12 +11,12 @@ function setLanguage(lang) {
         .then(data => {
             configData = data;
             renderApp(); // Re-render the app with the new language
+            startCountdown();
         });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     setLanguage(currentLang);
-    startCountdown();
 });
 
 function renderApp() {
