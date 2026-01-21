@@ -7,28 +7,28 @@
         "description": "ჩაეფლო მომავლის ატმოსფეროში. ღრმა ხმა, გენერაციული გრაფიკა და ქალაქის საუკეთესო კოქტეილები.",
         "ticketLink": "https://tkt.ge",
         "price": "45 GEL",
-        "whatsappContact": "https://wa.me/+995577258874"
+        "whatsappContact": "https://wa.me/+995511423894"
     },
     "socials": [
-        { "id": "inst", "name": "Instagram", "icon": "ph-instagram-logo", "url": "https://instagram.com", "color": "text-pink-500" },
-        { "id": "fb", "name": "Facebook", "icon": "ph-facebook-logo", "url": "https://facebook.com", "color": "text-blue-500" },
-        { "id": "tg", "name": "Telegram", "icon": "ph-telegram-logo", "url": "https://t.me", "color": "text-blue-400" }
+        { "id": "inst", "name": "Instagram", "icon": "ph-instagram-logo", "url": "https://www.instagram.com/drunkowlbar?igsh=MXdwNzhrN253eHFiZw==", "color": "text-pink-500" },
+        { "id": "fb", "name": "Facebook", "icon": "ph-facebook-logo", "url": "https://facebook.com/events/s/drunk-owl-bar/1612672706557750/", "color": "text-blue-500" },
+        { "id": "tg", "name": "Telegram", "icon": "ph-telegram-logo", "url": "https://t.me/barahodik", "color": "text-blue-400" }
     ],
     "participants": [
         {
             "name": "Serra Kankaya",
             "role": "შემსრულებელი",
-            "instagram": "https://instagram.com/djcybermist"
+            "instagram": "https://www.instagram.com/serrakankaya?igsh=Nzhvazd6dDQzYmtt"
         },
         {
             "name": "Alice Void",
             "role": "ვიზუალური არტისტი",
-            "instagram": "https://instagram.com/alicevoid"
+            "instagram": "https://instagram.com/"
         },
         {
-            "name": "Grey Mike Prod.",
+            "name": "Creative.Partners",
             "role": "ორგანიზატორი",
-            "instagram": "https://instagram.com/alexeyroo"
+            "instagram": "https://t.me/MultCreaPart"
         }
     ],
     "menu": {
