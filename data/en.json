@@ -2,9 +2,9 @@
     "event": {
         "title": "Serra Kankaya",
         "subtitle": "Live Music",
-        "date": "24 Января, 22:00",
+        "date": "January 24, 22:00",
         "eventDateISO": "2026-01-24T22:00:00",
-        "description": "Погрузитесь в атмосферу будущего. Глубокий звук, генеративная графика и лучшие коктейли города.",
+        "description": "Immerse yourself in the atmosphere of the future. Deep sound, generative graphics and the best cocktails in town.",
         "coverImage": "img/SerraKankaya.png",
         "ticketLink": "https://tkt.ge",
         "price": "45 GEL",
@@ -36,13 +36,13 @@
         }
     ],
     "menu": {
-        "categories": ["Коктейли", "Кухня", "Безалкогольные"],
+        "categories": ["Cocktails", "Kitchen", "Soft drinks"],
         "items": [
-            { "category": "Коктейли", "name": "Electric Blue", "price": "750₽", "desc": "Джин, тоник, ликер блю кюрасао", "img": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=200&auto=format&fit=crop&q=60" },
-            { "category": "Коктейли", "name": "Neon Sunset", "price": "850₽", "desc": "Ром, апельсин, гранат, мята", "img": "https://images.unsplash.com/photo-1536935338788-843bb528a346?w=200&auto=format&fit=crop&q=60" },
-            { "category": "Кухня", "name": "Татаки из тунца", "price": "900₽", "desc": "Свежий тунец, соус понзу", "img": "https://images.unsplash.com/photo-1582294154832-7203d920392f?w=200&auto=format&fit=crop&q=60" },
-            { "category": "Кухня", "name": "Брускетта", "price": "550₽", "desc": "Томаты, базилик, страчателла", "img": "https://images.unsplash.com/photo-1572695157369-24d29ca1653d?w=200&auto=format&fit=crop&q=60" },
-            { "category": "Безалкогольные", "name": "Virgin Mojito", "price": "450₽", "desc": "Лайм, мята, содовая, сахар", "img": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=200&auto=format&fit=crop&q=60" }
+            { "category": "Cocktails", "name": "Electric Blue", "price": "750₽", "desc": "Gin, tonic, blue curacao liqueur", "img": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=200&auto=format&fit=crop&q=60" },
+            { "category": "Cocktails", "name": "Neon Sunset", "price": "850₽", "desc": "Rum, orange, pomegranate, mint", "img": "https://images.unsplash.com/photo-1536935338788-843bb528a346?w=200&auto=format&fit=crop&q=60" },
+            { "category": "Kitchen", "name": "Tuna tataki", "price": "900₽", "desc": "Fresh tuna, ponzu sauce", "img": "https://images.unsplash.com/photo-1582294154832-7203d920392f?w=200&auto=format&fit=crop&q=60" },
+            { "category": "Kitchen", "name": "Bruschetta", "price": "550₽", "desc": "Tomatoes, basil, stracciatella", "img": "https://images.unsplash.com/photo-1572695157369-24d29ca1653d?w=200&auto=format&fit=crop&q=60" },
+            { "category": "Soft drinks", "name": "Virgin Mojito", "price": "450₽", "desc": "Lime, mint, soda, sugar", "img": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=200&auto=format&fit=crop&q=60" }
         ]
     },
     "location": {
