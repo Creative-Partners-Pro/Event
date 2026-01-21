@@ -1,16 +1,22 @@
 let configData;
+let currentLang = localStorage.getItem('lang') || 'en'; // Default to English
 
-/**
- * 2. РЕНДЕРИНГ
- */
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('data/config.json')
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+
+    // Fetch the new language file
+    fetch(`data/${lang}.json`)
         .then(response => response.json())
         .then(data => {
             configData = data;
-            renderApp();
+            renderApp(); // Re-render the app with the new language
             startCountdown();
         });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setLanguage(currentLang);
 });
 
 function renderApp() {
@@ -33,10 +39,23 @@ function renderHeader() {
     header.innerHTML = `
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black/90"></div>
         
-        <!-- Кнопка Share сверху справа -->
-        <button id="header-share-btn" class="absolute top-6 right-6 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 active:scale-90 transition-transform z-20">
-            <i class="ph-bold ph-share-network text-white text-lg"></i>
-        </button>
+        <div class="absolute top-6 right-6 flex items-center gap-2 z-20">
+            <!-- Language Switcher -->
+            <div id="lang-switcher" class="relative">
+                <button id="lang-btn" class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 active:scale-90 transition-transform">
+                    <i class="ph ph-translate text-white text-lg"></i>
+                </button>
+                <div id="lang-dropdown" class="absolute top-12 right-0 bg-white/10 backdrop-blur-md rounded-lg border border-white/10 p-1 hidden">
+                    <a href="#" class="lang-option block px-3 py-1 text-sm text-white rounded-md hover:bg-white/20" data-lang="en">EN</a>
+                    <a href="#" class="lang-option block px-3 py-1 text-sm text-white rounded-md hover:bg-white/20" data-lang="ru">RU</a>
+                    <a href="#" class="lang-option block px-3 py-1 text-sm text-white rounded-md hover:bg-white/20" data-lang="ka">KA</a>
+                </div>
+            </div>
+            <!-- Share Button -->
+            <button id="header-share-btn" class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 active:scale-90 transition-transform">
+                <i class="ph-bold ph-share-network text-white text-lg"></i>
+            </button>
+        </div>
 
         <div class="absolute bottom-20 left-6 right-6">
             <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-lg text-xs font-bold tracking-wider uppercase mb-2 border border-white/10">Coming Soon</span>
@@ -221,6 +240,30 @@ function setupInteractions() {
     menuModal.onclick = (e) => {
         if (e.target === menuModal) closeModal();
     };
+
+    // Language Switcher Logic
+    const langBtn = document.getElementById('lang-btn');
+    const langDropdown = document.getElementById('lang-dropdown');
+
+    langBtn.onclick = () => {
+        langDropdown.classList.toggle('hidden');
+    };
+
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.onclick = (e) => {
+            e.preventDefault();
+            const lang = e.target.getAttribute('data-lang');
+            setLanguage(lang);
+            langDropdown.classList.add('hidden');
+        };
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!document.getElementById('lang-switcher').contains(e.target)) {
+            langDropdown.classList.add('hidden');
+        }
+    });
 
     // Кнопка Share (в хедере)
     document.getElementById('header-share-btn').onclick = async (e) => {
