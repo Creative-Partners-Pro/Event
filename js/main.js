@@ -313,28 +313,37 @@ function setupInteractions() {
     // Parallax and Fade Effect on Scroll
     const header = document.getElementById('header-section');
     const headerContent = header.querySelector('.absolute.bottom-20');
+    const headerTitle = headerContent ? headerContent.querySelector('h1') : null;
+    const headerSubtitle = headerContent ? headerContent.querySelector('span') : null;
 
     window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const headerHeight = header.offsetHeight;
 
-        // Parallax: Move background slower than scroll
+        // Parallax
         header.style.backgroundPositionY = `${scrollTop * 0.5}px`;
 
-        // Fade out content and darken overlay as user scrolls
-        // Start fading from the very top, be fully faded by the time we scroll 300px
-        const fadeUntil = 300;
-        const fadeValue = Math.max(0, Math.min(1, scrollTop / fadeUntil));
+        // Fade out content and darken overlay
+        const fastFadeUntil = 300;
+        const fastFadeValue = Math.max(0, Math.min(1, scrollTop / fastFadeUntil));
 
-        // Fade out text content
-        if (headerContent) {
-            headerContent.style.opacity = (1 - fadeValue * 2).toString();
+        // Fade out subtitle (fast)
+        if (headerSubtitle) {
+            headerSubtitle.style.opacity = (1 - fastFadeValue * 2).toString();
         }
 
-        // Darken the overlay
+        // Darken the overlay (fast)
         const gradientOverlay = header.querySelector('.absolute.inset-0');
         if (gradientOverlay) {
-            gradientOverlay.style.backgroundColor = `rgba(0, 0, 0, ${fadeValue * 0.9})`;
+            gradientOverlay.style.backgroundColor = `rgba(0, 0, 0, ${fastFadeValue * 0.9})`;
+        }
+
+        // Fade out title (slow)
+        const slowFadeUntil = 600; // Fades out over 600px
+        const slowFadeValue = Math.max(0, Math.min(1, scrollTop / slowFadeUntil));
+
+        if (headerTitle) {
+            // Slower fade, will be fully faded at 600px scroll
+            headerTitle.style.opacity = (1 - slowFadeValue).toString();
         }
     });
 }
