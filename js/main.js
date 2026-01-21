@@ -40,6 +40,12 @@ function renderApp() {
     
     // Установка цены билета
     document.getElementById('ticket-price').innerText = configData.event.price;
+
+    // Apply translations for static UI elements
+    document.title = configData.ui.pageTitle;
+    document.querySelector('#artists-section h3').innerText = configData.ui.lineupGuests;
+    document.querySelector('#ticket-fab > div > span').innerText = configData.ui.tickets;
+    document.querySelector('#menu-modal h3').innerText = configData.ui.menu;
 }
 
 function renderHeader() {
@@ -179,7 +185,7 @@ function renderLocation() {
     const section = document.getElementById('location-section');
     section.innerHTML = `
         <div class="flex justify-between items-center mb-4">
-            <h3 class="text-xl font-semibold opacity-90">Локация</h3>
+            <h3 class="text-xl font-semibold opacity-90">${configData.ui.location}</h3>
             <a href="${configData.location.mapLink}" target="_blank" class="text-xs bg-white text-black px-3 py-1 rounded-full font-semibold">Google Maps</a>
         </div>
         <div class="rounded-2xl overflow-hidden h-32 mb-4 relative group">

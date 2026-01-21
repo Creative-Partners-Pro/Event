@@ -45,5 +45,12 @@
         "name": "Drunk Owl Bar",
         "address": "21 Samghebro St, Tbilisi",
         "mapLink": "https://www.google.com/maps/place/Drunk+Owl+Bar/@41.6889226,44.8073664,17z/data=!3m1!4b1!4m6!3m5!1s0x40440cf71e4e7ea1:0x1c7f75224dc96f48!8m2!3d41.6889186!4d44.8099413!16s%2Fg%2F11b5ymggwq?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
+    },
+    "ui": {
+        "pageTitle": "SMM Hub - Виртуальный Билборд",
+        "lineupGuests": "Лайн-ап & Гости",
+        "tickets": "БИЛЕТЫ",
+        "menu": "Меню",
+        "location": "Локация"
     }
 }
