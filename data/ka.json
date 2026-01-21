@@ -51,6 +51,12 @@
         "lineupGuests": "შემსრულებლები და სტუმრები",
         "tickets": "ბილეთები",
         "menu": "მენიუ",
-        "location": "ადგილმდებარეობა"
+        "location": "ადგილმდებარეობა",
+        "comingSoon": "მალე",
+        "days": "დღე",
+        "hours": "საათი",
+        "minutes": "წუთი",
+        "seconds": "წამი",
+        "eventStarted": "ღონისძიება დაიწყო"
     }
 }
