@@ -169,5 +169,7 @@
         }
 
         #header-section {
-            height: 560px;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            background-position: center;
         }

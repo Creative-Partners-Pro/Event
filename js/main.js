@@ -74,7 +74,7 @@ function renderHeader() {
         </div>
 
         <div class="absolute bottom-20 left-6 right-6">
-            <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-lg text-xs font-bold tracking-wider uppercase mb-2 border border-white/10">Coming Soon</span>
+            <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-lg text-xs font-bold tracking-wider uppercase mb-2 border border-white/10">${configData.ui.comingSoon}</span>
             <h1 class="text-4xl font-bold leading-tight tracking-tight text-white drop-shadow-lg">${configData.event.title}</h1>
         </div>
     `;
@@ -92,10 +92,10 @@ function renderMainInfo() {
         
         <!-- Таймер -->
         <div class="flex justify-center gap-2 mt-4" id="countdown-timer">
-            <div class="countdown-item"><span class="countdown-value" id="d-val">00</span><span class="countdown-label">Дней</span></div>
-            <div class="countdown-item"><span class="countdown-value" id="h-val">00</span><span class="countdown-label">Час</span></div>
-            <div class="countdown-item"><span class="countdown-value" id="m-val">00</span><span class="countdown-label">Мин</span></div>
-            <div class="countdown-item"><span class="countdown-value" id="s-val">00</span><span class="countdown-label">Сек</span></div>
+            <div class="countdown-item"><span class="countdown-value" id="d-val">00</span><span class="countdown-label">${configData.ui.days}</span></div>
+            <div class="countdown-item"><span class="countdown-value" id="h-val">00</span><span class="countdown-label">${configData.ui.hours}</span></div>
+            <div class="countdown-item"><span class="countdown-value" id="m-val">00</span><span class="countdown-label">${configData.ui.minutes}</span></div>
+            <div class="countdown-item"><span class="countdown-value" id="s-val">00</span><span class="countdown-label">${configData.ui.seconds}</span></div>
         </div>
     `;
 }
@@ -214,7 +214,7 @@ function startCountdown() {
         const distance = eventDate - now;
 
         if (distance < 0) {
-            document.getElementById('countdown-timer').innerHTML = '<div class="text-xl font-bold text-indigo-400">EVENT STARTED</div>';
+            document.getElementById('countdown-timer').innerHTML = `<div class="text-xl font-bold text-indigo-400">${configData.ui.eventStarted}</div>`;
             return;
         }
 
@@ -309,4 +309,32 @@ function setupInteractions() {
             alert('Ссылка скопирована!');
         }
     };
+
+    // Parallax and Fade Effect on Scroll
+    const header = document.getElementById('header-section');
+    const headerContent = header.querySelector('.absolute.bottom-20');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const headerHeight = header.offsetHeight;
+
+        // Parallax: Move background slower than scroll
+        header.style.backgroundPositionY = `${scrollTop * 0.5}px`;
+
+        // Fade out content and darken overlay as user scrolls
+        // Start fading from the very top, be fully faded by the time we scroll 300px
+        const fadeUntil = 300;
+        const fadeValue = Math.max(0, Math.min(1, scrollTop / fadeUntil));
+
+        // Fade out text content
+        if (headerContent) {
+            headerContent.style.opacity = (1 - fadeValue * 2).toString();
+        }
+
+        // Darken the overlay
+        const gradientOverlay = header.querySelector('.absolute.inset-0');
+        if (gradientOverlay) {
+            gradientOverlay.style.backgroundColor = `rgba(0, 0, 0, ${fadeValue * 0.9})`;
+        }
+    });
 }

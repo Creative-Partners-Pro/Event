@@ -51,6 +51,12 @@
         "lineupGuests": "Line-up & Guests",
         "tickets": "TICKETS",
         "menu": "Menu",
-        "location": "Location"
+        "location": "Location",
+        "comingSoon": "Coming Soon",
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "seconds": "Seconds",
+        "eventStarted": "Event Started"
     }
 }

@@ -51,6 +51,12 @@
         "lineupGuests": "Лайн-ап & Гости",
         "tickets": "БИЛЕТЫ",
         "menu": "Меню",
-        "location": "Локация"
+        "location": "Локация",
+        "comingSoon": "Скоро",
+        "days": "Дней",
+        "hours": "Часов",
+        "minutes": "Минут",
+        "seconds": "Секунд",
+        "eventStarted": "Событие началось"
     }
 }
