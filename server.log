@@ -1,0 +1,5 @@
+127.0.0.1 - - [22/Jan/2026 23:24:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/Jan/2026 23:24:22] "GET /js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [22/Jan/2026 23:24:22] "GET /css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [22/Jan/2026 23:24:23] "GET /data/config.json HTTP/1.1" 200 -
+127.0.0.1 - - [22/Jan/2026 23:24:23] "GET /img/SerraKankaya.png HTTP/1.1" 200 -

@@ -167,9 +167,3 @@
             height: 50%;
             background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
         }
-
-        #header-section {
-            width: 100%;
-            aspect-ratio: 4 / 5;
-            background-position: center;
-        }
