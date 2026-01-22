@@ -34,11 +34,11 @@
     "menu": {
         "categories": ["Cocktails", "Kitchen", "Soft drinks"],
         "items": [
-            { "category": "Cocktails", "name": "Electric Blue", "price": "750₽", "desc": "Gin, tonic, blue curacao liqueur" },
-            { "category": "Cocktails", "name": "Neon Sunset", "price": "850₽", "desc": "Rum, orange, pomegranate, mint" },
-            { "category": "Kitchen", "name": "Tuna tataki", "price": "900₽", "desc": "Fresh tuna, ponzu sauce" },
-            { "category": "Kitchen", "name": "Bruschetta", "price": "550₽", "desc": "Tomatoes, basil, stracciatella" },
-            { "category": "Soft drinks", "name": "Virgin Mojito", "price": "450₽", "desc": "Lime, mint, soda, sugar" }
+            { "category": "", "name": "", "price": "", "desc": "" },
+            { "category": "", "name": "", "price": "", "desc": "" },
+            { "category": "", "name": "", "price": "", "desc": "" },
+            { "category": "", "name": "", "price": "", "desc": "" },
+            { "category": "", "name": "", "price": "", "desc": "" }
         ]
     },
     "location": {
