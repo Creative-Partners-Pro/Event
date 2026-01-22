@@ -32,7 +32,6 @@
         }
     ],
     "menu": {
-        {
   "categories": [
     "Beer",
     "Soft drinks",
@@ -43,8 +42,7 @@
     "Food",
     "Wine",
     "Hot Drinks"
-  ]
-},
+  ],
         "items": [
     {
         "category": "Cocktails",
