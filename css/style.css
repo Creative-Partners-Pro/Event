@@ -123,8 +123,8 @@
 
         /* Таймер */
         .countdown-container {
-            width: 45%;
-            margin-left: auto;
+            width: 30%;
+            margin-left: 0;
             margin-right: auto;
         }
 
