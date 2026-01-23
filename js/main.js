@@ -74,7 +74,13 @@ function renderHeader() {
         </div>
 
         <div class="absolute bottom-20 left-6 right-6">
-            <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-lg text-xs font-bold tracking-wider uppercase mb-2 border border-white/10">${configData.ui.comingSoon}</span>
+            <!-- Таймер -->
+            <div class="flex justify-center gap-2 mb-2 countdown-container" id="countdown-timer">
+                <div class="countdown-item"><span class="countdown-value" id="d-val">00</span><span class="countdown-label">${configData.ui.days}</span></div>
+                <div class="countdown-item"><span class="countdown-value" id="h-val">00</span><span class="countdown-label">${configData.ui.hours}</span></div>
+                <div class="countdown-item"><span class="countdown-value" id="m-val">00</span><span class="countdown-label">${configData.ui.minutes}</span></div>
+                <div class="countdown-item"><span class="countdown-value" id="s-val">00</span><span class="countdown-label">${configData.ui.seconds}</span></div>
+            </div>
             <h1 class="text-4xl font-bold leading-tight tracking-tight text-white drop-shadow-lg">${configData.event.title}</h1>
         </div>
     `;
@@ -89,14 +95,6 @@ function renderMainInfo() {
         </div>
         <h2 class="text-xl font-medium text-white mb-3">${configData.event.subtitle}</h2>
         <p class="text-gray-300 text-sm leading-relaxed opacity-90 mb-5">${configData.event.description}</p>
-        
-        <!-- Таймер -->
-        <div class="flex justify-center gap-2 mt-4" id="countdown-timer">
-            <div class="countdown-item"><span class="countdown-value" id="d-val">00</span><span class="countdown-label">${configData.ui.days}</span></div>
-            <div class="countdown-item"><span class="countdown-value" id="h-val">00</span><span class="countdown-label">${configData.ui.hours}</span></div>
-            <div class="countdown-item"><span class="countdown-value" id="m-val">00</span><span class="countdown-label">${configData.ui.minutes}</span></div>
-            <div class="countdown-item"><span class="countdown-value" id="s-val">00</span><span class="countdown-label">${configData.ui.seconds}</span></div>
-        </div>
     `;
 }
 
