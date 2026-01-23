@@ -73,9 +73,9 @@ function renderHeader() {
             </button>
         </div>
 
-        <div class="absolute bottom-20 left-6 right-6">
+        <div class="absolute bottom-20 left-6 right-6 flex flex-col items-start">
             <!-- Таймер -->
-            <div class="flex justify-center gap-2 mb-2 countdown-container" id="countdown-timer">
+            <div class="flex justify-start gap-2 mb-2 countdown-container" id="countdown-timer">
                 <div class="countdown-item"><span class="countdown-value" id="d-val">00</span><span class="countdown-label">${configData.ui.days}</span></div>
                 <div class="countdown-item"><span class="countdown-value" id="h-val">00</span><span class="countdown-label">${configData.ui.hours}</span></div>
                 <div class="countdown-item"><span class="countdown-value" id="m-val">00</span><span class="countdown-label">${configData.ui.minutes}</span></div>
@@ -204,6 +204,16 @@ function renderLocation() {
     `;
 }
 
+// Google Analytics Event Tracker
+function trackEvent(eventName, eventCategory, eventLabel) {
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, {
+      'event_category': eventCategory,
+      'event_label': eventLabel,
+    });
+  }
+}
+
 function startCountdown() {
     const eventDate = new Date(configData.event.eventDateISO).getTime();
     
@@ -236,12 +246,16 @@ function setupInteractions() {
     const fab = document.getElementById('ticket-fab');
     fab.onclick = (e) => {
         e.preventDefault();
+        trackEvent('click', 'Tickets', configData.event.ticketLink);
         window.open(configData.event.ticketLink, '_blank');
     };
 
     // Кнопка WhatsApp (контакт)
     const waFab = document.getElementById('whatsapp-fab');
     waFab.href = configData.event.whatsappContact;
+    waFab.addEventListener('click', () => {
+        trackEvent('click', 'Contact', 'WhatsApp');
+    });
 
     // Логика Модального окна МЕНЮ
     const menuModal = document.getElementById('menu-modal');
@@ -249,6 +263,7 @@ function setupInteractions() {
     const closeMenuBtn = document.getElementById('close-menu');
 
     menuBtn.onclick = () => {
+        trackEvent('click', 'Navigation', 'Open Menu');
         menuModal.classList.add('open');
         document.body.style.overflow = 'hidden'; // блокируем скролл фона
     };
@@ -277,6 +292,7 @@ function setupInteractions() {
         option.onclick = (e) => {
             e.preventDefault();
             const lang = e.target.getAttribute('data-lang');
+            trackEvent('click', 'Language', `Switch to ${lang.toUpperCase()}`);
             setLanguage(lang);
             langDropdown.classList.add('hidden');
         };
@@ -292,6 +308,7 @@ function setupInteractions() {
     // Кнопка Share (в хедере)
     document.getElementById('header-share-btn').onclick = async (e) => {
         e.preventDefault();
+        trackEvent('click', 'Share', 'Header Share Button');
         if (navigator.share) {
             try {
                 await navigator.share({
@@ -344,4 +361,39 @@ function setupInteractions() {
             headerTitle.style.opacity = (1 - slowFadeValue).toString();
         }
     });
+
+    // Social Icons in main content
+    const socialIconsContainer = document.getElementById('social-icons');
+    if(socialIconsContainer) {
+        socialIconsContainer.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (link && link.href) {
+                const socialName = link.href.split('//')[1].split('/')[0] || 'Unknown'; // Extracts domain
+                trackEvent('click', 'Social', socialName);
+            }
+        });
+    }
+
+    // Artist links
+    const artistsContainer = document.getElementById('artists-container');
+    if(artistsContainer){
+        artistsContainer.addEventListener('click', (e) => {
+            const artistLink = e.target.closest('.group');
+            if (artistLink) {
+                const artistName = artistLink.querySelector('h4').innerText;
+                trackEvent('click', 'Artist', artistName);
+            }
+        });
+    }
+
+    // Location map link
+    const locationContainer = document.getElementById('location-section');
+    if(locationContainer) {
+        locationContainer.addEventListener('click', (e) => {
+            const link = e.target.closest('a');
+            if (link && (link.href.includes('maps') || link.href.includes('mapLink'))) {
+               trackEvent('click', 'Location', 'Map Link');
+            }
+        });
+    }
 }

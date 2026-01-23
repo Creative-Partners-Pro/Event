@@ -123,9 +123,9 @@
 
         /* Таймер */
         .countdown-container {
-            width: 30%;
-            margin-left: 0;
-            margin-right: auto;
+            /* width: 30%; */
+            /* margin-left: 0; */
+            /* margin-right: auto; */
         }
 
         .countdown-item {
