@@ -2,7 +2,7 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Drunk Owl Home V2</title>
+<title>Drunk Owl Home V3</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -26,6 +26,7 @@
                         'neon-red-strong': '0 0 50px 10px rgba(242, 13, 32, 0.4)',
                         'neon-yellow': '0 0 30px -5px rgba(255, 215, 0, 0.5)',
                         'depth-high': '0 10px 40px -10px rgba(0,0,0,0.5)',
+                        'glow-container-red': '0 0 30px rgba(242, 13, 32, 0.5), inset 0 0 20px rgba(242, 13, 32, 0.2)',
                     },
                     animation: {
                         'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -44,6 +45,7 @@
         body {
             font-family: 'Space Grotesk', sans-serif;
             -webkit-font-smoothing: antialiased;
+            min-height: max(884px, 100dvh);
         }
         .glass-panel {
             background: rgba(20, 20, 20, 0.7);
@@ -67,15 +69,7 @@
         .owl-logo-glow {
             filter: drop-shadow(0 0 15px rgba(242, 13, 32, 0.6));
         }
-        body {
-            min-height: max(884px, 100dvh);
-        }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
   </head>
 <body class="bg-background-dark text-white min-h-screen relative overflow-hidden">
 <div class="fixed inset-0 z-0 pointer-events-none">
@@ -92,7 +86,7 @@
 <span class="text-xl font-bold tracking-tight text-white drop-shadow-lg">Drunk Owl Bar</span>
 </div>
 </header>
-<main class="flex-1 flex flex-col items-center justify-center px-6 w-full max-w-sm mx-auto gap-8">
+<main class="flex-1 flex flex-col items-center justify-end px-6 w-full max-w-sm mx-auto gap-8 pb-32">
 <div class="relative flex items-center justify-center mb-6">
 <div class="absolute inset-0 bg-primary rounded-full blur-[60px] animate-pulse-glow opacity-60"></div>
 <div class="absolute inset-0 bg-accent-yellow rounded-full blur-[80px] opacity-20 animate-pulse-glow" style="animation-delay: 1s;"></div>
@@ -141,6 +135,15 @@
 </button>
 </div>
 </main>
+<div class="fixed bottom-10 left-0 right-0 z-50 flex justify-center px-6">
+<div class="flex items-center p-1.5 rounded-full w-full max-w-[320px] bg-white/5 backdrop-blur-3xl border border-white/10 shadow-glow-container-red">
+<button class="flex-1 py-3 rounded-full border border-accent-yellow text-accent-yellow shadow-neon-yellow font-bold text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center bg-accent-yellow/5">
+                    Bar
+                </button>
+<button class="flex-1 py-3 rounded-full text-white/40 hover:text-white font-medium text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center">
+                    Food
+                </button>
 </div>
-
+</div>
+</div>
 </body></html>
