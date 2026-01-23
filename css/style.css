@@ -179,3 +179,31 @@
             aspect-ratio: 4 / 5;
             background-position: center;
         }
+
+/* Styles from categories.html */
+.glass-panel {
+    background: rgba(20, 20, 20, 0.7);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.glass-tile {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.text-glow-yellow {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.2);
+}
+.text-glow-red {
+    text-shadow: 0 0 15px rgba(242, 13, 32, 0.8), 0 0 30px rgba(242, 13, 32, 0.4);
+}
+.owl-logo-glow {
+    filter: drop-shadow(0 0 15px rgba(242, 13, 32, 0.6));
+}
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}

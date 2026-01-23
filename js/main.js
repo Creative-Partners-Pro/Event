@@ -34,9 +34,9 @@ function renderApp() {
     renderMainInfo();
     renderSocialIcons();
     renderArtists();
-    renderMenu();
     renderLocation();
     setupInteractions();
+    setupCategoryCurtain(); // Новый вызов для шторки
     
     // Установка цены билета
     document.getElementById('ticket-price').innerText = configData.event.price;
@@ -45,7 +45,6 @@ function renderApp() {
     document.title = configData.ui.pageTitle;
     document.querySelector('#artists-section h3').innerText = configData.ui.lineupGuests;
     document.querySelector('#ticket-fab > div > span').innerText = configData.ui.tickets;
-    document.querySelector('#menu-modal h3').innerText = configData.ui.menu;
 }
 
 function renderHeader() {
@@ -134,50 +133,6 @@ function renderArtists() {
     container.appendChild(fragment);
 }
 
-let activeCategory;
-
-function renderMenu() {
-    if (!activeCategory) {
-        activeCategory = configData.menu.categories[0];
-    }
-    // Tabs
-    const tabsContainer = document.getElementById('menu-tabs');
-    tabsContainer.innerHTML = '';
-    configData.menu.categories.forEach(cat => {
-        const btn = document.createElement('button');
-        btn.className = `menu-tab px-5 py-2 rounded-full text-sm transition-all duration-300 whitespace-nowrap ${cat === activeCategory ? 'active' : ''}`;
-        btn.innerText = cat;
-        btn.onclick = () => {
-            activeCategory = cat;
-            renderMenu(); // Re-render content
-        };
-        tabsContainer.appendChild(btn);
-    });
-
-    // Items
-    const itemsContainer = document.getElementById('menu-container');
-    itemsContainer.innerHTML = '';
-    const fragment = document.createDocumentFragment();
-    const filteredItems = configData.menu.items.filter(item => item.category === activeCategory);
-    
-    filteredItems.forEach((item) => {
-        const originalIndex = configData.menu.items.findIndex(originalItem => originalItem.name === item.name && originalItem.desc === item.desc);
-        const div = document.createElement('div');
-        div.className = "bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5";
-        div.innerHTML = `
-            <img src="${imageData.menu[originalIndex]}" class="w-16 h-16 rounded-xl object-cover bg-gray-800" alt="${item.name}">
-            <div class="flex-1">
-                <div class="flex justify-between items-start">
-                    <h4 class="font-medium text-sm text-white">${item.name}</h4>
-                    <span class="font-bold text-sm text-indigo-300">${item.price}</span>
-                </div>
-                <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc || ''}</p>
-            </div>
-        `;
-        fragment.appendChild(div);
-    });
-    itemsContainer.appendChild(fragment);
-}
 
 function renderLocation() {
     const section = document.getElementById('location-section');
@@ -257,27 +212,13 @@ function setupInteractions() {
         trackEvent('click', 'Contact', 'WhatsApp');
     });
 
-    // Логика Модального окна МЕНЮ
-    const menuModal = document.getElementById('menu-modal');
+    // Логика для шторки категорий
     const menuBtn = document.getElementById('menu-btn');
-    const closeMenuBtn = document.getElementById('close-menu');
+    const categoryCurtain = document.getElementById('category-curtain');
 
     menuBtn.onclick = () => {
-        trackEvent('click', 'Navigation', 'Open Menu');
-        menuModal.classList.add('open');
-        document.body.style.overflow = 'hidden'; // блокируем скролл фона
-    };
-
-    const closeModal = () => {
-        menuModal.classList.remove('open');
-        document.body.style.overflow = '';
-    };
-
-    closeMenuBtn.onclick = closeModal;
-    
-    // Закрытие по клику на фон
-    menuModal.onclick = (e) => {
-        if (e.target === menuModal) closeModal();
+        trackEvent('click', 'Navigation', 'Open Category Curtain');
+        categoryCurtain.classList.toggle('translate-y-full');
     };
 
     // Language Switcher Logic
@@ -396,4 +337,151 @@ function setupInteractions() {
             }
         });
     }
+}
+
+function setupCategoryCurtain() {
+    const curtain = document.getElementById('category-curtain');
+    if (!curtain) return;
+
+    // --- DATA ---
+    const barCategories = [
+        { key: "Cocktails", icon: "local_bar", color: "text-accent-yellow" },
+        { key: "Beer", icon: "sports_bar", color: "text-white" },
+        { key: "Wine", icon: "wine_bar", color: "text-primary" },
+        { key: "Shots", icon: "liquor", color: "text-white" },
+    ];
+    const foodCategories = [
+        { key: "APPETIZER", icon: "restaurant_menu" },
+        { key: "SOUPS", icon: "soup_kitchen" },
+        { key: "SALADS", icon: "salad" },
+        { key: "HOT DISHES", icon: "local_dining" },
+        { key: "PASTRY", icon: "bakery_dining" },
+        { key: "PIZZA & PASTA", icon: "local_pizza" },
+        { key: "GARNISH & SAUCES", icon: "sauce" },
+        { key: "DESSERT", icon: "cake" },
+    ];
+
+    let mainContentContainer; // Для хранения <main>
+
+    // --- RENDER FUNCTIONS ---
+    function renderCategoryGrid(type = 'bar') {
+        if (!mainContentContainer) return;
+
+        const categories = (type === 'bar') ? barCategories : foodCategories;
+        const grid = document.createElement('div');
+        grid.className = "grid grid-cols-2 gap-4 w-full px-2";
+
+        // Find translated category names
+        const categoryTranslations = configData.menu.categories.reduce((acc, cat) => {
+            // Find the english key for the current language's category name
+            const enCategory = Object.entries(configData.ui.categoryTranslations || {}).find(([en, translations]) => Object.values(translations).includes(cat));
+            if (enCategory) {
+                acc[enCategory[0]] = cat;
+            } else {
+                 acc[cat] = cat; // Fallback for categories not in translation map
+            }
+            return acc;
+        }, {});
+
+        categories.forEach(catInfo => {
+            const translatedCatName = categoryTranslations[catInfo.key] || catInfo.key;
+            const button = document.createElement('button');
+            button.className = "group glass-tile rounded-2xl p-5 flex flex-col items-start gap-3 hover:bg-white/10 active:scale-95 transition-all duration-300 relative overflow-hidden h-32 justify-end";
+            button.innerHTML = `
+                <div class="absolute top-0 right-0 p-3 opacity-30 group-hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-3xl ${catInfo.color || 'text-white'}">${catInfo.icon}</span>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-white/50 group-hover:text-white/80">${type.toUpperCase()}</span>
+                <span class="text-xl font-bold ${catInfo.color ? 'text-glow-yellow' : ''}">${translatedCatName}</span>
+            `;
+            button.onclick = () => renderMenuItems(translatedCatName, type);
+            grid.appendChild(button);
+        });
+
+        mainContentContainer.innerHTML = '';
+        mainContentContainer.appendChild(grid);
+    }
+
+    function renderMenuItems(categoryName, originalType) {
+        if (!mainContentContainer) return;
+
+        const items = configData.menu.items.filter(item => item.category === categoryName);
+        const listContainer = document.createElement('div');
+        listContainer.className = "w-full px-2 space-y-3";
+
+        items.forEach(item => {
+            const div = document.createElement('div');
+            div.className = "bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5";
+            div.innerHTML = `
+                <div class="flex-1">
+                    <div class="flex justify-between items-start">
+                        <h4 class="font-medium text-sm text-white">${item.name}</h4>
+                        <span class="font-bold text-sm text-indigo-300">${item.price}</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc || ''}</p>
+                </div>
+            `;
+            listContainer.appendChild(div);
+        });
+
+        const backButton = document.createElement('button');
+        backButton.className = "text-accent-yellow font-semibold flex items-center gap-2 mb-4 ml-2";
+        backButton.innerHTML = `<span class="material-symbols-outlined">arrow_back_ios</span> ${configData.ui.backToCategories}`;
+        backButton.onclick = () => renderCategoryGrid(originalType);
+
+        mainContentContainer.innerHTML = '';
+        mainContentContainer.appendChild(backButton);
+        mainContentContainer.appendChild(listContainer);
+    }
+
+    // --- INITIALIZATION ---
+    fetch('categories.html')
+        .then(response => response.text())
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+
+            const mainContentTemplate = doc.querySelector('main');
+            const footerContent = doc.querySelector('.fixed.bottom-10');
+
+            if (mainContentTemplate && footerContent) {
+                curtain.innerHTML = ''; // Clear
+
+                // Add Close Button
+                const closeButton = document.createElement('button');
+                closeButton.className = "absolute top-6 right-6 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 active:scale-90 transition-transform z-50";
+                closeButton.innerHTML = '<i class="ph-bold ph-x text-white text-lg"></i>';
+                closeButton.onclick = () => curtain.classList.add('translate-y-full');
+
+                // Keep a reference to the main container
+                mainContentContainer = mainContentTemplate;
+
+                curtain.appendChild(closeButton);
+                curtain.appendChild(mainContentContainer);
+                curtain.appendChild(footerContent);
+
+                // Setup BAR/FOOD toggle
+                const barButton = footerContent.querySelectorAll('button')[0];
+                const foodButton = footerContent.querySelectorAll('button')[1];
+
+                barButton.onclick = () => {
+                    renderCategoryGrid('bar');
+                    // Style updates for active button
+                    barButton.className = "flex-1 py-3 rounded-full border border-accent-yellow text-accent-yellow shadow-neon-yellow font-bold text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center bg-accent-yellow/5";
+                    foodButton.className = "flex-1 py-3 rounded-full text-white/40 hover:text-white font-medium text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center";
+
+                };
+                foodButton.onclick = () => {
+                    renderCategoryGrid('food');
+                     // Style updates for active button
+                    foodButton.className = "flex-1 py-3 rounded-full border border-accent-yellow text-accent-yellow shadow-neon-yellow font-bold text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center bg-accent-yellow/5";
+                    barButton.className = "flex-1 py-3 rounded-full text-white/40 hover:text-white font-medium text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center";
+                };
+
+                // Initial render
+                renderCategoryGrid('bar');
+            }
+        })
+        .catch(error => console.error("Error loading or setting up categories.html:", error));
 }

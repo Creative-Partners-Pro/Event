@@ -58,7 +58,7 @@
             "Еда",
             "ГАРНИР И СОУСЫ",
             "ГОРЯЧИЕ БЛЮДА",
-            "Крепкие алкогольные напитки",
+            "High Alcohol Drinks",
             "Горячие напитки",
             "ВЫПЕЧКА",
             "ПИЦЦА И ПАСТА",
@@ -77,7 +77,7 @@
                 "desc": "Rum, tequila, vodka, gin, tripple sec, cola"
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Red Label",
                 "price": "12.00",
                 "desc": null
@@ -89,7 +89,7 @@
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Black Label",
                 "price": "16.00",
                 "desc": null
@@ -107,7 +107,7 @@
                 "desc": "500ml"
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Absolut vodka",
                 "price": "8.00",
                 "desc": "Absolut 50ml"
@@ -143,25 +143,25 @@
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Beluga Vodka",
                 "price": "24.00",
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Olmeca Tequila",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Bacardi Rum",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Capitan Morgan Black",
                 "price": "12.00",
                 "desc": null
@@ -179,13 +179,13 @@
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Chivas 12y.",
                 "price": "15.00",
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Tullamore Dew",
                 "price": "12.00",
                 "desc": null
@@ -203,7 +203,7 @@
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Jack Daniels",
                 "price": "14.00",
                 "desc": null
@@ -329,25 +329,25 @@
                 "desc": "Bourbon whiskey, egg white"
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Koskenkorva vodka",
                 "price": "6.00",
                 "desc": "Vodka 50ml"
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Gin Beefeater",
                 "price": "12.00",
                 "desc": "50ml"
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Gin Bombay Sapphire",
                 "price": "16.00",
                 "desc": "50ml"
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Tequila Sierra",
                 "price": "12.00",
                 "desc": "50ml"
@@ -359,13 +359,13 @@
                 "desc": "White Rum, Dark Rum, Orange liquor, Juice, Syrup"
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Capitan Morgan Spiced Gold",
                 "price": "13.00",
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Jagermeister",
                 "price": "12.00",
                 "desc": null
@@ -425,7 +425,7 @@
                 "desc": "Bombay Gin, Tonic"
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Jameson",
                 "price": "12.00",
                 "desc": null
@@ -443,19 +443,19 @@
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Jim Beam White",
                 "price": "14.00",
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Jim Beam Red Stag",
                 "price": "16.00",
                 "desc": null
             },
             {
-                "category": "Крепкие алкогольные напитки",
+                "category": "High Alcohol Drinks",
                 "name": "Baileys",
                 "price": "12.00",
                 "desc": null
@@ -1006,6 +1006,21 @@
         "hours": "Часов",
         "minutes": "Минут",
         "seconds": "Секунд",
-        "eventStarted": "Событие началось"
+        "eventStarted": "Событие началось",
+        "backToCategories": "Назад к категориям",
+        "categoryTranslations": {
+            "Cocktails": { "en": "Cocktails", "ru": "Коктейли", "ka": "კოქტეილები" },
+            "Beer": { "en": "Beer", "ru": "Пиво", "ka": "ლუდი" },
+            "Wine": { "en": "Wine", "ru": "Вино", "ka": "ღვინო" },
+            "Shots": { "en": "Shots", "ru": "Шоты", "ka": "შოთები" },
+            "APPETIZER": { "en": "APPETIZER", "ru": "ЗАКУСКИ", "ka": " appetizer" },
+            "SOUPS": { "en": "SOUPS", "ru": "СУПЫ", "ka": "სუპები" },
+            "SALADS": { "en": "SALADS", "ru": "САЛАТЫ", "ka": "სალათები" },
+            "HOT DISHES": { "en": "HOT DISHES", "ru": "ГОРЯЧИЕ БЛЮДА", "ka": "ცხელი კერძები" },
+            "PASTRY": { "en": "PASTRY", "ru": "ВЫПЕЧКА", "ka": "ცომეული" },
+            "PIZZA & PASTA": { "en": "PIZZA & PASTA", "ru": "ПИЦЦА И ПАСТА", "ka": "פיცა და პასტა" },
+            "GARNISH & SAUCES": { "en": "GARNISH & SAUCES", "ru": "ГАРНИРЫ И СОУСЫ", "ka": "გარნირი და სოუსები" },
+            "DESSERT": { "en": "DESSERT", "ru": "ДЕСЕРТЫ", "ka": "დესერტი" }
+        }
     }
 }

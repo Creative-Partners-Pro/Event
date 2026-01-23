@@ -1006,6 +1006,21 @@
         "hours": "Hours",
         "minutes": "Minutes",
         "seconds": "Seconds",
-        "eventStarted": "Event Started"
+        "eventStarted": "Event Started",
+        "backToCategories": "Back to Categories",
+        "categoryTranslations": {
+            "Cocktails": { "en": "Cocktails", "ru": "Коктейли", "ka": "კოქტეილები" },
+            "Beer": { "en": "Beer", "ru": "Пиво", "ka": "ლუდი" },
+            "Wine": { "en": "Wine", "ru": "Вино", "ka": "ღვინო" },
+            "Shots": { "en": "Shots", "ru": "Шоты", "ka": "შოთები" },
+            "APPETIZER": { "en": "APPETIZER", "ru": "ЗАКУСКИ", "ka": " appetizer" },
+            "SOUPS": { "en": "SOUPS", "ru": "СУПЫ", "ka": "სუპები" },
+            "SALADS": { "en": "SALADS", "ru": "САЛАТЫ", "ka": "სალათები" },
+            "HOT DISHES": { "en": "HOT DISHES", "ru": "ГОРЯЧИЕ БЛЮДА", "ka": "ცხელი კერძები" },
+            "PASTRY": { "en": "PASTRY", "ru": "ВЫПЕЧКА", "ka": "ცომეული" },
+            "PIZZA & PASTA": { "en": "PIZZA & PASTA", "ru": "ПИЦЦА И ПАСТА", "ka": "פיცა და პასტა" },
+            "GARNISH & SAUCES": { "en": "GARNISH & SAUCES", "ru": "ГАРНИРЫ И СОУСЫ", "ka": "გარნირი და სოუსები" },
+            "DESSERT": { "en": "DESSERT", "ru": "ДЕСЕРТЫ", "ka": "დესერტი" }
+        }
     }
 }

@@ -13,13 +13,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <title>SMM Hub - Виртуальный Билборд</title>
     
     <!-- Подключаем Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f20d20",
+                        "accent-yellow": "#FFD700",
+                        "background-dark": "#0a0a0c",
+                        "glass-border": "rgba(255, 255, 255, 0.15)",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                    },
+                    boxShadow: {
+                        'neon-red': '0 0 30px -5px rgba(242, 13, 32, 0.6)',
+                        'neon-red-strong': '0 0 50px 10px rgba(242, 13, 32, 0.4)',
+                        'neon-yellow': '0 0 30px -5px rgba(255, 215, 0, 0.5)',
+                        'depth-high': '0 10px 40px -10px rgba(0,0,0,0.5)',
+                        'glow-container-red': '0 0 30px rgba(242, 13, 32, 0.5), inset 0 0 20px rgba(242, 13, 32, 0.2)',
+                    },
+                    animation: {
+                        'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(0.95)' },
+                            '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
     
     <!-- Подключаем иконки (Phosphor Icons для стиля iOS) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <!-- Шрифт Inter (похож на San Francisco) -->
+    <!-- Шрифты и иконки -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -108,33 +145,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 
-    <!-- Модальное окно МЕНЮ -->
-    <div id="menu-modal" class="modal-overlay fixed inset-0 z-50 flex items-end justify-center sm:items-center bg-black/60 backdrop-blur-sm">
-        <div class="modal-content w-full max-w-md h-[85vh] sm:h-[80vh] bg-[#1c1c1e] rounded-t-[2.5rem] sm:rounded-[2.5rem] border-t border-white/10 shadow-2xl overflow-hidden flex flex-col relative">
-            
-            <!-- Шапка модального окна -->
-            <div class="px-6 pt-6 pb-4 flex justify-between items-center bg-[#1c1c1e] z-10">
-                <h3 class="text-2xl font-bold">Меню</h3>
-                <button id="close-menu" class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center">
-                    <i class="ph-bold ph-x text-white"></i>
-                </button>
-            </div>
-
-            <!-- Табы категорий -->
-            <div class="px-6 pb-4">
-                <div class="flex bg-white/5 rounded-full p-1 overflow-x-auto hide-scroll" id="menu-tabs">
-                    <!-- Заполняется JS -->
-                </div>
-            </div>
-
-            <!-- Список меню (скроллируемая область) -->
-            <div id="menu-container" class="flex-1 overflow-y-auto px-6 pb-24 space-y-4">
-                <!-- Заполняется JS -->
-            </div>
-        </div>
-    </div>
 
     <!-- Логика приложения -->
     <script src="js/main.js"></script>
+
+    <!-- Контейнер для шторки категорий -->
+    <div id="category-curtain" class="fixed inset-0 z-50 transform translate-y-full transition-transform duration-500 ease-in-out bg-background-dark">
+        <!-- Содержимое будет загружено динамически -->
+    </div>
 </body>
 </html>
