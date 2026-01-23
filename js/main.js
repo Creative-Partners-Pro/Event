@@ -171,7 +171,7 @@ function renderMenu() {
                     <h4 class="font-medium text-sm text-white">${item.name}</h4>
                     <span class="font-bold text-sm text-indigo-300">${item.price}</span>
                 </div>
-                <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc}</p>
+                <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc || ''}</p>
             </div>
         `;
         fragment.appendChild(div);
