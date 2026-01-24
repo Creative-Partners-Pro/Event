@@ -57,7 +57,7 @@ function renderPopularItems() {
 }
 
 function renderCategoryItems(category) {
-    const container = document.getElementById('selected-category-carousel');
+    const container = document.getElementById('selected-category-grid');
     const title = document.getElementById('selected-category-title');
     if (!container || !title) return;
 
@@ -69,7 +69,7 @@ function renderCategoryItems(category) {
     items.forEach(item => {
         const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
         html += `
-            <div class="bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60 flex-shrink-0">
+            <div class="bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5">
                 <img src="${imageUrl}" class="w-16 h-16 rounded-lg object-cover" alt="${item.name}">
                 <div class="flex-1">
                     <div class="flex justify-between items-start">
@@ -96,7 +96,6 @@ function renderCategoryGrid(type) {
             <div class="category-tile glass-tile-square rounded-2xl flex flex-col items-center justify-center p-2 text-center cursor-pointer transition-all duration-300"
                  onclick="handleCategoryClick('${category}')"
                  data-category="${category}">
-                <i class="ph ph-martini text-3xl text-accent-yellow mb-2"></i>
                 <span class="text-xs font-semibold uppercase tracking-wider">${translatedCategory}</span>
             </div>
         `;
