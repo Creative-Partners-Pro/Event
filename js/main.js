@@ -218,7 +218,8 @@ function setupInteractions() {
 
     menuBtn.onclick = () => {
         trackEvent('click', 'Navigation', 'Open Category Curtain');
-        categoryCurtain.classList.toggle('translate-y-full');
+        document.body.classList.add('overflow-hidden');
+        categoryCurtain.classList.remove('translate-y-full');
     };
 
     // Language Switcher Logic
@@ -466,15 +467,31 @@ function setupCategoryCurtain() {
                 const closeButton = document.createElement('button');
                 closeButton.className = "absolute top-6 right-6 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 active:scale-90 transition-transform z-50";
                 closeButton.innerHTML = '<i class="ph-bold ph-x text-white text-lg"></i>';
-                closeButton.onclick = () => curtain.classList.add('translate-y-full');
+                closeButton.onclick = () => {
+                    document.body.classList.remove('overflow-hidden');
+                    curtain.classList.add('translate-y-full');
+                };
 
-                // Keep a reference to the main container and adjust its styles for bottom alignment
+                // Create a scrollable container for the main content
+                const scrollContainer = document.createElement('div');
+                scrollContainer.className = 'flex-grow overflow-y-auto pb-24'; // Added padding-bottom
+
+                // Keep a reference to the main container
                 mainContentContainer = mainContentTemplate;
-                mainContentContainer.classList.add('flex-grow', 'flex', 'items-end', 'pb-4');
+                mainContentContainer.classList.add('pb-4'); // Padding at the bottom of the grid
+
+                scrollContainer.appendChild(mainContentContainer);
+
+                // Add fade-out gradient
+                const gradient = document.createElement('div');
+                gradient.className = 'absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black to-transparent pointer-events-none z-10';
+
+                footerContent.classList.add('z-20');
 
 
                 curtain.appendChild(closeButton);
-                curtain.appendChild(mainContentContainer);
+                curtain.appendChild(scrollContainer); // Add scrollable container
+                curtain.appendChild(gradient); // Add gradient overlay
                 curtain.appendChild(footerContent);
 
                 // Setup BAR/FOOD toggle
