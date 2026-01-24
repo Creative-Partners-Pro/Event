@@ -79,7 +79,7 @@ function renderCategoryItems(category) {
     items.forEach(item => {
         const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
         html += `
-            <div class="bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60">
+            <div class="menu-item bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60">
                 <img src="${imageUrl}" class="w-16 h-16 rounded-lg object-cover" alt="${item.name}">
                 <div class="flex-1">
                     <div class="flex justify-between items-start">

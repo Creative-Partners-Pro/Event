@@ -9,3 +9,4 @@ curtain_verification.png
 verify_curtain.spec.js
 test-results/
 playwright-report/
+__pycache__/
