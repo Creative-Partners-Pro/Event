@@ -344,177 +344,33 @@ function setupCategoryCurtain() {
     const curtain = document.getElementById('category-curtain');
     if (!curtain) return;
 
-    // --- DATA ---
-    const barCategories = [
-        { key: "COCKTAILS", icon: "local_bar", color: "text-accent-yellow" },
-        { key: "WHISKEY", icon: "local_bar", color: "text-white" },
-        { key: "BRANDY", icon: "local_bar", color: "text-white" },
-        { key: "GIN", icon: "local_bar", color: "text-white" },
-        { key: "VODKA", icon: "local_bar", color: "text-white" },
-        { key: "TEQUILA", icon: "local_bar", color: "text-white" },
-        { key: "APERITIVE", icon: "local_bar", color: "text-white" },
-        { key: "LIQUEUR", icon: "local_bar", color: "text-white" },
-        { key: "BEER", icon: "sports_bar", color: "text-white" },
-        { key: "CIDER", icon: "sports_bar", color: "text-white" },
-        { key: "WINE", icon: "wine_bar", color: "text-primary" },
-        { key: "SPARKLING WINE", icon: "wine_bar", color: "text-primary" },
-        { key: "SHOTS", icon: "liquor", color: "text-white" },
-        { key: "NON-ALCOHOLIC", icon: "local_cafe", color: "text-white" },
-    ];
-    const foodCategories = [
-        { key: "APPETIZER", icon: "restaurant_menu" },
-        { key: "SOUPS", icon: "soup_kitchen" },
-        { key: "SALADS", icon: "salad" },
-        { key: "HOT DISHES", icon: "local_dining" },
-        { key: "PASTRY", icon: "bakery_dining" },
-        { key: "PIZZA & PASTA", icon: "local_pizza" },
-        { key: "GARNISH & SAUCES", icon: "sauce" },
-        { key: "DESSERT", icon: "cake" },
-    ];
-
-    let mainContentContainer; // Для хранения <main>
-
-    // --- RENDER FUNCTIONS ---
-    function renderCategoryGrid(type = 'bar') {
-        if (!mainContentContainer) return;
-
-        const categories = (type === 'bar') ? barCategories : foodCategories;
-        const grid = document.createElement('div');
-        grid.className = "grid grid-cols-2 gap-4 w-full px-2";
-
-        // --- CORRECT TRANSLATION LOGIC ---
-        // Create a map from CANONICAL_KEY to the translated name for the current language.
-        const categoryTranslationMap = {};
-        for (const key in configData.ui.categoryTranslations) {
-            // The key in categoryTranslations can be "Cocktails", "APPETIZER", etc.
-            // The key in menu.items is always UPPERCASE. We use UPPERCASE as the canonical key.
-            const canonicalKey = key.toUpperCase();
-            const translation = configData.ui.categoryTranslations[key][currentLang];
-            if (translation) {
-                categoryTranslationMap[canonicalKey] = translation;
-            }
-        }
-
-        categories.forEach(catInfo => {
-            // catInfo.key is the canonical key, e.g., "COCKTAILS"
-            const translatedCatName = categoryTranslationMap[catInfo.key] || catInfo.key;
-            const button = document.createElement('button');
-            button.className = "group glass-tile rounded-xl p-3 flex flex-col items-start gap-1 hover:bg-white/10 active:scale-95 transition-all duration-300 relative overflow-hidden h-16 justify-end";
-            button.innerHTML = `
-                <div class="absolute top-0 right-0 p-2 opacity-30 group-hover:opacity-100 transition-opacity">
-                    <span class="material-symbols-outlined text-2xl ${catInfo.color || 'text-white'}">${catInfo.icon}</span>
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span class="text-xs font-semibold uppercase tracking-wider text-white/50 group-hover:text-white/80">${type.toUpperCase()}</span>
-                <span class="text-base font-bold ${catInfo.color ? 'text-glow-yellow' : ''}">${translatedCatName}</span>
-            `;
-            // Pass the canonical key to the next function
-            button.onclick = () => renderMenuItems(catInfo.key, type);
-            grid.appendChild(button);
-        });
-
-        mainContentContainer.innerHTML = '';
-        mainContentContainer.appendChild(grid);
-    }
-
-    function renderMenuItems(categoryKey, originalType) {
-        if (!mainContentContainer) return;
-
-        // Filter using the canonical key
-        const items = configData.menu.items.filter(item => item.category === categoryKey);
-        const listContainer = document.createElement('div');
-        listContainer.className = "w-full px-2 space-y-3";
-
-        items.forEach(item => {
-            const div = document.createElement('div');
-            div.className = "bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5";
-            div.innerHTML = `
-                <div class="flex-1">
-                    <div class="flex justify-between items-start">
-                        <h4 class="font-medium text-sm text-white">${item.name}</h4>
-                        <span class="font-bold text-sm text-indigo-300">${item.price}</span>
-                    </div>
-                    <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc || ''}</p>
-                </div>
-            `;
-            listContainer.appendChild(div);
-        });
-
-        const backButton = document.createElement('button');
-        backButton.className = "text-accent-yellow font-semibold flex items-center gap-2 mb-4 ml-2";
-        backButton.innerHTML = `<span class="material-symbols-outlined">arrow_back_ios</span> ${configData.ui.backToCategories}`;
-        backButton.onclick = () => renderCategoryGrid(originalType);
-
-        mainContentContainer.innerHTML = '';
-        mainContentContainer.appendChild(backButton);
-        mainContentContainer.appendChild(listContainer);
-    }
-
     // --- INITIALIZATION ---
-    fetch('categories.html')
+    fetch('menu.html')
         .then(response => response.text())
         .then(html => {
             const parser = new DOMParser();
             const doc = parser.parseFromString(html, 'text/html');
+            const menuContent = doc.body.firstElementChild; // Get the main container
 
-            const mainContentTemplate = doc.querySelector('main');
-            const footerContent = doc.querySelector('.fixed.bottom-10');
-
-            if (mainContentTemplate && footerContent) {
+            if (menuContent) {
                 curtain.innerHTML = ''; // Clear
+                curtain.appendChild(menuContent);
 
-                // Add Close Button
-                const closeButton = document.createElement('button');
-                closeButton.className = "absolute top-6 right-6 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/10 active:scale-90 transition-transform z-50";
-                closeButton.innerHTML = '<i class="ph-bold ph-x text-white text-lg"></i>';
-                closeButton.onclick = () => {
-                    document.body.classList.remove('overflow-hidden');
-                    curtain.classList.add('translate-y-full');
-                };
+                // Add close functionality
+                // Since there's no close button in the new design,
+                // we can re-purpose the top handle to close the modal.
+                const closeHandle = curtain.querySelector('.w-10.h-1');
+                if(closeHandle) {
+                    closeHandle.onclick = () => {
+                        document.body.classList.remove('overflow-hidden');
+                        curtain.classList.add('translate-y-full');
+                    };
+                }
 
-                // Create a scrollable container for the main content
-                const scrollContainer = document.createElement('div');
-                scrollContainer.className = 'flex-grow overflow-y-auto pb-24 px-4 pt-4'; // Added padding
-
-                // Keep a reference to the main container
-                mainContentContainer = mainContentTemplate;
-                mainContentContainer.classList.add('pb-4'); // Padding at the bottom of the grid
-
-                scrollContainer.appendChild(mainContentContainer);
-
-                // Add fade-out gradient
-                const gradient = document.createElement('div');
-                gradient.className = 'absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black to-transparent pointer-events-none z-10';
-
-                footerContent.classList.add('z-20');
-
-
-                curtain.appendChild(closeButton);
-                curtain.appendChild(scrollContainer); // Add scrollable container
-                curtain.appendChild(gradient); // Add gradient overlay
-                curtain.appendChild(footerContent);
-
-                // Setup BAR/FOOD toggle
-                const barButton = footerContent.querySelectorAll('button')[0];
-                const foodButton = footerContent.querySelectorAll('button')[1];
-
-                barButton.onclick = () => {
-                    renderCategoryGrid('bar');
-                    // Style updates for active button
-                    barButton.className = "flex-1 py-3 rounded-full border border-accent-yellow text-accent-yellow shadow-neon-yellow font-bold text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center bg-accent-yellow/5";
-                    foodButton.className = "flex-1 py-3 rounded-full text-white/40 hover:text-white font-medium text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center";
-
-                };
-                foodButton.onclick = () => {
-                    renderCategoryGrid('food');
-                     // Style updates for active button
-                    foodButton.className = "flex-1 py-3 rounded-full border border-accent-yellow text-accent-yellow shadow-neon-yellow font-bold text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center bg-accent-yellow/5";
-                    barButton.className = "flex-1 py-3 rounded-full text-white/40 hover:text-white font-medium text-sm uppercase tracking-widest transition-all duration-300 flex items-center justify-center";
-                };
-
-                // Initial render
-                renderCategoryGrid('bar');
+                // Now, we need to wire up the dynamic data to this new template
+                // This will require new rendering functions.
+                // For now, the static content from menu.html will be displayed.
             }
         })
-        .catch(error => console.error("Error loading or setting up categories.html:", error));
+        .catch(error => console.error("Error loading or setting up menu.html:", error));
 }
