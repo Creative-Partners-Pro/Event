@@ -110,6 +110,7 @@
             scrollbar-width: none;
         }
     </style>
+<script src="js/menu.js"></script>
 <style>
     body {
       min-height: max(884px, 100dvh);
@@ -166,9 +167,9 @@
 <span class="text-[10px] tracking-[0.4em] font-light uppercase text-accent-yellow/80 mb-1">Welcome to</span>
 <span class="text-2xl font-semibold tracking-tight text-white/90">Drunk Owl Bar</span>
 </div>
-<div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center bg-white/5 hover:bg-white/10 transition-colors cursor-pointer">
+<button id="close-menu-button" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center bg-white/5 hover:bg-white/10 transition-colors cursor-pointer">
 <span class="material-symbols-outlined text-xl text-white/60">close</span>
-</div>
+</button>
 </header>
 <main class="flex-1 flex flex-col items-center justify-start pt-2 relative w-full overflow-hidden">
 <div class="w-full pl-6 pr-0 mb-4 shrink-0 relative group animate-initial-hidden animate-slide-in-left">
@@ -178,40 +179,8 @@
 </div>
 <div class="relative w-full">
 <div class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
-<div class="flex gap-4 overflow-x-auto pb-2 no-scrollbar pr-6 snap-x snap-mandatory relative z-0">
-<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
-<img alt="Cocktail 1" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPaJUbtPesFpb0yW_XLsl9N0V8jikevj9UtQU5seufvo1l5AxoPqaiwCJJ6mS4T6htmzilq6lHKX5SM4MiIKw-3voRQNGxTR1odzpbPoCOqbrBdFS5TTiS88Ex3dH5zbCmcwXg-j0Z5enn5bavr4REgDS7xKZ9XUXEr__USvdOxQHRbxwTTnzKyVT0g0Ak3UNEtwqTOlmRwfETmR9tCPOyVWfrV7RYwh9UJVOmvB9j6i0fHL7quHYYeWatKWLbb_10E8usxd-cHWY9"/>
-<div class="relative z-20 mt-auto flex flex-col">
-<span class="text-xs font-bold text-white mb-0.5">Neon Spritz</span>
-<span class="text-[10px] text-accent-yellow">$12.00</span>
-</div>
-</div>
-<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group shadow-neon-red border-primary/30 snap-center animate-flicker-random">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
-<img alt="Cocktail 2" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_PM4cS5LVerHYl12OoTPx42V44tGYjSD6lDrXi9wFJmbVHkziZqhrETl-HHJxiLWAGxEBfAw97ZJKDl6zjNbu44BDwiHCE9w7L6GkvgLawQQqdl6GleigSa7z90tWCWdKCVc2HyY_lZKoYFs2vxetykTxvSrlatXnrP96AP2hHJhYG3vypqqOwNfdLi7NPZCOuXc232-gxofI_i-uBrps27IRQTtKIXBtE_8WuEzUjGCzwGauQrEeYsM_6WOwe1r4sAY8dDESpIDi"/>
-<div class="absolute top-2 right-2 z-20 w-2 h-2 rounded-full bg-primary shadow-neon-red animate-pulse"></div>
-<div class="relative z-20 mt-auto flex flex-col">
-<span class="text-xs font-bold text-white mb-0.5 text-glow-red">Red Owl</span>
-<span class="text-[10px] text-primary font-bold">$16.00</span>
-</div>
-</div>
-<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
-<img alt="Cocktail 3" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx0IEGdYBCUoFps8TDE-9bfwTgOXsCLlUw_oixvn7hHnt0AFdAGGc4j83HumwQ9bpnBOXuxmvgXPnlNpfgmJV2r9hTi3IzzQc8fZ8Wt6tq5gHDe2n0cWpqHQ3ewCXPxN9fxlZR_ld0Af__BjXWh-0DCqufBhQer4isT9V0nqoP5ptjNjcoyV_7uKffx3t01fA_C0fDUw_ja00VULR8gaJDEOBti6LVr9kuUUUK20ZGd_GwALD7Om4qWy9Rv8oUaXdrj4kCJTlROIMF"/>
-<div class="relative z-20 mt-auto flex flex-col">
-<span class="text-xs font-bold text-white mb-0.5">Golden Hour</span>
-<span class="text-[10px] text-accent-yellow">$14.00</span>
-</div>
-</div>
-<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
-<img alt="Cocktail 4" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL8p4Lfop63EFnD74nkrqis1aujL4_rv81qWYsVuarA9sDQLzFzgQKIYHCa8F858vUjOt1QbKV7uMJWrSCGkkuIPLwyGnhu2TJeibSsUu1SVfPeLWSrbEJbvnfGbVRTQfmuKvdwyFi5SuQGYvtA_OSbGtvJjI_cpDLtalVj5bqkFtuZ1_JAWSEQlKdcbXmxvmEMu7Q5nlN_MjLtw0QQRtUV57Paah1md4fwP3nzYFKlHPLRBOIhQh0cFua2jyqq3PlqRihR30Jh0pU"/>
-<div class="relative z-20 mt-auto flex flex-col">
-<span class="text-xs font-bold text-white mb-0.5">Midnight Blue</span>
-<span class="text-[10px] text-accent-yellow">$11.00</span>
-</div>
-</div>
+<div id="popular-now-carousel" class="flex gap-4 overflow-x-auto pb-2 no-scrollbar pr-6 snap-x snap-mandatory relative z-0">
+<!-- Содержимое будет заполнено из js/menu.js -->
 </div>
 <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
 </div>
@@ -222,51 +191,15 @@
 <div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
 </div>
 </div>
-<div class="w-full pl-6 pr-0 mb-4 shrink-0 relative group animate-initial-hidden animate-slide-in-right">
+<div id="categories-section" class="w-full pl-6 pr-0 mb-4 shrink-0 relative group animate-initial-hidden animate-slide-in-right">
 <div class="flex items-end justify-between pr-6 mb-3">
-<h3 class="text-sm font-semibold tracking-widest uppercase text-accent-yellow text-glow-yellow animate-flicker-slow">Cocktails</h3>
+<div id="categories-carousel" class="flex gap-2 overflow-x-auto pb-2 no-scrollbar pr-6 snap-x snap-mandatory relative z-0">
+<!-- Кнопки-табы категорий будут здесь -->
+</div>
 <div class="flex items-center gap-1">
 <span class="text-[10px] text-white/40">Sort by</span>
 <span class="material-symbols-outlined text-xs text-white/40">sort</span>
 </div>
-</div>
-<div class="relative w-full">
-<div class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
-<div class="flex gap-4 overflow-x-auto pb-2 no-scrollbar pr-6 snap-x snap-mandatory relative z-0">
-<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
-<img alt="Cocktail 3" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx0IEGdYBCUoFps8TDE-9bfwTgOXsCLlUw_oixvn7hHnt0AFdAGGc4j83HumwQ9bpnBOXuxmvgXPnlNpfgmJV2r9hTi3IzzQc8fZ8Wt6tq5gHDe2n0cWpqHQ3ewCXPxN9fxlZR_ld0Af__BjXWh-0DCqufBhQer4isT9V0nqoP5ptjNjcoyV_7uKffx3t01fA_C0fDUw_ja00VULR8gaJDEOBti6LVr9kuUUUK20ZGd_GwALD7Om4qWy9Rv8oUaXdrj4kCJTlROIMF"/>
-<div class="relative z-20 mt-auto flex flex-col">
-<span class="text-xs font-bold text-white mb-0.5">Solar Flare</span>
-<span class="text-[10px] text-accent-yellow">$13.50</span>
-</div>
-</div>
-<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
-<img alt="Cocktail 4" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL8p4Lfop63EFnD74nkrqis1aujL4_rv81qWYsVuarA9sDQLzFzgQKIYHCa8F858vUjOt1QbKV7uMJWrSCGkkuIPLwyGnhu2TJeibSsUu1SVfPeLWSrbEJbvnfGbVRTQfmuKvdwyFi5SuQGYvtA_OSbGtvJjI_cpDLtalVj5bqkFtuZ1_JAWSEQlKdcbXmxvmEMu7Q5nlN_MjLtw0QQRtUV57Paah1md4fwP3nzYFKlHPLRBOIhQh0cFua2jyqq3PlqRihR30Jh0pU"/>
-<div class="relative z-20 mt-auto flex flex-col">
-<span class="text-xs font-bold text-white mb-0.5">Deep Dive</span>
-<span class="text-[10px] text-accent-yellow">$15.00</span>
-</div>
-</div>
-<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
-<img alt="Cocktail 1" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPaJUbtPesFpb0yW_XLsl9N0V8jikevj9UtQU5seufvo1l5AxoPqaiwCJJ6mS4T6htmzilq6lHKX5SM4MiIKw-3voRQNGxTR1odzpbPoCOqbrBdFS5TTiS88Ex3dH5zbCmcwXg-j0Z5enn5bavr4REgDS7xKZ9XUXEr__USvdOxQHRbxwTTnzKyVT0g0Ak3UNEtwqTOlmRwfETmR9tCPOyVWfrV7RYwh9UJVOmvB9j6i0fHL7quHYYeWatKWLbb_10E8usxd-cHWY9"/>
-<div class="relative z-20 mt-auto flex flex-col">
-<span class="text-xs font-bold text-white mb-0.5">Citrus Pop</span>
-<span class="text-[10px] text-accent-yellow">$11.00</span>
-</div>
-</div>
-<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
-<img alt="Cocktail 2" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_PM4cS5LVerHYl12OoTPx42V44tGYjSD6lDrXi9wFJmbVHkziZqhrETl-HHJxiLWAGxEBfAw97ZJKDl6zjNbu44BDwiHCE9w7L6GkvgLawQQqdl6GleigSa7z90tWCWdKCVc2HyY_lZKoYFs2vxetykTxvSrlatXnrP96AP2hHJhYG3vypqqOwNfdLi7NPZCOuXc232-gxofI_i-uBrps27IRQTtKIXBtE_8WuEzUjGCzwGauQrEeYsM_6WOwe1r4sAY8dDESpIDi"/>
-<div class="relative z-20 mt-auto flex flex-col">
-<span class="text-xs font-bold text-white mb-0.5">Red Mist</span>
-<span class="text-[10px] text-accent-yellow">$14.00</span>
-</div>
-</div>
-</div>
-<div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
 </div>
 <div class="flex items-center justify-center gap-2 mt-1">
 <div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
@@ -278,10 +211,10 @@
 <div class="flex-none flex flex-col w-full z-20 animate-initial-hidden animate-slide-in-up">
 <div class="px-6 mb-6 flex justify-center items-center gap-3">
 <div class="flex items-center p-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 w-full max-w-[240px]">
-<button class="flex-1 py-2 rounded-full bg-accent-yellow/10 border border-accent-yellow/30 text-accent-yellow text-[10px] font-bold uppercase tracking-widest shadow-neon-yellow transition-all animate-flicker-slow">
+<button id="bar-button" class="flex-1 py-2 rounded-full bg-accent-yellow/10 border border-accent-yellow/30 text-accent-yellow text-[10px] font-bold uppercase tracking-widest shadow-neon-yellow transition-all animate-flicker-slow">
                         Bar
                     </button>
-<button class="flex-1 py-2 rounded-full text-white/30 text-[10px] font-bold uppercase tracking-widest hover:text-white/60 transition-colors">
+<button id="food-button" class="flex-1 py-2 rounded-full text-white/30 text-[10px] font-bold uppercase tracking-widest hover:text-white/60 transition-colors">
                         Food
                     </button>
 </div>
@@ -291,35 +224,8 @@
 </div>
 <div class="glass-sheet rounded-t-[32px] h-[25vh] min-h-[180px] w-full flex flex-col shadow-sheet relative border-t border-white/5">
 <div class="w-10 h-1 bg-white/10 rounded-full mx-auto my-3 shrink-0"></div>
-<div class="grid grid-cols-4 gap-3 h-full px-6 pt-4 pb-8 overflow-y-auto no-scrollbar content-start">
-<button class="glass-tile-square rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform hover:bg-white/5 group bg-white/5 border-accent-yellow/30 shadow-neon-yellow animate-flicker-random">
-<span class="material-symbols-outlined text-2xl text-accent-yellow text-glow-yellow group-hover:scale-110 transition-transform">local_bar</span>
-<span class="text-[9px] font-bold text-white uppercase tracking-wide">Cocktails</span>
-</button>
-<button class="glass-tile-square rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform hover:bg-white/5 group">
-<span class="material-symbols-outlined text-2xl text-white/70 font-light group-hover:scale-110 transition-transform">sports_bar</span>
-<span class="text-[9px] font-light text-white/70 uppercase tracking-wide">Beers</span>
-</button>
-<button class="glass-tile-square rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform hover:bg-white/5 group">
-<span class="material-symbols-outlined text-2xl text-primary/90 font-light group-hover:scale-110 transition-transform">wine_bar</span>
-<span class="text-[9px] font-light text-white/70 uppercase tracking-wide">Wines</span>
-</button>
-<button class="glass-tile-square rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform hover:bg-white/5 group">
-<span class="material-symbols-outlined text-2xl text-white/70 font-light group-hover:scale-110 transition-transform">liquor</span>
-<span class="text-[9px] font-light text-white/70 uppercase tracking-wide">Shots</span>
-</button>
-<div class="glass-tile-empty rounded-xl flex items-center justify-center opacity-50">
-<span class="material-symbols-outlined text-lg text-white/20">add</span>
-</div>
-<div class="glass-tile-empty rounded-xl flex items-center justify-center opacity-50">
-<span class="material-symbols-outlined text-lg text-white/20">add</span>
-</div>
-<div class="glass-tile-empty rounded-xl flex items-center justify-center opacity-50">
-<span class="material-symbols-outlined text-lg text-white/20">add</span>
-</div>
-<div class="glass-tile-empty rounded-xl flex items-center justify-center opacity-50">
-<span class="material-symbols-outlined text-lg text-white/20">add</span>
-</div>
+<div id="items-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3 h-full px-6 pt-4 pb-8 overflow-y-auto no-scrollbar content-start">
+<!-- Содержимое будет заполнено из js/menu.js -->
 </div>
 </div>
 </div>
