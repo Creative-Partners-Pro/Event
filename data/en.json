@@ -679,11 +679,11 @@
       },
       {
         "category": "APPETIZER",
-        "name": "Pickles assorted",
+        "name": "Assorted pickles",
         "price": "14",
         "desc": null,
         "type": "food",
-        "image": "pickles_assorted"
+        "image": "assorted_pickles"
       },
       {
         "category": "APPETIZER",
@@ -707,7 +707,7 @@
         "price": "23",
         "desc": null,
         "type": "food",
-        "image": "soup-kharcho"
+        "image": "soup_kharcho"
       },
       {
         "category": "SOUPS",
@@ -715,7 +715,7 @@
         "price": "14",
         "desc": null,
         "type": "food",
-        "image": "akroshka_(seasonal)"
+        "image": "akroshka"
       },
       {
         "category": "SOUPS",
@@ -723,35 +723,39 @@
         "price": "23",
         "desc": null,
         "type": "food",
-        "image": "spinach_cream-soup"
+        "image": "spinach_cream_soup"
       },
       {
         "category": "SOUPS",
         "name": "Pumpkin cream soup",
         "price": "23",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "pumpkin_cream_soup"
       },
       {
         "category": "SOUPS",
         "name": "Tomato cream-soup",
         "price": "23",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "tomato_cream_soup"
       },
       {
         "category": "SOUPS",
         "name": "Mushroom cream soup",
         "price": "23",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "mushroom_cream_soup"
       },
       {
         "category": "SALADS",
         "name": "Tomato and cucumber salad",
         "price": "14",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "tomato_and_cucumber_salad"
       },
       {
         "category": "SALADS",
@@ -773,35 +777,40 @@
         "name": "Caesar with bacon",
         "price": "32",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "caesar_with_bacon"
       },
       {
         "category": "SALADS",
         "name": "Greek salad",
         "price": "29",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "greek_salad"
       },
       {
         "category": "SALADS",
         "name": "Chicken salad with apple",
         "price": "32",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "chicken_salad"
       },
       {
         "category": "SALADS",
         "name": "Green salad",
         "price": "19",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "green_salad"
       },
       {
         "category": "SALADS",
         "name": "Vegetable salad",
         "price": "19",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "vegetable_salad"
       },
       {
         "category": "PASTRY",
@@ -832,49 +841,72 @@
         "name": "Lazuri Khachapuri",
         "price": "39",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "lazuri_khachapuri"
       },
       {
         "category": "PASTRY",
         "name": "Lobiani",
         "price": "21",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "lobiani"
       },
       {
         "category": "PASTRY",
         "name": "Mchadi",
         "price": "6",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "mchadi"
       },
       {
         "category": "PASTRY",
         "name": "Chvishtari",
         "price": "12",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "chvishtari"
       },
       {
         "category": "PASTRY",
-        "name": "Bread",
+        "name": "Shotis Puri Bread",
         "price": "5",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "shotis_puri_bread"
       },
       {
-        "category": "PASTRY",
-        "name": "Khinkali (All types)",
+        "category": "HOT DISHES",
+        "name": "Khinkali Kalakuri",
         "price": "2.30",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "khinkali_kalakuri"
       },
       {
-        "category": "PASTRY",
-        "name": "Ravioli in a pot",
+        "category": "HOT DISHES",
+        "name": "Khinkali with cheese",
+        "price": "2.30",
+        "desc": null,
+        "type": "food",
+        "image": "khinkali_with_cheese"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "Khinkali with mushroom",
+        "price": "2.30",
+        "desc": null,
+        "type": "food",
+        "image": "khinkali_with_mushroom"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "Pelmeni in clay pot",
         "price": "23",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "pelmeni_in_clay_pot"
       },
       {
         "category": "HOT DISHES",
@@ -1036,49 +1068,56 @@
         "price": "35",
         "desc": null,
         "popular": true,
-        "type": "food"
+        "type": "food",
+        "image": "pizza_margarita"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Pizza 4 Cheese",
         "price": "46",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "pizza_4_cheese"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Pizza Peperone",
         "price": "40",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "pizza_peperone"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Pizza with vegetables",
         "price": "35",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "pizza_with_vegetables"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Club Sandwich",
         "price": "29",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "club_sandwich"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Spaghetti Bolognese",
         "price": "34",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "spaghetti_bolognese"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Spaghetti Carbonara",
         "price": "34",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "spaghetti_carbonara"
       },
       {
         "category": "GARNISH & SAUCES",
