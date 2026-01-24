@@ -9,116 +9,16 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
     <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f20d20",
-                        "accent-yellow": "#FFD700",
-                        "background-dark": "#060608",
-                        "glass-border": "rgba(255, 255, 255, 0.1)",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Space Grotesk", "sans-serif"],
-                    },
-                    boxShadow: {
-                        'neon-red': '0 0 2px rgba(242, 13, 32, 0.6), 0 0 6px rgba(242, 13, 32, 0.4), 0 0 12px rgba(242, 13, 32, 0.2)',
-                        'neon-yellow': '0 0 2px rgba(255, 215, 0, 0.6), 0 0 6px rgba(255, 215, 0, 0.4), 0 0 12px rgba(255, 215, 0, 0.2)',
-                        'sheet': '0 -10px 40px rgba(0,0,0,0.8)',
-                        'card-glow': '0 0 10px rgba(255, 255, 255, 0.05)',
-                    },
-                },
-            },
-        }
+        // Tailwind config and custom styles will be injected here by the build process
     </script>
-    <style>
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            background-color: #060608;
-            color: white;
-            overflow: hidden;
-            min-height: max(884px, 100dvh);
-        }
-        .glass-sheet {
-            background: rgba(10, 10, 12, 0.6);
-            backdrop-filter: blur(40px);
-            -webkit-backdrop-filter: blur(40px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .glass-tile-square {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            aspect-ratio: 1/1;
-        }
-        .bg-desaturated {
-            filter: grayscale(100%) blur(50px) brightness(0.3);
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slide-in-left {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slide-in-right {
-            from { transform: translateX(50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slide-in-up {
-            from { transform: translateY(100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .animate-initial-hidden {
-            opacity: 0;
-        }
-        .animate-fade-in {
-            animation: fade-in 0.5s ease-out forwards;
-        }
-        .animate-slide-in-left {
-            animation: slide-in-left 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-            animation-delay: 0.2s;
-        }
-        .animate-slide-in-right {
-            animation: slide-in-right 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-            animation-delay: 0.4s;
-        }
-        .animate-slide-in-up {
-            animation: slide-in-up 0.7s cubic-bezier(0.2, 1, 0.4, 1) forwards;
-            animation-delay: 0.1s;
-        }
-
-        @keyframes neon-flicker {
-            0%, 100% {
-                text-shadow: 0 0 1px #FFD700, 0 0 3px #FFD700, 0 0 5px #FFD700, 0 0 8px #FF8D00, 0 0 12px #FF8D00;
-                box-shadow: 0 0 1px rgba(255, 215, 0, 0.5), 0 0 3px rgba(255, 215, 0, 0.3), 0 0 5px rgba(255, 215, 0, 0.1);
-            }
-            50% {
-                text-shadow: 0 0 2px #FFD700, 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FF8D00, 0 0 20px #FF8D00;
-                box-shadow: 0 0 2px rgba(255, 215, 0, 0.6), 0 0 5px rgba(255, 215, 0, 0.4), 0 0 10px rgba(255, 215, 0, 0.2);
-            }
-        }
-        .neon-flicker {
-            animation: neon-flicker 2s infinite alternate;
-        }
-    </style>
 </head>
-<body class="min-h-screen relative">
-    <div class="fixed inset-0 z-0 animate-initial-hidden animate-fade-in">
-        <img alt="Cocktail Glass Background" class="w-full h-full object-cover scale-110 bg-desaturated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABW2iAALtjWa1vQnEJDEoZp3zegtY9w2hN9-E4Hs6rsUMXb25f_FvIVxoJzGw6WVtzuqLD2DiQAZu8OXgg1AEBexZG_1I3UakHV_BpigR_xsJSBAFiaoyX0x9C70IQYa6yeR_qI0MgbdE8cZK_-52zW2C6LVc3Ky7q0DrYspVOunkos_IQx_kz07QQLK93-ggpcz4Qn2fNcouEB0ckx5TR0aQYHo1xNhl6cDHuGP70Zb8Q6SXD1ZRS6f9e4fYC9ympXAYbCg0A9DfX" />
+<body class="min-h-screen relative bg-background-dark text-white overflow-hidden">
+    <!-- Background Image -->
+    <div class="fixed inset-0 z-0">
+        <img alt="Cocktail Glass Background" class="w-full h-full object-cover scale-110 filter grayscale blur-lg brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABW2iAALtjWa1vQnEJDEoZp3zegtY9w2hN9-E4Hs6rsUMXb25f_FvIVxoJzGw6WVtzuqLD2DiQAZu8OXgg1AEBexZG_1I3UakHV_BpigR_xsJSBAFiaoyX0x9C70IQYa6yeR_qI0MgbdE8cZK_-52zW2C6LVc3Ky7q0DrYspVOunkos_IQx_kz07QQLK93-ggpcz4Qn2fNcouEB0ckx5TR0aQYHo1xNhl6cDHuGP70Zb8Q6SXD1ZRS6f9e4fYC9ympXAYbCg0A9DfX" />
         <div class="absolute inset-0 bg-black/50"></div>
     </div>
+
     <div class="relative z-10 flex flex-col h-[100dvh]">
         <header class="flex-none flex items-center justify-between px-8 pt-9 pb-2">
             <div class="flex flex-col">
@@ -129,58 +29,56 @@
                 <span class="material-symbols-outlined text-xl text-white/60">close</span>
             </button>
         </header>
-        <main class="flex-1 flex flex-col items-center justify-start pt-2 relative w-full overflow-hidden">
+
+        <main class="flex-1 flex flex-col pt-2 w-full overflow-hidden">
             <!-- Popular Now Carousel -->
-            <div class="w-full pl-6 pr-0 mb-4 shrink-0 relative group animate-initial-hidden animate-slide-in-left">
-                <div class="flex items-end justify-between pr-6 mb-3">
-                    <h3 class="text-sm font-light tracking-widest uppercase text-white/50">Popular Now</h3>
-                    <span class="text-[10px] text-accent-yellow cursor-pointer">View All</span>
-                </div>
-                <div class="relative w-full">
-                    <div class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
-                    <div id="popular-now-carousel" class="flex gap-4 overflow-x-auto pb-2 no-scrollbar pr-6 snap-x snap-mandatory relative z-0">
-                        <!-- Popular items will be injected here -->
-                    </div>
-                    <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
-                </div>
-                <div class="flex items-center justify-center gap-2 mt-1">
-                    <div class="h-1.5 w-6 rounded-full bg-primary shadow-neon-red neon-flicker"></div>
-                    <div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+            <div class="w-full pl-6 pr-0 mb-4 shrink-0 relative">
+                <h3 class="text-sm font-light tracking-widest uppercase text-white/50 pr-6 mb-3">Popular Now</h3>
+                <div id="popular-now-carousel" class="flex gap-4 overflow-x-auto no-scrollbar pr-6">
+                    <!-- Popular items will be injected here -->
                 </div>
             </div>
 
-            <!-- Selected Category Items Grid -->
-            <div id="selected-category-section" class="w-full px-6 mb-4 flex-1 flex flex-col relative group animate-initial-hidden animate-slide-in-right">
-                <div class="flex items-end justify-between mb-3">
-                    <h3 id="selected-category-title" class="text-sm font-light tracking-widest uppercase text-white/50">Category Items</h3>
-                </div>
-                <div id="selected-category-grid" class="grid grid-cols-2 gap-3 overflow-y-auto no-scrollbar pb-4 h-full">
-                    <!-- Items from selected category will be injected here -->
+            <!-- Selected Category Items -->
+            <div id="selected-category-section" class="w-full px-6 mb-4 flex-1 flex flex-col" style="height: 50vh;">
+                <h3 id="selected-category-title" class="text-sm font-light tracking-widest uppercase text-white/50 mb-3">Category Items</h3>
+                <div class="overflow-x-auto no-scrollbar h-full">
+                    <div id="selected-category-grid" class="grid grid-rows-2 grid-flow-col gap-4">
+                        <!-- Items from selected category will be injected here -->
+                    </div>
                 </div>
             </div>
         </main>
-        <div class="flex-none flex flex-col w-full z-20 animate-initial-hidden animate-slide-in-up">
-            <div class="px-6 mb-6 flex justify-center items-center gap-3">
+
+        <div class="flex-none flex flex-col w-full z-20">
+            <div class="px-6 mb-4 flex justify-center items-center gap-3">
                 <div class="flex items-center p-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 w-full max-w-[240px]">
-                    <button id="bar-button" class="flex-1 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all neon-flicker">
-                        Bar
-                    </button>
-                    <button id="food-button" class="flex-1 py-2 rounded-full text-white/30 text-[10px] font-bold uppercase tracking-widest hover:text-white/60 transition-colors">
-                        Food
-                    </button>
+                    <button id="bar-button" class="flex-1 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Bar</button>
+                    <button id="food-button" class="flex-1 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Food</button>
                 </div>
-                <button class="h-10 w-10 flex items-center justify-center rounded-xl bg-black/40 backdrop-blur-md border border-white/10 text-white/60 hover:text-white transition-colors" title="отзывы и чаевые">
+                <button class="h-10 w-10 flex items-center justify-center rounded-xl bg-black/40 backdrop-blur-md border border-white/10 text-white/60" title="Reviews">
                     <span class="material-symbols-outlined text-xl">reviews</span>
                 </button>
             </div>
-            <div class="glass-sheet rounded-t-[32px] h-[25vh] min-h-[180px] w-full flex flex-col shadow-sheet relative border-t border-white/5">
+
+            <div class="glass-sheet rounded-t-[32px] min-h-[120px] w-full flex flex-col shadow-sheet">
                 <div class="w-10 h-1 bg-white/10 rounded-full mx-auto my-3 shrink-0"></div>
-                <div id="categories-grid" class="grid grid-cols-4 gap-3 h-full px-6 pt-4 pb-8 overflow-y-auto no-scrollbar content-start">
-                    <!-- Category squares will be injected here -->
+                <div id="categories-grid-container" class="overflow-x-auto no-scrollbar px-6">
+                    <div id="categories-grid" class="grid grid-rows-2 grid-flow-col gap-2">
+                        <!-- Category squares will be injected here -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="js/menu.js"></script>
+    <style>
+        .glass-sheet {
+            background: rgba(10, 10, 12, 0.6);
+            backdrop-filter: blur(40px);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </body>
 </html>

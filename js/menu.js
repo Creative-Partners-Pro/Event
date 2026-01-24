@@ -69,7 +69,7 @@ function renderCategoryItems(category) {
     items.forEach(item => {
         const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
         html += `
-            <div class="bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5">
+            <div class="bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60">
                 <img src="${imageUrl}" class="w-16 h-16 rounded-lg object-cover" alt="${item.name}">
                 <div class="flex-1">
                     <div class="flex justify-between items-start">
@@ -93,14 +93,17 @@ function renderCategoryGrid(type) {
     categories.forEach(category => {
         const translatedCategory = configData.ui.categoryTranslations[category]?.[currentLang] || category;
         html += `
-            <div class="category-tile glass-tile-square rounded-2xl flex flex-col items-center justify-center p-2 text-center cursor-pointer transition-all duration-300"
-                 onclick="handleCategoryClick('${category}')"
-                 data-category="${category}">
-                <span class="text-xs font-semibold uppercase tracking-wider">${translatedCategory}</span>
+            <div class="category-tile rounded-lg flex items-center justify-center p-2 text-center cursor-pointer transition-all duration-300 w-24 h-10 bg-white/5">
+                 <span class="text-xs font-semibold uppercase tracking-wider">${translatedCategory}</span>
             </div>
         `;
     });
     container.innerHTML = html;
+
+    // Attach event listeners after rendering
+    document.querySelectorAll('.category-tile').forEach((tile, index) => {
+        tile.onclick = () => handleCategoryClick(categories[index]);
+    });
 }
 
 function handleCategoryClick(category) {
@@ -110,13 +113,17 @@ function handleCategoryClick(category) {
 
 function updateActiveCategory(category) {
     document.querySelectorAll('.category-tile').forEach(tile => {
-        if (tile.dataset.category === category) {
-            tile.classList.add('border-accent-yellow', 'neon-flicker');
+        // This logic needs to be based on the category name, not the tile's dataset since we're creating them dynamically
+        const tileCategory = tile.querySelector('span').textContent;
+        const translatedCategory = configData.ui.categoryTranslations[category]?.[currentLang] || category;
+        if (tileCategory.toLowerCase() === translatedCategory.toLowerCase()) {
+            tile.classList.add('bg-accent-yellow/20', 'border', 'border-accent-yellow/30');
         } else {
-            tile.classList.remove('border-accent-yellow', 'neon-flicker');
+            tile.classList.remove('bg-accent-yellow/20', 'border', 'border-accent-yellow/30');
         }
     });
 }
+
 
 function setupTypeSwitcher() {
     const barButton = document.getElementById('bar-button');
@@ -151,11 +158,13 @@ function updateSwitcherUI() {
     const barButton = document.getElementById('bar-button');
     const foodButton = document.getElementById('food-button');
     if (activeMenuType === 'bar') {
-        barButton.classList.add('neon-flicker', 'bg-accent-yellow/10', 'border', 'border-accent-yellow/30', 'text-accent-yellow');
-        foodButton.classList.remove('neon-flicker', 'bg-accent-yellow/10', 'border', 'border-accent-yellow/30', 'text-accent-yellow');
+        barButton.classList.add('bg-white/10', 'text-white');
+        foodButton.classList.remove('bg-white/10', 'text-white');
+        foodButton.classList.add('text-white/30');
     } else {
-        foodButton.classList.add('neon-flicker', 'bg-accent-yellow/10', 'border', 'border-accent-yellow/30', 'text-accent-yellow');
-        barButton.classList.remove('neon-flicker', 'bg-accent-yellow/10', 'border', 'border-accent-yellow/30', 'text-accent-yellow');
+        foodButton.classList.add('bg-white/10', 'text-white');
+        barButton.classList.remove('bg-white/10', 'text-white');
+        barButton.classList.add('text-white/30');
     }
 }
 
