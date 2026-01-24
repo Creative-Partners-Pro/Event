@@ -112,22 +112,51 @@
     </style>
 <style>
     body {
-      min-height: max(700px, 100dvh);
-    }
-  </style>
-<style>
-    body {
       min-height: max(884px, 100dvh);
     }
-  </style>
+</style>
 <style>
-    body {
-      min-height: max(884px, 100dvh);
+    @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
     }
-  </style>
+    @keyframes slide-in-left {
+        from { transform: translateX(-50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slide-in-right {
+        from { transform: translateX(50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slide-in-up {
+        from { transform: translateY(100px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Helper to set initial state */
+    .animate-initial-hidden {
+        opacity: 0;
+    }
+
+    .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+    }
+    .animate-slide-in-left {
+        animation: slide-in-left 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        animation-delay: 0.2s;
+    }
+    .animate-slide-in-right {
+        animation: slide-in-right 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        animation-delay: 0.4s;
+    }
+    .animate-slide-in-up {
+        animation: slide-in-up 0.7s cubic-bezier(0.2, 1, 0.4, 1) forwards;
+        animation-delay: 0.1s; /* The sheet should start appearing early */
+    }
+</style>
   </head>
 <body class="min-h-screen relative">
-<div class="fixed inset-0 z-0">
+<div class="fixed inset-0 z-0 animate-initial-hidden animate-fade-in">
 <img alt="Cocktail Glass Background" class="w-full h-full object-cover scale-110 bg-desaturated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABW2iAALtjWa1vQnEJDEoZp3zegtY9w2hN9-E4Hs6rsUMXb25f_FvIVxoJzGw6WVtzuqLD2DiQAZu8OXgg1AEBexZG_1I3UakHV_BpigR_xsJSBAFiaoyX0x9C70IQYa6yeR_qI0MgbdE8cZK_-52zW2C6LVc3Ky7q0DrYspVOunkos_IQx_kz07QQLK93-ggpcz4Qn2fNcouEB0ckx5TR0aQYHo1xNhl6cDHuGP70Zb8Q6SXD1ZRS6f9e4fYC9ympXAYbCg0A9DfX"/>
 <div class="absolute inset-0 bg-black/50"></div>
 </div>
@@ -142,7 +171,7 @@
 </div>
 </header>
 <main class="flex-1 flex flex-col items-center justify-start pt-2 relative w-full overflow-hidden">
-<div class="w-full pl-6 pr-0 mb-4 shrink-0 relative group">
+<div class="w-full pl-6 pr-0 mb-4 shrink-0 relative group animate-initial-hidden animate-slide-in-left">
 <div class="flex items-end justify-between pr-6 mb-3">
 <h3 class="text-sm font-light tracking-widest uppercase text-white/50">Popular Now</h3>
 <span class="text-[10px] text-accent-yellow cursor-pointer">View All</span>
@@ -193,7 +222,7 @@
 <div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
 </div>
 </div>
-<div class="w-full pl-6 pr-0 mb-4 shrink-0 relative group">
+<div class="w-full pl-6 pr-0 mb-4 shrink-0 relative group animate-initial-hidden animate-slide-in-right">
 <div class="flex items-end justify-between pr-6 mb-3">
 <h3 class="text-sm font-semibold tracking-widest uppercase text-accent-yellow text-glow-yellow animate-flicker-slow">Cocktails</h3>
 <div class="flex items-center gap-1">
@@ -246,7 +275,7 @@
 </div>
 </div>
 </main>
-<div class="flex-none flex flex-col w-full z-20">
+<div class="flex-none flex flex-col w-full z-20 animate-initial-hidden animate-slide-in-up">
 <div class="px-6 mb-6 flex justify-center items-center gap-3">
 <div class="flex items-center p-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 w-full max-w-[240px]">
 <button class="flex-1 py-2 rounded-full bg-accent-yellow/10 border border-accent-yellow/30 text-accent-yellow text-[10px] font-bold uppercase tracking-widest shadow-neon-yellow transition-all animate-flicker-slow">
