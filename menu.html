@@ -149,22 +149,14 @@
                 </div>
             </div>
 
-            <!-- Selected Category Items Carousel -->
-            <div id="selected-category-section" class="w-full pl-6 pr-0 mb-4 shrink-0 relative group animate-initial-hidden animate-slide-in-right">
-                <div class="flex items-end justify-between pr-6 mb-3">
+            <!-- Selected Category Items Grid -->
+            <div id="selected-category-section" class="w-full px-6 mb-4 flex-1 flex flex-col relative group animate-initial-hidden animate-slide-in-right">
+                <div class="flex items-end justify-between mb-3">
                     <h3 id="selected-category-title" class="text-sm font-light tracking-widest uppercase text-white/50">Category Items</h3>
                 </div>
-                <div class="relative w-full">
-                    <div class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
-                    <div id="selected-category-carousel" class="flex gap-4 overflow-x-auto pb-2 no-scrollbar pr-6 snap-x snap-mandatory relative z-0">
-                        <!-- Items from selected category will be injected here -->
-                    </div>
-                    <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
+                <div id="selected-category-grid" class="grid grid-cols-2 gap-3 overflow-y-auto no-scrollbar pb-4 h-full">
+                    <!-- Items from selected category will be injected here -->
                 </div>
-                 <div class="flex items-center justify-center gap-2 mt-1">
-                    <div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
-                    <div class="h-1.5 w-6 rounded-full bg-accent-yellow shadow-neon-yellow neon-flicker"></div>
-                 </div>
             </div>
         </main>
         <div class="flex-none flex flex-col w-full z-20 animate-initial-hidden animate-slide-in-up">
