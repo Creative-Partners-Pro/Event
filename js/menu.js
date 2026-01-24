@@ -42,7 +42,7 @@ function renderPopularItems() {
         const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
         html += `
             <div class="flex-shrink-0 w-40 snap-center">
-                <div class="group relative w-full h-52 rounded-2xl overflow-hidden active:scale-95 transition-transform duration-300">
+                <div class="group relative w-full h-16 rounded-2xl overflow-hidden active:scale-95 transition-transform duration-300">
                     <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${item.name}">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     <div class="absolute bottom-3 left-3 right-3">
