@@ -93,7 +93,7 @@ function renderCategoryGrid(type) {
     categories.forEach(category => {
         const translatedCategory = configData.ui.categoryTranslations[category]?.[currentLang] || category;
         html += `
-            <div class="category-tile rounded-lg flex items-center justify-center p-2 text-center cursor-pointer transition-all duration-300 w-24 h-10 bg-white/5">
+            <div class="category-tile rounded-lg flex items-center justify-center p-2 text-center cursor-pointer transition-all duration-300 w-24 h-10 bg-white/5" data-category="${category}">
                  <span class="text-xs font-semibold uppercase tracking-wider">${translatedCategory}</span>
             </div>
         `;
@@ -101,8 +101,9 @@ function renderCategoryGrid(type) {
     container.innerHTML = html;
 
     // Attach event listeners after rendering
-    document.querySelectorAll('.category-tile').forEach((tile, index) => {
-        tile.onclick = () => handleCategoryClick(categories[index]);
+    document.querySelectorAll('.category-tile').forEach(tile => {
+        const category = tile.getAttribute('data-category');
+        tile.onclick = () => handleCategoryClick(category);
     });
 }
 
@@ -113,13 +114,11 @@ function handleCategoryClick(category) {
 
 function updateActiveCategory(category) {
     document.querySelectorAll('.category-tile').forEach(tile => {
-        // This logic needs to be based on the category name, not the tile's dataset since we're creating them dynamically
-        const tileCategory = tile.querySelector('span').textContent;
-        const translatedCategory = configData.ui.categoryTranslations[category]?.[currentLang] || category;
-        if (tileCategory.toLowerCase() === translatedCategory.toLowerCase()) {
-            tile.classList.add('bg-accent-yellow/20', 'border', 'border-accent-yellow/30');
+        const tileCategoryName = tile.getAttribute('data-category');
+        if (tileCategoryName === category) {
+            tile.classList.add('neon-flicker', 'border-accent-yellow/30');
         } else {
-            tile.classList.remove('bg-accent-yellow/20', 'border', 'border-accent-yellow/30');
+            tile.classList.remove('neon-flicker', 'border-accent-yellow/30');
         }
     });
 }
@@ -158,13 +157,11 @@ function updateSwitcherUI() {
     const barButton = document.getElementById('bar-button');
     const foodButton = document.getElementById('food-button');
     if (activeMenuType === 'bar') {
-        barButton.classList.add('bg-white/10', 'text-white');
-        foodButton.classList.remove('bg-white/10', 'text-white');
-        foodButton.classList.add('text-white/30');
+        barButton.classList.add('neon-flicker', 'bg-accent-yellow/10', 'border', 'border-accent-yellow/30', 'text-accent-yellow');
+        foodButton.classList.remove('neon-flicker', 'bg-accent-yellow/10', 'border', 'border-accent-yellow/30', 'text-accent-yellow');
     } else {
-        foodButton.classList.add('bg-white/10', 'text-white');
-        barButton.classList.remove('bg-white/10', 'text-white');
-        barButton.classList.add('text-white/30');
+        foodButton.classList.add('neon-flicker', 'bg-accent-yellow/10', 'border', 'border-accent-yellow/30', 'text-accent-yellow');
+        barButton.classList.remove('neon-flicker', 'bg-accent-yellow/10', 'border', 'border-accent-yellow/30', 'text-accent-yellow');
     }
 }
 

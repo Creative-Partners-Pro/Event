@@ -9,8 +9,44 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
     <script>
-        // Tailwind config and custom styles will be injected here by the build process
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f20d20",
+                        "accent-yellow": "#FFD700",
+                        "background-dark": "#060608",
+                    },
+                    boxShadow: {
+                        'neon-yellow': '0 0 2px rgba(255, 215, 0, 0.6), 0 0 6px rgba(255, 215, 0, 0.4), 0 0 12px rgba(255, 215, 0, 0.2)',
+                    },
+                },
+            },
+        }
     </script>
+    <style>
+        .glass-sheet {
+            background: rgba(10, 10, 12, 0.6);
+            backdrop-filter: blur(40px);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @keyframes neon-flicker {
+            0%, 100% {
+                text-shadow: 0 0 1px #FFD700, 0 0 3px #FFD700, 0 0 5px #FFD700, 0 0 8px #FF8D00, 0 0 12px #FF8D00;
+                box-shadow: 0 0 1px rgba(255, 215, 0, 0.5), 0 0 3px rgba(255, 215, 0, 0.3), 0 0 5px rgba(255, 215, 0, 0.1);
+            }
+            50% {
+                text-shadow: 0 0 2px #FFD700, 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FF8D00, 0 0 20px #FF8D00;
+                box-shadow: 0 0 2px rgba(255, 215, 0, 0.6), 0 0 5px rgba(255, 215, 0, 0.4), 0 0 10px rgba(255, 215, 0, 0.2);
+            }
+        }
+        .neon-flicker {
+            animation: neon-flicker 2s infinite alternate;
+        }
+    </style>
 </head>
 <body class="min-h-screen relative bg-background-dark text-white overflow-hidden">
     <!-- Background Image -->
@@ -72,13 +108,5 @@
         </div>
     </div>
     <script src="js/menu.js"></script>
-    <style>
-        .glass-sheet {
-            background: rgba(10, 10, 12, 0.6);
-            backdrop-filter: blur(40px);
-        }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
 </body>
 </html>
