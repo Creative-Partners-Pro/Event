@@ -2,7 +2,7 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Drunk Owl Compact Menu V2</title>
+<title>Drunk Owl Refined Menu</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -15,15 +15,50 @@
                         "primary": "#f20d20",
                         "accent-yellow": "#FFD700",
                         "background-dark": "#060608",
+                        "glass-border": "rgba(255, 255, 255, 0.1)",
                     },
                     fontFamily: {
-                        "sans": ["Space Grotesk", "sans-serif"],
                         "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
                     },
                     boxShadow: {
-                        'neon-red': '0 0 15px rgba(242, 13, 32, 0.3)',
-                        'neon-yellow': '0 0 15px rgba(255, 215, 0, 0.25)',
-                        'sheet': '0 -15px 50px rgba(0,0,0,0.9)',
+                        // Refined neon look: Tighter spread, lower opacity for a "refined" less intense glow
+                        'neon-red': '0 0 2px rgba(242, 13, 32, 0.6), 0 0 6px rgba(242, 13, 32, 0.4), 0 0 12px rgba(242, 13, 32, 0.2)',
+                        'neon-yellow': '0 0 2px rgba(255, 215, 0, 0.6), 0 0 6px rgba(255, 215, 0, 0.4), 0 0 12px rgba(255, 215, 0, 0.2)',
+                        'sheet': '0 -10px 40px rgba(0,0,0,0.8)',
+                        'card-glow': '0 0 10px rgba(255, 255, 255, 0.05)',
+                    },
+                    animation: {
+                        'flicker-slow': 'flicker 4s infinite',
+                        'flicker-fast': 'flicker 2s infinite',
+                        'flicker-random': 'flicker-random 5s infinite',
+                        'buzz': 'buzz 0.2s infinite',
+                    },
+                    keyframes: {
+                        flicker: {
+                            '0%, 19.9%, 22%, 62.9%, 64%, 64.9%, 70%, 100%': {
+                                opacity: '1',
+                                filter: 'brightness(1) saturate(1)'
+                            },
+                            '20%, 21.9%, 63%, 63.9%, 65%, 69.9%': {
+                                opacity: '0.8', // Subtle dip in opacity
+                                filter: 'brightness(0.95) saturate(1.1)'
+                            },
+                        },
+                        'flicker-random': {
+                             '0%, 100%': { opacity: '1', filter: 'brightness(1)' },
+                             '3%': { opacity: '0.9', filter: 'brightness(0.9)' },
+                             '6%': { opacity: '1', filter: 'brightness(1)' },
+                             '7%': { opacity: '0.6', filter: 'brightness(0.7)' },
+                             '8%': { opacity: '1', filter: 'brightness(1)' },
+                             '9%': { opacity: '1', filter: 'brightness(1)' },
+                             '10%': { opacity: '0.95', filter: 'brightness(0.98)' },
+                             '11%': { opacity: '1', filter: 'brightness(1)' },
+                        },
+                        buzz: {
+                            '0%, 100%': { opacity: '1', filter: 'brightness(1)' },
+                            '50%': { opacity: '0.97', filter: 'brightness(1.05)' }
+                        }
                     }
                 },
             },
@@ -38,138 +73,35 @@
             }
         }
         .glass-sheet {
-            background: rgba(8, 8, 10, 0.7);
-            backdrop-filter: blur(50px) saturate(180%);
-            -webkit-backdrop-filter: blur(50px) saturate(180%);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(10, 10, 12, 0.6);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
         .glass-tile-square {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             aspect-ratio: 1/1;
         }
         .glass-tile-empty {
-            border: 1px dashed rgba(255, 255, 255, 0.05);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
             aspect-ratio: 1/1;
-        }
-        .text-glow-yellow {
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+            background: transparent;
+        }.text-glow-yellow {
+            text-shadow: 0 0 1px #fff, 0 0 4px rgba(255, 215, 0, 0.6), 0 0 12px rgba(255, 215, 0, 0.3);
         }
         .text-glow-red {
-            text-shadow: 0 0 12px rgba(242, 13, 32, 0.7);
+            text-shadow: 0 0 1px #fff, 0 0 4px rgba(242, 13, 32, 0.6), 0 0 12px rgba(242, 13, 32, 0.3);
         }
-        .bg-desaturated-blur {
-            filter: grayscale(100%) blur(80px) brightness(0.3);
-            transform: scale(1.2);
+        .bg-desaturated {
+            filter: grayscale(100%) blur(50px) brightness(0.3);
         }
-        .item-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="min-h-screen relative font-light">
-<div class="fixed inset-0 z-0">
-<img alt="Cocktail Glass Background" class="w-full h-full object-cover bg-desaturated-blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABW2iAALtjWa1vQnEJDEoZp3zegtY9w2hN9-E4Hs6rsUMXb25f_FvIVxoJzGw6WVtzuqLD2DiQAZu8OXgg1AEBexZG_1I3UakHV_BpigR_xsJSBAFiaoyX0x9C70IQYa6yeR_qI0MgbdE8cZK_-52zW2C6LVc3Ky7q0DrYspVOunkos_IQx_kz07QQLK93-ggpcz4Qn2fNcouEB0ckx5TR0aQYHo1xNhl6cDHuGP70Zb8Q6SXD1ZRS6f9e4fYC9ympXAYbCg0A9DfX"/>
-<div class="absolute inset-0 bg-black/40"></div>
-</div>
-<div class="relative z-10 flex flex-col h-[100dvh]">
-<header class="flex items-center justify-between px-8 pt-14 shrink-0">
-<div class="flex flex-col">
-<span class="text-[9px] tracking-[0.5em] font-light uppercase text-accent-yellow/60 mb-1">Drunk Owl Bar</span>
-<span class="text-xl font-medium tracking-tight text-white/80">Menu Refinement</span>
-</div>
-<div class="w-9 h-9 rounded-full border border-white/5 flex items-center justify-center bg-white/5">
-<span class="material-symbols-outlined text-lg text-white/40">search</span>
-</div>
-</header>
-<main class="flex-1 flex flex-col items-center justify-center -mt-12 opacity-40">
-<div class="relative w-32 h-32 flex items-center justify-center">
-<div class="absolute inset-0 bg-primary/10 rounded-full blur-[60px]"></div>
-<span class="material-symbols-outlined text-5xl text-white/20 font-light">owl</span>
-</div>
-</main>
-<div class="flex flex-col px-6 gap-4 pb-4">
-<div class="flex gap-3 overflow-x-auto no-scrollbar py-1">
-<div class="item-card shrink-0 w-32 p-3 rounded-2xl flex flex-col gap-2">
-<div class="w-full aspect-square rounded-lg bg-white/5 flex items-center justify-center">
-<span class="material-symbols-outlined text-white/20">liquor</span>
-</div>
-<div>
-<p class="text-[10px] text-white/70 font-medium truncate">Night Owl</p>
-<p class="text-[11px] text-accent-yellow font-bold text-glow-yellow">$14</p>
-</div>
-</div>
-<div class="item-card shrink-0 w-32 p-3 rounded-2xl flex flex-col gap-2">
-<div class="w-full aspect-square rounded-lg bg-white/5 flex items-center justify-center">
-<span class="material-symbols-outlined text-white/20">local_bar</span>
-</div>
-<div>
-<p class="text-[10px] text-white/70 font-medium truncate">Spiced Rum</p>
-<p class="text-[11px] text-accent-yellow font-bold text-glow-yellow">$12</p>
-</div>
-</div>
-<div class="item-card shrink-0 w-32 p-3 rounded-2xl flex flex-col gap-2 border-accent-yellow/20 bg-accent-yellow/5">
-<div class="w-full aspect-square rounded-lg bg-accent-yellow/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-accent-yellow/40">wine_bar</span>
-</div>
-<div>
-<p class="text-[10px] text-white/70 font-medium truncate">Red Velvet</p>
-<p class="text-[11px] text-accent-yellow font-bold text-glow-yellow">$16</p>
-</div>
-</div>
-</div>
-<div class="flex justify-center">
-<div class="flex items-center p-1 rounded-full bg-white/5 backdrop-blur-3xl border border-white/5 w-full max-w-[240px]">
-<button class="flex-1 py-2 rounded-full bg-white/10 text-white text-[10px] font-bold uppercase tracking-[0.2em]">
-                        Bar
-                    </button>
-<button class="flex-1 py-2 rounded-full text-white/20 text-[10px] font-bold uppercase tracking-[0.2em]">
-                        Food
-                    </button>
-</div>
-</div>
-</div>
-<div class="glass-sheet rounded-t-[48px] h-[25%] w-full flex flex-col px-7 pt-2 shadow-sheet shrink-0">
-<div class="w-10 h-1 bg-white/10 rounded-full mx-auto my-3"></div>
-<div class="grid grid-cols-4 gap-4 mt-2">
-<button class="glass-tile-square rounded-[22px] flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-xl text-accent-yellow/70 font-light">local_bar</span>
-<span class="text-[9px] font-medium text-white/40 uppercase tracking-tight">Bar</span>
-</button>
-<button class="glass-tile-square rounded-[22px] flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-xl text-white/40 font-light">sports_bar</span>
-<span class="text-[9px] font-medium text-white/40 uppercase tracking-tight">Beer</span>
-</button>
-<button class="glass-tile-square rounded-[22px] flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-xl text-primary/70 font-light">wine_bar</span>
-<span class="text-[9px] font-medium text-white/40 uppercase tracking-tight">Wine</span>
-</button>
-<button class="glass-tile-square rounded-[22px] flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-xl text-white/40 font-light">liquor</span>
-<span class="text-[9px] font-medium text-white/40 uppercase tracking-tight">Shots</span>
-</button>
-<div class="glass-tile-empty rounded-[22px] flex items-center justify-center">
-<span class="material-symbols-outlined text-base text-white/5">add</span>
-</div>
-<div class="glass-tile-empty rounded-[22px] flex items-center justify-center">
-<span class="material-symbols-outlined text-base text-white/5">add</span>
-</div>
-<div class="glass-tile-empty rounded-[22px] flex items-center justify-center">
-<span class="material-symbols-outlined text-base text-white/5">add</span>
-</div>
-<div class="glass-tile-empty rounded-[22px] flex items-center justify-center">
-<span class="material-symbols-outlined text-base text-white/5">add</span>
-</div>
-</div>
-</div>
-</div>
-<style>
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -178,5 +110,189 @@
             scrollbar-width: none;
         }
     </style>
-
+<style>
+    body {
+      min-height: max(700px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen relative">
+<div class="fixed inset-0 z-0">
+<img alt="Cocktail Glass Background" class="w-full h-full object-cover scale-110 bg-desaturated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABW2iAALtjWa1vQnEJDEoZp3zegtY9w2hN9-E4Hs6rsUMXb25f_FvIVxoJzGw6WVtzuqLD2DiQAZu8OXgg1AEBexZG_1I3UakHV_BpigR_xsJSBAFiaoyX0x9C70IQYa6yeR_qI0MgbdE8cZK_-52zW2C6LVc3Ky7q0DrYspVOunkos_IQx_kz07QQLK93-ggpcz4Qn2fNcouEB0ckx5TR0aQYHo1xNhl6cDHuGP70Zb8Q6SXD1ZRS6f9e4fYC9ympXAYbCg0A9DfX"/>
+<div class="absolute inset-0 bg-black/50"></div>
+</div>
+<div class="relative z-10 flex flex-col h-[100dvh]">
+<header class="flex-none flex items-center justify-between px-8 pt-9 pb-2">
+<div class="flex flex-col">
+<span class="text-[10px] tracking-[0.4em] font-light uppercase text-accent-yellow/80 mb-1">Welcome to</span>
+<span class="text-2xl font-semibold tracking-tight text-white/90">Drunk Owl Bar</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center bg-white/5 hover:bg-white/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-xl text-white/60">close</span>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center justify-start pt-2 relative w-full overflow-hidden">
+<div class="w-full pl-6 pr-0 mb-4 shrink-0 relative group">
+<div class="flex items-end justify-between pr-6 mb-3">
+<h3 class="text-sm font-light tracking-widest uppercase text-white/50">Popular Now</h3>
+<span class="text-[10px] text-accent-yellow cursor-pointer">View All</span>
+</div>
+<div class="relative w-full">
+<div class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
+<div class="flex gap-4 overflow-x-auto pb-2 no-scrollbar pr-6 snap-x snap-mandatory relative z-0">
+<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
+<img alt="Cocktail 1" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPaJUbtPesFpb0yW_XLsl9N0V8jikevj9UtQU5seufvo1l5AxoPqaiwCJJ6mS4T6htmzilq6lHKX5SM4MiIKw-3voRQNGxTR1odzpbPoCOqbrBdFS5TTiS88Ex3dH5zbCmcwXg-j0Z5enn5bavr4REgDS7xKZ9XUXEr__USvdOxQHRbxwTTnzKyVT0g0Ak3UNEtwqTOlmRwfETmR9tCPOyVWfrV7RYwh9UJVOmvB9j6i0fHL7quHYYeWatKWLbb_10E8usxd-cHWY9"/>
+<div class="relative z-20 mt-auto flex flex-col">
+<span class="text-xs font-bold text-white mb-0.5">Neon Spritz</span>
+<span class="text-[10px] text-accent-yellow">$12.00</span>
+</div>
+</div>
+<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group shadow-neon-red border-primary/30 snap-center animate-flicker-random">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
+<img alt="Cocktail 2" class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_PM4cS5LVerHYl12OoTPx42V44tGYjSD6lDrXi9wFJmbVHkziZqhrETl-HHJxiLWAGxEBfAw97ZJKDl6zjNbu44BDwiHCE9w7L6GkvgLawQQqdl6GleigSa7z90tWCWdKCVc2HyY_lZKoYFs2vxetykTxvSrlatXnrP96AP2hHJhYG3vypqqOwNfdLi7NPZCOuXc232-gxofI_i-uBrps27IRQTtKIXBtE_8WuEzUjGCzwGauQrEeYsM_6WOwe1r4sAY8dDESpIDi"/>
+<div class="absolute top-2 right-2 z-20 w-2 h-2 rounded-full bg-primary shadow-neon-red animate-pulse"></div>
+<div class="relative z-20 mt-auto flex flex-col">
+<span class="text-xs font-bold text-white mb-0.5 text-glow-red">Red Owl</span>
+<span class="text-[10px] text-primary font-bold">$16.00</span>
+</div>
+</div>
+<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
+<img alt="Cocktail 3" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx0IEGdYBCUoFps8TDE-9bfwTgOXsCLlUw_oixvn7hHnt0AFdAGGc4j83HumwQ9bpnBOXuxmvgXPnlNpfgmJV2r9hTi3IzzQc8fZ8Wt6tq5gHDe2n0cWpqHQ3ewCXPxN9fxlZR_ld0Af__BjXWh-0DCqufBhQer4isT9V0nqoP5ptjNjcoyV_7uKffx3t01fA_C0fDUw_ja00VULR8gaJDEOBti6LVr9kuUUUK20ZGd_GwALD7Om4qWy9Rv8oUaXdrj4kCJTlROIMF"/>
+<div class="relative z-20 mt-auto flex flex-col">
+<span class="text-xs font-bold text-white mb-0.5">Golden Hour</span>
+<span class="text-[10px] text-accent-yellow">$14.00</span>
+</div>
+</div>
+<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
+<img alt="Cocktail 4" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL8p4Lfop63EFnD74nkrqis1aujL4_rv81qWYsVuarA9sDQLzFzgQKIYHCa8F858vUjOt1QbKV7uMJWrSCGkkuIPLwyGnhu2TJeibSsUu1SVfPeLWSrbEJbvnfGbVRTQfmuKvdwyFi5SuQGYvtA_OSbGtvJjI_cpDLtalVj5bqkFtuZ1_JAWSEQlKdcbXmxvmEMu7Q5nlN_MjLtw0QQRtUV57Paah1md4fwP3nzYFKlHPLRBOIhQh0cFua2jyqq3PlqRihR30Jh0pU"/>
+<div class="relative z-20 mt-auto flex flex-col">
+<span class="text-xs font-bold text-white mb-0.5">Midnight Blue</span>
+<span class="text-[10px] text-accent-yellow">$11.00</span>
+</div>
+</div>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
+</div>
+<div class="flex items-center justify-center gap-2 mt-1">
+<div class="h-1.5 w-6 rounded-full bg-primary shadow-neon-red animate-flicker-fast"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+</div>
+</div>
+<div class="w-full pl-6 pr-0 mb-4 shrink-0 relative group">
+<div class="flex items-end justify-between pr-6 mb-3">
+<h3 class="text-sm font-semibold tracking-widest uppercase text-accent-yellow text-glow-yellow animate-flicker-slow">Cocktails</h3>
+<div class="flex items-center gap-1">
+<span class="text-[10px] text-white/40">Sort by</span>
+<span class="material-symbols-outlined text-xs text-white/40">sort</span>
+</div>
+</div>
+<div class="relative w-full">
+<div class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
+<div class="flex gap-4 overflow-x-auto pb-2 no-scrollbar pr-6 snap-x snap-mandatory relative z-0">
+<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
+<img alt="Cocktail 3" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx0IEGdYBCUoFps8TDE-9bfwTgOXsCLlUw_oixvn7hHnt0AFdAGGc4j83HumwQ9bpnBOXuxmvgXPnlNpfgmJV2r9hTi3IzzQc8fZ8Wt6tq5gHDe2n0cWpqHQ3ewCXPxN9fxlZR_ld0Af__BjXWh-0DCqufBhQer4isT9V0nqoP5ptjNjcoyV_7uKffx3t01fA_C0fDUw_ja00VULR8gaJDEOBti6LVr9kuUUUK20ZGd_GwALD7Om4qWy9Rv8oUaXdrj4kCJTlROIMF"/>
+<div class="relative z-20 mt-auto flex flex-col">
+<span class="text-xs font-bold text-white mb-0.5">Solar Flare</span>
+<span class="text-[10px] text-accent-yellow">$13.50</span>
+</div>
+</div>
+<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
+<img alt="Cocktail 4" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL8p4Lfop63EFnD74nkrqis1aujL4_rv81qWYsVuarA9sDQLzFzgQKIYHCa8F858vUjOt1QbKV7uMJWrSCGkkuIPLwyGnhu2TJeibSsUu1SVfPeLWSrbEJbvnfGbVRTQfmuKvdwyFi5SuQGYvtA_OSbGtvJjI_cpDLtalVj5bqkFtuZ1_JAWSEQlKdcbXmxvmEMu7Q5nlN_MjLtw0QQRtUV57Paah1md4fwP3nzYFKlHPLRBOIhQh0cFua2jyqq3PlqRihR30Jh0pU"/>
+<div class="relative z-20 mt-auto flex flex-col">
+<span class="text-xs font-bold text-white mb-0.5">Deep Dive</span>
+<span class="text-[10px] text-accent-yellow">$15.00</span>
+</div>
+</div>
+<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
+<img alt="Cocktail 1" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPaJUbtPesFpb0yW_XLsl9N0V8jikevj9UtQU5seufvo1l5AxoPqaiwCJJ6mS4T6htmzilq6lHKX5SM4MiIKw-3voRQNGxTR1odzpbPoCOqbrBdFS5TTiS88Ex3dH5zbCmcwXg-j0Z5enn5bavr4REgDS7xKZ9XUXEr__USvdOxQHRbxwTTnzKyVT0g0Ak3UNEtwqTOlmRwfETmR9tCPOyVWfrV7RYwh9UJVOmvB9j6i0fHL7quHYYeWatKWLbb_10E8usxd-cHWY9"/>
+<div class="relative z-20 mt-auto flex flex-col">
+<span class="text-xs font-bold text-white mb-0.5">Citrus Pop</span>
+<span class="text-[10px] text-accent-yellow">$11.00</span>
+</div>
+</div>
+<div class="glass-card min-w-[140px] h-[180px] rounded-2xl p-2 flex flex-col relative overflow-hidden group snap-center">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
+<img alt="Cocktail 2" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_PM4cS5LVerHYl12OoTPx42V44tGYjSD6lDrXi9wFJmbVHkziZqhrETl-HHJxiLWAGxEBfAw97ZJKDl6zjNbu44BDwiHCE9w7L6GkvgLawQQqdl6GleigSa7z90tWCWdKCVc2HyY_lZKoYFs2vxetykTxvSrlatXnrP96AP2hHJhYG3vypqqOwNfdLi7NPZCOuXc232-gxofI_i-uBrps27IRQTtKIXBtE_8WuEzUjGCzwGauQrEeYsM_6WOwe1r4sAY8dDESpIDi"/>
+<div class="relative z-20 mt-auto flex flex-col">
+<span class="text-xs font-bold text-white mb-0.5">Red Mist</span>
+<span class="text-[10px] text-accent-yellow">$14.00</span>
+</div>
+</div>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#060608] via-[#060608]/80 to-transparent z-30 pointer-events-none"></div>
+</div>
+<div class="flex items-center justify-center gap-2 mt-1">
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+<div class="h-1.5 w-6 rounded-full bg-accent-yellow shadow-neon-yellow animate-flicker-random"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-white/20"></div>
+</div>
+</div>
+</main>
+<div class="flex-none flex flex-col w-full z-20">
+<div class="px-6 mb-6 flex justify-center items-center gap-3">
+<div class="flex items-center p-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 w-full max-w-[240px]">
+<button class="flex-1 py-2 rounded-full bg-accent-yellow/10 border border-accent-yellow/30 text-accent-yellow text-[10px] font-bold uppercase tracking-widest shadow-neon-yellow transition-all animate-flicker-slow">
+                        Bar
+                    </button>
+<button class="flex-1 py-2 rounded-full text-white/30 text-[10px] font-bold uppercase tracking-widest hover:text-white/60 transition-colors">
+                        Food
+                    </button>
+</div>
+<button class="h-10 w-10 flex items-center justify-center rounded-xl bg-black/40 backdrop-blur-md border border-white/10 text-white/60 hover:text-white transition-colors" title="отзывы и чаевые">
+<span class="material-symbols-outlined text-xl">reviews</span>
+</button>
+</div>
+<div class="glass-sheet rounded-t-[32px] h-[25vh] min-h-[180px] w-full flex flex-col shadow-sheet relative border-t border-white/5">
+<div class="w-10 h-1 bg-white/10 rounded-full mx-auto my-3 shrink-0"></div>
+<div class="grid grid-cols-4 gap-3 h-full px-6 pt-4 pb-8 overflow-y-auto no-scrollbar content-start">
+<button class="glass-tile-square rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform hover:bg-white/5 group bg-white/5 border-accent-yellow/30 shadow-neon-yellow animate-flicker-random">
+<span class="material-symbols-outlined text-2xl text-accent-yellow text-glow-yellow group-hover:scale-110 transition-transform">local_bar</span>
+<span class="text-[9px] font-bold text-white uppercase tracking-wide">Cocktails</span>
+</button>
+<button class="glass-tile-square rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform hover:bg-white/5 group">
+<span class="material-symbols-outlined text-2xl text-white/70 font-light group-hover:scale-110 transition-transform">sports_bar</span>
+<span class="text-[9px] font-light text-white/70 uppercase tracking-wide">Beers</span>
+</button>
+<button class="glass-tile-square rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform hover:bg-white/5 group">
+<span class="material-symbols-outlined text-2xl text-primary/90 font-light group-hover:scale-110 transition-transform">wine_bar</span>
+<span class="text-[9px] font-light text-white/70 uppercase tracking-wide">Wines</span>
+</button>
+<button class="glass-tile-square rounded-xl flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform hover:bg-white/5 group">
+<span class="material-symbols-outlined text-2xl text-white/70 font-light group-hover:scale-110 transition-transform">liquor</span>
+<span class="text-[9px] font-light text-white/70 uppercase tracking-wide">Shots</span>
+</button>
+<div class="glass-tile-empty rounded-xl flex items-center justify-center opacity-50">
+<span class="material-symbols-outlined text-lg text-white/20">add</span>
+</div>
+<div class="glass-tile-empty rounded-xl flex items-center justify-center opacity-50">
+<span class="material-symbols-outlined text-lg text-white/20">add</span>
+</div>
+<div class="glass-tile-empty rounded-xl flex items-center justify-center opacity-50">
+<span class="material-symbols-outlined text-lg text-white/20">add</span>
+</div>
+<div class="glass-tile-empty rounded-xl flex items-center justify-center opacity-50">
+<span class="material-symbols-outlined text-lg text-white/20">add</span>
+</div>
+</div>
+</div>
+</div>
+</div>
 </body></html>
