@@ -345,10 +345,20 @@ function setupCategoryCurtain() {
 
     // --- DATA ---
     const barCategories = [
-        { key: "Cocktails", icon: "local_bar", color: "text-accent-yellow" },
-        { key: "Beer", icon: "sports_bar", color: "text-white" },
-        { key: "Wine", icon: "wine_bar", color: "text-primary" },
-        { key: "Shots", icon: "liquor", color: "text-white" },
+        { key: "COCKTAILS", icon: "local_bar", color: "text-accent-yellow" },
+        { key: "WHISKEY", icon: "local_bar", color: "text-white" },
+        { key: "BRANDY", icon: "local_bar", color: "text-white" },
+        { key: "GIN", icon: "local_bar", color: "text-white" },
+        { key: "VODKA", icon: "local_bar", color: "text-white" },
+        { key: "TEQUILA", icon: "local_bar", color: "text-white" },
+        { key: "APERITIVE", icon: "local_bar", color: "text-white" },
+        { key: "LIQUEUR", icon: "local_bar", color: "text-white" },
+        { key: "BEER", icon: "sports_bar", color: "text-white" },
+        { key: "CIDER", icon: "sports_bar", color: "text-white" },
+        { key: "WINE", icon: "wine_bar", color: "text-primary" },
+        { key: "SPARKLING WINE", icon: "wine_bar", color: "text-primary" },
+        { key: "SHOTS", icon: "liquor", color: "text-white" },
+        { key: "NON-ALCOHOLIC", icon: "local_cafe", color: "text-white" },
     ];
     const foodCategories = [
         { key: "APPETIZER", icon: "restaurant_menu" },
@@ -371,20 +381,22 @@ function setupCategoryCurtain() {
         const grid = document.createElement('div');
         grid.className = "grid grid-cols-2 gap-4 w-full px-2";
 
-        // Find translated category names
-        const categoryTranslations = configData.menu.categories.reduce((acc, cat) => {
-            // Find the english key for the current language's category name
-            const enCategory = Object.entries(configData.ui.categoryTranslations || {}).find(([en, translations]) => Object.values(translations).includes(cat));
-            if (enCategory) {
-                acc[enCategory[0]] = cat;
-            } else {
-                 acc[cat] = cat; // Fallback for categories not in translation map
+        // --- CORRECT TRANSLATION LOGIC ---
+        // Create a map from CANONICAL_KEY to the translated name for the current language.
+        const categoryTranslationMap = {};
+        for (const key in configData.ui.categoryTranslations) {
+            // The key in categoryTranslations can be "Cocktails", "APPETIZER", etc.
+            // The key in menu.items is always UPPERCASE. We use UPPERCASE as the canonical key.
+            const canonicalKey = key.toUpperCase();
+            const translation = configData.ui.categoryTranslations[key][currentLang];
+            if (translation) {
+                categoryTranslationMap[canonicalKey] = translation;
             }
-            return acc;
-        }, {});
+        }
 
         categories.forEach(catInfo => {
-            const translatedCatName = categoryTranslations[catInfo.key] || catInfo.key;
+            // catInfo.key is the canonical key, e.g., "COCKTAILS"
+            const translatedCatName = categoryTranslationMap[catInfo.key] || catInfo.key;
             const button = document.createElement('button');
             button.className = "group glass-tile rounded-2xl p-5 flex flex-col items-start gap-3 hover:bg-white/10 active:scale-95 transition-all duration-300 relative overflow-hidden h-32 justify-end";
             button.innerHTML = `
@@ -395,7 +407,8 @@ function setupCategoryCurtain() {
                 <span class="text-xs font-semibold uppercase tracking-wider text-white/50 group-hover:text-white/80">${type.toUpperCase()}</span>
                 <span class="text-xl font-bold ${catInfo.color ? 'text-glow-yellow' : ''}">${translatedCatName}</span>
             `;
-            button.onclick = () => renderMenuItems(translatedCatName, type);
+            // Pass the canonical key to the next function
+            button.onclick = () => renderMenuItems(catInfo.key, type);
             grid.appendChild(button);
         });
 
@@ -403,10 +416,11 @@ function setupCategoryCurtain() {
         mainContentContainer.appendChild(grid);
     }
 
-    function renderMenuItems(categoryName, originalType) {
+    function renderMenuItems(categoryKey, originalType) {
         if (!mainContentContainer) return;
 
-        const items = configData.menu.items.filter(item => item.category === categoryName);
+        // Filter using the canonical key
+        const items = configData.menu.items.filter(item => item.category === categoryKey);
         const listContainer = document.createElement('div');
         listContainer.className = "w-full px-2 space-y-3";
 
@@ -454,8 +468,10 @@ function setupCategoryCurtain() {
                 closeButton.innerHTML = '<i class="ph-bold ph-x text-white text-lg"></i>';
                 closeButton.onclick = () => curtain.classList.add('translate-y-full');
 
-                // Keep a reference to the main container
+                // Keep a reference to the main container and adjust its styles for bottom alignment
                 mainContentContainer = mainContentTemplate;
+                mainContentContainer.classList.add('flex-grow', 'flex', 'items-end', 'pb-4');
+
 
                 curtain.appendChild(closeButton);
                 curtain.appendChild(mainContentContainer);
