@@ -399,14 +399,14 @@ function setupCategoryCurtain() {
             // catInfo.key is the canonical key, e.g., "COCKTAILS"
             const translatedCatName = categoryTranslationMap[catInfo.key] || catInfo.key;
             const button = document.createElement('button');
-            button.className = "group glass-tile rounded-2xl p-5 flex flex-col items-start gap-3 hover:bg-white/10 active:scale-95 transition-all duration-300 relative overflow-hidden h-32 justify-end";
+            button.className = "group glass-tile rounded-xl p-3 flex flex-col items-start gap-1 hover:bg-white/10 active:scale-95 transition-all duration-300 relative overflow-hidden h-16 justify-end";
             button.innerHTML = `
-                <div class="absolute top-0 right-0 p-3 opacity-30 group-hover:opacity-100 transition-opacity">
-                    <span class="material-symbols-outlined text-3xl ${catInfo.color || 'text-white'}">${catInfo.icon}</span>
+                <div class="absolute top-0 right-0 p-2 opacity-30 group-hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-2xl ${catInfo.color || 'text-white'}">${catInfo.icon}</span>
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <span class="text-xs font-semibold uppercase tracking-wider text-white/50 group-hover:text-white/80">${type.toUpperCase()}</span>
-                <span class="text-xl font-bold ${catInfo.color ? 'text-glow-yellow' : ''}">${translatedCatName}</span>
+                <span class="text-base font-bold ${catInfo.color ? 'text-glow-yellow' : ''}">${translatedCatName}</span>
             `;
             // Pass the canonical key to the next function
             button.onclick = () => renderMenuItems(catInfo.key, type);
@@ -474,7 +474,7 @@ function setupCategoryCurtain() {
 
                 // Create a scrollable container for the main content
                 const scrollContainer = document.createElement('div');
-                scrollContainer.className = 'flex-grow overflow-y-auto pb-24'; // Added padding-bottom
+                scrollContainer.className = 'flex-grow overflow-y-auto pb-24 px-4 pt-4'; // Added padding
 
                 // Keep a reference to the main container
                 mainContentContainer = mainContentTemplate;
