@@ -65,6 +65,16 @@ function renderCategoryItems(category) {
     title.textContent = translatedCategory;
 
     const items = configData.menu.items.filter(item => item.category === category);
+
+    // Sort items: those with images first
+    items.sort((a, b) => {
+        const aImageUrl = imageData.menu[a.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+        const bImageUrl = imageData.menu[b.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+        const aHasImage = !aImageUrl.includes('placeholder');
+        const bHasImage = !bImageUrl.includes('placeholder');
+        return bHasImage - aHasImage;
+    });
+
     let html = '';
     items.forEach(item => {
         const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
