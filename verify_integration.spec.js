@@ -17,7 +17,7 @@ test.describe('Menu Integration Test', () => {
     // 4. Проверить, что динамический контент загрузился
     // Ищем "Neon Spritz" именно в карусели популярных товаров.
     const popularCarousel = page.locator('#popular-now-carousel');
-    const popularItemName = popularCarousel.locator('h4:has-text("Neon Spritz")');
+    const popularItemName = popularCarousel.locator('h4:has-text("Pizza Margarita")');
     await expect(popularItemName).toBeVisible();
 
     // 5. Сделать скриншот для визуальной проверки
