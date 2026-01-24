@@ -58,8 +58,8 @@
             "Food",
             "GARNISH & SAUCES",
             "HOT DISHES",
-            "High Alcohol Drinks",
-            "Hot Drinks",
+            "LIQUEUR",
+            "NON-ALCOHOLIC",
             "PASTRY",
             "PIZZA & PASTA",
             "SALADS",
@@ -71,355 +71,355 @@
         ],
         "items": [
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Long Iceland",
                 "price": "25.00",
                 "desc": "Rum, tequila, vodka, gin, tripple sec, cola"
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "WHISKEY",
                 "name": "Red Label",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "Black Lion Ipa",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "WHISKEY",
                 "name": "Black Label",
                 "price": "16.00",
                 "desc": null
             },
             {
-                "category": "Soft drinks",
+                "category": "NON-ALCOHOLIC",
                 "name": "Tonic Water",
                 "price": "6.00",
                 "desc": null
             },
             {
-                "category": "Soft drinks",
+                "category": "NON-ALCOHOLIC",
                 "name": "Coca-cola plastic",
                 "price": "6.00",
                 "desc": "500ml"
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "VODKA",
                 "name": "Absolut vodka",
                 "price": "8.00",
                 "desc": "Absolut 50ml"
             },
             {
-                "category": "Soft drinks",
+                "category": "NON-ALCOHOLIC",
                 "name": "Coca-cola can",
                 "price": "4.00",
                 "desc": "330ml"
             },
             {
-                "category": "Soft drinks",
+                "category": "NON-ALCOHOLIC",
                 "name": "XL Energy Drink",
                 "price": "7.00",
                 "desc": null
             },
             {
-                "category": "Soft drinks",
+                "category": "NON-ALCOHOLIC",
                 "name": "Ginger Ale",
                 "price": "6.00",
                 "desc": null
             },
             {
-                "category": "Soft drinks",
+                "category": "NON-ALCOHOLIC",
                 "name": "Sparkling Water",
                 "price": "4.00",
                 "desc": null
             },
             {
-                "category": "Soft drinks",
+                "category": "NON-ALCOHOLIC",
                 "name": "Mineral Water",
                 "price": "3.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "VODKA",
                 "name": "Beluga Vodka",
                 "price": "24.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "TEQUILA",
                 "name": "Olmeca Tequila",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "BRANDY",
                 "name": "Bacardi Rum",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "BRANDY",
                 "name": "Capitan Morgan Black",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "Shots",
+                "category": "SHOTS",
                 "name": "Brain Cancer",
                 "price": "14.00",
                 "desc": "Baileys, Banana liquor, Kahlua"
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "Kayki Lager",
                 "price": "10.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "WHISKEY",
                 "name": "Chivas 12y.",
                 "price": "15.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "WHISKEY",
                 "name": "Tullamore Dew",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "Black Lion Apa",
                 "price": "14.00",
                 "desc": null
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "Corona",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "WHISKEY",
                 "name": "Jack Daniels",
                 "price": "14.00",
                 "desc": null
             },
             {
-                "category": "Soft drinks",
+                "category": "NON-ALCOHOLIC",
                 "name": "Juice",
                 "price": "6.00",
                 "desc": "250ml"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Mojito",
                 "price": "23.00",
                 "desc": "Rum, Brown Sugar Mint, Lime, Soda Water"
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "Black Lion Porter",
                 "price": "14.00",
                 "desc": null
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "ALcraft Lager",
                 "price": "10.00",
                 "desc": null
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Aperol Spritz",
                 "price": "25.00",
                 "desc": "Aperol,Sprk.wine,orange,soda water"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Bloody Mary",
                 "price": "18.00",
                 "desc": "Vodka, tomato juice, salt, pepper, Worcestershire sauce, Tabasco"
             },
             {
-                "category": "Shots",
+                "category": "SHOTS",
                 "name": "B-52",
                 "price": "16.00",
                 "desc": "Kahlua,Bailyes,Cointreau"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Black Occupant",
                 "price": "17.00",
                 "desc": "Kahlua, Vodka"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Tequila Sunrise",
                 "price": "20.00",
                 "desc": "Tequila,Orange juice,Grenadine"
             },
             {
-                "category": "Shots",
+                "category": "SHOTS",
                 "name": "Blow Job",
                 "price": "12.00",
                 "desc": "Kahlua, bailey's, Musetop"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Gin&Tonic",
                 "price": "20.00",
                 "desc": "Beefeater,Tonic water"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "White Russuian",
                 "price": "18.00",
                 "desc": "kahlua,Vodka, Cream"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Negroni",
                 "price": "20.00",
                 "desc": "Gin, Campari Bitter, Rosso"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Dr.Pepper",
                 "price": "20.00",
                 "desc": "Beer, amaretto liquer, Coke"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Long Energy",
                 "price": "26.00",
                 "desc": "Vodka,gin,rum,coiuntreau,tequila,energy drink,blue curacao"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Moscow Mule",
                 "price": "18.00",
                 "desc": "Vodka, GigerAle"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "JagerBomb",
                 "price": "22.00",
                 "desc": "Jagermaister,Energy Drink"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Cherry Lady",
                 "price": "18.00",
                 "desc": "Rum, Cherry tincture,moraschinno cherry jam, soft drink top"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Cosmopolitan",
                 "price": "18.00",
                 "desc": "Vodka, cranberry juice, Orange liquer"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Whiskey Sour",
                 "price": "20.00",
                 "desc": "Bourbon whiskey, egg white"
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "VODKA",
                 "name": "Koskenkorva vodka",
                 "price": "6.00",
                 "desc": "Vodka 50ml"
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "GIN",
                 "name": "Gin Beefeater",
                 "price": "12.00",
                 "desc": "50ml"
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "GIN",
                 "name": "Gin Bombay Sapphire",
                 "price": "16.00",
                 "desc": "50ml"
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "TEQUILA",
                 "name": "Tequila Sierra",
                 "price": "12.00",
                 "desc": "50ml"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Mai Tai",
                 "price": "20.00",
                 "desc": "White Rum, Dark Rum, Orange liquor, Juice, Syrup"
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "BRANDY",
                 "name": "Capitan Morgan Spiced Gold",
                 "price": "13.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "LIQUEUR",
                 "name": "Jagermeister",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Pina Colada",
                 "price": "21.00",
                 "desc": "Rum, Malibu, Cream, syrup, juice"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Vodka Energy",
                 "price": "18.00",
                 "desc": "Vodka, Energy Drink"
             },
             {
-                "category": "Shots",
+                "category": "SHOTS",
                 "name": "R.I.P.",
                 "price": "14.00",
                 "desc": "Bourbon, Blavod Vodka, Tequila"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Screwdriver",
                 "price": "17.00",
                 "desc": "Vodka, Orange juice"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Cuba Libre",
                 "price": "18.00",
                 "desc": "Rum, Coca-cola"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Jack&Ginger",
                 "price": "20.00",
                 "desc": "Jack Daniel's, Ginger Ale"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "007",
                 "price": "18.00",
                 "desc": "Gin, Dry Vermouth"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Jager Juice",
                 "price": "20.00",
                 "desc": "Jägermeister, juice"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Sapphire Fizz",
                 "price": "21.00",
                 "desc": "Bombay Gin, Tonic"
@@ -431,91 +431,91 @@
                 "desc": null
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Blue Hawai",
                 "price": "22.00",
                 "desc": "Rum, blue curacao, juice"
             },
             {
-                "category": "Soft drinks",
+                "category": "NON-ALCOHOLIC",
                 "name": "Sprite",
                 "price": "4.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "WHISKEY",
                 "name": "Jim Beam White",
                 "price": "14.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "WHISKEY",
                 "name": "Jim Beam Red Stag",
                 "price": "16.00",
                 "desc": null
             },
             {
-                "category": "High Alcohol Drinks",
+                "category": "LIQUEUR",
                 "name": "Baileys",
                 "price": "12.00",
                 "desc": null
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Corona Sunrise",
                 "price": "22.00",
                 "desc": "Corona beer, Tequila, Triple sec. lime, Grenadine, Orange juice"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Lynchburg Lemonade",
                 "price": "22.00",
                 "desc": "Bourbon, Orange liquor, Ginger ale"
             },
             {
-                "category": "Shots",
+                "category": "SHOTS",
                 "name": "Mad Dog",
                 "price": "16.00",
                 "desc": "Vodka, Grenadine, Tabasco"
             },
             {
-                "category": "Wine",
+                "category": "WINE",
                 "name": "Kindzmarauli",
                 "price": "18.00",
                 "desc": "Semi_Sweet Red Wine"
             },
             {
-                "category": "Wine",
+                "category": "WINE",
                 "name": "Tsinandali",
                 "price": "17.00",
                 "desc": "White Dry"
             },
             {
-                "category": "Wine",
+                "category": "WINE",
                 "name": "Khvanchkara",
                 "price": "23.00",
                 "desc": "Semi_Sweet Red"
             },
             {
-                "category": "Wine",
+                "category": "WINE",
                 "name": "Tvishi",
                 "price": "17.00",
                 "desc": "White Semi Sweet"
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "Arriba Draft Beer 🍺",
                 "price": "10.00",
                 "desc": "400ml"
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Adios MTF",
                 "price": "26.00",
                 "desc": null
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "Unfiltered Draft Beer",
                 "price": "10.00",
                 "desc": null
@@ -527,25 +527,25 @@
                 "desc": null
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "Guinness draft",
                 "price": "20.00",
                 "desc": null
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "Cider N4",
                 "price": "13.00",
                 "desc": null
             },
             {
-                "category": "Cocktails",
+                "category": "COCKTAILS",
                 "name": "Margirita",
                 "price": "20.00",
                 "desc": "Tequila, aguave suryp,  triple sec, lime squzee"
             },
             {
-                "category": "Beer",
+                "category": "BEER",
                 "name": "Draft Lager",
                 "price": "9.00",
                 "desc": null
