@@ -12,43 +12,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SMM Hub - Виртуальный Билборд</title>
     
-    <!-- Подключаем Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#f20d20",
-                        "accent-yellow": "#FFD700",
-                        "background-dark": "#0a0a0c",
-                        "glass-border": "rgba(255, 255, 255, 0.15)",
-                    },
-                    fontFamily: {
-                        "display": ["Space Grotesk", "sans-serif"],
-                        "body": ["Space Grotesk", "sans-serif"],
-                    },
-                    boxShadow: {
-                        'neon-red': '0 0 30px -5px rgba(242, 13, 32, 0.6)',
-                        'neon-red-strong': '0 0 50px 10px rgba(242, 13, 32, 0.4)',
-                        'neon-yellow': '0 0 30px -5px rgba(255, 215, 0, 0.5)',
-                        'depth-high': '0 10px 40px -10px rgba(0,0,0,0.5)',
-                        'glow-container-red': '0 0 30px rgba(242, 13, 32, 0.5), inset 0 0 20px rgba(242, 13, 32, 0.2)',
-                    },
-                    animation: {
-                        'pulse-glow': 'pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        'pulse-glow': {
-                            '0%, 100%': { opacity: '0.4', transform: 'scale(0.95)' },
-                            '50%': { opacity: '0.8', transform: 'scale(1.05)' },
-                        }
-                    }
-                },
-            },
-        }
-    </script>
     
     <!-- Подключаем иконки (Phosphor Icons для стиля iOS) -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -57,11 +20,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:,">
 
     <link rel="stylesheet" href="css/style.css">
-
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 </head>
-<body class="antialiased text-gray-100 selection:bg-indigo-500 selection:text-white">
+<body class="antialiased text-gray-100 selection:bg-indigo-500 selection:text-white" x-cloak>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3Z9P5K7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

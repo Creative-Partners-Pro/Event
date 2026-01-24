@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
         /* --- iOS 18 / Liquid Glass Styles --- */
 
         body {

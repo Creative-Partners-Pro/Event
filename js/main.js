@@ -45,6 +45,9 @@ function renderApp() {
     document.title = configData.ui.pageTitle;
     document.querySelector('#artists-section h3').innerText = configData.ui.lineupGuests;
     document.querySelector('#ticket-fab > div > span').innerText = configData.ui.tickets;
+
+    // Make the body visible
+    document.body.removeAttribute('x-cloak');
 }
 
 function renderHeader() {
