@@ -82,16 +82,19 @@ function setupModal() {
 
 function displayModalData(item) {
     document.getElementById('modal-image').src = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
-    document.getElementById('modal-name').innerHTML = item.name.replace(/(<br>|<\/br>)/g, ' ');
+    document.getElementById('modal-name').textContent = item.name.replace(/(<br>|<\/br>)/g, ' ');
     document.getElementById('modal-price').textContent = item.price;
     document.getElementById('modal-desc').textContent = item.desc || '';
 
     // Handle tags if they exist in data
     const tagsContainer = document.getElementById('modal-tags');
-    tagsContainer.innerHTML = '';
+    tagsContainer.innerHTML = ''; // Clear existing tags
     if (item.tags && Array.isArray(item.tags)) {
         item.tags.forEach(tag => {
-            tagsContainer.innerHTML += `<span class="font-body text-[11px] font-normal uppercase tracking-[0.15em] text-accent-yellow border border-accent-yellow/30 px-3 py-1 rounded-full">${tag}</span>`;
+            const tagElement = document.createElement('span');
+            tagElement.className = 'font-body text-[11px] font-normal uppercase tracking-[0.15em] text-accent-yellow border border-accent-yellow/30 px-3 py-1 rounded-full';
+            tagElement.textContent = tag;
+            tagsContainer.appendChild(tagElement);
         });
     }
 }
@@ -181,7 +184,7 @@ function renderCategoryItems(category) {
     const translatedCategory = configData.ui.categoryTranslations[category]?.[currentLang] || category;
     title.textContent = translatedCategory;
 
-    const items = configData.menu.items.filter(item => item.category === category);
+    const items = configData.menu.items.filter(item => item.category.toUpperCase() === category.toUpperCase());
 
     // Sort items: those with images first
     items.sort((a, b) => {
@@ -216,13 +219,25 @@ function renderCategoryGrid(type) {
     const container = document.getElementById('categories-grid');
     if (!container) return;
 
-    const categories = [...new Set(configData.menu.items.filter(item => item.type === type).map(item => item.category))];
+    // Get the names of categories that have items of the specified type, standardized to uppercase
+    const relevantCategoryNames = new Set(
+        configData.menu.items
+            .filter(item => item.type === type)
+            .map(item => item.category.toUpperCase())
+    );
+
+    // Filter the main category list, comparing in a case-insensitive way
+    const categories = configData.menu.categories.filter(cat =>
+        relevantCategoryNames.has(cat.name.toUpperCase())
+    );
+
     let html = '';
     categories.forEach(category => {
-        const translatedCategory = configData.ui.categoryTranslations[category]?.[currentLang] || category;
+        const translatedCategory = configData.ui.categoryTranslations[category.name]?.[currentLang] || category.name;
         html += `
-            <div class="category-tile rounded-lg flex items-center justify-center p-2 text-center cursor-pointer transition-all duration-300 w-24 h-10 bg-white/5" data-category="${category}">
-                 <span class="text-xs font-semibold uppercase tracking-wider">${translatedCategory}</span>
+            <div class="category-tile flex-shrink-0 w-24 h-24 rounded-2xl flex flex-col items-center justify-center p-2 text-center cursor-pointer transition-all duration-300 bg-white/5" data-category="${category.name}">
+                 <i class="${category.icon} text-4xl text-accent-yellow"></i>
+                 <span class="mt-2 text-xs font-semibold uppercase tracking-wider">${translatedCategory}</span>
             </div>
         `;
     });
