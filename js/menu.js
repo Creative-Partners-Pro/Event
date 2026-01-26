@@ -83,7 +83,7 @@ function setupModal() {
 function displayModalData(item) {
     document.getElementById('modal-image').src = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
     document.getElementById('modal-name').textContent = item.name.replace(/(<br>|<\/br>)/g, ' ');
-    document.getElementById('modal-price').textContent = item.price;
+    document.getElementById('modal-price').textContent = `${item.price} ₾`;
     document.getElementById('modal-desc').textContent = item.desc || '';
 
     // Handle tags if they exist in data
@@ -167,7 +167,7 @@ function renderPopularItems() {
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div class="absolute bottom-3 left-3 right-3">
                     <h4 class="font-bold text-sm text-white truncate">${item.name}</h4>
-                    <p class="text-xs text-white/70">${item.price}</p>
+                    <p class="text-xs text-white/70">${item.price} ₾</p>
                 </div>
             </div>
         `;
@@ -205,7 +205,7 @@ function renderCategoryItems(category) {
             <div class="flex-1">
                 <div class="flex justify-between items-start">
                     <h4 class="font-medium text-sm text-white">${item.name}</h4>
-                    <span class="font-bold text-sm text-accent-yellow">${item.price}</span>
+                    <span class="font-bold text-sm text-accent-yellow">${item.price} ₾</span>
                 </div>
                 <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc || ''}</p>
             </div>

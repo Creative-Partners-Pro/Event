@@ -62,7 +62,14 @@
       { "name": "Shots", "icon": "ph-shot-glass" },
       { "name": "Snacks", "icon": "ph-popcorn" },
       { "name": "Soft drinks", "icon": "ph-cup" },
-      { "name": "Wine", "icon": "ph-wine" }
+      { "name": "Wine", "icon": "ph-wine" },
+      { "name": "WHISKEY", "icon": "ph-brandy" },
+      { "name": "VODKA", "icon": "ph-brandy" },
+      { "name": "TEQUILA", "icon": "ph-brandy" },
+      { "name": "BRANDY", "icon": "ph-brandy" },
+      { "name": "GIN", "icon": "ph-brandy" },
+      { "name": "High Alcohol Drinks", "icon": "ph-brandy" },
+      { "name": "Hot Drinks", "icon": "ph-coffee" }
     ],
     "items": [
       {
@@ -709,16 +716,14 @@
         "name": "Akroshka (seasonal)",
         "price": "14",
         "desc": null,
-        "type": "food",
-        "image": "akroshka"
+        "type": "food"
       },
       {
         "category": "SOUPS",
         "name": "Spinach cream-soup",
         "price": "23",
         "desc": null,
-        "type": "food",
-        "image": "spinach_cream_soup"
+        "type": "food"
       },
       {
         "category": "SOUPS",
