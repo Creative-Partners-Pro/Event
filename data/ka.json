@@ -1,10 +1,10 @@
 {
     "event": {
-        "title": "Serra Kankaya",
+        "title": "Ketus",
         "subtitle": "ცოცხალი მუსიკა",
-        "date": "24 იანვარი, 21:00",
-        "eventDateISO": "2026-01-24T21:00:00",
-        "description": "24 იანვარს, შაბათს 21:00სთ\nGrey Mike's Production და Drunk Owl Bar გთავაზობთ ცოცხალი მუსიკის საღამოს!\nSerra Kankaya თქვენთვის შეასრულებს საავტორო სიმღერებს და ყველასთვის საყვარელ ,ცნობილ ქავერებს.\nცოცხალი მუსიკა , ცოცხალი ხმა , O SèS Turkey მონაწილე Serra Kankay Drunk Owl Bar'ში.\nსაღამოს განრიგი: \nკარი ღიაა: 18:00\n21:00 - 00:00 Serra Kankay",
+        "date": "31 იანვარი, 21:00",
+        "eventDateISO": "2026-01-31T21:00:00",
+        "description": "საღამოს განრიგი:\nკარი ღიაა: 18:00\n21:00 - 00:00",
         "ticketLink": "https://tkt.ge/show/31281/cockhali-musikis-saghamo-serra-kankaya",
         "price": "20 GEL",
         "whatsappContact": "https://wa.me/+995511423894"
@@ -34,14 +34,9 @@
     ],
     "participants": [
         {
-            "name": "Serra Kankaya",
+            "name": "Ketus",
             "role": "შემსრულებელი",
-            "instagram": "https://www.instagram.com/serrakankaya?igsh=Nzhvazd6dDQzYmtt"
-        },
-        {
-            "name": "Gorkem Yavuz",
-            "role": "ვიზუალური არტისტი",
-            "instagram": "https://www.instagram.com/gorkemtahayavuz?igsh=MTlxaWtmdjc5MGN2aA=="
+            "instagram": "https://www.instagram.com/ketusberidze?igsh=M3Q2cXFvNGd2Z3hp"
         },
         {
             "name": "Creative.Partners",
