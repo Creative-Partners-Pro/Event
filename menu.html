@@ -74,11 +74,44 @@
         .font-body {
             font-family: 'Space Grotesk', sans-serif;
         }
+
+        /* Animation Styles */
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slide-in-from-left {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slide-in-from-right {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slide-in-from-bottom {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .initial-hidden {
+            opacity: 0;
+        }
+
+        .animate-on-load {
+            animation-duration: 0.7s;
+            animation-fill-mode: forwards;
+            animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .fade-in-bg { animation-name: fade-in; }
+        .slide-in-left { animation-name: slide-in-from-left; }
+        .slide-in-right { animation-name: slide-in-from-right; }
+        .slide-in-bottom { animation-name: slide-in-from-bottom; }
     </style>
 </head>
 <body class="min-h-screen relative bg-background-dark text-white overflow-hidden">
     <!-- Background Image -->
-    <div class="fixed inset-0 z-0">
+    <div class="fixed inset-0 z-0 initial-hidden animate-on-load fade-in-bg">
         <img alt="Cocktail Glass Background" class="w-full h-full object-cover scale-110 filter grayscale blur-lg brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABW2iAALtjWa1vQnEJDEoZp3zegtY9w2hN9-E4Hs6rsUMXb25f_FvIVxoJzGw6WVtzuqLD2DiQAZu8OXgg1AEBexZG_1I3UakHV_BpigR_xsJSBAFiaoyX0x9C70IQYa6yeR_qI0MgbdE8cZK_-52zW2C6LVc3Ky7q0DrYspVOunkos_IQx_kz07QQLK93-ggpcz4Qn2fNcouEB0ckx5TR0aQYHo1xNhl6cDHuGP70Zb8Q6SXD1ZRS6f9e4fYC9ympXAYbCg0A9DfX" />
         <div class="absolute inset-0 bg-black/50"></div>
     </div>
@@ -96,7 +129,7 @@
 
         <main class="flex-1 flex flex-col pt-2 w-full overflow-hidden">
             <!-- Popular Now Carousel -->
-            <div class="w-full pl-6 pr-0 mb-4 shrink-0 relative">
+            <div class="w-full pl-6 pr-0 mb-4 shrink-0 relative initial-hidden animate-on-load slide-in-left" style="animation-delay: 0.2s;">
                 <h3 class="text-sm font-light tracking-widest uppercase text-white/50 pr-6 mb-3">Popular Now</h3>
                 <div id="popular-now-carousel" class="flex gap-4 overflow-x-auto no-scrollbar pr-6">
                     <!-- Popular items will be injected here -->
@@ -104,7 +137,7 @@
             </div>
 
             <!-- Selected Category Items -->
-            <div id="selected-category-section" class="w-full px-6 mb-4 flex-1 flex flex-col" style="height: 50vh;">
+            <div id="selected-category-section" class="w-full px-6 mb-4 flex-1 flex flex-col initial-hidden animate-on-load slide-in-right" style="animation-delay: 0.4s; height: 50vh;">
                 <h3 id="selected-category-title" class="text-sm font-light tracking-widest uppercase text-white/50 mb-3">Category Items</h3>
                 <div class="overflow-x-auto no-scrollbar h-full">
                     <div id="selected-category-grid" class="grid grid-rows-2 grid-flow-col gap-4">
@@ -114,7 +147,7 @@
             </div>
         </main>
 
-        <div class="flex-none flex flex-col w-full z-20">
+        <div class="flex-none flex flex-col w-full z-20 initial-hidden animate-on-load slide-in-bottom" style="animation-delay: 0.6s;">
             <div class="px-6 mb-4 flex justify-center items-center gap-3">
                 <div class="flex items-center p-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 w-full max-w-[240px]">
                     <button id="bar-button" class="flex-1 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Bar</button>
