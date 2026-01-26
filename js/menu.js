@@ -3,6 +3,8 @@ let configData;
 let imageData;
 let currentLang = localStorage.getItem('lang') || 'en';
 let activeMenuType = 'bar'; // 'bar' or 'food'
+let currentItemIndex = -1;
+let currentCategoryItems = [];
 
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
@@ -36,35 +38,49 @@ function setupModal() {
         const diffY = currentY - startY;
         const diffX = currentX - startX;
 
-        // Allow vertical swipe only
+        // Prevent default to avoid scrolling page
         e.preventDefault();
-        if (diffY > 0) { // Only allow swiping down
-            modalContent.style.transform = `translateY(${diffY}px)`;
-        }
+
+        // Apply transformations based on swipe direction
+        modalContent.style.transform = `translate(${diffX}px, ${diffY}px)`;
     });
 
     modalContent.addEventListener('touchend', (e) => {
         const endY = e.changedTouches[0].clientY;
+        const endX = e.changedTouches[0].clientX;
         const diffY = endY - startY;
+        const diffX = endX - startX;
 
-        if (diffY > 100) { // Swipe threshold
-            closeModal();
-        } else {
-            // If swipe is not enough, animate back to original position
+        const swipeThreshold = 100;
+
+        if (Math.abs(diffY) > Math.abs(diffX)) { // Vertical swipe
+            if (Math.abs(diffY) > swipeThreshold) {
+                closeModal();
+            } else {
+                modalContent.style.transition = 'transform 0.3s ease-in-out';
+                modalContent.style.transform = 'translate(0, 0)';
+            }
+        } else { // Horizontal swipe
+            if (Math.abs(diffX) > swipeThreshold) {
+                if (diffX > 0) { // Swipe right (previous)
+                    currentItemIndex = (currentItemIndex - 1 + currentCategoryItems.length) % currentCategoryItems.length;
+                } else { // Swipe left (next)
+                    currentItemIndex = (currentItemIndex + 1) % currentCategoryItems.length;
+                }
+                displayModalData(currentCategoryItems[currentItemIndex]);
+            }
             modalContent.style.transition = 'transform 0.3s ease-in-out';
-            modalContent.style.transform = 'translateY(0)';
-            // Reset transition style after animation
-            setTimeout(() => {
-                modalContent.style.transition = '';
-            }, 300);
+            modalContent.style.transform = 'translate(0, 0)';
         }
+
+        // Reset transition style after animation
+        setTimeout(() => {
+            modalContent.style.transition = '';
+        }, 300);
     });
 }
 
-function openModal(item) {
-    const modal = document.getElementById('product-modal');
-    if (!modal) return;
-
+function displayModalData(item) {
     document.getElementById('modal-image').src = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
     document.getElementById('modal-name').innerHTML = item.name.replace(/(<br>|<\/br>)/g, ' ');
     document.getElementById('modal-price').textContent = item.price;
@@ -78,6 +94,17 @@ function openModal(item) {
             tagsContainer.innerHTML += `<span class="font-body text-[11px] font-normal uppercase tracking-[0.15em] text-accent-yellow border border-accent-yellow/30 px-3 py-1 rounded-full">${tag}</span>`;
         });
     }
+}
+
+function openModal(item) {
+    const modal = document.getElementById('product-modal');
+    if (!modal) return;
+
+    // Set current context for navigation
+    currentCategoryItems = configData.menu.items.filter(i => i.category === item.category);
+    currentItemIndex = currentCategoryItems.findIndex(i => i.name === item.name);
+
+    displayModalData(item);
 
     modal.classList.remove('hidden');
     setTimeout(() => modal.classList.remove('opacity-0', 'scale-95'), 10);
