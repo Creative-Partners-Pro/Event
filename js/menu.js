@@ -13,11 +13,52 @@ function setupModal() {
     const modal = document.getElementById('product-modal');
     const overlay = document.getElementById('modal-overlay');
     const closeButton = document.getElementById('modal-close-button');
+    const modalContent = document.getElementById('modal-content');
 
-    if (modal && overlay && closeButton) {
-        overlay.onclick = closeModal;
-        closeButton.onclick = closeModal;
-    }
+    if (!modal || !overlay || !closeButton || !modalContent) return;
+
+    overlay.onclick = closeModal;
+    closeButton.onclick = closeModal;
+
+    let startY, startX;
+    let modalRect;
+
+    modalContent.addEventListener('touchstart', (e) => {
+        startY = e.touches[0].clientY;
+        startX = e.touches[0].clientX;
+        modalRect = modalContent.getBoundingClientRect();
+        modalContent.style.transition = 'none';
+    });
+
+    modalContent.addEventListener('touchmove', (e) => {
+        const currentY = e.touches[0].clientY;
+        const currentX = e.touches[0].clientX;
+        const diffY = currentY - startY;
+        const diffX = currentX - startX;
+
+        // Allow vertical swipe only
+        e.preventDefault();
+        if (diffY > 0) { // Only allow swiping down
+            modalContent.style.transform = `translateY(${diffY}px)`;
+        }
+    });
+
+    modalContent.addEventListener('touchend', (e) => {
+        const endY = e.changedTouches[0].clientY;
+        const diffY = endY - startY;
+
+        if (diffY > 100) { // Swipe threshold
+            closeModal();
+        } else {
+            // If swipe is not enough, animate back to original position
+            modalContent.style.transition = 'transform 0.3s ease-in-out';
+            modalContent.style.transform = 'translateY(0)';
+            // Reset transition style after animation
+            setTimeout(() => {
+                modalContent.style.transition = '';
+            }, 300);
+        }
+    });
 }
 
 function openModal(item) {
@@ -44,10 +85,16 @@ function openModal(item) {
 
 function closeModal() {
     const modal = document.getElementById('product-modal');
-    if (!modal) return;
+    const modalContent = document.getElementById('modal-content');
+    if (!modal || !modalContent) return;
 
     modal.classList.add('opacity-0', 'scale-95');
-    setTimeout(() => modal.classList.add('hidden'), 300);
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        // Reset styles for the next time it opens
+        modalContent.style.transform = '';
+        modalContent.style.transition = '';
+    }, 300);
 }
 
 function initMenu() {
@@ -122,7 +169,7 @@ function renderCategoryItems(category) {
     items.forEach(item => {
         const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
         const itemElement = document.createElement('div');
-        itemElement.className = 'bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60 cursor-pointer';
+        itemElement.className = 'menu-item bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60 cursor-pointer';
         itemElement.innerHTML = `
             <img src="${imageUrl}" class="w-16 h-16 rounded-lg object-cover" alt="${item.name}">
             <div class="flex-1">
