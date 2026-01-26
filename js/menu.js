@@ -6,7 +6,49 @@ let activeMenuType = 'bar'; // 'bar' or 'food'
 
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
+    setupModal();
 });
+
+function setupModal() {
+    const modal = document.getElementById('product-modal');
+    const overlay = document.getElementById('modal-overlay');
+    const closeButton = document.getElementById('modal-close-button');
+
+    if (modal && overlay && closeButton) {
+        overlay.onclick = closeModal;
+        closeButton.onclick = closeModal;
+    }
+}
+
+function openModal(item) {
+    const modal = document.getElementById('product-modal');
+    if (!modal) return;
+
+    document.getElementById('modal-image').src = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+    document.getElementById('modal-name').innerHTML = item.name.replace(/(<br>|<\/br>)/g, ' ');
+    document.getElementById('modal-price').textContent = item.price;
+    document.getElementById('modal-desc').textContent = item.desc || '';
+
+    // Handle tags if they exist in data
+    const tagsContainer = document.getElementById('modal-tags');
+    tagsContainer.innerHTML = '';
+    if (item.tags && Array.isArray(item.tags)) {
+        item.tags.forEach(tag => {
+            tagsContainer.innerHTML += `<span class="font-body text-[11px] font-normal uppercase tracking-[0.15em] text-accent-yellow border border-accent-yellow/30 px-3 py-1 rounded-full">${tag}</span>`;
+        });
+    }
+
+    modal.classList.remove('hidden');
+    setTimeout(() => modal.classList.remove('opacity-0', 'scale-95'), 10);
+}
+
+function closeModal() {
+    const modal = document.getElementById('product-modal');
+    if (!modal) return;
+
+    modal.classList.add('opacity-0', 'scale-95');
+    setTimeout(() => modal.classList.add('hidden'), 300);
+}
 
 function initMenu() {
     Promise.all([
@@ -37,23 +79,24 @@ function renderPopularItems() {
     if (!container) return;
 
     const popularItems = configData.menu.items.filter(item => item.popular);
-    let html = '';
+    container.innerHTML = ''; // Clear existing content
     popularItems.forEach(item => {
         const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
-        html += `
-            <div class="flex-shrink-0 w-40 snap-center">
-                <div class="group relative w-full h-16 rounded-2xl overflow-hidden active:scale-95 transition-transform duration-300">
-                    <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${item.name}">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <div class="absolute bottom-3 left-3 right-3">
-                        <h4 class="font-bold text-sm text-white truncate">${item.name}</h4>
-                        <p class="text-xs text-white/70">${item.price}</p>
-                    </div>
+        const itemElement = document.createElement('div');
+        itemElement.className = 'flex-shrink-0 w-40 snap-center';
+        itemElement.innerHTML = `
+            <div class="group relative w-full h-16 rounded-2xl overflow-hidden active:scale-95 transition-transform duration-300 cursor-pointer">
+                <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${item.name}">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-3 left-3 right-3">
+                    <h4 class="font-bold text-sm text-white truncate">${item.name}</h4>
+                    <p class="text-xs text-white/70">${item.price}</p>
                 </div>
             </div>
         `;
+        itemElement.onclick = () => openModal(item);
+        container.appendChild(itemElement);
     });
-    container.innerHTML = html;
 }
 
 function renderCategoryItems(category) {
@@ -75,23 +118,24 @@ function renderCategoryItems(category) {
         return bHasImage - aHasImage;
     });
 
-    let html = '';
+    container.innerHTML = ''; // Clear existing content
     items.forEach(item => {
         const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
-        html += `
-            <div class="bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60">
-                <img src="${imageUrl}" class="w-16 h-16 rounded-lg object-cover" alt="${item.name}">
-                <div class="flex-1">
-                    <div class="flex justify-between items-start">
-                        <h4 class="font-medium text-sm text-white">${item.name}</h4>
-                        <span class="font-bold text-sm text-accent-yellow">${item.price}</span>
-                    </div>
-                    <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc || ''}</p>
+        const itemElement = document.createElement('div');
+        itemElement.className = 'bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60 cursor-pointer';
+        itemElement.innerHTML = `
+            <img src="${imageUrl}" class="w-16 h-16 rounded-lg object-cover" alt="${item.name}">
+            <div class="flex-1">
+                <div class="flex justify-between items-start">
+                    <h4 class="font-medium text-sm text-white">${item.name}</h4>
+                    <span class="font-bold text-sm text-accent-yellow">${item.price}</span>
                 </div>
+                <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc || ''}</p>
             </div>
         `;
+        itemElement.onclick = () => openModal(item);
+        container.appendChild(itemElement);
     });
-    container.innerHTML = html;
 }
 
 function renderCategoryGrid(type) {
