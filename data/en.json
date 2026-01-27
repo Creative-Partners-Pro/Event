@@ -77,14 +77,16 @@
         "name": "Neon Spritz",
         "price": "22.00",
         "desc": "A refreshing mix of prosecco, Aperol, and a splash of citrus.",
-        "type": "bar"
+        "type": "bar",
+        "tags": ["popular"]
       },
       {
         "category": "COCKTAILS",
         "name": "Red Owl",
         "price": "24.00",
         "desc": "A bold blend of whiskey, sweet vermouth, and a hint of cherry.",
-        "type": "bar"
+        "type": "bar",
+        "tags": ["hot", "popular"]
       },
       {
         "category": "COCKTAILS",
@@ -882,7 +884,8 @@
         "price": "2.30",
         "desc": null,
         "type": "food",
-        "image": "khinkali_kalakuri"
+        "image": "khinkali_kalakuri",
+        "tags": ["hot"]
       },
       {
         "category": "HOT DISHES",

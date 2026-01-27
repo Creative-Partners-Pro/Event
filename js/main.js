@@ -71,18 +71,14 @@ function renderHeader() {
             </button>
         </div>
 
-        <!-- Timer container - does not fade -->
-        <div class="absolute bottom-32 left-6 right-6 z-10">
+        <div class="absolute bottom-20 left-6 right-6 flex flex-col items-start">
+            <!-- Таймер -->
             <div class="flex justify-start gap-2 mb-2 countdown-container" id="countdown-timer">
                 <div class="countdown-item"><span class="countdown-value" id="d-val">00</span><span class="countdown-label">${configData.ui.days}</span></div>
                 <div class="countdown-item"><span class="countdown-value" id="h-val">00</span><span class="countdown-label">${configData.ui.hours}</span></div>
                 <div class="countdown-item"><span class="countdown-value" id="m-val">00</span><span class="countdown-label">${configData.ui.minutes}</span></div>
                 <div class="countdown-item"><span class="countdown-value" id="s-val">00</span><span class="countdown-label">${configData.ui.seconds}</span></div>
             </div>
-        </div>
-
-        <!-- Title container - will fade -->
-        <div class="absolute bottom-20 left-6 right-6 flex flex-col items-start">
             <h1 class="text-4xl font-bold leading-tight tracking-tight text-white drop-shadow-lg">${configData.event.title}</h1>
         </div>
     `;

@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -107,6 +106,20 @@
         .slide-in-left { animation-name: slide-in-from-left; }
         .slide-in-right { animation-name: slide-in-from-right; }
         .slide-in-bottom { animation-name: slide-in-from-bottom; }
+
+        .active-tip {
+            background-color: #FFD700 !important;
+            color: #000 !important;
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+        }
+        .rating-owl {
+            opacity: 0.3;
+            transition: opacity 0.2s ease-in-out, transform 0.1s ease-in-out;
+        }
+        .rating-owl.hovered, .rating-owl.selected {
+            opacity: 1;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body class="min-h-screen relative bg-background-dark text-white overflow-hidden">
@@ -153,7 +166,7 @@
                     <button id="bar-button" class="flex-1 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Bar</button>
                     <button id="food-button" class="flex-1 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Food</button>
                 </div>
-                <button class="h-10 w-10 flex items-center justify-center rounded-xl bg-black/40 backdrop-blur-md border border-white/10 text-white/60" title="Reviews">
+                <button id="reviews-modal-trigger" class="h-10 w-10 flex items-center justify-center rounded-xl bg-black/40 backdrop-blur-md border border-white/10 text-white/60" title="Reviews">
                     <span class="material-symbols-outlined text-xl">reviews</span>
                 </button>
             </div>
@@ -205,5 +218,58 @@
     </div>
 
     <script src="js/menu.js"></script>
+
+    <!-- Reviews & Tips Modal -->
+    <div id="reviews-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+        <!-- Background Overlay -->
+        <div id="reviews-modal-overlay" class="absolute inset-0 bg-black/30 backdrop-blur-md"></div>
+
+        <!-- Modal Content -->
+        <div class="relative z-20 w-[90%] max-w-[400px] bg-black/50 backdrop-blur-2xl rounded-3xl border border-white/10 p-6 flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+                <h2 class="text-lg font-semibold text-white/90">Reviews & Tips</h2>
+                <button id="reviews-modal-close-button" class="w-8 h-8 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-md text-white/60">close</span>
+                </button>
+            </div>
+
+            <!-- Google Maps Link -->
+            <a href="https://g.page/r/Cbi1Qy_s8-TxEAI/review" target="_blank" class="flex items-center justify-between p-3 bg-black/20 rounded-lg border border-white/10 hover:bg-white/5 transition-colors">
+                <span class="text-white/80">Leave a public review on Google</span>
+                <span class="material-symbols-outlined text-white/50">open_in_new</span>
+            </a>
+
+            <!-- Anonymous Review Form -->
+            <div class="border-t border-b border-white/5 py-4">
+                <label for="review-text" class="text-sm font-light text-white/50 mb-2 block">Or leave an anonymous review for the owner</label>
+                <div id="rating-container" class="flex items-center gap-2 mb-3">
+                    <!-- Rating owls will be injected here -->
+                </div>
+                <textarea id="review-text" rows="3" placeholder="Your feedback..." class="w-full bg-black/20 border border-white/10 rounded-lg p-2 text-white/80 focus:ring-1 focus:ring-accent-yellow focus:border-accent-yellow transition"></textarea>
+            </div>
+
+            <div>
+                <h3 class="text-sm font-light text-white/50 mb-2">Leave a tip</h3>
+                <div class="flex items-start gap-4">
+                    <div class="w-24 h-24 rounded-lg bg-white p-1 flex items-center justify-center">
+                        <img id="tip-qr-code" src="img/qr-code-placeholder.svg" alt="QR Code for Tips" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1 flex flex-col gap-2">
+                        <button data-tip="1" class="tip-button w-full py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:bg-accent-yellow hover:text-black transition">1 GEL</button>
+                        <button data-tip="3" class="tip-button w-full py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:bg-accent-yellow hover:text-black transition">3 GEL</button>
+                        <button data-tip="5" class="tip-button w-full py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:bg-accent-yellow hover:text-black transition">5 GEL</button>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <button id="copy-details-button" class="w-full text-center text-xs text-white/40 hover:text-accent-yellow transition-colors">
+                        Copy bank account details
+                    </button>
+                    <span id="copy-success-message" class="text-xs text-green-400 hidden ml-2">Copied!</span>
+                </div>
+            </div>
+
+            <button id="send-feedback-button" class="w-full py-3 bg-accent-yellow text-black font-bold rounded-lg hover:bg-yellow-400 transition mt-2">Send Feedback</button>
+        </div>
+    </div>
 </body>
 </html>
