@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Analog Studio Vinyl Hub - Vinyl Rock Night</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Big+Shoulders+Stencil+Text:wght@400;600;800&amp;family=Share+Tech+Mono&amp;family=Special+Elite&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<style>.bg-concrete {
+    background-color: #1a1a1a;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC9D1jGZQHlOLaEGLBn0M_vu2VhaZ6RPyW0MfYeGLTA_ntKYD45ZMWbBwdBGdQMq1fp6aqiYNLHqVram34u6EUSvLjhjB3-Fyr799nL-__zVhtj_DwBOkTVZeITEbsbRGSzORq8ue8GZBccsonX7P8Fhurw8z6HzV6SlrjVktrGFGQoQSqIMdL4xRKcT4OwEc1647xO2qhobIxnU8Ijpsi6_npB2y4wroLZ2IG4KDgxekU85PBpz4wR6x7hVA21DEH_4TqrAC31KsE)
+    }
+.text-stencil {
+    font-family: "Big Shoulders Stencil Text", cursive;
+    text-transform: uppercase;
+    letter-spacing: 0.05em
+    }
+.text-distressed {
+    color: #e5e5e5;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(100, 100, 100, 0.1);
+    position: relative
+    }
+.text-distressed::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    top: 0;
+    color: rgba(255, 255, 255, 0.1);
+    filter: blur(2px);
+    z-index: -1
+    }
+.bg-brushed-metal {
+    background: linear-gradient(135deg, #e0e0e0 0%, #a0a0a0 25%, #d0d0d0 50%, #909090 75%, #c0c0c0 100%);
+    background-size: 400% 400%;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.2)
+    }
+.no-scrollbar::-webkit-scrollbar {
+    display: none
+    }
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+    }
+.vu-meter-bg {
+    background: #2a2a2a;
+    box-shadow: inset 0 0 10px #000
+    }
+.vu-needle {
+    transform-origin: bottom center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5)
+    }
+.glass-panel {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5)
+    }
+.grain-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCX-iedkvXgKdVrhmdnL0EhVCBDqNX3a2pIqs2gPqV8SqlAC2Aqj16aaU5_q-qRWpYmN0EW-hw1ZB-6X4NXYqRGvMSnUf5XpyqWdrwvyKYrMZttf006IAecsDUrHUeo_Uup0dGa7TmqHT3KupyhzIGp27hf37uaUqdkg06HgxxDB2pMtkgMsmkIEaa3MaGm8CAgiQl2Ok-4jG_Tr8KLgMfy-GRpYNPDe8xAuAMFYZoN5KvjHYyw42HqkFeuZyveggCPVTR7tDnjSk0);
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 20;
+    mix-blend-mode: overlay
+    }.flip-board-item {
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+.flip-card {
+    background-color: #222;
+    color: #e0e0e0;
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    border: 1px solid #333;
+}
+.flip-card::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+    z-index: 10;
+}
+.flip-top {
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+}
+.flip-bottom {
+    background: linear-gradient(to bottom, #1a1a1a, #2a2a2a);
+}
+</style>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#d4d4d4",
+                        secondary: "#888888",
+                        "background-dark": "#121212",
+                        "panel-dark": "rgba(40, 40, 40, 0.8)",
+                    },
+                    fontFamily: {
+                        stencil: ["Big Shoulders Stencil Text", "cursive"],
+                        mono: ["Share Tech Mono", "monospace"],
+                        typewriter: ["Special Elite", "serif"]
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(255, 255, 255, 0.1)',
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-concrete text-gray-200 font-mono min-h-screen relative overflow-x-hidden grain-overlay selection:bg-gray-600 selection:text-white">
+<div class="fixed inset-0 z-0 pointer-events-none">
+<div class="absolute inset-0 bg-cover bg-top bg-no-repeat opacity-50 mix-blend-overlay grayscale contrast-125" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8sIeK7yefXvLIuCsWJQoJrFH_Bbrdd-FqmeQbNBXmApdIRuAAHpcXWeYMuIFhOAc5MBerrGmMmeecOGPXqZHLWAeIdparXYUe_LqHQJ1r_cJlNuqW7h8e9mCLhRi9ZBBhw9_ianHB8S1p1nPsju7NWA3sf71HiHP_ejtEq_73qP7lwOxu-fYlBKFuGH3XgBCrC12346DlfCp56qGmul4J-MEJSX5onJlPDjE7z0j56wN5prRlbD0fNAuVbOFwEgdmfX9iGksrwfU');"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/80 via-[#1a1a1a]/90 to-[#121212]"></div>
+<div class="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-gray-500/10 to-transparent mix-blend-screen filter blur-[80px]"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]"></div>
+</div>
+<div class="relative z-10 max-w-md mx-auto min-h-screen flex flex-col pb-32">
+<header class="flex justify-end items-center p-6 space-x-4">
+<button class="w-10 h-10 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 hover:bg-white/10 transition-all shadow-glow">
+<span class="material-icons-outlined text-xl">translate</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm flex items-center justify-center text-gray-400 hover:text-white hover:border-white/30 hover:bg-white/10 transition-all shadow-glow">
+<span class="material-icons-outlined text-xl">share</span>
+</button>
+</header>
+<div class="px-6 pt-2 pb-8">
+<div class="mb-10 text-center sm:text-left relative">
+<div class="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-gray-500 to-transparent opacity-30"></div>
+<h2 class="text-sm font-typewriter tracking-widest text-gray-400 uppercase mb-2 pl-2 border-b border-gray-700 inline-block pb-1">Dr. Owl Bar Presents</h2>
+<h1 class="text-[5.5rem] font-stencil uppercase leading-[0.85] text-distressed tracking-tighter" data-text="VINYL ROCK">
+                    VINYL<br/>ROCK
+                </h1>
+<p class="text-xs font-mono text-gray-500 mt-2 pl-1 tracking-widest uppercase">Analog Night / Vol. 03</p>
+</div>
+<div class="flex justify-between gap-3 mb-10 overflow-x-auto no-scrollbar pb-2">
+<div class="flex flex-col items-center">
+<div class="flip-board-item w-[70px] h-[80px] bg-[#1a1a1a] rounded flex items-center justify-center relative shadow-lg border border-gray-800">
+<div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#2a2a2a] to-[#1f1f1f] border-b border-black/50 z-0 rounded-t"></div>
+<div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] border-t border-white/5 z-0 rounded-b"></div>
+<div class="absolute inset-0 flex items-center justify-center z-10">
+<span class="text-4xl font-mono font-bold text-gray-200 tracking-wider">00</span>
+</div>
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-black shadow-[0_1px_0_rgba(255,255,255,0.1)] z-20"></div>
+<div class="absolute top-1 left-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute top-1 right-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute bottom-1 left-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute bottom-1 right-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+</div>
+<span class="text-[9px] text-gray-500 uppercase font-bold tracking-widest mt-2 bg-black/40 px-2 py-0.5 rounded border border-white/5">Days</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="flip-board-item w-[70px] h-[80px] bg-[#1a1a1a] rounded flex items-center justify-center relative shadow-lg border border-gray-800">
+<div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#2a2a2a] to-[#1f1f1f] border-b border-black/50 z-0 rounded-t"></div>
+<div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] border-t border-white/5 z-0 rounded-b"></div>
+<div class="absolute inset-0 flex items-center justify-center z-10">
+<span class="text-4xl font-mono font-bold text-gray-200 tracking-wider">12</span>
+</div>
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-black shadow-[0_1px_0_rgba(255,255,255,0.1)] z-20"></div>
+<div class="absolute top-1 left-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute top-1 right-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute bottom-1 left-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute bottom-1 right-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+</div>
+<span class="text-[9px] text-gray-500 uppercase font-bold tracking-widest mt-2 bg-black/40 px-2 py-0.5 rounded border border-white/5">Hrs</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="flip-board-item w-[70px] h-[80px] bg-[#1a1a1a] rounded flex items-center justify-center relative shadow-lg border border-gray-800">
+<div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#2a2a2a] to-[#1f1f1f] border-b border-black/50 z-0 rounded-t"></div>
+<div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] border-t border-white/5 z-0 rounded-b"></div>
+<div class="absolute inset-0 flex items-center justify-center z-10">
+<span class="text-4xl font-mono font-bold text-gray-200 tracking-wider">23</span>
+</div>
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-black shadow-[0_1px_0_rgba(255,255,255,0.1)] z-20"></div>
+<div class="absolute top-1 left-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute top-1 right-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute bottom-1 left-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute bottom-1 right-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+</div>
+<span class="text-[9px] text-gray-500 uppercase font-bold tracking-widest mt-2 bg-black/40 px-2 py-0.5 rounded border border-white/5">Min</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="flip-board-item w-[70px] h-[80px] bg-[#1a1a1a] rounded flex items-center justify-center relative shadow-lg border border-gray-800">
+<div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#2a2a2a] to-[#1f1f1f] border-b border-black/50 z-0 rounded-t"></div>
+<div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-[#1f1f1f] to-[#2a2a2a] border-t border-white/5 z-0 rounded-b"></div>
+<div class="absolute inset-0 flex items-center justify-center z-10">
+<span class="text-4xl font-mono font-bold text-gray-200 tracking-wider">04</span>
+</div>
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-black shadow-[0_1px_0_rgba(255,255,255,0.1)] z-20"></div>
+<div class="absolute top-1 left-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute top-1 right-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute bottom-1 left-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+<div class="absolute bottom-1 right-1 w-1 h-1 rounded-full bg-[#111] shadow-[inset_0_0_1px_rgba(255,255,255,0.2)]"></div>
+</div>
+<span class="text-[9px] text-gray-500 uppercase font-bold tracking-widest mt-2 bg-black/40 px-2 py-0.5 rounded border border-white/5">Sec</span>
+</div>
+</div>
+<div class="relative glass-panel rounded-sm p-6 mb-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-white/10 -mr-2 -mt-2"></div>
+<div class="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-white/10 -ml-2 -mb-2"></div>
+<div class="flex flex-col items-center text-center relative z-10">
+<div class="flex items-center space-x-2 text-white/90 mb-3 border-b border-white/10 pb-2 w-full justify-center">
+<span class="material-icons-outlined text-sm">calendar_today</span>
+<span class="font-typewriter text-lg tracking-wider">JAN 31 / 21:00</span>
+</div>
+<h3 class="text-3xl font-stencil uppercase tracking-widest mb-2 text-white drop-shadow-md">LIVE SESSION</h3>
+<p class="text-sm font-mono text-gray-400 leading-relaxed max-w-[280px]">
+<span class="text-gray-500">OPEN:</span> 18:00  |  <span class="text-gray-500">LIVE:</span> 21:00
+                    </p>
+</div>
+</div>
+<div class="flex justify-center space-x-6 mb-12">
+<a class="w-12 h-12 rounded-full border border-gray-600 bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-700 hover:border-gray-400 transition-all group shadow-lg" href="#">
+<svg class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="w-12 h-12 rounded-full border border-gray-600 bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-700 hover:border-gray-400 transition-all group shadow-lg" href="#">
+<svg class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.791-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="w-12 h-12 rounded-full border border-gray-600 bg-[#1a1a1a] flex items-center justify-center hover:bg-gray-700 hover:border-gray-400 transition-all group shadow-lg" href="#">
+<svg class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"></path></svg>
+</a>
+</div>
+<div class="mb-12">
+<h3 class="text-xl font-stencil uppercase mb-6 text-white border-l-4 border-white/30 pl-3 tracking-widest flex items-center">
+                    Line-up &amp; Guests
+                    <div class="h-[1px] bg-white/10 flex-grow ml-4"></div>
+</h3>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col items-center group cursor-pointer bg-black/40 p-4 rounded-sm border border-white/5 hover:border-white/20 transition-all">
+<div class="relative w-24 h-24 mb-4">
+<div class="absolute inset-0 rounded-full border-2 border-gray-500 p-0.5 group-hover:border-white transition-colors">
+<img alt="Ketus Artist" class="w-full h-full object-cover rounded-full grayscale contrast-150 brightness-90 group-hover:contrast-125 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcNbcbrkmSFeowZ9nOud507khytWP9Wx-h8uG_A9mojwsx6pEbYF4VPGCaNkp09_5X3XFll8yCCej_imq13SWoCXu-9xmsgG38WW3NQu3W0qbh5eDS9pxNXEp-2TuDPsZMHvjGot4siMnWQvL5i20BFbkbZnGC-pSHq6rg3LSUhfIimrGqD3T-M6d8k3Hj-ECyM8FOXV83vZ231B9V94qIIxTLsKH26ahy0bTXFfjQogzbOxlMYy9pBw33YuVbJ_iCWI4qcV95cuM"/>
+</div>
+<div class="absolute -top-2 -right-2 bg-white text-black text-[9px] font-black px-2 py-1 uppercase border border-black shadow-sm transform rotate-12">ON STAGE</div>
+</div>
+<h4 class="text-base font-bold font-stencil text-gray-200 tracking-wider group-hover:text-white">Ketus</h4>
+<span class="text-[10px] text-gray-500 font-mono uppercase mt-1">Headliner</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer bg-black/40 p-4 rounded-sm border border-white/5 hover:border-white/20 transition-all">
+<div class="relative w-24 h-24 mb-4">
+<div class="absolute inset-0 rounded-full border-2 border-gray-600 p-0.5 group-hover:border-white transition-colors dashed-border">
+<div class="w-full h-full rounded-full bg-[#111] flex items-center justify-center overflow-hidden relative">
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:4px_4px]"></div>
+<span class="material-icons-outlined text-4xl text-gray-400 group-hover:text-white transition-colors">all_inclusive</span>
+</div>
+</div>
+</div>
+<h4 class="text-base font-bold font-stencil text-gray-200 tracking-wider group-hover:text-white">Creative</h4>
+<span class="text-[10px] text-gray-500 font-mono uppercase mt-1">Organizer</span>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<div class="glass-panel rounded-sm p-5 relative overflow-hidden">
+<div class="flex justify-between items-center mb-4 border-b border-white/10 pb-3">
+<h3 class="text-xl font-stencil uppercase text-white tracking-widest">Location</h3>
+<button class="bg-transparent border border-gray-500 text-gray-300 px-3 py-1 rounded-sm text-[10px] font-bold hover:bg-white hover:text-black hover:border-white transition-all uppercase tracking-wider font-mono">
+                            Open Map
+                        </button>
+</div>
+<div class="relative w-full h-36 rounded-sm overflow-hidden mb-4 bg-[#0a0a0a] border border-gray-800 group cursor-pointer">
+<img alt="Dark Map Background" class="w-full h-full object-cover opacity-20 mix-blend-luminosity grayscale group-hover:opacity-30 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdE3w1oDBEelzEe9t-LeBGG7crdj2RVBnQJLIFkw2GFvPEohFbI94Z2yB1dVjjQWfUOuaTLghAhBiPCVsXpgc_JcJVR8zxvSa3z9W9-F6C27MR91kVDGtXxSXKmudZ1vJdh7_qxNeNQSJJkz7HT6ZtMUSIOuij_z-Zni-gTibjJjNTcbVsHARrlgkqIn55IImZwY7Ki38QCET1tMg8lhvw5vnKNf8QpOuzE94Otvyu5duaS4auAt4KDYJPUuOTpD_V1DEL9gKnwDc"/>
+<div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-5xl font-stencil text-white/5 uppercase tracking-tighter select-none scale-150 transform -rotate-12">ZONE 01</span>
+</div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+<div class="w-4 h-4 bg-white rounded-full animate-ping absolute opacity-75"></div>
+<div class="w-3 h-3 bg-white rounded-full relative z-10 border-2 border-black"></div>
+</div>
+</div>
+<div class="flex items-start space-x-3 text-gray-300">
+<span class="material-icons-outlined text-gray-500 mt-1">place</span>
+<div>
+<h4 class="font-bold font-stencil text-lg text-white tracking-wide">Drunk Owl Bar</h4>
+<p class="text-xs text-gray-500 font-mono">21 Samghebro St, Tbilisi</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 left-4 right-4 z-50">
+<div class="bg-brushed-metal rounded-lg p-2 pl-4 pr-2 flex items-center justify-between shadow-[0_10px_30px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.5)] border border-gray-400">
+<button class="text-gray-600 hover:text-black transition-colors p-2 active:scale-95">
+<span class="material-icons-outlined">restaurant_menu</span>
+</button>
+<div class="flex-1 flex justify-center mx-2">
+<div class="flex bg-[#e5e5e5] rounded border border-gray-400 overflow-hidden h-10 shadow-inner relative group cursor-pointer w-full max-w-[200px]">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-r from-gray-400 to-transparent opacity-30"></div>
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-l from-gray-400 to-transparent opacity-30"></div>
+<button class="flex items-center justify-center px-4 w-full hover:bg-white transition-colors">
+<span class="material-icons-outlined text-sm mr-2 text-gray-800">confirmation_number</span>
+<div class="flex flex-col items-start">
+<span class="text-[10px] font-black tracking-widest text-black uppercase leading-none mb-0.5">Get Entry</span>
+<span class="text-[9px] font-mono text-gray-600 leading-none">20 GEL</span>
+</div>
+</button>
+</div>
+</div>
+<button class="w-10 h-10 rounded bg-black flex items-center justify-center text-white border border-gray-600 hover:bg-gray-800 transition-all shadow-lg active:scale-95">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
+</button>
+</div>
+<div class="absolute -bottom-1 left-6 w-1.5 h-1.5 rounded-full bg-gray-400 shadow-sm flex items-center justify-center pointer-events-none"><div class="w-full h-[1px] bg-gray-600 transform rotate-45"></div></div>
+<div class="absolute -bottom-1 right-6 w-1.5 h-1.5 rounded-full bg-gray-400 shadow-sm flex items-center justify-center pointer-events-none"><div class="w-full h-[1px] bg-gray-600 transform rotate-45"></div></div>
+<div class="absolute -top-1 left-6 w-1.5 h-1.5 rounded-full bg-gray-400 shadow-sm flex items-center justify-center pointer-events-none"><div class="w-full h-[1px] bg-gray-600 transform rotate-45"></div></div>
+<div class="absolute -top-1 right-6 w-1.5 h-1.5 rounded-full bg-gray-400 shadow-sm flex items-center justify-center pointer-events-none"><div class="w-full h-[1px] bg-gray-600 transform rotate-45"></div></div>
+</div>
+</body></html>
