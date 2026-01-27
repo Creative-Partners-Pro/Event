@@ -718,14 +718,16 @@
         "name": "Akroshka (seasonal)",
         "price": "14",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "akroshka"
       },
       {
         "category": "SOUPS",
         "name": "Spinach cream-soup",
         "price": "23",
         "desc": null,
-        "type": "food"
+        "type": "food",
+        "image": "spinach_cream_soup"
       },
       {
         "category": "SOUPS",

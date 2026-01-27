@@ -120,7 +120,7 @@ function renderArtists() {
         div.onclick = () => window.location.href = person.instagram;
         // Corrected the image path to use the new structure in images.json
         const participantImageKey = person.name.toLowerCase().replace(/ /g, '_');
-        const imageUrl = imageData.participants && imageData.participants[participantImageKey] ? imageData.participants[participantImageKey] : 'img/placeholder.png';
+        const imageUrl = imageData.participants && imageData.participants[participantImageKey] ? imageData.participants[participantImageKey] : 'img/placeholder.webp';
 
         div.innerHTML = `
             <div class="w-24 h-24 mx-auto rounded-full p-1 bg-gradient-to-tr from-indigo-500 to-pink-500 mb-3 group-active:scale-95 transition-transform">

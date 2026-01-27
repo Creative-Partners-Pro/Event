@@ -243,7 +243,7 @@ function formatPrice(price) {
 }
 
 function displayModalData(item) {
-    document.getElementById('modal-image').src = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+    document.getElementById('modal-image').src = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.webp';
     document.getElementById('modal-name').textContent = item.name.replace(/(<br>|<\/br>)/g, ' ');
     document.getElementById('modal-price').textContent = formatPrice(item.price);
     document.getElementById('modal-desc').textContent = item.desc || '';
@@ -320,7 +320,7 @@ function renderPopularItems() {
     const popularItems = configData.menu.items.filter(item => item.popular);
     container.innerHTML = ''; // Clear existing content
     popularItems.forEach(item => {
-        const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+        const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.webp';
         const itemElement = document.createElement('div');
         itemElement.className = 'flex-shrink-0 w-40 snap-center';
         itemElement.innerHTML = `
@@ -350,8 +350,8 @@ function renderCategoryItems(category) {
 
     // Sort items: those with images first
     items.sort((a, b) => {
-        const aImageUrl = imageData.menu[a.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
-        const bImageUrl = imageData.menu[b.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+        const aImageUrl = imageData.menu[a.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.webp';
+        const bImageUrl = imageData.menu[b.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.webp';
         const aHasImage = !aImageUrl.includes('placeholder');
         const bHasImage = !bImageUrl.includes('placeholder');
         return bHasImage - aHasImage;
@@ -359,7 +359,7 @@ function renderCategoryItems(category) {
 
     container.innerHTML = ''; // Clear existing content
     items.forEach(item => {
-        const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+        const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.webp';
         const itemElement = document.createElement('div');
         itemElement.className = 'menu-item bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60 cursor-pointer';
         const tagsHtml = item.tags && item.tags.map(tag => {
