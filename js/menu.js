@@ -5,165 +5,11 @@ let currentLang = localStorage.getItem('lang') || 'en';
 let activeMenuType = 'bar'; // 'bar' or 'food'
 let currentItemIndex = -1;
 let currentCategoryItems = [];
-let currentRating = 0;
-
-// --- Constants ---
-const bankAccountDetails = "GE75CD0360000050090787";
-const qrCodeUrls = {
-    1: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://drunk-owl-bar.com/tip/1',
-    3: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://drunk-owl-bar.com/tip/3',
-    5: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://drunk-owl-bar.com/tip/5'
-};
-
 
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
     setupModal();
-    initReviewsModal();
 });
-
-
-function initReviewsModal() {
-    const modal = document.getElementById('reviews-modal');
-    const trigger = document.getElementById('reviews-modal-trigger');
-    const closeButton = document.getElementById('reviews-modal-close-button');
-    const overlay = document.getElementById('reviews-modal-overlay');
-
-    if (!modal || !trigger || !closeButton || !overlay) {
-        console.warn('Reviews modal elements not found.');
-        return;
-    }
-
-    const openModal = () => modal.classList.remove('hidden');
-    const closeModal = () => modal.classList.add('hidden');
-
-    trigger.addEventListener('click', openModal);
-    closeButton.addEventListener('click', closeModal);
-    overlay.addEventListener('click', closeModal);
-
-    setupRating();
-    setupTipButtons();
-    setupCopyButton();
-    setupSendFeedbackButton(closeModal);
-}
-
-function createOwlIcon(value) {
-    const svgNS = "http://www.w3.org/2000/svg";
-    const svg = document.createElementNS(svgNS, "svg");
-    svg.setAttribute("xmlns", svgNS);
-    svg.setAttribute("width", "32");
-    svg.setAttribute("height", "32");
-    svg.setAttribute("fill", "currentColor");
-    svg.setAttribute("viewBox", "0 0 256 256");
-    svg.classList.add('rating-owl', 'cursor-pointer');
-    svg.dataset.value = value;
-
-    const path = document.createElementNS(svgNS, "path");
-    const svgPathData = "M176,68a12,12,0,1,1-12-12A12,12,0,0,1,176,68Zm64,12a8,8,0,0,1-3.56,6.66L216,100.28V120A104.11,104.11,0,0,1,112,224H24a16,16,0,0,1-12.49-26l.1-.12L96,96.63V76.89C96,43.47,122.79,16.16,155.71,16H156a60,60,0,0,1,57.21,41.86l23.23,15.48A8,8,0,0,1,240,80Zm-22.42,0L201.9,69.54a8,8,0,0,1-3.31-4.64A44,44,0,0,0,156,32h-.22C131.64,32.12,112,52.25,112,76.89V99.52a8,8,0,0,1-1.85,5.13L24,208h26.9l70.94-85.12a8,8,0,1,1,12.29,10.24L71.75,208H112a88.1,88.1,0,0,0,88-88V96a8,8,0,0,1,3.56-6.66Z";
-    path.setAttribute("d", svgPathData);
-    svg.appendChild(path);
-
-    return svg;
-}
-
-function setupRating() {
-    const ratingContainer = document.getElementById('rating-container');
-    const ratingInput = document.getElementById('rating-input');
-    if (!ratingContainer || !ratingInput) return;
-
-    for (let i = 1; i <= 5; i++) {
-        const owlIcon = createOwlIcon(i);
-        ratingContainer.appendChild(owlIcon);
-    }
-
-    const owls = ratingContainer.querySelectorAll('.rating-owl');
-
-    owls.forEach(owl => {
-        owl.addEventListener('mouseover', () => {
-            const value = parseInt(owl.dataset.value);
-            owls.forEach(o => o.classList.toggle('hovered', parseInt(o.dataset.value) <= value));
-        });
-
-        owl.addEventListener('mouseout', () => {
-            owls.forEach(o => o.classList.remove('hovered'));
-        });
-
-        owl.addEventListener('click', () => {
-            currentRating = parseInt(owl.dataset.value);
-            ratingInput.value = currentRating; // Update the hidden input
-            owls.forEach(o => o.classList.toggle('selected', parseInt(o.dataset.value) <= currentRating));
-        });
-    });
-}
-
-function setupTipButtons() {
-    const tipButtons = document.querySelectorAll('.tip-button');
-    const qrCodeImage = document.getElementById('tip-qr-code');
-
-    if (!qrCodeImage) return;
-
-    tipButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            tipButtons.forEach(btn => btn.classList.remove('active-tip'));
-            button.classList.add('active-tip');
-            const tipAmount = button.dataset.tip;
-            qrCodeImage.src = qrCodeUrls[tipAmount] || 'img/qr-code-placeholder.svg';
-        });
-    });
-}
-
-
-function setupCopyButton() {
-    const copyButton = document.getElementById('copy-details-button');
-    const successMessage = document.getElementById('copy-success-message');
-
-    if (!copyButton || !successMessage) return;
-
-    copyButton.addEventListener('click', () => {
-        navigator.clipboard.writeText(bankAccountDetails).then(() => {
-            successMessage.classList.remove('hidden');
-            setTimeout(() => {
-                successMessage.classList.add('hidden');
-            }, 2000);
-        }).catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
-    });
-}
-
-
-function setupSendFeedbackButton(closeModalCallback) {
-    const form = document.getElementById('feedback-form');
-    const reviewTextArea = document.getElementById('review-text');
-    const ratingContainer = document.getElementById('rating-container');
-    const ratingInput = document.getElementById('rating-input');
-    const errorElement = document.getElementById('feedback-error');
-
-    if (!form || !reviewTextArea || !ratingContainer || !ratingInput || !errorElement) return;
-
-    form.addEventListener('submit', (event) => {
-        // Basic validation
-        if (currentRating === 0 && reviewTextArea.value.trim() === '') {
-            event.preventDefault(); // Stop form submission
-            errorElement.textContent = 'Please leave a rating or a review before sending.';
-            return;
-        }
-
-        errorElement.textContent = ''; // Clear error message
-
-        // The form will now submit to the Google Apps Script URL
-
-        // Optional: Reset form visually after a short delay to allow submission
-        setTimeout(() => {
-            reviewTextArea.value = '';
-            currentRating = 0;
-            ratingInput.value = '0';
-            ratingContainer.querySelectorAll('.rating-owl').forEach(o => o.classList.remove('selected'));
-            closeModalCallback();
-        }, 500);
-    });
-}
-
 
 function setupModal() {
     const modal = document.getElementById('product-modal');
@@ -234,18 +80,10 @@ function setupModal() {
     });
 }
 
-function formatPrice(price) {
-    const numericPrice = parseFloat(price);
-    if (isNaN(numericPrice)) {
-        return price; // Return original if not a number
-    }
-    return `${numericPrice.toFixed(1)} GEL`;
-}
-
 function displayModalData(item) {
     document.getElementById('modal-image').src = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.webp';
     document.getElementById('modal-name').textContent = item.name.replace(/(<br>|<\/br>)/g, ' ');
-    document.getElementById('modal-price').textContent = formatPrice(item.price);
+    document.getElementById('modal-price').textContent = item.price;
     document.getElementById('modal-desc').textContent = item.desc || '';
 
     // Handle tags if they exist in data
@@ -329,7 +167,7 @@ function renderPopularItems() {
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                 <div class="absolute bottom-3 left-3 right-3">
                     <h4 class="font-bold text-sm text-white truncate">${item.name}</h4>
-                    <p class="text-xs text-white/70">${formatPrice(item.price)}</p>
+                    <p class="text-xs text-white/70">${item.price}</p>
                 </div>
             </div>
         `;
@@ -362,34 +200,14 @@ function renderCategoryItems(category) {
         const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.webp';
         const itemElement = document.createElement('div');
         itemElement.className = 'menu-item bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60 cursor-pointer';
-        const tagsHtml = item.tags && item.tags.map(tag => {
-            let bgColor = 'bg-gray-500/20';
-            let textColor = 'text-gray-300';
-            if (tag.toLowerCase() === 'hot') {
-                bgColor = 'bg-red-500/20';
-                textColor = 'text-red-400';
-            } else if (tag.toLowerCase() === 'popular') {
-                bgColor = 'bg-yellow-500/20';
-                textColor = 'text-yellow-400';
-            } else if (tag.toLowerCase() === 'sale') {
-                bgColor = 'bg-green-500/20';
-                textColor = 'text-green-400';
-            }
-            return `<span class="text-[10px] uppercase font-semibold tracking-wider px-2 py-1 rounded-md ${bgColor} ${textColor}">${tag}</span>`;
-        }).join('');
-
-        const tagsContainer = tagsHtml ? `<div class="flex gap-2 items-center">${tagsHtml}</div>` : '';
-
         itemElement.innerHTML = `
             <img src="${imageUrl}" class="w-16 h-16 rounded-lg object-cover" alt="${item.name}">
             <div class="flex-1">
-                <h4 class="font-medium text-sm text-white">${item.name}</h4>
-                <div class="flex justify-between items-center mt-2">
-                    <div class="price-container border border-white/10 rounded-full px-3 py-1">
-                         <span class="font-bold text-sm text-accent-yellow">${formatPrice(item.price)}</span>
-                    </div>
-                    ${tagsContainer}
+                <div class="flex justify-between items-start">
+                    <h4 class="font-medium text-sm text-white">${item.name}</h4>
+                    <span class="font-bold text-sm text-accent-yellow">${item.price}</span>
                 </div>
+                <p class="text-xs text-gray-400 mt-1 line-clamp-2">${item.desc || ''}</p>
             </div>
         `;
         itemElement.onclick = () => openModal(item);
