@@ -8,7 +8,7 @@ let currentCategoryItems = [];
 let currentRating = 0;
 
 // --- Constants ---
-const bankAccountDetails = "GE12BG0000000123456789\nReceiver: Drunk Owl Bar";
+const bankAccountDetails = "GE75CD0360000050090787";
 const qrCodeUrls = {
     1: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://drunk-owl-bar.com/tip/1',
     3: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://drunk-owl-bar.com/tip/3',
@@ -68,7 +68,8 @@ function createOwlIcon(value) {
 
 function setupRating() {
     const ratingContainer = document.getElementById('rating-container');
-    if (!ratingContainer) return;
+    const ratingInput = document.getElementById('rating-input');
+    if (!ratingContainer || !ratingInput) return;
 
     for (let i = 1; i <= 5; i++) {
         const owlIcon = createOwlIcon(i);
@@ -89,6 +90,7 @@ function setupRating() {
 
         owl.addEventListener('click', () => {
             currentRating = parseInt(owl.dataset.value);
+            ratingInput.value = currentRating; // Update the hidden input
             owls.forEach(o => o.classList.toggle('selected', parseInt(o.dataset.value) <= currentRating));
         });
     });
@@ -131,46 +133,34 @@ function setupCopyButton() {
 
 
 function setupSendFeedbackButton(closeModalCallback) {
-    const sendButton = document.getElementById('send-feedback-button');
+    const form = document.getElementById('feedback-form');
     const reviewTextArea = document.getElementById('review-text');
     const ratingContainer = document.getElementById('rating-container');
-    const tipButtons = document.querySelectorAll('.tip-button');
-    const qrCodeImage = document.getElementById('tip-qr-code');
+    const ratingInput = document.getElementById('rating-input');
+    const errorElement = document.getElementById('feedback-error');
 
+    if (!form || !reviewTextArea || !ratingContainer || !ratingInput || !errorElement) return;
 
-    if (!sendButton || !reviewTextArea) return;
-
-    sendButton.addEventListener('click', () => {
-        const reviewText = reviewTextArea.value;
-        const selectedTip = document.querySelector('.tip-button.active-tip')?.dataset.tip || 'No tip';
-
+    form.addEventListener('submit', (event) => {
         // Basic validation
-        if (currentRating === 0 && reviewText.trim() === '') {
-            alert('Please leave a rating or a review before sending.');
+        if (currentRating === 0 && reviewTextArea.value.trim() === '') {
+            event.preventDefault(); // Stop form submission
+            errorElement.textContent = 'Please leave a rating or a review before sending.';
             return;
         }
 
-        const feedback = {
-            rating: currentRating,
-            review: reviewText,
-            tip: selectedTip
-        };
+        errorElement.textContent = ''; // Clear error message
 
-        // Simulate sending data
-        console.log('--- Sending Feedback ---');
-        console.log(feedback);
-        alert('Thank you for your feedback!');
+        // The form will now submit to the Google Apps Script URL
 
-        // Reset form
-        reviewTextArea.value = '';
-        currentRating = 0;
-        ratingContainer.querySelectorAll('.rating-owl').forEach(o => o.classList.remove('selected'));
-        tipButtons.forEach(btn => btn.classList.remove('active-tip'));
-        qrCodeImage.src = 'img/qr-code-placeholder.svg';
-
-
-        // Close modal
-        closeModalCallback();
+        // Optional: Reset form visually after a short delay to allow submission
+        setTimeout(() => {
+            reviewTextArea.value = '';
+            currentRating = 0;
+            ratingInput.value = '0';
+            ratingContainer.querySelectorAll('.rating-owl').forEach(o => o.classList.remove('selected'));
+            closeModalCallback();
+        }, 500);
     });
 }
 
