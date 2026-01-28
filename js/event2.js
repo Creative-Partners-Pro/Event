@@ -32,6 +32,7 @@ function renderApp() {
     // UI strings
     document.title = configData.ui.pageTitle;
     document.getElementById('presents-text').innerText = configData.event.presents;
+    document.getElementById('other-events-text').innerText = configData.ui.otherEvents;
     document.getElementById('event-title').innerHTML = configData.event.title;
     document.getElementById('event-subtitle').innerText = configData.event.subtitle;
 
