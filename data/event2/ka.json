@@ -1,0 +1,71 @@
+{
+  "event": {
+    "presents": "Dr. Owl Bar წარმოგიდგენთ",
+    "title": "VINYL<br/>ROCK",
+    "subtitle": "ანალოგური ღამე / გამოშვ. 03",
+    "date": "31 იან / 21:00",
+    "eventDateISO": "2026-01-31T21:00:00",
+    "sessionType": "ცოცხალი სესია",
+    "schedule": "OPEN: 18:00 | LIVE: 21:00",
+    "ticketLink": "https://tkt.ge/show/31281/cockhali-musikis-saghamo-serra-kankaya",
+    "price": "20 GEL",
+    "whatsappContact": "https://wa.me/+995511423894"
+  },
+  "socials": [
+    {
+      "id": "inst",
+      "name": "Instagram",
+      "icon": "ph-instagram-logo",
+      "url": "https://www.instagram.com/drunkowlbar?igsh=MXdwNzhrN253eHFiZw==",
+      "color": "text-pink-500"
+    },
+    {
+      "id": "fb",
+      "name": "Facebook",
+      "icon": "ph-facebook-logo",
+      "url": "https://facebook.com/events/s/drunk-owl-bar/1612672706557750/",
+      "color": "text-blue-500"
+    },
+    {
+      "id": "tg",
+      "name": "Telegram",
+      "icon": "ph-telegram-logo",
+      "url": "https://t.me/barahodik",
+      "color": "text-blue-400"
+    }
+  ],
+  "participants": [
+    {
+      "name": "Ketus",
+      "role": "ჰედლაინერი",
+      "status": "სცენაზე",
+      "instagram": "https://www.instagram.com/ketusberidze?igsh=M3Q2cXFvNGd2Z3hp"
+    },
+    {
+      "name": "Creative",
+      "role": "ორგანიზატორი",
+      "status": null,
+      "instagram": "https://t.me/MultCreaPart"
+    }
+  ],
+  "location": {
+    "name": "Drunk Owl Bar",
+    "address": "სამღებროს ქ. 21, თბილისი",
+    "mapLink": "https://www.google.com/maps/place/Drunk+Owl+Bar/@41.6889226,44.8073664,17z/data=!3m1!4b1!4m6!3m5!1s0x40440cf71e4e7ea1:0x1c7f75224dc96f48!8m2!3d41.6889186!4d44.8099413!16s%2Fg%2F11b5ymggwq?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D",
+    "zone": "ზონა 01"
+  },
+  "ui": {
+    "pageTitle": "Analog Studio Vinyl Hub - Vinyl Rock Night",
+    "lineupGuests": "ლაინ-აფი და სტუმრები",
+    "tickets": "შესვლა",
+    "location": "ლოკაცია",
+    "openMap": "რუკა",
+    "days": "დღე",
+    "hours": "სთ",
+    "minutes": "წთ",
+    "seconds": "წმ",
+    "eventStarted": "მიმდინარეობს",
+    "open": "OPEN",
+    "live": "LIVE"
+  }
+}
