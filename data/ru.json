@@ -1001,6 +1001,7 @@
         "hours": "Часов",
         "minutes": "Минут",
         "seconds": "Секунд",
+        "nextEvent": "След. ивент",
         "eventStarted": "Событие началось",
         "backToCategories": "Назад к категориям",
         "categoryTranslations": {

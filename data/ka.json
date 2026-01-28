@@ -1001,6 +1001,7 @@
         "hours": "საათი",
         "minutes": "წუთი",
         "seconds": "წამი",
+        "nextEvent": "შემდეგი",
         "eventStarted": "ღონისძიება დაიწყო",
         "backToCategories": "კატეგორიებში დაბრუნება",
         "categoryTranslations": {
