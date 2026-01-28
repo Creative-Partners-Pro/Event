@@ -1238,6 +1238,7 @@
     "hours": "Hours",
     "minutes": "Minutes",
     "seconds": "Seconds",
+    "nextEvent": "Next Event",
     "eventStarted": "Event Started",
     "backToCategories": "Back to Categories",
     "categoryTranslations": {

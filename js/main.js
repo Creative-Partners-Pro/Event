@@ -73,11 +73,15 @@ function renderHeader() {
 
         <div class="absolute bottom-20 left-6 right-6 flex flex-col items-start">
             <!-- Таймер -->
-            <div class="flex justify-start gap-2 mb-2 countdown-container" id="countdown-timer">
+            <div class="flex justify-start gap-2 mb-2 countdown-container relative z-30" id="countdown-timer">
                 <div class="countdown-item"><span class="countdown-value" id="d-val">00</span><span class="countdown-label">${configData.ui.days}</span></div>
                 <div class="countdown-item"><span class="countdown-value" id="h-val">00</span><span class="countdown-label">${configData.ui.hours}</span></div>
                 <div class="countdown-item"><span class="countdown-value" id="m-val">00</span><span class="countdown-label">${configData.ui.minutes}</span></div>
                 <div class="countdown-item"><span class="countdown-value" id="s-val">00</span><span class="countdown-label">${configData.ui.seconds}</span></div>
+                <a href="event2.html" class="countdown-item border-primary/30 bg-primary/10 active:scale-95 transition-transform">
+                    <i class="ph ph-arrow-right countdown-value text-primary"></i>
+                    <span class="countdown-label text-primary font-bold">${configData.ui.nextEvent}</span>
+                </a>
             </div>
             <h1 class="text-4xl font-bold leading-tight tracking-tight text-white drop-shadow-lg">${configData.event.title}</h1>
         </div>
@@ -180,7 +184,17 @@ function startCountdown() {
         const distance = eventDate - now;
 
         if (distance < 0) {
-            document.getElementById('countdown-timer').innerHTML = `<div class="text-xl font-bold text-indigo-400">${configData.ui.eventStarted}</div>`;
+            const timerContainer = document.getElementById('countdown-timer');
+            // Check if already replaced to avoid constant overwriting
+            if (!timerContainer.querySelector('.event-started-label')) {
+                timerContainer.innerHTML = `
+                    <div class="text-xl font-bold text-indigo-400 event-started-label mr-4">${configData.ui.eventStarted}</div>
+                    <a href="event2.html" class="countdown-item border-primary/30 bg-primary/10 active:scale-95 transition-transform">
+                        <i class="ph ph-arrow-right countdown-value text-primary"></i>
+                        <span class="countdown-label text-primary font-bold">${configData.ui.nextEvent}</span>
+                    </a>
+                `;
+            }
             return;
         }
 
