@@ -317,7 +317,9 @@ function getItemImage(item) {
     if (item.image && imageData.menu[item.image]) {
         return imageData.menu[item.image];
     }
-    const nameKey = item.name.toLowerCase().replace(/ /g, '_').replace(/🍺/g, '').trim();
+    // Remove emojis first, then trim, then replace spaces with underscores
+    const cleanedName = item.name.replace(/🍺/g, '').trim();
+    const nameKey = cleanedName.toLowerCase().replace(/ /g, '_');
     return imageData.menu[nameKey] || 'img/placeholder.png';
 }
 
@@ -369,7 +371,7 @@ function renderCategoryItems(category) {
     items.forEach(item => {
         const imageUrl = getItemImage(item);
         const itemElement = document.createElement('div');
-        itemElement.className = 'menu-item bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-full cursor-pointer';
+        itemElement.className = 'menu-item bg-white/5 rounded-[24px] p-4 flex gap-5 items-center border border-white/10 w-[90%] mx-auto min-h-[120px] cursor-pointer active:scale-[0.98] transition-all';
         const tagsHtml = item.tags && item.tags.map(tag => {
             let bgColor = 'bg-gray-500/20';
             let textColor = 'text-gray-300';
@@ -383,20 +385,24 @@ function renderCategoryItems(category) {
                 bgColor = 'bg-green-500/20';
                 textColor = 'text-green-400';
             }
-            return `<span class="text-[10px] uppercase font-semibold tracking-wider px-2 py-1 rounded-md ${bgColor} ${textColor}">${tag}</span>`;
+            return `<span class="text-[11px] uppercase font-bold tracking-widest px-3 py-1 rounded-full ${bgColor} ${textColor}">${tag}</span>`;
         }).join('');
 
         const tagsContainer = tagsHtml ? `<div class="flex gap-2 items-center">${tagsHtml}</div>` : '';
 
         itemElement.innerHTML = `
-            <img src="${imageUrl}" class="w-16 h-16 rounded-lg object-cover" alt="${item.name}">
-            <div class="flex-1">
-                <h4 class="font-medium text-sm text-white">${item.name}</h4>
-                <div class="flex justify-between items-center mt-2">
-                    <div class="price-container border border-white/10 rounded-full px-3 py-1">
-                         <span class="font-bold text-sm text-accent-yellow">${formatPrice(item.price)}</span>
-                    </div>
+            <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 shadow-lg border border-white/5">
+                <img src="${imageUrl}" class="w-full h-full object-cover" alt="${item.name}">
+            </div>
+            <div class="flex-1 flex flex-col justify-between h-full py-1">
+                <div>
+                    <h4 class="font-semibold text-base text-white/90 leading-tight mb-2">${item.name}</h4>
                     ${tagsContainer}
+                </div>
+                <div class="flex justify-start items-center mt-3">
+                    <div class="price-container bg-primary/10 border border-primary/20 rounded-xl px-4 py-1.5 shadow-sm">
+                         <span class="font-bold text-lg text-primary">${formatPrice(item.price)}</span>
+                    </div>
                 </div>
             </div>
         `;
