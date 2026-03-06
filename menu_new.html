@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Drunk Owl Premium Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#06111C",
+                        "background-light": "#06111C",
+                        "background-dark": "#06111C",
+                        accent: "#10B981",
+                        "accent-red": "#EF4444",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        xl: "1rem",
+                        "2xl": "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .dark-glass {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+            border-color: rgba(0, 255, 255, 0.8);
+        }
+        .obsidian {
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.1), 0 4px 6px rgba(0,0,0,0.5);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+            background-color: #06111C;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-[#06111C] text-white antialiased min-h-screen flex flex-col items-center justify-center m-0 p-0">
+<div class="relative w-full min-h-screen bg-[#06111C] overflow-hidden flex flex-col mx-auto max-w-md md:max-w-full">
+<header class="flex items-center justify-between px-6 py-4 z-20 sticky top-0 bg-[#06111C]/80 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<button class="bg-white/10 p-2 rounded-lg flex items-center justify-center text-white">
+<span class="material-icons text-sm">calendar_today</span>
+<span class="text-xs font-bold ml-1">21</span>
+</button>
+<button class="bg-white/10 px-2 py-1.5 rounded-lg text-sm font-bold text-white">
+                    RU
+                </button>
+</div>
+<h1 class="text-lg font-bold text-center flex-1 text-white">Drunk Owl Bar</h1>
+<div class="flex items-center gap-2 relative">
+<button class="bg-white/10 p-2 rounded-lg relative text-white">
+<span class="material-icons">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-accent-red text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center border-2 border-[#06111C]">4</span>
+</button>
+<button class="bg-white/10 p-2 rounded-lg text-white">
+<span class="material-icons">login</span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto hide-scrollbar relative">
+<div class="absolute top-0 left-0 w-full h-[600px] z-0">
+<img alt="Long Island Cocktail" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy-H8-v6IHSY5Sa1uWeOqUEWfzqEHzC-eqrh1z1hOyNaVod9VPM-XrMQYy-mdw7-AiGqj2WZ8o931xIwMrAr5o0WGHhlPvDur7trQAJAU8qupJps__xicEXekcrFI9jpAkKV3Gnj2yjhuDOSISspgI8WumuD-1-5NqydFwRMLVncUuhDgWrZRajOXtqJI7EEx86UXDxqAmYYmtn1wSNj-CtPvMHqzn_94Nj7E_Ue8L4OgSFIYdgREhWl3bXB-cGVJYqQvNIhTIQV0"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#06111C]/80 to-[#06111C] pointer-events-none h-full"></div>
+</div>
+<div class="relative z-20 px-6 pt-10 pb-32 flex">
+<div class="flex-1 flex flex-col pr-4">
+<span class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full self-start mb-16">Popular</span>
+<div class="flex items-end gap-3 mb-2">
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 mb-1">volume</span>
+<span class="bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-md">15%</span>
+</div>
+<div class="bg-white/10 text-white px-3 py-1.5 rounded-xl font-bold text-xl flex items-center gap-1 shadow-md backdrop-blur-sm border border-white/5">
+                            25
+                            <span class="material-icons text-sm">currency_ruble</span>
+</div>
+<div class="bg-white/5 text-gray-300 text-xs font-bold px-2 py-1.5 rounded-lg shadow-sm border border-white/5">
+                            300 ml
+                        </div>
+</div>
+<div class="rounded-2xl py-2 mb-4 relative overflow-hidden group">
+<h2 class="text-4xl font-extrabold text-white text-glow tracking-tight leading-none mb-2">Long Island</h2>
+</div>
+<div class="space-y-4 w-[85%]">
+<div class="dark-glass rounded-2xl p-4 min-h-[80px]">
+<h3 class="text-sm text-gray-300 mb-1">Состав:</h3>
+<p class="text-xs text-gray-400">Vodka, Tequila, Light Rum, Triple Sec, Gin, Cola.</p>
+</div>
+<div class="dark-glass rounded-2xl p-4 min-h-[80px]">
+<h3 class="text-sm text-gray-300 mb-1">Описание:</h3>
+<p class="text-xs text-gray-400">A strong, refreshing highball drink.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 mt-6">
+<button class="bg-white/10 text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1 border border-white/10">
+                            Подробнее
+                            <span class="material-icons text-[14px]">arrow_forward</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white border border-white/10">
+<span class="material-icons text-sm">remove</span>
+</button>
+<span class="w-8 text-center font-bold text-white">1</span>
+<button class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white border border-white/10">
+<span class="material-icons text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-20 flex flex-col items-center py-4 relative">
+<button class="mb-4 text-gray-400 hover:text-white transition-colors">
+<span class="material-icons text-sm">arrow_drop_up</span>
+</button>
+<div class="flex flex-col items-center gap-6 flex-1">
+<div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center overflow-hidden border border-white/10">
+<img alt="Blue cocktail" class="w-8 h-8 rounded-full object-cover opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk3Forja4g-bjQ3qDqq1wlqEuhvXMGQ3NwwkpEEing7WQCACv30dWKw6Qj4UeN3hZZ-luWPcjgtWtP-_lddfzT7Fzg3d-ShICSN-jSaqnvWqWem3buRU6fszI_ciPreJVgKqcqWNamCMNiyQ-sIrFuSULqz0RyVtVURyoVJJcWQ0lz9aez0GzFiHTXArG2UY_SkE2k2jcdRLfwumj566fcWCq8S8vhaib0zR7IZ6TZgX4vbvDq2oifr1jk3t8p59Ba-Fyhb9rofnM"/>
+</div>
+<div class="w-10 h-10 rounded-full bg-orange-900/30 flex items-center justify-center overflow-hidden border border-white/10">
+<img alt="Orange cocktail" class="w-8 h-8 rounded-full object-cover opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYsLhHCEamuMxsPR7jJdP8GV9TPfcoaKEshz_91aHB67p8ifS0Pmgmd_idoxs5kdulMj0LIHvCMdW8UpMehYH_J7p0KCjxJszUpmYftt2-ojAZmy1dDRXYWo-j9JgVXfkjooYSY-YE8THmxpE7JR_AdH1zMTLkRJsPlONY-bH9hsR9G9ZJDIvwVJ2re-Ng8P76cplxzu31y3VV75mgn12LgaN5jA2z6BYTYsM28OcWjumkOV7uY55hofkNSMzV1R5Yyqn7ncDy2Jo"/>
+</div>
+<div class="w-12 h-12 rounded-full bg-pink-900/30 flex items-center justify-center overflow-hidden border border-white/10">
+<img alt="Pink cocktail" class="w-10 h-10 rounded-full object-cover opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6OEn4_R_tod1EzjqZODZyElTlwxX3RCBPHfQsiiWCOsYFhEtFwoXXOT3HsnyVQExOVumP_UZ-YNqxfFku2NjTTP5YFVMOCncd8tqcIaUVoI_4y-67ayx_kyATEWUzSVKdshRMbmUK6F3aYme0Ie_Gt4ijoivqhb7w2SScW9I3c2ypmXq3oPc4bDOz02y64YF29XXritYxkB4x4c3z_w3LOsg9NGNgBqlOAVevnea3jpKiNSTWZR_PeA4pnq7w1ABqa_YblOuIUB0"/>
+</div>
+<div class="w-20 h-20 rounded-full bg-[#06111C] border-2 flex items-center justify-center overflow-hidden neon-glow transform -translate-x-4 relative z-10">
+<img alt="Long Island cocktail active" class="w-16 h-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvkdlF0Ehb5qSI93A4M-Rh3IU-YWjtUO0mCt9fJS3CNFOiE3-dNP9zbJqa1WgEyHKkEhlKn-K5D6cLME9MxKX0sI9IqfoGgCYfs4Y-1TOMNdJ1wGsrbZSw8N50keZaJLNbmsz30cbPXiAmJiWa-Wa3GFmbTaQZZPTPTludZy_HRtLwWfel2BMHpG8VPk5QM5SLVifAuG8YWDMD00N5YKtnGTs1zwjVhkfD_MXjGoldSFEQChpQktxpeKKQtmhOpEua8mxceg_imes"/>
+</div>
+<div class="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center overflow-hidden border border-white/10">
+<img alt="Purple cocktail" class="w-10 h-10 rounded-full object-cover opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWF-rzjhO1WCy5GaIBGBXzaarze8FDl8nJyY0mFhpBnLsMkOp7pWqTB1-KzXKxaNaRQXLb-yQYJpz1JozFqw_ej_iWoCeSM0Ryw1FA4NruW3_de_pBWQCqLe2igUGHvtGW6N23Ksz88YKSiYNcMj1WHMtuLNnDnr2iXLcRqzmxxv9RFX6cf3cgQ5j-Oiok-Upqm2jUuvr5o5kbmu_RDU9_4KBsBYBkRU5h6YhsoLAOH5DUKhh_bwD5erunfu6w4kG5QGOYJ4gy69E"/>
+</div>
+<div class="w-10 h-10 rounded-full bg-green-900/30 flex items-center justify-center overflow-hidden border border-white/10">
+<img alt="Mojito" class="w-8 h-8 rounded-full object-cover opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEl0BK8IPa6-yVQkj5t-vAZxzZY8U7gC2deguE3zXnjVaIJ2EnwQTdnAUeoJmkkQVLLkCuH2onxrqVqVEaHBjIgygPnfPeg0mBzvSzPwLnnUDKwqhW4kp6Coef_qj3iJBwGHyH-lfGPWh1eT7WIMKBETSB1fKgFzvPPHCvcPezeRofAmxgBLt8N-9cfnG6LjRLKNg5gS6IdDisrFap1MZv4YwSrrJOjZ7NaNB502ZooD4C6LaZtIPetXoOUXDqHSe58pWsF80oPZg"/>
+</div>
+<div class="w-10 h-10 rounded-full bg-red-900/30 flex items-center justify-center overflow-hidden opacity-30 border border-white/10">
+<img alt="Red cocktail" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj5kIi14k6Gh9qFiyPtLtBawsj4Ni-KR2z7jl7YSevzEqkt-SNXMbUMF1xrLjoC5mC8sm-y1L1cXx81rZdonLnaqvGj-3FrN2BalIN3RW8rQnmWy9OLmf7esEOytUKbsy03JN5EizXgcnNO6W6fo00cDQcmSXP8MXeSkoyVLaEx_CLaWh7rjNh_pIb-Cfd-z9zRZo4A9tbPpMMZUJt6_7iUDR6ZAXId4BlL1sUs_oCq7-NjB1fiE9_Uo5tLHlHrziIFfEYTYMy0Bg"/>
+</div>
+</div>
+<button class="mt-4 text-gray-400 hover:text-white transition-colors">
+<span class="material-icons text-sm">arrow_drop_down</span>
+</button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 w-full p-4 pb-8 bg-gradient-to-t from-[#06111C] via-[#06111C]/95 to-transparent z-30 flex flex-col gap-4">
+<div class="flex gap-2 overflow-x-auto hide-scrollbar px-2 max-w-md mx-auto w-full">
+<button class="bg-gray-800 text-white px-5 py-2.5 rounded-full font-bold text-sm border border-cyan-500/50 shadow-[0_0_10px_rgba(0,255,255,0.2)] whitespace-nowrap">
+                    Cocktails
+                </button>
+<button class="bg-white/10 text-gray-300 px-5 py-2.5 rounded-full font-bold text-sm whitespace-nowrap border border-white/5">
+                    Beer
+                </button>
+<button class="bg-white/10 text-gray-300 px-5 py-2.5 rounded-full font-bold text-sm whitespace-nowrap border border-white/5">
+                    Shorts
+                </button>
+</div>
+<div class="flex gap-3 px-2 max-w-md mx-auto w-full">
+<button class="w-14 h-14 bg-gray-800 text-white rounded-2xl flex items-center justify-center shadow-lg border border-white/10">
+<span class="material-icons text-3xl">chat_bubble_outline</span>
+</button>
+<div class="flex-1 rounded-2xl flex p-1 shadow-2xl border bg-white">
+<button class="flex-1 text-white rounded-xl font-extrabold tracking-wider text-lg py-3 shadow-sm bg-[#06111C]">
+                        BAR
+                    </button>
+<button class="flex-1 text-[#06111C] rounded-xl font-extrabold tracking-wider text-lg py-3 opacity-70 hover:opacity-100 transition-opacity">
+                        FOOD
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</body></html>
