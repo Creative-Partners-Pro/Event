@@ -1,277 +1,203 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drunk Owl Refined Menu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Drunk Owl Premium Menu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#f20d20",
-                        "accent-yellow": "#FFD700",
-                        "background-dark": "#060608",
+                        primary: "#06111C",
+                        "background-light": "#06111C",
+                        "background-dark": "#06111C",
+                        accent: "#10B981",
+                        "accent-red": "#EF4444",
                     },
                     fontFamily: {
-                        "display": ["Outfit", "sans-serif"],
-                        "body": ["Space Grotesk", "sans-serif"],
+                        display: ["Inter", "sans-serif"],
                     },
-                    boxShadow: {
-                        'neon-yellow': '0 0 2px rgba(255, 215, 0, 0.6), 0 0 6px rgba(255, 215, 0, 0.4), 0 0 12px rgba(255, 215, 0, 0.2)',
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        xl: "1rem",
+                        "2xl": "1.5rem",
                     },
                 },
             },
-        }
+        };
     </script>
     <style>
-        .main-card-glow {
-            box-shadow: 0 0 50px 10px rgba(242, 13, 32, 0.4), 0 0 100px 5px rgba(242, 13, 32, 0.15);
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #06111C;
         }
-        .text-glow-red {
-            text-shadow: 0 0 10px rgba(242, 13, 32, 0.8), 0 0 20px rgba(242, 13, 32, 0.5), 0 0 30px rgba(242, 13, 32, 0.3);
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .price-glow-red {
-            text-shadow: 0 0 15px rgba(242, 13, 32, 0.9), 0 0 30px rgba(242, 13, 32, 0.4);
+        .dark-glass {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .glass-sheet {
-            background: rgba(10, 10, 12, 0.6);
-            backdrop-filter: blur(40px);
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-        @keyframes neon-flicker {
-            0%, 100% {
-                text-shadow: 0 0 1px #FFD700, 0 0 3px #FFD700, 0 0 5px #FFD700, 0 0 8px #FF8D00, 0 0 12px #FF8D00;
-                box-shadow: 0 0 1px rgba(255, 215, 0, 0.5), 0 0 3px rgba(255, 215, 0, 0.3), 0 0 5px rgba(255, 215, 0, 0.1);
-            }
-            50% {
-                text-shadow: 0 0 2px #FFD700, 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FF8D00, 0 0 20px #FF8D00;
-                box-shadow: 0 0 2px rgba(255, 215, 0, 0.6), 0 0 5px rgba(255, 215, 0, 0.4), 0 0 10px rgba(255, 215, 0, 0.2);
-            }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+            border-color: rgba(0, 255, 255, 0.8);
         }
-        .neon-flicker {
-            animation: neon-flicker 2s infinite alternate;
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
         }
-        #product-modal {
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-        #product-modal.hidden {
-            opacity: 0;
-            transform: scale(0.95);
-            pointer-events: none;
-        }
-        .font-display {
-            font-family: 'Outfit', sans-serif;
-        }
-        .font-body {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        /* Animation Styles */
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slide-in-from-left {
-            from { transform: translateX(-100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slide-in-from-right {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slide-in-from-bottom {
-            from { transform: translateY(100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .initial-hidden {
-            opacity: 0;
-        }
-
-        .animate-on-load {
-            animation-duration: 0.7s;
-            animation-fill-mode: forwards;
-            animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .fade-in-bg { animation-name: fade-in; }
-        .slide-in-left { animation-name: slide-in-from-left; }
-        .slide-in-right { animation-name: slide-in-from-right; }
-        .slide-in-bottom { animation-name: slide-in-from-bottom; }
-
-        .active-tip {
-            background-color: #FFD700 !important;
-            color: #000 !important;
-            box-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
-        }
-        .rating-owl {
-            opacity: 0.3;
-            transition: opacity 0.2s ease-in-out, transform 0.1s ease-in-out;
-        }
-        .rating-owl.hovered, .rating-owl.selected {
-            opacity: 1;
-            transform: scale(1.1);
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
     </style>
 </head>
-<body class="min-h-screen relative bg-background-dark text-white overflow-hidden">
-    <!-- Background Image -->
-    <div class="fixed inset-0 z-0 initial-hidden animate-on-load fade-in-bg">
-        <img alt="Cocktail Glass Background" class="w-full h-full object-cover scale-110 filter grayscale blur-lg brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABW2iAALtjWa1vQnEJDEoZp3zegtY9w2hN9-E4Hs6rsUMXb25f_FvIVxoJzGw6WVtzuqLD2DiQAZu8OXgg1AEBexZG_1I3UakHV_BpigR_xsJSBAFiaoyX0x9C70IQYa6yeR_qI0MgbdE8cZK_-52zW2C6LVc3Ky7q0DrYspVOunkos_IQx_kz07QQLK93-ggpcz4Qn2fNcouEB0ckx5TR0aQYHo1xNhl6cDHuGP70Zb8Q6SXD1ZRS6f9e4fYC9ympXAYbCg0A9DfX" />
-        <div class="absolute inset-0 bg-black/50"></div>
-    </div>
-
-    <div class="relative z-10 flex flex-col h-[100dvh]">
-        <header class="flex-none flex items-center justify-between px-8 pt-9 pb-2">
-            <div class="flex flex-col">
-                <span class="text-[10px] tracking-[0.4em] font-light uppercase text-accent-yellow/80 mb-1">Welcome to</span>
-                <span class="text-2xl font-semibold tracking-tight text-white/90">Drunk Owl Bar</span>
-            </div>
-            <button id="close-menu-button" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center bg-white/5 hover:bg-white/10 transition-colors cursor-pointer">
-                <span class="material-symbols-outlined text-xl text-white/60">close</span>
-            </button>
-        </header>
-
-        <main class="flex-1 flex flex-col pt-2 w-full overflow-hidden">
-            <!-- Popular Now Carousel -->
-            <div class="w-full pl-6 pr-0 mb-4 shrink-0 relative initial-hidden animate-on-load slide-in-left" style="animation-delay: 0.2s;">
-                <h3 class="text-sm font-light tracking-widest uppercase text-white/50 pr-6 mb-3">Popular Now</h3>
-                <div id="popular-now-carousel" class="flex gap-4 overflow-x-auto no-scrollbar pr-6">
-                    <!-- Popular items will be injected here -->
-                </div>
-            </div>
-
-            <!-- Selected Category Items -->
-            <div id="selected-category-section" class="w-full px-6 mb-4 flex-1 flex flex-col initial-hidden animate-on-load slide-in-right" style="animation-delay: 0.4s; height: 50vh;">
-                <h3 id="selected-category-title" class="text-sm font-light tracking-widest uppercase text-white/50 mb-3">Category Items</h3>
-                <div class="overflow-x-auto no-scrollbar h-full">
-                    <div id="selected-category-grid" class="grid grid-rows-2 grid-flow-col gap-4">
-                        <!-- Items from selected category will be injected here -->
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <div class="flex-none flex flex-col w-full z-20 initial-hidden animate-on-load slide-in-bottom" style="animation-delay: 0.6s;">
-            <div class="px-6 mb-4 flex justify-center items-center gap-3">
-                <div class="flex items-center p-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 w-full max-w-[240px]">
-                    <button id="bar-button" class="flex-1 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Bar</button>
-                    <button id="food-button" class="flex-1 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Food</button>
-                </div>
-                <button id="reviews-modal-trigger" class="h-10 w-10 flex items-center justify-center rounded-xl bg-black/40 backdrop-blur-md border border-white/10 text-white/60" title="Reviews">
-                    <span class="material-symbols-outlined text-xl">reviews</span>
+<body class="bg-[#06111C] text-white antialiased min-h-screen flex flex-col items-center justify-start m-0 p-0 overflow-hidden">
+    <div class="relative w-full h-screen bg-[#06111C] overflow-hidden flex flex-col mx-auto max-w-md md:max-w-full">
+        <header class="flex items-center justify-between px-6 py-4 z-20 sticky top-0 bg-[#06111C]/80 backdrop-blur-md">
+            <div class="flex items-center gap-2">
+                <button id="calendar-btn" class="bg-white/10 p-2 rounded-lg flex items-center justify-center text-white">
+                    <span class="material-icons text-sm">calendar_today</span>
+                    <span id="header-date" class="text-xs font-bold ml-1">21</span>
+                </button>
+                <button id="lang-btn" class="bg-white/10 px-2 py-1.5 rounded-lg text-sm font-bold text-white">
+                    EN
                 </button>
             </div>
+            <h1 class="text-lg font-bold text-center flex-1 text-white">Drunk Owl Bar</h1>
+            <div class="flex items-center gap-2 relative">
+                <button id="close-menu-button" class="bg-white/10 p-2 rounded-lg text-white">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+        </header>
 
-            <div class="glass-sheet rounded-t-[32px] min-h-[150px] w-full flex flex-col shadow-sheet">
-                <div class="w-10 h-1 bg-white/10 rounded-full mx-auto my-3 shrink-0"></div>
-                <div id="categories-grid-container" class="overflow-x-auto no-scrollbar px-6 py-4">
-                    <div id="categories-grid" class="flex gap-4">
-                        <!-- Category squares will be injected here -->
+        <div class="flex-1 overflow-y-auto hide-scrollbar relative">
+            <div id="featured-image-container" class="absolute top-0 left-0 w-full h-[600px] z-0">
+                <img id="featured-image" alt="Featured Item" class="w-full h-full object-cover object-top" src="img/placeholder.png"/>
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#06111C]/80 to-[#06111C] pointer-events-none h-full"></div>
+            </div>
+
+            <div class="relative z-20 px-6 pt-10 pb-32 flex">
+                <div id="featured-details" class="flex-1 flex flex-col pr-4">
+                    <span id="featured-tag" class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full self-start mb-16 hidden">Popular</span>
+
+                    <div class="flex items-end gap-3 mb-2">
+                        <div id="featured-abv-container" class="flex flex-col hidden">
+                            <span class="text-[10px] text-gray-400 mb-1">volume</span>
+                            <span id="featured-abv" class="bg-accent-red text-white text-xs font-bold px-2 py-1 rounded-md">15%</span>
+                        </div>
+                        <div class="bg-white/10 text-white px-3 py-1.5 rounded-xl font-bold text-xl flex items-center gap-1 shadow-md backdrop-blur-sm border border-white/5">
+                            <span id="featured-price">0</span>
+                            <span class="text-sm ml-1 text-accent">GEL</span>
+                        </div>
+                        <div id="featured-volume-container" class="bg-white/5 text-gray-300 text-xs font-bold px-2 py-1.5 rounded-lg shadow-sm border border-white/5 hidden">
+                            <span id="featured-volume">300 ml</span>
+                        </div>
                     </div>
+
+                    <div class="rounded-2xl py-2 mb-4 relative overflow-hidden group">
+                        <h2 id="featured-name" class="text-4xl font-extrabold text-white text-glow tracking-tight leading-tight mb-2 uppercase"></h2>
+                    </div>
+
+                    <div class="space-y-4 w-[85%]">
+                        <div id="featured-ingredients-container" class="dark-glass rounded-2xl p-4 min-h-[80px]">
+                            <h3 id="ingredients-label" class="text-sm text-gray-300 mb-1">Ingredients:</h3>
+                            <p id="featured-ingredients" class="text-xs text-gray-400"></p>
+                        </div>
+                        <div id="featured-desc-container" class="dark-glass rounded-2xl p-4 min-h-[80px] hidden">
+                            <h3 id="description-label" class="text-sm text-gray-300 mb-1">Description:</h3>
+                            <p id="featured-desc" class="text-xs text-gray-400"></p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-6">
+                        <button id="more-info-btn" class="bg-white/10 text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-1 border border-white/10">
+                            <span id="more-info-text">More Info</span>
+                            <span class="material-icons text-[14px]">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="w-20 flex flex-col items-center py-4 relative">
+                    <button id="items-scroll-up" class="mb-4 text-gray-400 hover:text-white transition-colors">
+                        <span class="material-icons text-sm">arrow_drop_up</span>
+                    </button>
+
+                    <div id="category-items-sidebar" class="flex flex-col items-center gap-6 flex-1 overflow-y-auto hide-scrollbar max-h-[400px]">
+                        <!-- Items will be injected here -->
+                    </div>
+
+                    <button id="items-scroll-down" class="mt-4 text-gray-400 hover:text-white transition-colors">
+                        <span class="material-icons text-sm">arrow_drop_down</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="fixed bottom-0 left-0 w-full p-4 pb-8 bg-gradient-to-t from-[#06111C] via-[#06111C]/95 to-transparent z-30 flex flex-col gap-4">
+            <div id="categories-nav" class="flex gap-2 overflow-x-auto hide-scrollbar px-2 max-w-md mx-auto w-full">
+                <!-- Categories will be injected here -->
+            </div>
+
+            <div class="flex gap-3 px-2 max-w-md mx-auto w-full">
+                <button id="reviews-modal-trigger" class="w-14 h-14 bg-gray-800 text-white rounded-2xl flex items-center justify-center shadow-lg border border-white/10">
+                    <span class="material-icons text-3xl">chat_bubble_outline</span>
+                </button>
+                <div class="flex-1 rounded-2xl flex p-1 shadow-2xl border bg-white">
+                    <button id="bar-button" class="flex-1 rounded-xl font-extrabold tracking-wider text-lg py-3 transition-all duration-300">
+                        BAR
+                    </button>
+                    <button id="food-button" class="flex-1 rounded-xl font-extrabold tracking-wider text-lg py-3 transition-all duration-300">
+                        FOOD
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Product Detail Modal -->
-    <div id="product-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
-        <!-- Background Overlay -->
-        <div id="modal-overlay" class="absolute inset-0 bg-black/30 backdrop-blur-md"></div>
 
-        <!-- Modal Content -->
-        <div id="modal-content" class="relative z-20 w-[85%] max-w-[340px]">
-            <div class="relative bg-black/50 backdrop-blur-2xl rounded-[40px] overflow-hidden border border-white/5 main-card-glow flex flex-col">
-                <div class="relative h-[420px] w-full overflow-hidden">
-                    <img id="modal-image" alt="Product Image" class="absolute inset-0 w-full h-full object-cover grayscale-[40%] opacity-60" src="">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10"></div>
-                    <div class="absolute inset-0 p-10 flex flex-col justify-end">
-                        <div class="absolute top-10 right-10 w-2 h-2 rounded-full bg-primary shadow-[0_0_15px_rgba(242,13,32,1)]"></div>
-                        <h2 id="modal-name" class="font-display text-3xl md:text-4xl font-extralight text-white tracking-[0.12em] uppercase leading-[0.9] mb-6 text-glow-red">
-                            <!-- Product Name -->
-                        </h2>
-                        <div class="flex items-baseline gap-2 mb-8">
-                            <span id="modal-price" class="text-4xl font-body font-medium text-primary price-glow-red"><!-- Price --></span>
-                        </div>
-                        <!-- Tags will be dynamically inserted here if available -->
-                        <div id="modal-tags" class="flex flex-wrap gap-2 mt-2"></div>
+    <!-- Review Modal (hidden by default) -->
+    <div id="reviews-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+        <div id="reviews-modal-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
+        <div class="relative z-20 w-[90%] max-w-[400px] bg-[#06111C] rounded-3xl border border-white/10 p-6 flex flex-col gap-4">
+            <div class="flex items-center justify-between">
+                <h2 id="reviews-title" class="text-lg font-semibold text-white/90">Reviews & Tips</h2>
+                <button id="reviews-modal-close-button" class="w-8 h-8 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 transition-colors">
+                    <span class="material-icons text-md text-white/60">close</span>
+                </button>
+            </div>
+            <a href="https://www.google.com/search?q=drunk+owl+bar+reviews" target="_blank" class="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-white/10">
+                <span id="google-review-text" class="text-white/80">Leave a review on Google</span>
+                <span class="material-icons text-white/50">open_in_new</span>
+            </a>
+            <div class="border-t border-white/10 pt-4">
+                <h3 id="tip-label" class="text-sm font-light text-white/50 mb-2">Leave a tip</h3>
+                <div class="flex items-start gap-4">
+                    <div class="w-24 h-24 bg-white rounded-lg p-1 flex items-center justify-center">
+                        <img id="tip-qr-code" src="img/qr-code-placeholder.svg" alt="QR Code" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1 flex flex-col gap-2">
+                        <button data-tip="1" class="tip-button w-full py-2 bg-white/5 border border-white/10 rounded-lg text-white/70">1 GEL</button>
+                        <button data-tip="3" class="tip-button w-full py-2 bg-white/5 border border-white/10 rounded-lg text-white/70">3 GEL</button>
+                        <button data-tip="5" class="tip-button w-full py-2 bg-white/5 border border-white/10 rounded-lg text-white/70">5 GEL</button>
                     </div>
                 </div>
-                <div class="bg-white/[0.02] backdrop-blur-3xl border-t border-white/10 py-6 px-8">
-                    <p id="modal-desc" class="text-sm text-white/70 text-center"><!-- Description --></p>
-                </div>
-            </div>
-            <div class="flex justify-center mt-12">
-                <button id="modal-close-button" class="w-16 h-16 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-white/30 hover:text-white hover:bg-white/10 transition-all duration-300">
-                    <span class="material-symbols-outlined text-3xl">close</span>
-                </button>
             </div>
         </div>
     </div>
 
     <script src="js/menu.js"></script>
-
-    <!-- Reviews & Tips Modal -->
-    <div id="reviews-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
-        <!-- Background Overlay -->
-        <div id="reviews-modal-overlay" class="absolute inset-0 bg-black/30 backdrop-blur-md"></div>
-
-        <!-- Modal Content -->
-        <div class="relative z-20 w-[90%] max-w-[400px] bg-black/50 backdrop-blur-2xl rounded-3xl border border-white/10 p-6 flex flex-col gap-4">
-            <div class="flex items-center justify-between">
-                <h2 class="text-lg font-semibold text-white/90">Reviews & Tips</h2>
-                <button id="reviews-modal-close-button" class="w-8 h-8 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 transition-colors">
-                    <span class="material-symbols-outlined text-md text-white/60">close</span>
-                </button>
-            </div>
-
-            <!-- Google Maps Link -->
-            <a href="https://www.google.com/search?q=drunk+owl+bar+%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B&oq=&gs_lcrp=EgZjaHJvbWUqCQgAEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgMyCQgIEEUYOxjCAzIJCAkQRRg7GMIDMgkIChBFGDsYwgMyCQgLEEUYOxjCAzIJCAwQRRg7GMIDMgkIDRBFGDsYwgMyCQgOEEUYOxjCA9IBBi0xajBqN6gCD7ACAQ&client=ms-android-zte&sourceid=chrome-mobile&ie=UTF-8#ebo=3" target="_blank" class="flex items-center justify-between p-3 bg-black/20 rounded-lg border border-white/10 hover:bg-white/5 transition-colors">
-                <span class="text-white/80">Leave a public review on Google</span>
-                <span class="material-symbols-outlined text-white/50">open_in_new</span>
-            </a>
-
-            <!-- Anonymous Review Form -->
-            <form id="feedback-form" action="https://script.google.com/macros/s/AKfycbwjXc-EG7xuea6mw8HM7i1Kh7QSuBCALsKEUV5gxwcsDyI_sBvebsGWjTFOnOAYnPNI/exec" method="POST">
-                <div class="border-t border-b border-white/5 py-4">
-                    <label for="review-text" class="text-sm font-light text-white/50 mb-2 block">Or leave an anonymous review for the owner</label>
-                    <div id="rating-container" class="flex items-center gap-2 mb-3">
-                        <!-- Rating owls will be injected here -->
-                    </div>
-                    <input type="hidden" name="rating" id="rating-input" value="0">
-                    <textarea id="review-text" name="feedback" rows="3" placeholder="Your feedback..." class="w-full bg-black/20 border border-white/10 rounded-lg p-2 text-white/80 focus:ring-1 focus:ring-accent-yellow focus:border-accent-yellow transition"></textarea>
-                </div>
-                <p id="feedback-error" class="text-red-500 text-xs mt-2 h-4"></p>
-                <button id="send-feedback-button" type="submit" class="w-full py-3 bg-accent-yellow text-black font-bold rounded-lg hover:bg-yellow-400 transition mt-2">Send Feedback</button>
-            </form>
-
-            <div>
-                <h3 class="text-sm font-light text-white/50 mb-2">Leave a tip</h3>
-                <div class="flex items-start gap-4">
-                    <div class="w-24 h-24 rounded-lg bg-white p-1 flex items-center justify-center">
-                        <img id="tip-qr-code" src="img/qr-code-placeholder.svg" alt="QR Code for Tips" class="w-full h-full object-contain">
-                    </div>
-                    <div class="flex-1 flex flex-col gap-2">
-                        <button data-tip="1" class="tip-button w-full py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:bg-accent-yellow hover:text-black transition">1 GEL</button>
-                        <button data-tip="3" class="tip-button w-full py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:bg-accent-yellow hover:text-black transition">3 GEL</button>
-                        <button data-tip="5" class="tip-button w-full py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:bg-accent-yellow hover:text-black transition">5 GEL</button>
-                    </div>
-                </div>
-                <div class="mt-2">
-                    <button id="copy-details-button" class="w-full text-center text-xs text-white/40 hover:text-accent-yellow transition-colors">
-                        Copy bank account details
-                    </button>
-                    <span id="copy-success-message" class="text-xs text-green-400 hidden ml-2">Copied!</span>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
