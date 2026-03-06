@@ -431,9 +431,9 @@ function renderCategoryGrid(type) {
     categories.forEach(category => {
         const translatedCategory = configData.ui.categoryTranslations[category.name]?.[currentLang] || category.name;
         html += `
-            <div class="category-tile flex-shrink-0 w-24 h-24 rounded-2xl flex flex-col items-center justify-center p-2 text-center cursor-pointer transition-all duration-300 bg-white/5" data-category="${category.name}">
-                 <i class="${category.icon} text-4xl text-accent-yellow"></i>
-                 <span class="mt-2 text-xs font-semibold uppercase tracking-wider">${translatedCategory}</span>
+            <div class="category-tile flex-shrink-0 w-20 h-10 rounded-xl flex flex-col items-center justify-center p-1 text-center cursor-pointer transition-all duration-300 bg-white/5" data-category="${category.name}">
+                 <i class="${category.icon} text-lg text-accent-yellow"></i>
+                 <span class="mt-0.5 text-[8px] font-bold uppercase tracking-tight leading-none">${translatedCategory}</span>
             </div>
         `;
     });

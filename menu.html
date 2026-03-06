@@ -161,22 +161,25 @@
         </main>
 
         <div class="flex-none flex flex-col w-full z-20 initial-hidden animate-on-load slide-in-bottom" style="animation-delay: 0.6s;">
-            <div class="px-6 mb-4 flex justify-center items-center gap-3">
-                <div class="flex items-center p-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 w-full max-w-[240px]">
-                    <button id="bar-button" class="flex-1 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Bar</button>
-                    <button id="food-button" class="flex-1 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest">Food</button>
-                </div>
-                <button id="reviews-modal-trigger" class="h-10 w-10 flex items-center justify-center rounded-xl bg-black/40 backdrop-blur-md border border-white/10 text-white/60" title="Reviews">
-                    <span class="material-symbols-outlined text-xl">reviews</span>
-                </button>
-            </div>
-
-            <div class="glass-sheet rounded-t-[32px] min-h-[150px] w-full flex flex-col shadow-sheet">
+            <div class="glass-sheet rounded-t-[32px] min-h-[100px] w-full flex flex-col shadow-sheet">
                 <div class="w-10 h-1 bg-white/10 rounded-full mx-auto my-3 shrink-0"></div>
-                <div id="categories-grid-container" class="overflow-x-auto no-scrollbar px-6 py-4">
+
+                <!-- Category Grid Container -->
+                <div id="categories-grid-container" class="overflow-x-auto no-scrollbar px-6 py-2">
                     <div id="categories-grid" class="flex gap-4">
                         <!-- Category squares will be injected here -->
                     </div>
+                </div>
+
+                <!-- Type Switcher & Reviews -->
+                <div class="px-6 pb-4 mt-2 flex justify-center items-center gap-3">
+                    <div class="flex items-center p-1 rounded-full bg-black/40 backdrop-blur-md border border-white/10 w-full max-w-[200px]">
+                        <button id="bar-button" class="flex-1 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest">Bar</button>
+                        <button id="food-button" class="flex-1 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest">Food</button>
+                    </div>
+                    <button id="reviews-modal-trigger" class="h-8 w-8 flex items-center justify-center rounded-lg bg-black/40 backdrop-blur-md border border-white/10 text-white/60" title="Reviews">
+                        <span class="material-symbols-outlined text-lg">reviews</span>
+                    </button>
                 </div>
             </div>
         </div>
