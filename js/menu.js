@@ -177,60 +177,52 @@ function setupModal() {
     closeButton.onclick = closeModal;
 
     let startY, startX;
-    let modalRect;
+    let currentY;
 
     modalContent.addEventListener('touchstart', (e) => {
         startY = e.touches[0].clientY;
         startX = e.touches[0].clientX;
-        modalRect = modalContent.getBoundingClientRect();
         modalContent.style.transition = 'none';
-    });
+    }, { passive: true });
 
     modalContent.addEventListener('touchmove', (e) => {
-        const currentY = e.touches[0].clientY;
-        const currentX = e.touches[0].clientX;
+        currentY = e.touches[0].clientY;
         const diffY = currentY - startY;
-        const diffX = currentX - startX;
+        const diffX = e.touches[0].clientX - startX;
 
-        // Prevent default to avoid scrolling page
-        e.preventDefault();
-
-        // Apply transformations based on swipe direction
-        modalContent.style.transform = `translate(${diffX}px, ${diffY}px)`;
-    });
+        // If swiping down and not primarily swiping horizontally
+        if (diffY > 0 && Math.abs(diffY) > Math.abs(diffX)) {
+            modalContent.style.transform = `translateY(${diffY}px)`;
+            // Fade overlay as we drag down
+            const opacity = 0.6 * (1 - diffY / (window.innerHeight * 0.8));
+            overlay.style.backgroundColor = `rgba(0, 0, 0, ${Math.max(0, opacity)})`;
+        }
+    }, { passive: true });
 
     modalContent.addEventListener('touchend', (e) => {
-        const endY = e.changedTouches[0].clientY;
-        const endX = e.changedTouches[0].clientX;
-        const diffY = endY - startY;
-        const diffX = endX - startX;
-
+        const diffY = e.changedTouches[0].clientY - startY;
+        const diffX = e.changedTouches[0].clientX - startX;
         const swipeThreshold = 100;
 
-        if (Math.abs(diffY) > Math.abs(diffX)) { // Vertical swipe
-            if (Math.abs(diffY) > swipeThreshold) {
-                closeModal();
-            } else {
-                modalContent.style.transition = 'transform 0.3s ease-in-out';
-                modalContent.style.transform = 'translate(0, 0)';
-            }
-        } else { // Horizontal swipe
-            if (Math.abs(diffX) > swipeThreshold) {
-                if (diffX > 0) { // Swipe right (previous)
-                    currentItemIndex = (currentItemIndex - 1 + currentCategoryItems.length) % currentCategoryItems.length;
-                } else { // Swipe left (next)
-                    currentItemIndex = (currentItemIndex + 1) % currentCategoryItems.length;
-                }
-                displayModalData(currentCategoryItems[currentItemIndex]);
-            }
-            modalContent.style.transition = 'transform 0.3s ease-in-out';
-            modalContent.style.transform = 'translate(0, 0)';
-        }
+        modalContent.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
 
-        // Reset transition style after animation
-        setTimeout(() => {
-            modalContent.style.transition = '';
-        }, 300);
+        if (diffY > swipeThreshold && Math.abs(diffY) > Math.abs(diffX)) {
+            closeModal();
+        } else if (Math.abs(diffX) > swipeThreshold && Math.abs(diffX) > Math.abs(diffY)) {
+            // Horizontal swipe for navigation
+            if (diffX > 0) { // Swipe right
+                currentItemIndex = (currentItemIndex - 1 + currentCategoryItems.length) % currentCategoryItems.length;
+            } else { // Swipe left
+                currentItemIndex = (currentItemIndex + 1) % currentCategoryItems.length;
+            }
+            displayModalData(currentCategoryItems[currentItemIndex]);
+            modalContent.style.transform = 'translateY(0)';
+            overlay.style.backgroundColor = '';
+        } else {
+            // Reset position
+            modalContent.style.transform = 'translateY(0)';
+            overlay.style.backgroundColor = '';
+        }
     });
 }
 
@@ -248,22 +240,32 @@ function displayModalData(item) {
     document.getElementById('modal-price').textContent = formatPrice(item.price);
     document.getElementById('modal-desc').textContent = item.desc || '';
 
-    // Handle tags if they exist in data
+    // Handle tags
     const tagsContainer = document.getElementById('modal-tags');
-    tagsContainer.innerHTML = ''; // Clear existing tags
+    tagsContainer.innerHTML = '';
     if (item.tags && Array.isArray(item.tags)) {
         item.tags.forEach(tag => {
             const tagElement = document.createElement('span');
-            tagElement.className = 'font-body text-[11px] font-normal uppercase tracking-[0.15em] text-accent-yellow border border-accent-yellow/30 px-3 py-1 rounded-full';
+            tagElement.className = 'text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-primary/20 text-primary border border-primary/20';
             tagElement.textContent = tag;
             tagsContainer.appendChild(tagElement);
         });
     }
+
+    // Handle Attributes (Strength, Volume, Taste)
+    const valStrength = document.getElementById('val-strength');
+    const valVolume = document.getElementById('val-volume');
+    const valTaste = document.getElementById('val-taste');
+
+    if (valStrength) valStrength.textContent = item.strength || '-';
+    if (valVolume) valVolume.textContent = item.volume || '-';
+    if (valTaste) valTaste.textContent = item.taste || '-';
 }
 
 function openModal(item) {
     const modal = document.getElementById('product-modal');
-    if (!modal) return;
+    const modalContent = document.getElementById('modal-content');
+    if (!modal || !modalContent) return;
 
     // Set current context for navigation
     currentCategoryItems = configData.menu.items.filter(i => i.category === item.category);
@@ -272,7 +274,10 @@ function openModal(item) {
     displayModalData(item);
 
     modal.classList.remove('hidden');
-    setTimeout(() => modal.classList.remove('opacity-0', 'scale-95'), 10);
+    // Force reflow
+    modal.offsetHeight;
+    modalContent.style.transform = 'translateY(0)';
+    document.getElementById('modal-overlay').style.backgroundColor = '';
 }
 
 function closeModal() {
@@ -280,11 +285,10 @@ function closeModal() {
     const modalContent = document.getElementById('modal-content');
     if (!modal || !modalContent) return;
 
-    modal.classList.add('opacity-0', 'scale-95');
+    modalContent.style.transform = 'translateY(100%)';
     setTimeout(() => {
         modal.classList.add('hidden');
         // Reset styles for the next time it opens
-        modalContent.style.transform = '';
         modalContent.style.transition = '';
     }, 300);
 }
