@@ -243,7 +243,7 @@ function formatPrice(price) {
 }
 
 function displayModalData(item) {
-    document.getElementById('modal-image').src = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+    document.getElementById('modal-image').src = getItemImage(item);
     document.getElementById('modal-name').textContent = item.name.replace(/(<br>|<\/br>)/g, ' ');
     document.getElementById('modal-price').textContent = formatPrice(item.price);
     document.getElementById('modal-desc').textContent = item.desc || '';
@@ -313,6 +313,14 @@ function initMenu() {
     .catch(error => console.error("Error loading initial data:", error));
 }
 
+function getItemImage(item) {
+    if (item.image && imageData.menu[item.image]) {
+        return imageData.menu[item.image];
+    }
+    const nameKey = item.name.toLowerCase().replace(/ /g, '_').replace(/🍺/g, '').trim();
+    return imageData.menu[nameKey] || 'img/placeholder.png';
+}
+
 function renderPopularItems() {
     const container = document.getElementById('popular-now-carousel');
     if (!container) return;
@@ -320,16 +328,16 @@ function renderPopularItems() {
     const popularItems = configData.menu.items.filter(item => item.popular);
     container.innerHTML = ''; // Clear existing content
     popularItems.forEach(item => {
-        const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+        const imageUrl = getItemImage(item);
         const itemElement = document.createElement('div');
-        itemElement.className = 'flex-shrink-0 w-40 snap-center';
+        itemElement.className = 'flex-shrink-0 w-48 snap-center';
         itemElement.innerHTML = `
-            <div class="group relative w-full h-16 rounded-2xl overflow-hidden active:scale-95 transition-transform duration-300 cursor-pointer">
+            <div class="group relative w-full h-24 rounded-2xl overflow-hidden active:scale-95 transition-transform duration-300 cursor-pointer">
                 <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${item.name}">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                 <div class="absolute bottom-3 left-3 right-3">
-                    <h4 class="font-bold text-sm text-white truncate">${item.name}</h4>
-                    <p class="text-xs text-white/70">${formatPrice(item.price)}</p>
+                    <h4 class="font-bold text-xs text-white leading-tight mb-0.5">${item.name}</h4>
+                    <p class="text-[10px] text-accent-yellow font-medium">${formatPrice(item.price)}</p>
                 </div>
             </div>
         `;
@@ -350,8 +358,8 @@ function renderCategoryItems(category) {
 
     // Sort items: those with images first
     items.sort((a, b) => {
-        const aImageUrl = imageData.menu[a.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
-        const bImageUrl = imageData.menu[b.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+        const aImageUrl = getItemImage(a);
+        const bImageUrl = getItemImage(b);
         const aHasImage = !aImageUrl.includes('placeholder');
         const bHasImage = !bImageUrl.includes('placeholder');
         return bHasImage - aHasImage;
@@ -359,9 +367,9 @@ function renderCategoryItems(category) {
 
     container.innerHTML = ''; // Clear existing content
     items.forEach(item => {
-        const imageUrl = imageData.menu[item.name.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
+        const imageUrl = getItemImage(item);
         const itemElement = document.createElement('div');
-        itemElement.className = 'menu-item bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-60 cursor-pointer';
+        itemElement.className = 'menu-item bg-white/5 rounded-2xl p-3 flex gap-4 items-center border border-white/5 w-full cursor-pointer';
         const tagsHtml = item.tags && item.tags.map(tag => {
             let bgColor = 'bg-gray-500/20';
             let textColor = 'text-gray-300';
