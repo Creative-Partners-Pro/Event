@@ -78,7 +78,10 @@
         "price": "22.00",
         "desc": "A refreshing mix of prosecco, Aperol, and a splash of citrus.",
         "type": "bar",
-        "tags": ["popular"]
+        "tags": ["popular"],
+        "strength": "Low",
+        "volume": "250ml",
+        "taste": "Bitter-Sweet"
       },
       {
         "category": "COCKTAILS",
@@ -86,14 +89,20 @@
         "price": "24.00",
         "desc": "A bold blend of whiskey, sweet vermouth, and a hint of cherry.",
         "type": "bar",
-        "tags": ["hot", "popular"]
+        "tags": ["hot", "popular"],
+        "strength": "Strong",
+        "volume": "150ml",
+        "taste": "Sweet & Bold"
       },
       {
         "category": "COCKTAILS",
         "name": "Golden Hour",
         "price": "23.00",
         "desc": "A smooth mix of gin, elderflower liqueur, and grapefruit juice.",
-        "type": "bar"
+        "type": "bar",
+        "strength": "Medium",
+        "volume": "200ml",
+        "taste": "Floral"
       },
       {
         "category": "COCKTAILS",
@@ -268,7 +277,10 @@
         "name": "Mojito",
         "price": "23.00",
         "desc": "Rum, Brown Sugar Mint, Lime, Soda Water",
-        "type": "bar"
+        "type": "bar",
+        "strength": "Medium",
+        "volume": "300ml",
+        "taste": "Minty & Refreshing"
       },
       {
         "category": "BEER",
@@ -289,7 +301,10 @@
         "name": "Aperol Spritz",
         "price": "25.00",
         "desc": "Aperol,Sprk.wine,orange,soda water",
-        "type": "bar"
+        "type": "bar",
+        "strength": "Low",
+        "volume": "250ml",
+        "taste": "Bitter-Sweet"
       },
       {
         "category": "COCKTAILS",
@@ -603,9 +618,12 @@
         "category": "BEER",
         "name": "Arriba Draft Beer 🍺",
         "price": "10.00",
-        "desc": "400ml",
+        "desc": "Local draft beer with a smooth finish.",
         "popular": true,
-        "type": "bar"
+        "type": "bar",
+        "strength": "4.5%",
+        "volume": "400ml",
+        "taste": "Crisp"
       },
       {
         "category": "COCKTAILS",

@@ -182,37 +182,68 @@
             </div>
         </div>
     </div>
-    <!-- Product Detail Modal -->
-    <div id="product-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+    <!-- Product Detail Modal (Bottom Sheet) -->
+    <div id="product-modal" class="hidden fixed inset-0 z-50 flex items-end justify-center">
         <!-- Background Overlay -->
-        <div id="modal-overlay" class="absolute inset-0 bg-black/30 backdrop-blur-md"></div>
+        <div id="modal-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
 
         <!-- Modal Content -->
-        <div id="modal-content" class="relative z-20 w-[85%] max-w-[340px]">
-            <div class="relative bg-black/50 backdrop-blur-2xl rounded-2xl overflow-hidden border border-white/5 main-card-glow flex flex-col">
-                <div class="relative h-[420px] w-full overflow-hidden">
-                    <img id="modal-image" alt="Product Image" class="absolute inset-0 w-full h-full object-cover grayscale-[40%] opacity-60" src="">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10"></div>
-                    <div class="absolute inset-0 p-10 flex flex-col justify-end">
-                        <div class="absolute top-10 right-10 w-2 h-2 rounded-full bg-primary shadow-[0_0_15px_rgba(242,13,32,1)]"></div>
-                        <h2 id="modal-name" class="font-display text-3xl md:text-4xl font-extralight text-white tracking-[0.12em] uppercase leading-[0.9] mb-6 text-glow-red">
+        <div id="modal-content" class="relative z-20 w-full max-w-[500px] h-[85dvh] bg-[#0A0A0C] rounded-t-[40px] border-t border-white/10 flex flex-col overflow-hidden shadow-2xl transition-transform duration-300 translate-y-full">
+            <!-- Drag Handle -->
+            <div class="absolute top-0 left-0 right-0 h-10 flex items-start justify-center pt-3 z-30 cursor-grab active:cursor-grabbing">
+                <div class="w-12 h-1.5 bg-white/20 rounded-full"></div>
+            </div>
+
+            <!-- Close Button -->
+            <button id="modal-close-button" class="absolute top-4 right-6 z-30 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-colors">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+
+            <div class="flex-1 overflow-y-auto no-scrollbar pt-0">
+                <!-- Image Header -->
+                <div class="relative h-[45vh] w-full shrink-0">
+                    <img id="modal-image" alt="Product Image" class="w-full h-full object-cover grayscale-[20%]" src="">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0C] via-transparent to-transparent"></div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="px-8 pb-12 -mt-16 relative z-10">
+                    <div class="flex flex-col gap-4 mb-8">
+                        <h2 id="modal-name" class="font-display text-4xl font-bold text-white tracking-tight leading-tight uppercase">
                             <!-- Product Name -->
                         </h2>
-                        <div class="flex items-baseline gap-2 mb-8">
-                            <span id="modal-price" class="text-4xl font-body font-medium text-primary price-glow-red"><!-- Price --></span>
+                        <div class="flex items-center gap-4">
+                            <span id="modal-price" class="text-3xl font-body font-bold text-primary">
+                                <!-- Price -->
+                            </span>
+                            <div id="modal-tags" class="flex flex-wrap gap-2"></div>
                         </div>
-                        <!-- Tags will be dynamically inserted here if available -->
-                        <div id="modal-tags" class="flex flex-wrap gap-2 mt-2"></div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="mb-10">
+                        <h3 class="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold mb-3">Description</h3>
+                        <p id="modal-desc" class="text-lg text-white/70 font-light leading-relaxed">
+                            <!-- Description -->
+                        </p>
+                    </div>
+
+                    <!-- Attributes (Strength, Volume, Taste) -->
+                    <div id="modal-attributes" class="grid grid-cols-3 gap-4 border-t border-white/5 pt-8">
+                        <div id="attr-strength" class="flex flex-col gap-1.5">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 font-bold">Strength</span>
+                            <span class="text-sm text-white font-medium" id="val-strength">-</span>
+                        </div>
+                        <div id="attr-volume" class="flex flex-col gap-1.5">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 font-bold">Volume</span>
+                            <span class="text-sm text-white font-medium" id="val-volume">-</span>
+                        </div>
+                        <div id="attr-taste" class="flex flex-col gap-1.5">
+                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 font-bold">Taste</span>
+                            <span class="text-sm text-white font-medium capitalize" id="val-taste">-</span>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-white/[0.02] backdrop-blur-3xl border-t border-white/10 py-6 px-8">
-                    <p id="modal-desc" class="text-sm text-white/70 text-center"><!-- Description --></p>
-                </div>
-            </div>
-            <div class="flex justify-center mt-12">
-                <button id="modal-close-button" class="w-16 h-16 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center justify-center text-white/30 hover:text-white hover:bg-white/10 transition-all duration-300">
-                    <span class="material-symbols-outlined text-3xl">close</span>
-                </button>
             </div>
         </div>
     </div>
