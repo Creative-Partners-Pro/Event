@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drunk Owl - Admin Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f20d20",
+                        "accent-yellow": "#FFD700",
+                        "background-dark": "#060608",
+                        "card-bg": "#121214",
+                    },
+                    fontFamily: {
+                        "display": ["Outfit", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .custom-shadow { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); }
+        .tab-active { border-bottom: 2px solid #f20d20; color: #f20d20; }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-body min-h-screen">
+    <div class="flex flex-col h-screen">
+        <!-- Header -->
+        <header class="flex-none bg-card-bg border-b border-white/10 px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <i class="ph ph-gear-six text-2xl text-white"></i>
+                </div>
+                <h1 class="text-xl font-semibold tracking-tight">Admin Dashboard</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="save-all-btn" class="bg-primary hover:bg-red-600 text-white px-4 py-2 rounded-lg font-bold transition-colors flex items-center gap-2">
+                    <i class="ph ph-floppy-disk"></i>
+                    Save Changes
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="flex-1 flex overflow-hidden">
+            <!-- Sidebar Navigation -->
+            <nav class="w-64 bg-card-bg border-r border-white/10 flex flex-col p-4 gap-2">
+                <button data-tab="business" class="nav-item flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-white/70 hover:text-white">
+                    <i class="ph ph-info text-xl"></i>
+                    <span>Business Info</span>
+                </button>
+                <button data-tab="global" class="nav-item flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-white/70 hover:text-white">
+                    <i class="ph ph-globe text-xl"></i>
+                    <span>Global Settings</span>
+                </button>
+                <button data-tab="categories" class="nav-item flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-white/70 hover:text-white">
+                    <i class="ph ph-squares-four text-xl"></i>
+                    <span>Categories</span>
+                </button>
+                <button data-tab="items" class="nav-item flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-white/70 hover:text-white">
+                    <i class="ph ph-list-bullets text-xl"></i>
+                    <span>Menu Items</span>
+                </button>
+                <div class="mt-auto pt-4 border-t border-white/5">
+                    <a href="menu.html" target="_blank" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-white/50 hover:text-white">
+                        <i class="ph ph-arrow-square-out text-xl"></i>
+                        <span>View Live Menu</span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Content -->
+            <main class="flex-1 overflow-y-auto p-8 no-scrollbar">
+                <!-- Business Info Tab -->
+                <section id="tab-business" class="tab-content hidden space-y-8">
+                    <div class="max-w-3xl">
+                        <h2 class="text-2xl font-bold mb-6">Business Information</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-white/50">Establishment Name</label>
+                                <input type="text" id="biz-name" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 focus:ring-1 focus:ring-primary focus:border-primary outline-none">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-white/50">Type (e.g., Bar, Restaurant)</label>
+                                <input type="text" id="biz-type" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 focus:ring-1 focus:ring-primary focus:border-primary outline-none">
+                            </div>
+                            <div class="space-y-2 md:col-span-2">
+                                <label class="text-sm font-medium text-white/50">Description</label>
+                                <textarea id="biz-desc" rows="3" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 focus:ring-1 focus:ring-primary focus:border-primary outline-none"></textarea>
+                            </div>
+                            <div class="space-y-2 md:col-span-2">
+                                <label class="text-sm font-medium text-white/50">Location Address</label>
+                                <input type="text" id="biz-address" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 focus:ring-1 focus:ring-primary focus:border-primary outline-none">
+                            </div>
+                            <div class="space-y-2 md:col-span-2">
+                                <label class="text-sm font-medium text-white/50">Google Maps Link</label>
+                                <input type="text" id="biz-map-link" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 focus:ring-1 focus:ring-primary focus:border-primary outline-none">
+                            </div>
+                            <div class="space-y-2 md:col-span-2">
+                                <label class="text-sm font-medium text-white/50">Profile Photo URL</label>
+                                <div class="flex gap-4">
+                                    <input type="text" id="biz-photo" class="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2 focus:ring-1 focus:ring-primary focus:border-primary outline-none">
+                                    <button class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors">Upload</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Global Settings Tab -->
+                <section id="tab-global" class="tab-content hidden space-y-8">
+                    <div class="max-w-3xl space-y-8">
+                        <div>
+                            <h2 class="text-2xl font-bold mb-6">Greetings & Welcome</h2>
+                            <div class="space-y-6">
+                                <div class="p-4 bg-white/5 rounded-xl border border-white/10 space-y-4">
+                                    <h3 class="font-semibold text-accent-yellow flex items-center gap-2">
+                                        <i class="ph ph-translate"></i> English (Default)
+                                    </h3>
+                                    <div class="grid grid-cols-1 gap-4">
+                                        <input type="text" id="greet-title-en" placeholder="Greeting Title" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                                        <input type="text" id="greet-sub-en" placeholder="Greeting Subtext" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-white/5 rounded-xl border border-white/10 space-y-4">
+                                    <h3 class="font-semibold text-blue-400 flex items-center gap-2">
+                                        <i class="ph ph-translate"></i> Russian
+                                    </h3>
+                                    <div class="grid grid-cols-1 gap-4">
+                                        <input type="text" id="greet-title-ru" placeholder="Заголовок приветствия" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                                        <input type="text" id="greet-sub-ru" placeholder="Подзаголовок приветствия" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h2 class="text-2xl font-bold mb-6">Promotional Banner</h2>
+                                <div class="p-6 bg-white/5 rounded-xl border border-white/10 space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="font-semibold">Show Banner</h3>
+                                            <p class="text-sm text-white/50">Display at top</p>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" id="banner-toggle" class="sr-only peer">
+                                            <div class="w-11 h-6 bg-white/10 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+                                        </label>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label class="text-xs font-medium text-white/50">Banner Image URL</label>
+                                        <input type="text" id="banner-image" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-1 text-sm outline-none">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold mb-6">Menu QR Code</h2>
+                                <div class="p-6 bg-white/5 rounded-xl border border-white/10 space-y-2 h-[104px]">
+                                    <label class="text-xs font-medium text-white/50">QR Identifier / URL</label>
+                                    <input type="text" id="qr-id" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-1 text-sm outline-none">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 class="text-2xl font-bold mb-6">Tags Management</h2>
+                            <div class="p-6 bg-white/5 rounded-xl border border-white/10 space-y-4">
+                                <div id="tags-list" class="flex flex-wrap gap-2">
+                                    <!-- Tags will be listed here -->
+                                </div>
+                                <div class="flex gap-2">
+                                    <input type="text" id="new-tag-input" placeholder="New tag name" class="flex-1 bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                                    <button id="add-tag-btn" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors">Add Tag</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Categories Tab -->
+                <section id="tab-categories" class="tab-content hidden">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold">Menu Categories</h2>
+                        <button id="add-category-btn" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
+                            <i class="ph ph-plus"></i> Add Category
+                        </button>
+                    </div>
+                    <div id="categories-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Category cards will be injected here -->
+                    </div>
+                </section>
+
+                <!-- Items Tab -->
+                <section id="tab-items" class="tab-content hidden">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                        <h2 class="text-2xl font-bold">Menu Items</h2>
+                        <div class="flex gap-4 w-full md:w-auto">
+                            <select id="item-category-filter" class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 outline-none focus:ring-1 focus:ring-primary">
+                                <option value="all">All Categories</option>
+                            </select>
+                            <button id="add-item-btn" class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors flex items-center gap-2 whitespace-nowrap">
+                                <i class="ph ph-plus"></i> Add Item
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+                        <table class="w-full text-left">
+                            <thead class="bg-white/5 text-sm uppercase tracking-wider text-white/50">
+                                <tr>
+                                    <th class="px-6 py-4 font-medium">Item</th>
+                                    <th class="px-6 py-4 font-medium">Category</th>
+                                    <th class="px-6 py-4 font-medium">Price</th>
+                                    <th class="px-6 py-4 font-medium">Status</th>
+                                    <th class="px-6 py-4 font-medium text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="items-table-body" class="divide-y divide-white/5">
+                                <!-- Item rows will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Edit Category Modal -->
+    <div id="category-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+        <div class="relative bg-card-bg border border-white/10 rounded-2xl w-full max-w-lg overflow-hidden custom-shadow">
+            <div class="p-6 border-b border-white/5 flex justify-between items-center">
+                <h3 class="text-xl font-bold" id="category-modal-title">Edit Category</h3>
+                <button class="close-modal text-white/50 hover:text-white"><i class="ph ph-x text-2xl"></i></button>
+            </div>
+            <div class="p-6 space-y-4">
+                <div class="space-y-2">
+                    <label class="text-sm font-medium text-white/50">Name (English)</label>
+                    <input type="text" id="cat-name-en" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Name (Russian)</label>
+                        <input type="text" id="cat-name-ru" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Name (Georgian)</label>
+                        <input type="text" id="cat-name-ka" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Icon/Emoji</label>
+                        <input type="text" id="cat-icon" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none" placeholder="ph-beer-bottle or 🍺">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Order Position</label>
+                        <input type="number" id="cat-order" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none" value="0">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-sm font-medium text-white/50">Category Image URL (Optional)</label>
+                    <input type="text" id="cat-image" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none" placeholder="Leave empty to use icon/emoji">
+                </div>
+            </div>
+            <div class="p-6 bg-white/5 flex justify-end gap-3">
+                <button class="close-modal px-6 py-2 rounded-lg hover:bg-white/5 transition-colors">Cancel</button>
+                <button id="save-category-btn" class="bg-primary hover:bg-red-600 text-white px-6 py-2 rounded-lg font-bold transition-colors">Save Category</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Item Modal -->
+    <div id="item-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+        <div class="relative bg-card-bg border border-white/10 rounded-2xl w-full max-w-2xl overflow-hidden custom-shadow max-h-[90vh] flex flex-col">
+            <div class="p-6 border-b border-white/5 flex justify-between items-center shrink-0">
+                <h3 class="text-xl font-bold" id="item-modal-title">Edit Menu Item</h3>
+                <button class="close-modal text-white/50 hover:text-white"><i class="ph ph-x text-2xl"></i></button>
+            </div>
+            <div class="p-6 space-y-6 overflow-y-auto no-scrollbar">
+                <!-- Basic Info -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Item Name (EN)</label>
+                        <input type="text" id="item-name-en" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Category</label>
+                        <select id="item-category-select" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                            <!-- Categories will be injected here -->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Translations -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Item Name (RU)</label>
+                        <input type="text" id="item-name-ru" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Item Name (KA)</label>
+                        <input type="text" id="item-name-ka" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                    </div>
+                </div>
+
+                <!-- Pricing & Metadata -->
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Price (GEL)</label>
+                        <input type="text" id="item-price" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Type</label>
+                        <select id="item-type-select" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                            <option value="bar">Bar (Drinks)</option>
+                            <option value="food">Food (Kitchen)</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Order Pos</label>
+                        <input type="number" id="item-order" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none" value="0">
+                    </div>
+                </div>
+
+                <!-- Tags & Visibility -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Tags</label>
+                        <div id="item-tags-select" class="flex flex-wrap gap-2 border border-white/10 rounded-lg p-2 min-h-[42px] bg-black/20">
+                            <!-- Tag checkboxes or toggles -->
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <div class="space-y-1">
+                            <label class="text-sm font-medium text-white/50">Hidden</label>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="item-hidden-toggle" class="sr-only peer">
+                                <div class="w-11 h-6 bg-white/10 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                            </label>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-medium text-white/50">Popular</label>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" id="item-popular-toggle" class="sr-only peer">
+                                <div class="w-11 h-6 bg-white/10 rounded-full peer peer-checked:after:translate-x-full peer-checked:bg-accent-yellow after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Descriptions -->
+                <div class="space-y-4">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Description (EN)</label>
+                        <textarea id="item-desc-en" rows="2" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none"></textarea>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Description (RU)</label>
+                        <textarea id="item-desc-ru" rows="2" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none"></textarea>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Description (KA)</label>
+                        <textarea id="item-desc-ka" rows="2" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none"></textarea>
+                    </div>
+                </div>
+
+                <!-- Additional Attributes -->
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Strength</label>
+                        <input type="text" id="item-strength" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none" placeholder="e.g. 12% or High">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Volume</label>
+                        <input type="text" id="item-volume" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none" placeholder="e.g. 500ml">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-white/50">Taste</label>
+                        <input type="text" id="item-taste" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none" placeholder="e.g. Bitter-Sweet">
+                    </div>
+                </div>
+
+                <!-- Media -->
+                <div class="space-y-2">
+                    <label class="text-sm font-medium text-white/50">Photo URL</label>
+                    <div class="flex gap-4">
+                        <input type="text" id="item-photo" class="flex-1 bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none">
+                        <button class="bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg transition-colors whitespace-nowrap">Upload File</button>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6 bg-white/5 flex justify-end gap-3 shrink-0">
+                <button class="close-modal px-6 py-2 rounded-lg hover:bg-white/5 transition-colors">Cancel</button>
+                <button id="save-item-btn" class="bg-primary hover:bg-red-600 text-white px-6 py-2 rounded-lg font-bold transition-colors">Save Item</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
