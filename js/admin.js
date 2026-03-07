@@ -30,6 +30,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function loadAllData() {
+    if (window.location.protocol === 'file:') {
+        document.getElementById('file-protocol-warning').classList.remove('hidden');
+    }
+
     try {
         // We use relative paths. When served by our Node server, these will work.
         // We add a timestamp to avoid caching
@@ -69,6 +73,10 @@ function initUI() {
     document.getElementById('add-item-btn').addEventListener('click', () => openItemModal());
     document.getElementById('save-category-btn').addEventListener('click', saveCategory);
     document.getElementById('save-item-btn').addEventListener('click', saveItem);
+
+    // Upload handling
+    document.getElementById('upload-biz-photo').addEventListener('click', () => triggerUpload('biz-photo'));
+    document.getElementById('upload-item-photo').addEventListener('click', () => triggerUpload('item-photo'));
 
     document.querySelectorAll('.close-modal').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -591,7 +599,8 @@ function loadGitHubSettings() {
 function updateSaveModeUI() {
     const ghEnabled = document.getElementById('gh-enabled').checked;
     const infoBox = document.getElementById('save-mode-info');
-    if (!infoBox) return;
+    const headerIndicator = document.getElementById('header-mode-indicator');
+    if (!infoBox || !headerIndicator) return;
 
     if (ghEnabled) {
         infoBox.className = 'px-4 py-2 mb-2 bg-blue-500/5 border border-blue-500/20 rounded-xl';
@@ -599,15 +608,68 @@ function updateSaveModeUI() {
             <p class="text-[10px] text-blue-400 font-bold uppercase tracking-wider mb-1">GitHub Sync</p>
             <p class="text-[11px] text-white/60 leading-tight">Изменения будут отправлены коммитом в репозиторий GitHub.</p>
         `;
-    } else {
-        // We can't easily detect if server is running without a request,
-        // but we'll assume server mode by default or fallback to local.
+        headerIndicator.innerHTML = `
+            <p class="text-[10px] text-white/50 uppercase tracking-widest">GitHub Mode</p>
+            <p class="text-xs text-blue-400">Direct Commit Sync</p>
+        `;
+    } else if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
         infoBox.className = 'px-4 py-2 mb-2 bg-green-500/5 border border-green-500/20 rounded-xl';
         infoBox.innerHTML = `
             <p class="text-[10px] text-green-400 font-bold uppercase tracking-wider mb-1">Режим сервера</p>
-            <p class="text-[11px] text-white/60 leading-tight">Изменения сохраняются напрямую в файлы проекта (или скачиваются).</p>
+            <p class="text-[11px] text-white/60 leading-tight">Изменения сохраняются напрямую в файлы проекта.</p>
+        `;
+        headerIndicator.innerHTML = `
+            <p class="text-[10px] text-white/50 uppercase tracking-widest">Server Mode</p>
+            <p class="text-xs text-green-400">Direct File Access</p>
+        `;
+    } else {
+        infoBox.className = 'px-4 py-2 mb-2 bg-accent-yellow/5 border border-accent-yellow/20 rounded-xl';
+        infoBox.innerHTML = `
+            <p class="text-[10px] text-accent-yellow font-bold uppercase tracking-wider mb-1">Static Mode</p>
+            <p class="text-[11px] text-white/60 leading-tight">Сервер не обнаружен. Файлы будут скачаны для ручной замены.</p>
+        `;
+        headerIndicator.innerHTML = `
+            <p class="text-[10px] text-white/50 uppercase tracking-widest">Static Mode</p>
+            <p class="text-xs text-accent-yellow">Download JSON</p>
         `;
     }
+}
+
+function triggerUpload(targetId) {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.onchange = async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = async (event) => {
+            const content = event.target.result;
+            const filename = `${Date.now()}_${file.name}`;
+
+            try {
+                const res = await fetch('/api/upload', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ filename, content })
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    document.getElementById(targetId).value = data.path;
+                    alert('Image uploaded successfully!');
+                } else {
+                    throw new Error('Upload failed');
+                }
+            } catch (err) {
+                console.error('Upload error:', err);
+                alert('Upload failed. Server mode is required for direct uploads.');
+            }
+        };
+        reader.readAsDataURL(file);
+    };
+    input.click();
 }
 
 async function saveToGitHub() {
@@ -648,6 +710,9 @@ async function saveToGitHub() {
         }
 
         // 2. Update/Create file
+        // Base64 encode using a method that supports Unicode
+        const base64Content = btoa(new TextEncoder().encode(file.content).reduce((data, byte) => data + String.fromCharCode(byte), ''));
+
         const putRes = await fetch(`https://api.github.com/repos/${repo}/contents/${file.path}`, {
             method: 'PUT',
             headers: {
@@ -656,7 +721,7 @@ async function saveToGitHub() {
             },
             body: JSON.stringify({
                 message: `Update ${file.path} via Admin Panel`,
-                content: btoa(unescape(encodeURIComponent(file.content))),
+                content: base64Content,
                 sha: sha,
                 branch: branch
             })

@@ -10,6 +10,27 @@ app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 app.use(express.static(__dirname));
 
+// Endpoint to upload images
+app.post('/api/upload', (req, res) => {
+    const { filename, content } = req.body;
+    if (!filename || !content) {
+        return res.status(400).json({ error: 'Missing filename or content' });
+    }
+
+    try {
+        const base64Data = content.replace(/^data:image\/\w+;base64,/, "");
+        const buffer = Buffer.from(base64Data, 'base64');
+        const filepath = path.join(__dirname, 'img', filename);
+
+        fs.writeFileSync(filepath, buffer);
+        console.log(`File uploaded: ${filename}`);
+        res.json({ message: 'Upload successful', path: `img/${filename}` });
+    } catch (err) {
+        console.error('Upload error:', err);
+        res.status(500).json({ error: 'Upload failed' });
+    }
+});
+
 // Endpoint to save configuration files
 app.post('/api/save', (req, res) => {
     const { en, ru, ka, images } = req.body;
