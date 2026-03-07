@@ -501,6 +501,12 @@ function renderCategoryGrid(type) {
 function handleCategoryClick(category) {
     renderCategoryItems(category);
     updateActiveCategory(category);
+
+    // Reset scroll position to top when changing categories
+    const mainContainer = document.querySelector('main');
+    if (mainContainer) {
+        mainContainer.scrollTop = 0;
+    }
 }
 
 function updateActiveCategory(category) {
