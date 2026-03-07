@@ -362,57 +362,105 @@ function renderCategoryItems(category) {
 
     const items = configData.menu.items.filter(item => item.category.toUpperCase() === category.toUpperCase());
 
-    // Sort items: those with images first
-    items.sort((a, b) => {
-        const aImageUrl = getItemImage(a);
-        const bImageUrl = getItemImage(b);
-        const aHasImage = !aImageUrl.includes('placeholder');
-        const bHasImage = !bImageUrl.includes('placeholder');
-        return bHasImage - aHasImage;
-    });
-
     container.innerHTML = ''; // Clear existing content
-    items.forEach(item => {
-        const imageUrl = getItemImage(item);
-        const itemElement = document.createElement('div');
-        itemElement.className = 'menu-item bg-white/5 rounded-[24px] p-4 flex gap-5 items-center border border-white/10 w-[90%] mx-auto min-h-[120px] cursor-pointer active:scale-[0.98] transition-all';
-        const tagsHtml = item.tags && item.tags.map(tag => {
-            let bgColor = 'bg-gray-500/20';
-            let textColor = 'text-gray-300';
-            if (tag.toLowerCase() === 'hot') {
-                bgColor = 'bg-red-500/20';
-                textColor = 'text-red-400';
-            } else if (tag.toLowerCase() === 'popular') {
-                bgColor = 'bg-yellow-500/20';
-                textColor = 'text-yellow-400';
-            } else if (tag.toLowerCase() === 'sale') {
-                bgColor = 'bg-green-500/20';
-                textColor = 'text-green-400';
-            }
-            return `<span class="text-[11px] uppercase font-bold tracking-widest px-3 py-1 rounded-full ${bgColor} ${textColor}">${tag}</span>`;
-        }).join('');
 
-        const tagsContainer = tagsHtml ? `<div class="flex gap-2 items-center">${tagsHtml}</div>` : '';
+    const hasSubcategories = items.some(item => item.subcategory);
 
-        itemElement.innerHTML = `
-            <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 shadow-lg border border-white/5">
-                <img src="${imageUrl}" class="w-full h-full object-cover" alt="${item.name}">
-            </div>
-            <div class="flex-1 flex flex-col justify-between h-full py-1">
-                <div>
-                    <h4 class="font-semibold text-base text-white/90 leading-tight mb-2">${item.name}</h4>
-                    ${tagsContainer}
+    if (hasSubcategories) {
+        // Group items by subcategory
+        const grouped = items.reduce((acc, item) => {
+            const sub = item.subcategory || 'Other';
+            if (!acc[sub]) acc[sub] = [];
+            acc[sub].push(item);
+            return acc;
+        }, {});
+
+        Object.entries(grouped).forEach(([subName, subItems]) => {
+            const subTitle = configData.ui.subcategoryTranslations?.[subName]?.[currentLang] || subName;
+
+            const groupWrapper = document.createElement('div');
+            groupWrapper.className = 'w-full mb-6';
+            groupWrapper.innerHTML = `
+                <h4 class="px-6 text-[10px] font-bold tracking-[0.2em] uppercase text-white/30 mb-3">${subTitle}</h4>
+                <div class="flex gap-4 overflow-x-auto no-scrollbar px-6 snap-x">
+                    <!-- Items will be injected here -->
                 </div>
-                <div class="flex justify-start items-center mt-3">
-                    <div class="price-container bg-primary/10 border border-primary/20 rounded-xl px-4 py-1.5 shadow-sm">
-                         <span class="font-bold text-lg text-primary">${formatPrice(item.price)}</span>
+            `;
+
+            const carousel = groupWrapper.querySelector('div');
+
+            subItems.forEach(item => {
+                const imageUrl = getItemImage(item);
+                const itemElement = document.createElement('div');
+                itemElement.className = 'flex-shrink-0 w-40 snap-center';
+                itemElement.innerHTML = `
+                    <div class="group relative w-full h-24 rounded-2xl overflow-hidden active:scale-95 transition-transform duration-300 cursor-pointer border border-white/5">
+                        <img src="${imageUrl}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="${item.name}">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                        <div class="absolute bottom-2 left-2 right-2">
+                            <h5 class="font-bold text-[10px] text-white leading-tight mb-0.5 line-clamp-2">${item.name}</h5>
+                            <p class="text-[10px] text-accent-yellow font-medium">${formatPrice(item.price)}</p>
+                        </div>
+                    </div>
+                `;
+                itemElement.onclick = () => openModal(item);
+                carousel.appendChild(itemElement);
+            });
+
+            container.appendChild(groupWrapper);
+        });
+    } else {
+        // Sort items: those with images first
+        items.sort((a, b) => {
+            const aImageUrl = getItemImage(a);
+            const bImageUrl = getItemImage(b);
+            const aHasImage = !aImageUrl.includes('placeholder');
+            const bHasImage = !bImageUrl.includes('placeholder');
+            return bHasImage - aHasImage;
+        });
+
+        items.forEach(item => {
+            const imageUrl = getItemImage(item);
+            const itemElement = document.createElement('div');
+            itemElement.className = 'menu-item bg-white/5 rounded-[24px] p-4 flex gap-5 items-center border border-white/10 w-[90%] mx-auto min-h-[120px] cursor-pointer active:scale-[0.98] transition-all';
+            const tagsHtml = item.tags && item.tags.map(tag => {
+                let bgColor = 'bg-gray-500/20';
+                let textColor = 'text-gray-300';
+                if (tag.toLowerCase() === 'hot') {
+                    bgColor = 'bg-red-500/20';
+                    textColor = 'text-red-400';
+                } else if (tag.toLowerCase() === 'popular') {
+                    bgColor = 'bg-yellow-500/20';
+                    textColor = 'text-yellow-400';
+                } else if (tag.toLowerCase() === 'sale') {
+                    bgColor = 'bg-green-500/20';
+                    textColor = 'text-green-400';
+                }
+                return `<span class="text-[11px] uppercase font-bold tracking-widest px-3 py-1 rounded-full ${bgColor} ${textColor}">${tag}</span>`;
+            }).join('');
+
+            const tagsContainer = tagsHtml ? `<div class="flex gap-2 items-center">${tagsHtml}</div>` : '';
+
+            itemElement.innerHTML = `
+                <div class="w-24 h-24 rounded-2xl overflow-hidden shrink-0 shadow-lg border border-white/5">
+                    <img src="${imageUrl}" class="w-full h-full object-cover" alt="${item.name}">
+                </div>
+                <div class="flex-1 flex flex-col justify-between h-full py-1">
+                    <div>
+                        <h4 class="font-semibold text-base text-white/90 leading-tight mb-2">${item.name}</h4>
+                        ${tagsContainer}
+                    </div>
+                    <div class="flex justify-start items-center mt-3">
+                        <div class="price-container bg-primary/10 border border-primary/20 rounded-xl px-4 py-1.5 shadow-sm">
+                             <span class="font-bold text-lg text-primary">${formatPrice(item.price)}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-        itemElement.onclick = () => openModal(item);
-        container.appendChild(itemElement);
-    });
+            `;
+            itemElement.onclick = () => openModal(item);
+            container.appendChild(itemElement);
+        });
+    }
 }
 
 function renderCategoryGrid(type) {
