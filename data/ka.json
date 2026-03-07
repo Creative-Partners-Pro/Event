@@ -1,1022 +1,1349 @@
 {
-    "event": {
-        "title": "Ketus",
-        "subtitle": "ცოცხალი მუსიკა",
-        "date": "14 თებერვალი, 21:00",
-        "eventDateISO": "2026-02-14T21:00:00",
-        "description": "საღამოს განრიგი:\nკარი ღიაა: 18:00\n21:00 - 00:00",
-        "ticketLink": "https://tkt.ge/show/31367/cockhali-musikis-saghamo-qetusi-beridzestan-ertad",
-        "price": "20 GEL",
-        "whatsappContact": "https://wa.me/+995511423894"
+  "event": {
+    "title": "Ketus",
+    "subtitle": "ცოცხალი მუსიკა",
+    "date": "14 თებერვალი, 21:00",
+    "eventDateISO": "2026-02-14T21:00:00",
+    "description": "საღამოს განრიგი:\nკარი ღიაა: 18:00\n21:00 - 00:00",
+    "ticketLink": "https://tkt.ge/show/31367/cockhali-musikis-saghamo-qetusi-beridzestan-ertad",
+    "price": "20 GEL",
+    "whatsappContact": "https://wa.me/+995511423894"
+  },
+  "socials": [
+    {
+      "id": "inst",
+      "name": "Instagram",
+      "icon": "ph-instagram-logo",
+      "url": "https://www.instagram.com/drunkowlbar?igsh=MXdwNzhrN253eHFiZw==",
+      "color": "text-pink-500"
     },
-    "socials": [
-        {
-            "id": "inst",
-            "name": "Instagram",
-            "icon": "ph-instagram-logo",
-            "url": "https://www.instagram.com/drunkowlbar?igsh=MXdwNzhrN253eHFiZw==",
-            "color": "text-pink-500"
-        },
-        {
-            "id": "fb",
-            "name": "Facebook",
-            "icon": "ph-facebook-logo",
-            "url": "https://facebook.com/events/s/drunk-owl-bar/1612672706557750/",
-            "color": "text-blue-500"
-        },
-        {
-            "id": "tg",
-            "name": "Telegram",
-            "icon": "ph-telegram-logo",
-            "url": "https://t.me/barahodik",
-            "color": "text-blue-400"
-        }
-    ],
-    "participants": [
-        {
-            "name": "Ketus",
-            "role": "შემსრულებელი",
-            "instagram": "https://www.instagram.com/ketusberidze?igsh=M3Q2cXFvNGd2Z3hp"
-        },
-        {
-            "name": "Creative.Partners",
-            "role": "ორგანიზატორი",
-            "instagram": "https://t.me/MultCreaPart"
-        }
-    ],
-    "menu": {
-        "categories": [
-            "Beer",
-            "Cocktails",
-            "Food",
-            "Hight Alcohol Drinks",
-            "Hot Drinks",
-            "Shots",
-            "Snacks",
-            "Soft drinks",
-            "Wine",
-            "აპეტაიზერი",
-            "გარნირი და სოუსები",
-            "დესერტი",
-            "პიცა და პასტა",
-            "სალათები",
-            "სუპები",
-            "ცომეული",
-            "ცხელი კერძები"
-        ],
-        "items": [
-            {
-                "category": "COCKTAILS",
-                "name": "Long Iceland",
-                "price": "25.00",
-                "desc": "Rum, tequila, vodka, gin, tripple sec, cola"
-            },
-            {
-                "category": "WHISKEY",
-                "name": "Red Label",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "BEER",
-                "name": "Black Lion Ipa",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "WHISKEY",
-                "name": "Black Label",
-                "price": "16.00",
-                "desc": null
-            },
-            {
-                "category": "NON-ALCOHOLIC",
-                "name": "Tonic Water",
-                "price": "6.00",
-                "desc": null
-            },
-            {
-                "category": "NON-ALCOHOLIC",
-                "name": "Coca-cola plastic",
-                "price": "6.00",
-                "desc": "500ml"
-            },
-            {
-                "category": "VODKA",
-                "name": "Absolut vodka",
-                "price": "8.00",
-                "desc": "Absolut 50ml"
-            },
-            {
-                "category": "NON-ALCOHOLIC",
-                "name": "Coca-cola can",
-                "price": "4.00",
-                "desc": "330ml"
-            },
-            {
-                "category": "NON-ALCOHOLIC",
-                "name": "XL Energy Drink",
-                "price": "7.00",
-                "desc": null
-            },
-            {
-                "category": "NON-ALCOHOLIC",
-                "name": "Ginger Ale",
-                "price": "6.00",
-                "desc": null
-            },
-            {
-                "category": "NON-ALCOHOLIC",
-                "name": "Sparkling Water",
-                "price": "4.00",
-                "desc": null
-            },
-            {
-                "category": "NON-ALCOHOLIC",
-                "name": "Mineral Water",
-                "price": "3.00",
-                "desc": null
-            },
-            {
-                "category": "VODKA",
-                "name": "Beluga Vodka",
-                "price": "24.00",
-                "desc": null
-            },
-            {
-                "category": "TEQUILA",
-                "name": "Olmeca Tequila",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "BRANDY",
-                "name": "Bacardi Rum",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "BRANDY",
-                "name": "Capitan Morgan Black",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "SHOTS",
-                "name": "Brain Cancer",
-                "price": "14.00",
-                "desc": "Baileys, Banana liquor, Kahlua"
-            },
-            {
-                "category": "BEER",
-                "name": "Kayki Lager",
-                "price": "10.00",
-                "desc": null
-            },
-            {
-                "category": "WHISKEY",
-                "name": "Chivas 12y.",
-                "price": "15.00",
-                "desc": null
-            },
-            {
-                "category": "WHISKEY",
-                "name": "Tullamore Dew",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "BEER",
-                "name": "Black Lion Apa",
-                "price": "14.00",
-                "desc": null
-            },
-            {
-                "category": "BEER",
-                "name": "Corona",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "WHISKEY",
-                "name": "Jack Daniels",
-                "price": "14.00",
-                "desc": null
-            },
-            {
-                "category": "NON-ALCOHOLIC",
-                "name": "Juice",
-                "price": "6.00",
-                "desc": "250ml"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Mojito",
-                "price": "23.00",
-                "desc": "Rum, Brown Sugar Mint, Lime, Soda Water"
-            },
-            {
-                "category": "BEER",
-                "name": "Black Lion Porter",
-                "price": "14.00",
-                "desc": null
-            },
-            {
-                "category": "BEER",
-                "name": "ALcraft Lager",
-                "price": "10.00",
-                "desc": null
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Aperol Spritz",
-                "price": "25.00",
-                "desc": "Aperol,Sprk.wine,orange,soda water"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Bloody Mary",
-                "price": "18.00",
-                "desc": "Vodka, tomato juice, salt, pepper, Worcestershire sauce, Tabasco"
-            },
-            {
-                "category": "SHOTS",
-                "name": "B-52",
-                "price": "16.00",
-                "desc": "Kahlua,Bailyes,Cointreau"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Black Occupant",
-                "price": "17.00",
-                "desc": "Kahlua, Vodka"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Tequila Sunrise",
-                "price": "20.00",
-                "desc": "Tequila,Orange juice,Grenadine"
-            },
-            {
-                "category": "SHOTS",
-                "name": "Blow Job",
-                "price": "12.00",
-                "desc": "Kahlua, bailey's, Musetop"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Gin&Tonic",
-                "price": "20.00",
-                "desc": "Beefeater,Tonic water"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "White Russuian",
-                "price": "18.00",
-                "desc": "kahlua,Vodka, Cream"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Negroni",
-                "price": "20.00",
-                "desc": "Gin, Campari Bitter, Rosso"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Dr.Pepper",
-                "price": "20.00",
-                "desc": "Beer, amaretto liquer, Coke"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Long Energy",
-                "price": "26.00",
-                "desc": "Vodka,gin,rum,coiuntreau,tequila,energy drink,blue curacao"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Moscow Mule",
-                "price": "18.00",
-                "desc": "Vodka, GigerAle"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "JagerBomb",
-                "price": "22.00",
-                "desc": "Jagermaister,Energy Drink"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Cherry Lady",
-                "price": "18.00",
-                "desc": "Rum, Cherry tincture,moraschinno cherry jam, soft drink top"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Cosmopolitan",
-                "price": "18.00",
-                "desc": "Vodka, cranberry juice, Orange liquer"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Whiskey Sour",
-                "price": "20.00",
-                "desc": "Bourbon whiskey, egg white"
-            },
-            {
-                "category": "VODKA",
-                "name": "Koskenkorva vodka",
-                "price": "6.00",
-                "desc": "Vodka 50ml"
-            },
-            {
-                "category": "GIN",
-                "name": "Gin Beefeater",
-                "price": "12.00",
-                "desc": "50ml"
-            },
-            {
-                "category": "GIN",
-                "name": "Gin Bombay Sapphire",
-                "price": "16.00",
-                "desc": "50ml"
-            },
-            {
-                "category": "TEQUILA",
-                "name": "Tequila Sierra",
-                "price": "12.00",
-                "desc": "50ml"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Mai Tai",
-                "price": "20.00",
-                "desc": "White Rum, Dark Rum, Orange liquor, Juice, Syrup"
-            },
-            {
-                "category": "BRANDY",
-                "name": "Capitan Morgan Spiced Gold",
-                "price": "13.00",
-                "desc": null
-            },
-            {
-                "category": "LIQUEUR",
-                "name": "Jagermeister",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Pina Colada",
-                "price": "21.00",
-                "desc": "Rum, Malibu, Cream, syrup, juice"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Vodka Energy",
-                "price": "18.00",
-                "desc": "Vodka, Energy Drink"
-            },
-            {
-                "category": "SHOTS",
-                "name": "R.I.P.",
-                "price": "14.00",
-                "desc": "Bourbon, Blavod Vodka, Tequila"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Screwdriver",
-                "price": "17.00",
-                "desc": "Vodka, Orange juice"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Cuba Libre",
-                "price": "18.00",
-                "desc": "Rum, Coca-cola"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Jack&Ginger",
-                "price": "20.00",
-                "desc": "Jack Daniel's, Ginger Ale"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "007",
-                "price": "18.00",
-                "desc": "Gin, Dry Vermouth"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Jager Juice",
-                "price": "20.00",
-                "desc": "Jägermeister, juice"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Sapphire Fizz",
-                "price": "21.00",
-                "desc": "Bombay Gin, Tonic"
-            },
-            {
-                "category": "WHISKEY",
-                "name": "Jameson",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Blue Hawai",
-                "price": "22.00",
-                "desc": "Rum, blue curacao, juice"
-            },
-            {
-                "category": "NON-ALCOHOLIC",
-                "name": "Sprite",
-                "price": "4.00",
-                "desc": null
-            },
-            {
-                "category": "WHISKEY",
-                "name": "Jim Beam White",
-                "price": "14.00",
-                "desc": null
-            },
-            {
-                "category": "WHISKEY",
-                "name": "Jim Beam Red Stag",
-                "price": "16.00",
-                "desc": null
-            },
-            {
-                "category": "LIQUEUR",
-                "name": "Baileys",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Corona Sunrise",
-                "price": "22.00",
-                "desc": "Corona beer, Tequila, Triple sec. lime, Grenadine, Orange juice"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Lynchburg Lemonade",
-                "price": "22.00",
-                "desc": "Bourbon, Orange liquor, Ginger ale"
-            },
-            {
-                "category": "SHOTS",
-                "name": "Mad Dog",
-                "price": "16.00",
-                "desc": "Vodka, Grenadine, Tabasco"
-            },
-            {
-                "category": "WINE",
-                "name": "Kindzmarauli",
-                "price": "18.00",
-                "desc": "Semi_Sweet Red Wine"
-            },
-            {
-                "category": "WINE",
-                "name": "Tsinandali",
-                "price": "17.00",
-                "desc": "White Dry"
-            },
-            {
-                "category": "WINE",
-                "name": "Khvanchkara",
-                "price": "23.00",
-                "desc": "Semi_Sweet Red"
-            },
-            {
-                "category": "WINE",
-                "name": "Tvishi",
-                "price": "17.00",
-                "desc": "White Semi Sweet"
-            },
-            {
-                "category": "BEER",
-                "name": "Arriba Draft Beer 🍺",
-                "price": "10.00",
-                "desc": "400ml"
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Adios MTF",
-                "price": "26.00",
-                "desc": null
-            },
-            {
-                "category": "BEER",
-                "name": "Unfiltered Draft Beer",
-                "price": "10.00",
-                "desc": null
-            },
-            {
-                "category": "NON-ALCOHOLIC",
-                "name": "Glintwein seasonal",
-                "price": "12.00",
-                "desc": null
-            },
-            {
-                "category": "BEER",
-                "name": "Guinness draft",
-                "price": "20.00",
-                "desc": null
-            },
-            {
-                "category": "BEER",
-                "name": "Cider N4",
-                "price": "13.00",
-                "desc": null
-            },
-            {
-                "category": "COCKTAILS",
-                "name": "Margirita",
-                "price": "20.00",
-                "desc": "Tequila, aguave suryp,  triple sec, lime squzee"
-            },
-            {
-                "category": "BEER",
-                "name": "Draft Lager",
-                "price": "9.00",
-                "desc": null
-            },
-            {
-                "category": "აპეტაიზერი",
-                "name": "ფხალის ასორტი",
-                "price": "29",
-                "desc": null
-            },
-            {
-                "category": "აპეტაიზერი",
-                "name": "ბადრიჯანი ნიგვზით",
-                "price": "17",
-                "desc": null
-            },
-            {
-                "category": "აპეტაიზერი",
-                "name": "ქართული ყველის ასორტი",
-                "price": "24",
-                "desc": null
-            },
-            {
-                "category": "აპეტაიზერი",
-                "name": "მჟავის ასორტი",
-                "price": "14",
-                "desc": null
-            },
-            {
-                "category": "აპეტაიზერი",
-                "name": "ზეთისხილი",
-                "price": "14",
-                "desc": null
-            },
-            {
-                "category": "სუპები",
-                "name": "ჩიხირთმა",
-                "price": "14",
-                "desc": null
-            },
-            {
-                "category": "სუპები",
-                "name": "სუპ-ხარჩო",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "სუპები",
-                "name": "აკროშკა (სეზონური)",
-                "price": "14",
-                "desc": null
-            },
-            {
-                "category": "სუპები",
-                "name": "ისპანახის კრემ-სუპი",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "სუპები",
-                "name": "გოგრის კრემ-სუპი",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "სუპები",
-                "name": "პომიდვრის კრემ-სუპი",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "სუპები",
-                "name": "სოკოს კრემ-სუპი",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "სალათები",
-                "name": "კიტრი-პომიდვრის სალათი",
-                "price": "14",
-                "desc": null
-            },
-            {
-                "category": "სალათები",
-                "name": "კიტრი-პომიდორი ნიგვზით",
-                "price": "17",
-                "desc": null
-            },
-            {
-                "category": "სალათები",
-                "name": "ცეზარი ქათმით",
-                "price": "29",
-                "desc": null
-            },
-            {
-                "category": "სალათები",
-                "name": "ცეზარი ბეკონით",
-                "price": "32",
-                "desc": null
-            },
-            {
-                "category": "სალათები",
-                "name": "ბერძნული სალათი",
-                "price": "29",
-                "desc": null
-            },
-            {
-                "category": "სალათები",
-                "name": "ქათმის სალათი ვაშლით",
-                "price": "32",
-                "desc": null
-            },
-            {
-                "category": "სალათები",
-                "name": "მწვანე სალათი",
-                "price": "19",
-                "desc": null
-            },
-            {
-                "category": "სალათები",
-                "name": "ბოსტნეულის სალათი",
-                "price": "19",
-                "desc": null
-            },
-            {
-                "category": "ცომეული",
-                "name": "აჭარული ხაჭაპური",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "ცომეული",
-                "name": "იმერული ხაჭაპური",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "ცომეული",
-                "name": "მეგრული ხაჭაპური",
-                "price": "29",
-                "desc": null
-            },
-            {
-                "category": "ცომეული",
-                "name": "ლაზური ხაჭაპური",
-                "price": "39",
-                "desc": null
-            },
-            {
-                "category": "ცომეული",
-                "name": "ლობიანი",
-                "price": "21",
-                "desc": null
-            },
-            {
-                "category": "ცომეული",
-                "name": "მჭადი",
-                "price": "6",
-                "desc": null
-            },
-            {
-                "category": "ცომეული",
-                "name": "ჭვიშტარი",
-                "price": "12",
-                "desc": null
-            },
-            {
-                "category": "ცომეული",
-                "name": "პური",
-                "price": "5",
-                "desc": null
-            },
-            {
-                "category": "ცომეული",
-                "name": "ხინკალი (ყველა სახეობა)",
-                "price": "2.30",
-                "desc": null
-            },
-            {
-                "category": "ცომეული",
-                "name": "პელმენი ქოთანში",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ქაბაბი საქონლის",
-                "price": "21",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ღორის ოჯახური",
-                "price": "26",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ხბოს ოჯახური",
-                "price": "32",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ხბოს ჩაშუშული",
-                "price": "26",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ხბოს ჩაქაფული",
-                "price": "28",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ცხვრის ჩაქაფული",
-                "price": "28",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ცხვრის მწვადი",
-                "price": "41",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ხბოს მწვადი კეცზე",
-                "price": "35",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ღორის მწვადი",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ქათმის მწვადი",
-                "price": "22",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "კუპატი აფხაზურა",
-                "price": "25",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "წიწილა შქმერულად (500გრ)",
-                "price": "25",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "წიწილა შქმერულად (მთლიანი)",
-                "price": "40",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "წიწილა ბროწეულის სოუსში (500გრ)",
-                "price": "25",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ტაბაკა",
-                "price": "35",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "სოკო კეცზე",
-                "price": "18",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "სოკო კეცზე სულგუნით",
-                "price": "25",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "სულგუნი კეცზე",
-                "price": "18",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ლობიო ქოთანში",
-                "price": "18",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "აჯაბსანდალი",
-                "price": "18",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "ღორის სუკი ბეკონით და ყველით",
-                "price": "44",
-                "desc": null
-            },
-            {
-                "category": "ცხელი კერძები",
-                "name": "კალმახი ბროწეულის სოუსით",
-                "price": "32",
-                "desc": null
-            },
-            {
-                "category": "პიცა და პასტა",
-                "name": "პიცა მარგარიტა",
-                "price": "35",
-                "desc": null
-            },
-            {
-                "category": "პიცა და პასტა",
-                "name": "პიცა 4 ყველით",
-                "price": "46",
-                "desc": null
-            },
-            {
-                "category": "პიცა და პასტა",
-                "name": "პიცა პეპერონე",
-                "price": "40",
-                "desc": null
-            },
-            {
-                "category": "პიცა და პასტა",
-                "name": "პიცა ბოსტნეულით",
-                "price": "35",
-                "desc": null
-            },
-            {
-                "category": "პიცა და პასტა",
-                "name": "ქლაბ სენდვიჩი",
-                "price": "29",
-                "desc": null
-            },
-            {
-                "category": "პიცა და პასტა",
-                "name": "სპაგეტი ბოლონეზა",
-                "price": "34",
-                "desc": null
-            },
-            {
-                "category": "პიცა და პასტა",
-                "name": "სპაგეტი კარბონარა",
-                "price": "34",
-                "desc": null
-            },
-            {
-                "category": "გარნირი და სოუსები",
-                "name": "კარტოფილი ფრი",
-                "price": "12",
-                "desc": null
-            },
-            {
-                "category": "გარნირი და სოუსები",
-                "name": "მექსიკური კარტოფილი",
-                "price": "18",
-                "desc": null
-            },
-            {
-                "category": "გარნირი და სოუსები",
-                "name": "მოთუშული ბოსტნეული",
-                "price": "14",
-                "desc": null
-            },
-            {
-                "category": "გარნირი და სოუსები",
-                "name": "ბრინჯი ბოსტნეულით",
-                "price": "14",
-                "desc": null
-            },
-            {
-                "category": "გარნირი და სოუსები",
-                "name": "ტომატის საწებელი",
-                "price": "7",
-                "desc": null
-            },
-            {
-                "category": "გარნირი და სოუსები",
-                "name": "აჯიკა",
-                "price": "7",
-                "desc": null
-            },
-            {
-                "category": "გარნირი და სოუსები",
-                "name": "ტყემალი",
-                "price": "6",
-                "desc": null
-            },
-            {
-                "category": "გარნირი და სოუსები",
-                "name": "სოკოს სოუსი",
-                "price": "17",
-                "desc": null
-            },
-            {
-                "category": "დესერტი",
-                "name": "კულანი \"ლავა ქეიქი\"",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "დესერტი",
-                "name": "ჩიზ ქეიქი",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "დესერტი",
-                "name": "ხილის ასორტი",
-                "price": "29",
-                "desc": null
-            },
-            {
-                "category": "დესერტი",
-                "name": "ბლინი ბანანით და შოკოლადით",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "დესერტი",
-                "name": "ვაშლის შტრუდელი",
-                "price": "23",
-                "desc": null
-            },
-            {
-                "category": "DESSERT",
-                "name": "ვანილის ნაყინი",
-                "price": "9",
-                "desc": null
-            }
-        ]
+    {
+      "id": "fb",
+      "name": "Facebook",
+      "icon": "ph-facebook-logo",
+      "url": "https://facebook.com/events/s/drunk-owl-bar/1612672706557750/",
+      "color": "text-blue-500"
     },
-    "location": {
-        "name": "Drunk Owl Bar",
-        "address": "21 Samghebro St, Tbilisi",
-        "mapLink": "https://www.google.com/maps/place/Drunk+Owl+Bar/@41.6889226,44.8073664,17z/data=!3m1!4b1!4m6!3m5!1s0x40440cf71e4e7ea1:0x1c7f75224dc96f48!8m2!3d41.6889186!4d44.8099413!16s%2Fg%2F11b5ymggwq?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
-    },
-    "ui": {
-        "pageTitle": "SMM Hub - ვირტუალური ბილბორდი",
-        "lineupGuests": "შემსრულებლები და სტუმრები",
-        "tickets": "ბილეთები",
-        "menu": "მენიუ",
-        "location": "ადგილმდებარეობა",
-        "comingSoon": "მალე",
-        "days": "დღე",
-        "hours": "საათი",
-        "minutes": "წუთი",
-        "seconds": "წამი",
-        "nextEvent": "შემდეგი",
-        "eventStarted": "ღონისძიება დაიწყო",
-        "backToCategories": "კატეგორიებში დაბრუნება",
-        "categoryTranslations": {
-            "Cocktails": { "en": "Cocktails", "ru": "Коктейли", "ka": "კოქტეილები" },
-            "Beer": { "en": "Beer", "ru": "Пиво", "ka": "ლუდი" },
-            "Wine": { "en": "Wine", "ru": "Вино", "ka": "ღვინო" },
-            "Shots": { "en": "Shots", "ru": "Шоты", "ka": "შოთები" },
-            "APPETIZER": { "en": "APPETIZER", "ru": "ЗАКУСКИ", "ka": "აპეტაიზერი" },
-            "SOUPS": { "en": "SOUPS", "ru": "СУПЫ", "ka": "სუპები" },
-            "SALADS": { "en": "SALADS", "ru": "САЛАТЫ", "ka": "სალათები" },
-            "HOT DISHES": { "en": "HOT DISHES", "ru": "ГОРЯЧИЕ БЛЮДА", "ka": "ცხელი კერძები" },
-            "PASTRY": { "en": "PASTRY", "ru": "ВЫПЕЧКА", "ka": "ცომეული" },
-            "PIZZA & PASTA": { "en": "PIZZA & PASTA", "ru": "ПИЦЦА И ПАСТА", "ka": "პიცა და პასტა" },
-            "GARNISH & SAUCES": { "en": "GARNISH & SAUCES", "ru": "ГАРНИРЫ И СОУСЫ", "ka": "გარნირი და სოუსები" },
-            "DESSERT": { "en": "DESSERT", "ru": "ДЕСЕРТЫ", "ka": "დესერტი" }
-        }
+    {
+      "id": "tg",
+      "name": "Telegram",
+      "icon": "ph-telegram-logo",
+      "url": "https://t.me/barahodik",
+      "color": "text-blue-400"
     }
+  ],
+  "participants": [
+    {
+      "name": "Ketus",
+      "role": "შემსრულებელი",
+      "instagram": "https://www.instagram.com/ketusberidze?igsh=M3Q2cXFvNGd2Z3hp"
+    },
+    {
+      "name": "Creative.Partners",
+      "role": "ორგანიზატორი",
+      "instagram": "https://t.me/MultCreaPart"
+    }
+  ],
+  "menu": {
+    "categories": [
+      {
+        "name": "COCKTAILS",
+        "icon": "ph-cocktail"
+      },
+      {
+        "name": "BEER",
+        "icon": "ph-beer-bottle"
+      },
+      {
+        "name": "WINE",
+        "icon": "ph-wine"
+      },
+      {
+        "name": "SPIRITS",
+        "icon": "ph-brandy"
+      },
+      {
+        "name": "SHOTS",
+        "icon": "ph-shot-glass"
+      },
+      {
+        "name": "NON-ALCOHOLIC",
+        "icon": "ph-coffee"
+      },
+      {
+        "name": "APPETIZERS",
+        "icon": "ph-popcorn"
+      },
+      {
+        "name": "SOUPS",
+        "icon": "ph-soup"
+      },
+      {
+        "name": "SALADS",
+        "icon": "ph-bowl-food"
+      },
+      {
+        "name": "HOT DISHES",
+        "icon": "ph-pot"
+      },
+      {
+        "name": "PASTRY",
+        "icon": "ph-croissant"
+      },
+      {
+        "name": "PIZZA & PASTA",
+        "icon": "ph-pizza"
+      },
+      {
+        "name": "GARNISH & SAUCES",
+        "icon": "ph-pepper"
+      },
+      {
+        "name": "DESSERTS",
+        "icon": "ph-cake"
+      }
+    ],
+    "items": [
+      {
+        "category": "COCKTAILS",
+        "name": "Long Iceland",
+        "price": "25.00",
+        "desc": "Rum, tequila, vodka, gin, tripple sec, cola",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Red Label",
+        "price": "12.00",
+        "desc": null,
+        "subcategory": "Whiskey",
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "Black Lion Ipa",
+        "price": "12.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Black Label",
+        "price": "16.00",
+        "desc": null,
+        "subcategory": "Whiskey",
+        "type": "bar"
+      },
+      {
+        "category": "NON-ALCOHOLIC",
+        "name": "Tonic Water",
+        "price": "6.00",
+        "desc": null,
+        "subcategory": "Soft Drinks",
+        "type": "bar"
+      },
+      {
+        "category": "NON-ALCOHOLIC",
+        "name": "Coca-cola plastic",
+        "price": "6.00",
+        "desc": "500ml",
+        "subcategory": "Soft Drinks",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Absolut vodka",
+        "price": "8.00",
+        "desc": "Absolut 50ml",
+        "subcategory": "Vodka",
+        "type": "bar"
+      },
+      {
+        "category": "NON-ALCOHOLIC",
+        "name": "Coca-cola can",
+        "price": "4.00",
+        "desc": "330ml",
+        "subcategory": "Soft Drinks",
+        "type": "bar"
+      },
+      {
+        "category": "NON-ALCOHOLIC",
+        "name": "XL Energy Drink",
+        "price": "7.00",
+        "desc": null,
+        "subcategory": "Soft Drinks",
+        "type": "bar"
+      },
+      {
+        "category": "NON-ALCOHOLIC",
+        "name": "Ginger Ale",
+        "price": "6.00",
+        "desc": null,
+        "subcategory": "Soft Drinks",
+        "type": "bar"
+      },
+      {
+        "category": "NON-ALCOHOLIC",
+        "name": "Sparkling Water",
+        "price": "4.00",
+        "desc": null,
+        "subcategory": "Soft Drinks",
+        "type": "bar"
+      },
+      {
+        "category": "NON-ALCOHOLIC",
+        "name": "Mineral Water",
+        "price": "3.00",
+        "desc": null,
+        "subcategory": "Soft Drinks",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Beluga Vodka",
+        "price": "24.00",
+        "desc": null,
+        "subcategory": "Vodka",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Olmeca Tequila",
+        "price": "12.00",
+        "desc": null,
+        "subcategory": "Tequila",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Bacardi Rum",
+        "price": "12.00",
+        "desc": null,
+        "subcategory": "Rum",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Capitan Morgan Black",
+        "price": "12.00",
+        "desc": null,
+        "subcategory": "Rum",
+        "type": "bar"
+      },
+      {
+        "category": "SHOTS",
+        "name": "Brain Cancer",
+        "price": "14.00",
+        "desc": "Baileys, Banana liquor, Kahlua",
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "Kayki Lager",
+        "price": "10.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Chivas 12y.",
+        "price": "15.00",
+        "desc": null,
+        "subcategory": "Whiskey",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Tullamore Dew",
+        "price": "12.00",
+        "desc": null,
+        "subcategory": "Whiskey",
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "Black Lion Apa",
+        "price": "14.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "Corona",
+        "price": "12.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Jack Daniels",
+        "price": "14.00",
+        "desc": null,
+        "subcategory": "Whiskey",
+        "type": "bar"
+      },
+      {
+        "category": "NON-ALCOHOLIC",
+        "name": "Juice",
+        "price": "6.00",
+        "desc": "250ml",
+        "subcategory": "Soft Drinks",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Mojito",
+        "price": "23.00",
+        "desc": "Rum, Brown Sugar Mint, Lime, Soda Water",
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "Black Lion Porter",
+        "price": "14.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "ALcraft Lager",
+        "price": "10.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Aperol Spritz",
+        "price": "25.00",
+        "desc": "Aperol,Sprk.wine,orange,soda water",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Bloody Mary",
+        "price": "18.00",
+        "desc": "Vodka, tomato juice, salt, pepper, Worcestershire sauce, Tabasco",
+        "type": "bar"
+      },
+      {
+        "category": "SHOTS",
+        "name": "B-52",
+        "price": "16.00",
+        "desc": "Kahlua,Bailyes,Cointreau",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Black Occupant",
+        "price": "17.00",
+        "desc": "Kahlua, Vodka",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Tequila Sunrise",
+        "price": "20.00",
+        "desc": "Tequila,Orange juice,Grenadine",
+        "type": "bar"
+      },
+      {
+        "category": "SHOTS",
+        "name": "Blow Job",
+        "price": "12.00",
+        "desc": "Kahlua, bailey's, Musetop",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Gin&Tonic",
+        "price": "20.00",
+        "desc": "Beefeater,Tonic water",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "White Russuian",
+        "price": "18.00",
+        "desc": "kahlua,Vodka, Cream",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Negroni",
+        "price": "20.00",
+        "desc": "Gin, Campari Bitter, Rosso",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Dr.Pepper",
+        "price": "20.00",
+        "desc": "Beer, amaretto liquer, Coke",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Long Energy",
+        "price": "26.00",
+        "desc": "Vodka,gin,rum,coiuntreau,tequila,energy drink,blue curacao",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Moscow Mule",
+        "price": "18.00",
+        "desc": "Vodka, GigerAle",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "JagerBomb",
+        "price": "22.00",
+        "desc": "Jagermaister,Energy Drink",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Cherry Lady",
+        "price": "18.00",
+        "desc": "Rum, Cherry tincture,moraschinno cherry jam, soft drink top",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Cosmopolitan",
+        "price": "18.00",
+        "desc": "Vodka, cranberry juice, Orange liquer",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Whiskey Sour",
+        "price": "20.00",
+        "desc": "Bourbon whiskey, egg white",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Koskenkorva vodka",
+        "price": "6.00",
+        "desc": "Vodka 50ml",
+        "subcategory": "Vodka",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Gin Beefeater",
+        "price": "12.00",
+        "desc": "50ml",
+        "subcategory": "Gin",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Gin Bombay Sapphire",
+        "price": "16.00",
+        "desc": "50ml",
+        "subcategory": "Gin",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Tequila Sierra",
+        "price": "12.00",
+        "desc": "50ml",
+        "subcategory": "Tequila",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Mai Tai",
+        "price": "20.00",
+        "desc": "White Rum, Dark Rum, Orange liquor, Juice, Syrup",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Capitan Morgan Spiced Gold",
+        "price": "13.00",
+        "desc": null,
+        "subcategory": "Rum",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Jagermeister",
+        "price": "12.00",
+        "desc": null,
+        "subcategory": "Liqueur",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Pina Colada",
+        "price": "21.00",
+        "desc": "Rum, Malibu, Cream, syrup, juice",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Vodka Energy",
+        "price": "18.00",
+        "desc": "Vodka, Energy Drink",
+        "type": "bar"
+      },
+      {
+        "category": "SHOTS",
+        "name": "R.I.P.",
+        "price": "14.00",
+        "desc": "Bourbon, Blavod Vodka, Tequila",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Screwdriver",
+        "price": "17.00",
+        "desc": "Vodka, Orange juice",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Cuba Libre",
+        "price": "18.00",
+        "desc": "Rum, Coca-cola",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Jack&Ginger",
+        "price": "20.00",
+        "desc": "Jack Daniel's, Ginger Ale",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "007",
+        "price": "18.00",
+        "desc": "Gin, Dry Vermouth",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Jager Juice",
+        "price": "20.00",
+        "desc": "Jägermeister, juice",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Sapphire Fizz",
+        "price": "21.00",
+        "desc": "Bombay Gin, Tonic",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Jameson",
+        "price": "12.00",
+        "desc": null,
+        "subcategory": "Whiskey",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Blue Hawai",
+        "price": "22.00",
+        "desc": "Rum, blue curacao, juice",
+        "type": "bar"
+      },
+      {
+        "category": "NON-ALCOHOLIC",
+        "name": "Sprite",
+        "price": "4.00",
+        "desc": null,
+        "subcategory": "Soft Drinks",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Jim Beam White",
+        "price": "14.00",
+        "desc": null,
+        "subcategory": "Whiskey",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Jim Beam Red Stag",
+        "price": "16.00",
+        "desc": null,
+        "subcategory": "Whiskey",
+        "type": "bar"
+      },
+      {
+        "category": "SPIRITS",
+        "name": "Baileys",
+        "price": "12.00",
+        "desc": null,
+        "subcategory": "Liqueur",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Corona Sunrise",
+        "price": "22.00",
+        "desc": "Corona beer, Tequila, Triple sec. lime, Grenadine, Orange juice",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Lynchburg Lemonade",
+        "price": "22.00",
+        "desc": "Bourbon, Orange liquor, Ginger ale",
+        "type": "bar"
+      },
+      {
+        "category": "SHOTS",
+        "name": "Mad Dog",
+        "price": "16.00",
+        "desc": "Vodka, Grenadine, Tabasco",
+        "type": "bar"
+      },
+      {
+        "category": "WINE",
+        "name": "Kindzmarauli",
+        "price": "18.00",
+        "desc": "Semi_Sweet Red Wine",
+        "type": "bar"
+      },
+      {
+        "category": "WINE",
+        "name": "Tsinandali",
+        "price": "17.00",
+        "desc": "White Dry",
+        "type": "bar"
+      },
+      {
+        "category": "WINE",
+        "name": "Khvanchkara",
+        "price": "23.00",
+        "desc": "Semi_Sweet Red",
+        "type": "bar"
+      },
+      {
+        "category": "WINE",
+        "name": "Tvishi",
+        "price": "17.00",
+        "desc": "White Semi Sweet",
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "Arriba Draft Beer 🍺",
+        "price": "10.00",
+        "desc": "400ml",
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Adios MTF",
+        "price": "26.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "Unfiltered Draft Beer",
+        "price": "10.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "NON-ALCOHOLIC",
+        "name": "Glintwein seasonal",
+        "price": "12.00",
+        "desc": null,
+        "subcategory": "Soft Drinks",
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "Guinness draft",
+        "price": "20.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "Cider N4",
+        "price": "13.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Margirita",
+        "price": "20.00",
+        "desc": "Tequila, aguave suryp,  triple sec, lime squzee",
+        "type": "bar"
+      },
+      {
+        "category": "BEER",
+        "name": "Draft Lager",
+        "price": "9.00",
+        "desc": null,
+        "type": "bar"
+      },
+      {
+        "category": "APPETIZERS",
+        "name": "ფხალის ასორტი",
+        "price": "29",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "APPETIZERS",
+        "name": "ბადრიჯანი ნიგვზით",
+        "price": "17",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "APPETIZERS",
+        "name": "ქართული ყველის ასორტი",
+        "price": "24",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "APPETIZERS",
+        "name": "მჟავის ასორტი",
+        "price": "14",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "APPETIZERS",
+        "name": "ზეთისხილი",
+        "price": "14",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SOUPS",
+        "name": "ჩიხირთმა",
+        "price": "14",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SOUPS",
+        "name": "სუპ-ხარჩო",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SOUPS",
+        "name": "აკროშკა (სეზონური)",
+        "price": "14",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SOUPS",
+        "name": "ისპანახის კრემ-სუპი",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SOUPS",
+        "name": "გოგრის კრემ-სუპი",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SOUPS",
+        "name": "პომიდვრის კრემ-სუპი",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SOUPS",
+        "name": "სოკოს კრემ-სუპი",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SALADS",
+        "name": "კიტრი-პომიდვრის სალათი",
+        "price": "14",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SALADS",
+        "name": "კიტრი-პომიდორი ნიგვზით",
+        "price": "17",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SALADS",
+        "name": "ცეზარი ქათმით",
+        "price": "29",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SALADS",
+        "name": "ცეზარი ბეკონით",
+        "price": "32",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SALADS",
+        "name": "ბერძნული სალათი",
+        "price": "29",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SALADS",
+        "name": "ქათმის სალათი ვაშლით",
+        "price": "32",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SALADS",
+        "name": "მწვანე სალათი",
+        "price": "19",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "SALADS",
+        "name": "ბოსტნეულის სალათი",
+        "price": "19",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PASTRY",
+        "name": "აჭარული ხაჭაპური",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PASTRY",
+        "name": "იმერული ხაჭაპური",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PASTRY",
+        "name": "მეგრული ხაჭაპური",
+        "price": "29",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PASTRY",
+        "name": "ლაზური ხაჭაპური",
+        "price": "39",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PASTRY",
+        "name": "ლობიანი",
+        "price": "21",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PASTRY",
+        "name": "მჭადი",
+        "price": "6",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PASTRY",
+        "name": "ჭვიშტარი",
+        "price": "12",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PASTRY",
+        "name": "პური",
+        "price": "5",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PASTRY",
+        "name": "ხინკალი (ყველა სახეობა)",
+        "price": "2.30",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PASTRY",
+        "name": "პელმენი ქოთანში",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ქაბაბი საქონლის",
+        "price": "21",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ღორის ოჯახური",
+        "price": "26",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ხბოს ოჯახური",
+        "price": "32",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ხბოს ჩაშუშული",
+        "price": "26",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ხბოს ჩაქაფული",
+        "price": "28",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ცხვრის ჩაქაფული",
+        "price": "28",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ცხვრის მწვადი",
+        "price": "41",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ხბოს მწვადი კეცზე",
+        "price": "35",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ღორის მწვადი",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ქათმის მწვადი",
+        "price": "22",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "კუპატი აფხაზურა",
+        "price": "25",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "წიწილა შქმერულად (500გრ)",
+        "price": "25",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "წიწილა შქმერულად (მთლიანი)",
+        "price": "40",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "წიწილა ბროწეულის სოუსში (500გრ)",
+        "price": "25",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ტაბაკა",
+        "price": "35",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "სოკო კეცზე",
+        "price": "18",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "სოკო კეცზე სულგუნით",
+        "price": "25",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "სულგუნი კეცზე",
+        "price": "18",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ლობიო ქოთანში",
+        "price": "18",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "აჯაბსანდალი",
+        "price": "18",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "ღორის სუკი ბეკონით და ყველით",
+        "price": "44",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "კალმახი ბროწეულის სოუსით",
+        "price": "32",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PIZZA & PASTA",
+        "name": "პიცა მარგარიტა",
+        "price": "35",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PIZZA & PASTA",
+        "name": "პიცა 4 ყველით",
+        "price": "46",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PIZZA & PASTA",
+        "name": "პიცა პეპერონე",
+        "price": "40",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PIZZA & PASTA",
+        "name": "პიცა ბოსტნეულით",
+        "price": "35",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PIZZA & PASTA",
+        "name": "ქლაბ სენდვიჩი",
+        "price": "29",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PIZZA & PASTA",
+        "name": "სპაგეტი ბოლონეზა",
+        "price": "34",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "PIZZA & PASTA",
+        "name": "სპაგეტი კარბონარა",
+        "price": "34",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "GARNISH & SAUCES",
+        "name": "კარტოფილი ფრი",
+        "price": "12",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "GARNISH & SAUCES",
+        "name": "მექსიკური კარტოფილი",
+        "price": "18",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "GARNISH & SAUCES",
+        "name": "მოთუშული ბოსტნეული",
+        "price": "14",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "GARNISH & SAUCES",
+        "name": "ბრინჯი ბოსტნეულით",
+        "price": "14",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "GARNISH & SAUCES",
+        "name": "ტომატის საწებელი",
+        "price": "7",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "GARNISH & SAUCES",
+        "name": "აჯიკა",
+        "price": "7",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "GARNISH & SAUCES",
+        "name": "ტყემალი",
+        "price": "6",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "GARNISH & SAUCES",
+        "name": "სოკოს სოუსი",
+        "price": "17",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "DESSERTS",
+        "name": "კულანი \"ლავა ქეიქი\"",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "DESSERTS",
+        "name": "ჩიზ ქეიქი",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "DESSERTS",
+        "name": "ხილის ასორტი",
+        "price": "29",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "DESSERTS",
+        "name": "ბლინი ბანანით და შოკოლადით",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "DESSERTS",
+        "name": "ვაშლის შტრუდელი",
+        "price": "23",
+        "desc": null,
+        "type": "food"
+      },
+      {
+        "category": "DESSERTS",
+        "name": "ვანილის ნაყინი",
+        "price": "9",
+        "desc": null,
+        "type": "food"
+      }
+    ]
+  },
+  "location": {
+    "name": "Drunk Owl Bar",
+    "address": "21 Samghebro St, Tbilisi",
+    "mapLink": "https://www.google.com/maps/place/Drunk+Owl+Bar/@41.6889226,44.8073664,17z/data=!3m1!4b1!4m6!3m5!1s0x40440cf71e4e7ea1:0x1c7f75224dc96f48!8m2!3d41.6889186!4d44.8099413!16s%2Fg%2F11b5ymggwq?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  "ui": {
+    "pageTitle": "SMM Hub - ვირტუალური ბილბორდი",
+    "lineupGuests": "შემსრულებლები და სტუმრები",
+    "tickets": "ბილეთები",
+    "menu": "მენიუ",
+    "location": "ადგილმდებარეობა",
+    "comingSoon": "მალე",
+    "days": "დღე",
+    "hours": "საათი",
+    "minutes": "წუთი",
+    "seconds": "წამი",
+    "nextEvent": "შემდეგი",
+    "eventStarted": "ღონისძიება დაიწყო",
+    "backToCategories": "კატეგორიებში დაბრუნება",
+    "categoryTranslations": {
+      "COCKTAILS": {
+        "en": "Cocktails",
+        "ru": "Коктейли",
+        "ka": "კოქტეილები"
+      },
+      "BEER": {
+        "en": "Beer",
+        "ru": "Пиво",
+        "ka": "ლუდი"
+      },
+      "WINE": {
+        "en": "Wine",
+        "ru": "Вино",
+        "ka": "ღვინო"
+      },
+      "SPIRITS": {
+        "en": "Spirits",
+        "ru": "Крепкий алкоголь",
+        "ka": "ძლიერი ალკოჰოლი"
+      },
+      "SHOTS": {
+        "en": "Shots",
+        "ru": "Шоты",
+        "ka": "შოთები"
+      },
+      "NON-ALCOHOLIC": {
+        "en": "Non-Alcoholic",
+        "ru": "Безалкогольное",
+        "ka": "უალკოჰოლო"
+      },
+      "APPETIZERS": {
+        "en": "Appetizers",
+        "ru": "Закуски",
+        "ka": "აპეტაიზერი"
+      },
+      "SOUPS": {
+        "en": "Soups",
+        "ru": "Супы",
+        "ka": "სუპები"
+      },
+      "SALADS": {
+        "en": "Salads",
+        "ru": "Салаты",
+        "ka": "სალათები"
+      },
+      "HOT DISHES": {
+        "en": "Main Dishes",
+        "ru": "Горячие блюда",
+        "ka": "ცხელი კერძები"
+      },
+      "PASTRY": {
+        "en": "Pastry",
+        "ru": "Выпечка",
+        "ka": "ცომეული"
+      },
+      "PIZZA & PASTA": {
+        "en": "Pizza & Pasta",
+        "ru": "Пицца и паста",
+        "ka": "პიცა და პასტა"
+      },
+      "GARNISH & SAUCES": {
+        "en": "Sides",
+        "ru": "Гарниры",
+        "ka": "გარნირი"
+      },
+      "DESSERTS": {
+        "en": "Desserts",
+        "ru": "Десерты",
+        "ka": "დესერტი"
+      }
+    },
+    "subcategoryTranslations": {
+      "Whiskey": {
+        "en": "Whiskey",
+        "ru": "Виски",
+        "ka": "ვისკი"
+      },
+      "Vodka": {
+        "en": "Vodka",
+        "ru": "Водка",
+        "ka": "არაყი"
+      },
+      "Tequila": {
+        "en": "Tequila",
+        "ru": "Текила",
+        "ka": "ტეკილა"
+      },
+      "Gin": {
+        "en": "Gin",
+        "ru": "Джин",
+        "ka": "ჯინი"
+      },
+      "Rum": {
+        "en": "Rum",
+        "ru": "Ром",
+        "ka": "რომი"
+      },
+      "Liqueur": {
+        "en": "Liqueur",
+        "ru": "Ликер",
+        "ka": "ლიქიორი"
+      },
+      "Brandy": {
+        "en": "Brandy",
+        "ru": "Бренди",
+        "ka": "ბრენდი"
+      },
+      "Hot Drinks": {
+        "en": "Hot Drinks",
+        "ru": "Горячие напитки",
+        "ka": "ცხელი სასმელები"
+      },
+      "Soft Drinks": {
+        "en": "Soft Drinks",
+        "ru": "Безалкогольные напитки",
+        "ka": "გამაგრილებელი სასმელები"
+      }
+    }
+  }
 }

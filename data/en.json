@@ -46,30 +46,62 @@
   ],
   "menu": {
     "categories": [
-      { "name": "APPETIZER", "icon": "ph-carrot" },
-      { "name": "Beer", "icon": "ph-beer-bottle" },
-      { "name": "Cocktails", "icon": "ph-cocktail" },
-      { "name": "DESSERT", "icon": "ph-cake" },
-      { "name": "Food", "icon": "ph-fork-knife" },
-      { "name": "GARNISH & SAUCES", "icon": "ph-pepper" },
-      { "name": "HOT DISHES", "icon": "ph-pot" },
-      { "name": "LIQUEUR", "icon": "ph-brandy" },
-      { "name": "NON-ALCOHOLIC", "icon": "ph-coffee" },
-      { "name": "PASTRY", "icon": "ph-croissant" },
-      { "name": "PIZZA & PASTA", "icon": "ph-pizza" },
-      { "name": "SALADS", "icon": "ph-bowl-food" },
-      { "name": "SOUPS", "icon": "ph-soup" },
-      { "name": "Shots", "icon": "ph-shot-glass" },
-      { "name": "Snacks", "icon": "ph-popcorn" },
-      { "name": "Soft drinks", "icon": "ph-cup" },
-      { "name": "Wine", "icon": "ph-wine" },
-      { "name": "WHISKEY", "icon": "ph-brandy" },
-      { "name": "VODKA", "icon": "ph-brandy" },
-      { "name": "TEQUILA", "icon": "ph-brandy" },
-      { "name": "BRANDY", "icon": "ph-brandy" },
-      { "name": "GIN", "icon": "ph-brandy" },
-      { "name": "High Alcohol Drinks", "icon": "ph-brandy" },
-      { "name": "Hot Drinks", "icon": "ph-coffee" }
+      {
+        "name": "COCKTAILS",
+        "icon": "ph-cocktail"
+      },
+      {
+        "name": "BEER",
+        "icon": "ph-beer-bottle"
+      },
+      {
+        "name": "WINE",
+        "icon": "ph-wine"
+      },
+      {
+        "name": "SPIRITS",
+        "icon": "ph-brandy"
+      },
+      {
+        "name": "SHOTS",
+        "icon": "ph-shot-glass"
+      },
+      {
+        "name": "NON-ALCOHOLIC",
+        "icon": "ph-coffee"
+      },
+      {
+        "name": "APPETIZERS",
+        "icon": "ph-popcorn"
+      },
+      {
+        "name": "SOUPS",
+        "icon": "ph-soup"
+      },
+      {
+        "name": "SALADS",
+        "icon": "ph-bowl-food"
+      },
+      {
+        "name": "HOT DISHES",
+        "icon": "ph-pot"
+      },
+      {
+        "name": "PASTRY",
+        "icon": "ph-croissant"
+      },
+      {
+        "name": "PIZZA & PASTA",
+        "icon": "ph-pizza"
+      },
+      {
+        "name": "GARNISH & SAUCES",
+        "icon": "ph-pepper"
+      },
+      {
+        "name": "DESSERTS",
+        "icon": "ph-cake"
+      }
     ],
     "items": [
       {
@@ -78,7 +110,9 @@
         "price": "22.00",
         "desc": "A refreshing mix of prosecco, Aperol, and a splash of citrus.",
         "type": "bar",
-        "tags": ["popular"],
+        "tags": [
+          "popular"
+        ],
         "strength": "Low",
         "volume": "250ml",
         "taste": "Bitter-Sweet"
@@ -89,7 +123,10 @@
         "price": "24.00",
         "desc": "A bold blend of whiskey, sweet vermouth, and a hint of cherry.",
         "type": "bar",
-        "tags": ["hot", "popular"],
+        "tags": [
+          "hot",
+          "popular"
+        ],
         "strength": "Strong",
         "volume": "150ml",
         "taste": "Sweet & Bold"
@@ -112,11 +149,12 @@
         "type": "bar"
       },
       {
-        "category": "WHISKEY",
+        "category": "SPIRITS",
         "name": "Red Label",
         "price": "12.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Whiskey"
       },
       {
         "category": "BEER",
@@ -126,95 +164,108 @@
         "type": "bar"
       },
       {
-        "category": "WHISKEY",
+        "category": "SPIRITS",
         "name": "Black Label",
         "price": "16.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Whiskey"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Tonic Water",
         "price": "6.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Soft Drinks"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Coca-cola plastic",
         "price": "6.00",
         "desc": "500ml",
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Soft Drinks"
       },
       {
-        "category": "VODKA",
+        "category": "SPIRITS",
         "name": "Absolut vodka",
         "price": "8.00",
         "desc": "Absolut 50ml",
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Vodka"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Coca-cola can",
         "price": "4.00",
         "desc": "330ml",
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Soft Drinks"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "XL Energy Drink",
         "price": "7.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Soft Drinks"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Ginger Ale",
         "price": "6.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Soft Drinks"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Sparkling Water",
         "price": "4.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Soft Drinks"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Mineral Water",
         "price": "3.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Soft Drinks"
       },
       {
-        "category": "VODKA",
+        "category": "SPIRITS",
         "name": "Beluga Vodka",
         "price": "24.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Vodka"
       },
       {
-        "category": "TEQUILA",
+        "category": "SPIRITS",
         "name": "Olmeca Tequila",
         "price": "12.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Tequila"
       },
       {
-        "category": "BRANDY",
+        "category": "SPIRITS",
         "name": "Bacardi Rum",
         "price": "12.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Rum"
       },
       {
-        "category": "BRANDY",
+        "category": "SPIRITS",
         "name": "Capitan Morgan Black",
         "price": "12.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Rum"
       },
       {
         "category": "SHOTS",
@@ -231,18 +282,20 @@
         "type": "bar"
       },
       {
-        "category": "WHISKEY",
+        "category": "SPIRITS",
         "name": "Chivas 12y.",
         "price": "15.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Whiskey"
       },
       {
-        "category": "WHISKEY",
+        "category": "SPIRITS",
         "name": "Tullamore Dew",
         "price": "12.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Whiskey"
       },
       {
         "category": "BEER",
@@ -259,18 +312,20 @@
         "type": "bar"
       },
       {
-        "category": "WHISKEY",
+        "category": "SPIRITS",
         "name": "Jack Daniels",
         "price": "14.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Whiskey"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Juice",
         "price": "6.00",
         "desc": "250ml",
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Soft Drinks"
       },
       {
         "category": "COCKTAILS",
@@ -412,32 +467,36 @@
         "type": "bar"
       },
       {
-        "category": "VODKA",
+        "category": "SPIRITS",
         "name": "Koskenkorva vodka",
         "price": "6.00",
         "desc": "Vodka 50ml",
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Vodka"
       },
       {
-        "category": "GIN",
+        "category": "SPIRITS",
         "name": "Gin Beefeater",
         "price": "12.00",
         "desc": "50ml",
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Gin"
       },
       {
-        "category": "GIN",
+        "category": "SPIRITS",
         "name": "Gin Bombay Sapphire",
         "price": "16.00",
         "desc": "50ml",
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Gin"
       },
       {
-        "category": "TEQUILA",
+        "category": "SPIRITS",
         "name": "Tequila Sierra",
         "price": "12.00",
         "desc": "50ml",
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Tequila"
       },
       {
         "category": "COCKTAILS",
@@ -447,18 +506,20 @@
         "type": "bar"
       },
       {
-        "category": "BRANDY",
+        "category": "SPIRITS",
         "name": "Capitan Morgan Spiced Gold",
         "price": "13.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Rum"
       },
       {
-        "category": "LIQUEUR",
+        "category": "SPIRITS",
         "name": "Jagermeister",
         "price": "12.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Liqueur"
       },
       {
         "category": "COCKTAILS",
@@ -524,11 +585,12 @@
         "type": "bar"
       },
       {
-        "category": "High Alcohol Drinks",
+        "category": "SPIRITS",
         "name": "Jameson",
         "price": "12.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Whiskey"
       },
       {
         "category": "COCKTAILS",
@@ -542,28 +604,32 @@
         "name": "Sprite",
         "price": "4.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Soft Drinks"
       },
       {
-        "category": "WHISKEY",
+        "category": "SPIRITS",
         "name": "Jim Beam White",
         "price": "14.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Whiskey"
       },
       {
-        "category": "WHISKEY",
+        "category": "SPIRITS",
         "name": "Jim Beam Red Stag",
         "price": "16.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Whiskey"
       },
       {
-        "category": "LIQUEUR",
+        "category": "SPIRITS",
         "name": "Baileys",
         "price": "12.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Liqueur"
       },
       {
         "category": "COCKTAILS",
@@ -641,11 +707,12 @@
         "type": "bar"
       },
       {
-        "category": "Hot Drinks",
+        "category": "NON-ALCOHOLIC",
         "name": "Glintwein seasonal",
         "price": "12.00",
         "desc": null,
-        "type": "bar"
+        "type": "bar",
+        "subcategory": "Hot Drinks"
       },
       {
         "category": "BEER",
@@ -676,7 +743,7 @@
         "type": "bar"
       },
       {
-        "category": "APPETIZER",
+        "category": "APPETIZERS",
         "name": "Assorted Pkhali",
         "price": "29",
         "desc": null,
@@ -684,7 +751,7 @@
         "image": "assorted_pkhali"
       },
       {
-        "category": "APPETIZER",
+        "category": "APPETIZERS",
         "name": "Eggplant with walnuts",
         "price": "17",
         "desc": null,
@@ -692,7 +759,7 @@
         "image": "eggplant_with_walnuts"
       },
       {
-        "category": "APPETIZER",
+        "category": "APPETIZERS",
         "name": "Georgian Cheese Platter",
         "price": "24",
         "desc": null,
@@ -700,7 +767,7 @@
         "image": "georgian_cheese_platter"
       },
       {
-        "category": "APPETIZER",
+        "category": "APPETIZERS",
         "name": "Assorted pickles",
         "price": "14",
         "desc": null,
@@ -708,7 +775,7 @@
         "image": "assorted_pickles"
       },
       {
-        "category": "APPETIZER",
+        "category": "APPETIZERS",
         "name": "Olives",
         "price": "14",
         "desc": null,
@@ -903,7 +970,9 @@
         "desc": null,
         "type": "food",
         "image": "khinkali_kalakuri",
-        "tags": ["hot"]
+        "tags": [
+          "hot"
+        ]
       },
       {
         "category": "HOT DISHES",
@@ -1197,42 +1266,42 @@
         "type": "food"
       },
       {
-        "category": "DESSERT",
+        "category": "DESSERTS",
         "name": "Lava Cake",
         "price": "23",
         "desc": null,
         "type": "food"
       },
       {
-        "category": "DESSERT",
+        "category": "DESSERTS",
         "name": "Cheese Cake",
         "price": "23",
         "desc": null,
         "type": "food"
       },
       {
-        "category": "DESSERT",
+        "category": "DESSERTS",
         "name": "Fruit assorted",
         "price": "29",
         "desc": null,
         "type": "food"
       },
       {
-        "category": "DESSERT",
+        "category": "DESSERTS",
         "name": "Pancakes with banana",
         "price": "23",
         "desc": null,
         "type": "food"
       },
       {
-        "category": "DESSERT",
+        "category": "DESSERTS",
         "name": "Apple Strudel",
         "price": "23",
         "desc": null,
         "type": "food"
       },
       {
-        "category": "DESSERT",
+        "category": "DESSERTS",
         "name": "Vanilla ice cream",
         "price": "9",
         "desc": null,
@@ -1260,65 +1329,122 @@
     "eventStarted": "Event Started",
     "backToCategories": "Back to Categories",
     "categoryTranslations": {
-      "Cocktails": {
+      "COCKTAILS": {
         "en": "Cocktails",
         "ru": "Коктейли",
         "ka": "კოქტეილები"
       },
-      "Beer": {
+      "BEER": {
         "en": "Beer",
         "ru": "Пиво",
         "ka": "ლუდი"
       },
-      "Wine": {
+      "WINE": {
         "en": "Wine",
         "ru": "Вино",
         "ka": "ღვინო"
       },
-      "Shots": {
+      "SPIRITS": {
+        "en": "Spirits",
+        "ru": "Крепкий алкоголь",
+        "ka": "ძლიერი ალკოჰოლი"
+      },
+      "SHOTS": {
         "en": "Shots",
         "ru": "Шоты",
         "ka": "შოთები"
       },
-      "APPETIZER": {
-        "en": "APPETIZER",
-        "ru": "ЗАКУСКИ",
-        "ka": " appetizer"
+      "NON-ALCOHOLIC": {
+        "en": "Non-Alcoholic",
+        "ru": "Безалкогольное",
+        "ka": "უალკოჰოლო"
+      },
+      "APPETIZERS": {
+        "en": "Appetizers",
+        "ru": "Закуски",
+        "ka": "აპეტაიზერი"
       },
       "SOUPS": {
-        "en": "SOUPS",
-        "ru": "СУПЫ",
+        "en": "Soups",
+        "ru": "Супы",
         "ka": "სუპები"
       },
       "SALADS": {
-        "en": "SALADS",
-        "ru": "САЛАТЫ",
+        "en": "Salads",
+        "ru": "Салаты",
         "ka": "სალათები"
       },
       "HOT DISHES": {
-        "en": "HOT DISHES",
-        "ru": "ГОРЯЧИЕ БЛЮДА",
+        "en": "Main Dishes",
+        "ru": "Горячие блюда",
         "ka": "ცხელი კერძები"
       },
       "PASTRY": {
-        "en": "PASTRY",
-        "ru": "ВЫПЕЧКА",
+        "en": "Pastry",
+        "ru": "Выпечка",
         "ka": "ცომეული"
       },
       "PIZZA & PASTA": {
-        "en": "PIZZA & PASTA",
-        "ru": "ПИЦЦА И ПАСТА",
-        "ka": "פיცა და პასტა"
+        "en": "Pizza & Pasta",
+        "ru": "Пицца и паста",
+        "ka": "პიცა და პასტა"
       },
       "GARNISH & SAUCES": {
-        "en": "GARNISH & SAUCES",
-        "ru": "ГАРНИРЫ И СОУСЫ",
-        "ka": "გარნირი და სოუსები"
+        "en": "Sides",
+        "ru": "Гарниры",
+        "ka": "გარნირი"
       },
-      "DESSERT": {
-        "en": "DESSERT",
-        "ru": "ДЕСЕРТЫ",
+      "DESSERTS": {
+        "en": "Desserts",
+        "ru": "Десерты",
         "ka": "დესერტი"
+      }
+    },
+    "subcategoryTranslations": {
+      "Whiskey": {
+        "en": "Whiskey",
+        "ru": "Виски",
+        "ka": "ვისკი"
+      },
+      "Vodka": {
+        "en": "Vodka",
+        "ru": "Водка",
+        "ka": "არაყი"
+      },
+      "Tequila": {
+        "en": "Tequila",
+        "ru": "Текила",
+        "ka": "ტეკილა"
+      },
+      "Gin": {
+        "en": "Gin",
+        "ru": "Джин",
+        "ka": "ჯინი"
+      },
+      "Rum": {
+        "en": "Rum",
+        "ru": "Ром",
+        "ka": "რომი"
+      },
+      "Liqueur": {
+        "en": "Liqueur",
+        "ru": "Ликер",
+        "ka": "ლიქიორი"
+      },
+      "Brandy": {
+        "en": "Brandy",
+        "ru": "Бренди",
+        "ka": "ბრენდი"
+      },
+      "Hot Drinks": {
+        "en": "Hot Drinks",
+        "ru": "Горячие напитки",
+        "ka": "ცხელი სასმელები"
+      },
+      "Soft Drinks": {
+        "en": "Soft Drinks",
+        "ru": "Безалкогольные напитки",
+        "ka": "გამაგრილებელი სასმელები"
       }
     }
   }
