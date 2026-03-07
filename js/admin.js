@@ -22,11 +22,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function loadAllData() {
     try {
+        // We use relative paths. When served by our Node server, these will work.
+        // We add a timestamp to avoid caching
+        const ts = new Date().getTime();
         const [en, ru, ka, images] = await Promise.all([
-            fetch('data/en.json').then(res => res.json()),
-            fetch('data/ru.json').then(res => res.json()),
-            fetch('data/ka.json').then(res => res.json()),
-            fetch('data/images.json').then(res => res.json())
+            fetch(`data/en.json?v=${ts}`).then(res => res.json()),
+            fetch(`data/ru.json?v=${ts}`).then(res => res.json()),
+            fetch(`data/ka.json?v=${ts}`).then(res => res.json()),
+            fetch(`data/images.json?v=${ts}`).then(res => res.json())
         ]);
         appData.en = en;
         appData.ru = ru;
@@ -506,16 +509,41 @@ function saveAllData() {
     appData.en.banner_image = document.getElementById('banner-image').value;
     appData.en.qr_id = document.getElementById('qr-id').value;
 
-    // In a real scenario, we'd send this to a server.
-    // Here we'll just log it and offer to download the JSON files.
     console.log('Final Data to Save:', appData);
 
-    downloadJSON(appData.en, 'en.json');
-    downloadJSON(appData.ru, 'ru.json');
-    downloadJSON(appData.ka, 'ka.json');
-    downloadJSON(appData.images, 'images.json');
+    const saveBtn = document.getElementById('save-all-btn');
+    const originalText = saveBtn.innerHTML;
+    saveBtn.disabled = true;
+    saveBtn.textContent = 'Saving...';
 
-    alert('Configuration exported! In a production environment, these would be saved to the server.');
+    try {
+        const response = await fetch('/api/save', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(appData)
+        });
+
+        if (response.ok) {
+            alert('Changes saved successfully! The menu is updated.');
+        } else {
+            const err = await response.json();
+            throw new Error(err.error || 'Server error');
+        }
+    } catch (err) {
+        console.error('Save error:', err);
+        alert('Failed to save directly. Falling back to download mode.');
+
+        // Fallback to downloading files if server is not available or fails
+        downloadJSON(appData.en, 'en.json');
+        downloadJSON(appData.ru, 'ru.json');
+        downloadJSON(appData.ka, 'ka.json');
+        downloadJSON(appData.images, 'images.json');
+    } finally {
+        saveBtn.disabled = false;
+        saveBtn.innerHTML = originalText;
+    }
 }
 
 function downloadJSON(obj, filename) {
