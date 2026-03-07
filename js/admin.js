@@ -18,6 +18,15 @@ const LANGUAGES = ['en', 'ru', 'ka'];
 document.addEventListener('DOMContentLoaded', async () => {
     await loadAllData();
     initUI();
+
+    // Attach functions to window to make them accessible from inline onclick handlers
+    // since this script is a module
+    window.switchTab = switchTab;
+    window.removeTag = removeTag;
+    window.openCategoryModal = openCategoryModal;
+    window.deleteCategory = deleteCategory;
+    window.openItemModal = openItemModal;
+    window.deleteItem = deleteItem;
 });
 
 async function loadAllData() {
@@ -69,6 +78,19 @@ function initUI() {
     });
 
     document.getElementById('item-category-filter').addEventListener('change', renderItemsTable);
+    document.getElementById('save-gh-config-btn').addEventListener('click', () => {
+        const token = document.getElementById('gh-token').value;
+        const repo = document.getElementById('gh-repo').value;
+        const branch = document.getElementById('gh-branch').value;
+        const enabled = document.getElementById('gh-enabled').checked;
+
+        localStorage.setItem('gh_token', token);
+        localStorage.setItem('gh_repo', repo);
+        localStorage.setItem('gh_branch', branch);
+        localStorage.setItem('gh_enabled', enabled);
+        alert('GitHub configuration saved to local storage!');
+        updateSaveModeUI();
+    });
 
     // Initial render
     renderBusinessInfo();
@@ -76,6 +98,7 @@ function initUI() {
     renderCategories();
     renderItemsTable();
     populateCategorySelects();
+    loadGitHubSettings();
 }
 
 function switchTab(tabId) {
@@ -151,7 +174,8 @@ function renderCategories() {
         card.className = 'bg-card-bg border border-white/10 rounded-2xl p-6 space-y-4';
 
         const isEmoji = !cat.icon.startsWith('ph-');
-        const iconHtml = isEmoji ? `<span class="text-3xl">${cat.icon}</span>` : `<i class="${cat.icon} text-3xl text-accent-yellow"></i>`;
+        const iconClass = cat.icon.startsWith('ph-') ? `ph ${cat.icon}` : cat.icon;
+        const iconHtml = isEmoji ? `<span class="text-3xl">${cat.icon}</span>` : `<i class="${iconClass} text-3xl text-accent-yellow"></i>`;
 
         card.innerHTML = `
             <div class="flex justify-between items-start">
@@ -199,7 +223,7 @@ function renderItemsTable() {
             ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-white/5 text-white/30 border border-white/5">Hidden</span>`
             : `<span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-green-500/10 text-green-400 border border-green-500/10">Active</span>`;
 
-        const popularHtml = item.popular ? `<i class="ph-fill ph-star text-accent-yellow ml-2" title="Popular"></i>` : '';
+        const popularHtml = item.popular ? `<i class="ph ph-fill ph-star text-accent-yellow ml-2" title="Popular"></i>` : '';
 
         row.innerHTML = `
             <td class="px-6 py-4">
@@ -490,7 +514,7 @@ function deleteItem(index) {
     renderItemsTable();
 }
 
-function saveAllData() {
+async function saveAllData() {
     // Collect business info back to appData
     appData.en.location.name = document.getElementById('biz-name').value;
     appData.en.biz_type = document.getElementById('biz-type').value;
@@ -517,23 +541,30 @@ function saveAllData() {
     saveBtn.textContent = 'Saving...';
 
     try {
-        const response = await fetch('/api/save', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(appData)
-        });
+        const ghEnabled = document.getElementById('gh-enabled').checked;
 
-        if (response.ok) {
-            alert('Changes saved successfully! The menu is updated.');
+        if (ghEnabled) {
+            await saveToGitHub();
+            alert('Changes successfully committed to GitHub!');
         } else {
-            const err = await response.json();
-            throw new Error(err.error || 'Server error');
+            const response = await fetch('/api/save', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(appData)
+            });
+
+            if (response.ok) {
+                alert('Changes saved successfully! The menu is updated.');
+            } else {
+                const err = await response.json();
+                throw new Error(err.error || 'Server error');
+            }
         }
     } catch (err) {
         console.error('Save error:', err);
-        alert('Failed to save directly. Falling back to download mode.');
+        alert(`Error: ${err.message}. Falling back to download mode.`);
 
         // Fallback to downloading files if server is not available or fails
         downloadJSON(appData.en, 'en.json');
@@ -543,6 +574,98 @@ function saveAllData() {
     } finally {
         saveBtn.disabled = false;
         saveBtn.innerHTML = originalText;
+    }
+}
+
+function loadGitHubSettings() {
+    document.getElementById('gh-token').value = localStorage.getItem('gh_token') || '';
+    document.getElementById('gh-repo').value = localStorage.getItem('gh_repo') || '';
+    document.getElementById('gh-branch').value = localStorage.getItem('gh_branch') || 'main';
+    const enabled = localStorage.getItem('gh_enabled') === 'true';
+    document.getElementById('gh-enabled').checked = enabled;
+
+    document.getElementById('gh-enabled').addEventListener('change', updateSaveModeUI);
+    updateSaveModeUI();
+}
+
+function updateSaveModeUI() {
+    const ghEnabled = document.getElementById('gh-enabled').checked;
+    const infoBox = document.getElementById('save-mode-info');
+    if (!infoBox) return;
+
+    if (ghEnabled) {
+        infoBox.className = 'px-4 py-2 mb-2 bg-blue-500/5 border border-blue-500/20 rounded-xl';
+        infoBox.innerHTML = `
+            <p class="text-[10px] text-blue-400 font-bold uppercase tracking-wider mb-1">GitHub Sync</p>
+            <p class="text-[11px] text-white/60 leading-tight">Изменения будут отправлены коммитом в репозиторий GitHub.</p>
+        `;
+    } else {
+        // We can't easily detect if server is running without a request,
+        // but we'll assume server mode by default or fallback to local.
+        infoBox.className = 'px-4 py-2 mb-2 bg-green-500/5 border border-green-500/20 rounded-xl';
+        infoBox.innerHTML = `
+            <p class="text-[10px] text-green-400 font-bold uppercase tracking-wider mb-1">Режим сервера</p>
+            <p class="text-[11px] text-white/60 leading-tight">Изменения сохраняются напрямую в файлы проекта (или скачиваются).</p>
+        `;
+    }
+}
+
+async function saveToGitHub() {
+    const token = document.getElementById('gh-token').value;
+    const repo = document.getElementById('gh-repo').value;
+    const branch = document.getElementById('gh-branch').value;
+
+    if (!token || !repo) {
+        throw new Error('GitHub Token and Repository are required for GitHub Sync.');
+    }
+
+    // Save settings to localStorage
+    localStorage.setItem('gh_token', token);
+    localStorage.setItem('gh_repo', repo);
+    localStorage.setItem('gh_branch', branch);
+    localStorage.setItem('gh_enabled', document.getElementById('gh-enabled').checked);
+
+    const files = [
+        { path: 'data/en.json', content: JSON.stringify(appData.en, null, 2) },
+        { path: 'data/ru.json', content: JSON.stringify(appData.ru, null, 2) },
+        { path: 'data/ka.json', content: JSON.stringify(appData.ka, null, 2) },
+        { path: 'data/images.json', content: JSON.stringify(appData.images, null, 2) }
+    ];
+
+    console.log('Pushing to GitHub...');
+
+    for (const file of files) {
+        // 1. Get current file SHA
+        const getUrl = `https://api.github.com/repos/${repo}/contents/${file.path}?ref=${branch}`;
+        const getRes = await fetch(getUrl, {
+            headers: { 'Authorization': `token ${token}` }
+        });
+
+        let sha;
+        if (getRes.ok) {
+            const data = await getRes.json();
+            sha = data.sha;
+        }
+
+        // 2. Update/Create file
+        const putRes = await fetch(`https://api.github.com/repos/${repo}/contents/${file.path}`, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: `Update ${file.path} via Admin Panel`,
+                content: btoa(unescape(encodeURIComponent(file.content))),
+                sha: sha,
+                branch: branch
+            })
+        });
+
+        if (!putRes.ok) {
+            const err = await putRes.json();
+            throw new Error(`GitHub API Error (${file.path}): ${err.message}`);
+        }
     }
 }
 

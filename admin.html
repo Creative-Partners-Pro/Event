@@ -79,6 +79,10 @@
                     <i class="ph ph-list-bullets text-xl"></i>
                     <span>Menu Items</span>
                 </button>
+                <button data-tab="github" class="nav-item flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-white/70 hover:text-white">
+                    <i class="ph ph-github-logo text-xl"></i>
+                    <span>GitHub Sync</span>
+                </button>
                 <div class="mt-auto pt-4 border-t border-white/5">
                     <a href="menu.html" target="_blank" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-all text-white/50 hover:text-white">
                         <i class="ph ph-arrow-square-out text-xl"></i>
@@ -206,6 +210,53 @@
                     </div>
                     <div id="categories-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <!-- Category cards will be injected here -->
+                    </div>
+                </section>
+
+                <!-- GitHub Sync Tab -->
+                <section id="tab-github" class="tab-content hidden space-y-8">
+                    <div class="max-w-3xl">
+                        <h2 class="text-2xl font-bold mb-2">GitHub Synchronization</h2>
+                        <p class="text-white/50 mb-6 text-sm">Настройте интеграцию, чтобы сохранять изменения напрямую в ваш репозиторий на GitHub.</p>
+
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium text-white/50">Personal Access Token (classic)</label>
+                                <input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxx" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none focus:ring-1 focus:ring-primary">
+                                <p class="text-[10px] text-white/30 italic">Token must have 'repo' scope. Don't share this token with anyone.</p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-medium text-white/50">Repository Path</label>
+                                    <input type="text" id="gh-repo" placeholder="username/repository" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none focus:ring-1 focus:ring-primary">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-medium text-white/50">Branch</label>
+                                    <input type="text" id="gh-branch" placeholder="main" class="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-2 outline-none focus:ring-1 focus:ring-primary">
+                                </div>
+                            </div>
+
+                            <div class="p-4 bg-primary/5 border border-primary/20 rounded-xl">
+                                <h4 class="text-xs font-bold text-primary uppercase mb-1">Как получить токен?</h4>
+                                <ol class="text-[11px] text-white/60 space-y-1 list-decimal ml-4">
+                                    <li>Перейдите в <a href="https://github.com/settings/tokens" target="_blank" class="text-primary hover:underline">Settings -> Developer Settings -> Tokens (classic)</a></li>
+                                    <li>Нажмите "Generate new token"</li>
+                                    <li>Выберите срок действия и отметьте галочку <code class="bg-black/40 px-1 rounded text-white">repo</code></li>
+                                    <li>Скопируйте полученный токен и вставьте сюда.</li>
+                                </ol>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" id="gh-enabled" class="rounded bg-black/20 border-white/10 text-primary focus:ring-0">
+                                    <label for="gh-enabled" class="text-sm font-medium">Включить сохранение на GitHub</label>
+                                </div>
+                                <button id="save-gh-config-btn" class="text-xs bg-white/5 hover:bg-white/10 px-4 py-2 rounded-lg transition-colors border border-white/10">
+                                    Save Config to LocalStorage
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -416,6 +467,6 @@
         </div>
     </div>
 
-    <script src="js/admin.js"></script>
+    <script src="js/admin.js" type="module"></script>
 </body>
 </html>
