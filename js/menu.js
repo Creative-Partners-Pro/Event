@@ -287,16 +287,37 @@ function displayModalData(item) {
     const recommendationsSection = document.getElementById('recommendations-section');
     if (recommendationsSection) {
         recommendationsSection.innerHTML = '';
-        const recType = item.type === 'bar' ? 'food' : 'bar';
-        const recommendations = configData.menu.items
-            .filter(i => i.type === recType && i.popular)
-            .slice(0, 3);
+
+        let recommendations = [];
+
+        // 1. Try explicit recommendations from JSON
+        if (item.recommendations && Array.isArray(item.recommendations)) {
+            // Since recommendations are stored as EN names, we need to find the items in current lang
+            // But actually we injected them into each file, so they should match the names in that file?
+            // No, the inject script used EN names. We should find items by index or by EN name if we had it.
+            // Let's assume we can match by name (since we cleaned them) or just use the index if we had it.
+
+            // Safer: match by name across the items list
+            item.recommendations.forEach(recName => {
+                const recItem = configData.menu.items.find(i => i.name === recName);
+                if (recItem) recommendations.push(recItem);
+            });
+        }
+
+        // 2. Fallback to automatic popular items if no explicit ones or not enough
+        if (recommendations.length < 3) {
+            const recType = item.type === 'bar' ? 'food' : 'bar';
+            const extra = configData.menu.items
+                .filter(i => i.type === recType && i.popular && !recommendations.includes(i))
+                .slice(0, 3 - recommendations.length);
+            recommendations = recommendations.concat(extra);
+        }
 
         if (recommendations.length > 0) {
             recommendationsSection.classList.remove('hidden');
             recommendations.forEach(rec => {
                 const recEl = document.createElement('div');
-                recEl.className = 'flex items-center gap-3 p-2 bg-white/5 rounded-xl cursor-pointer';
+                recEl.className = 'flex items-center gap-3 p-2 bg-white/5 rounded-xl cursor-pointer active:scale-[0.98] transition-transform';
                 recEl.innerHTML = `
                     <img src="${getItemImage(rec)}" class="w-12 h-12 rounded-lg object-cover">
                     <div>
@@ -304,7 +325,10 @@ function displayModalData(item) {
                         <div class="text-[10px] text-primary">${formatPrice(rec.price)}</div>
                     </div>
                 `;
-                recEl.onclick = () => displayModalData(rec);
+                recEl.onclick = (e) => {
+                    e.stopPropagation();
+                    displayModalData(rec);
+                };
                 recommendationsSection.appendChild(recEl);
             });
         } else {
@@ -365,8 +389,27 @@ function initMenu() {
 
         setupTypeSwitcher();
         setupCloseButton();
+        setupLanguageSwitcher();
     })
     .catch(error => console.error("Error loading initial data:", error));
+}
+
+function setupLanguageSwitcher() {
+    const btn = document.getElementById('lang-switcher-btn');
+    if (!btn) return;
+
+    btn.textContent = currentLang.toUpperCase();
+
+    btn.onclick = () => {
+        const langs = ['en', 'ru', 'ka'];
+        const nextIndex = (langs.indexOf(currentLang) + 1) % langs.length;
+        currentLang = langs[nextIndex];
+        localStorage.setItem('lang', currentLang);
+        btn.textContent = currentLang.toUpperCase();
+
+        // Reload menu with new language
+        initMenu();
+    };
 }
 
 function getItemImage(item) {
