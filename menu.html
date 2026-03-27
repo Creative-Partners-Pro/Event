@@ -132,8 +132,8 @@
     <div class="relative z-10 flex flex-col h-[100dvh]">
         <header class="flex-none flex items-center justify-between px-8 pt-9 pb-2">
             <div class="flex flex-col">
-                <span class="text-[10px] tracking-[0.4em] font-light uppercase text-accent-yellow/80 mb-1">Welcome to</span>
-                <span class="text-2xl font-semibold tracking-tight text-white/90">Drunk Owl Bar</span>
+                <span id="label-welcome" class="text-[10px] tracking-[0.4em] font-light uppercase text-accent-yellow/80 mb-1">Welcome to</span>
+                <span id="label-location-name" class="text-2xl font-semibold tracking-tight text-white/90">Drunk Owl Bar</span>
             </div>
             <button id="close-menu-button" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center bg-white/5 hover:bg-white/10 transition-colors cursor-pointer">
                 <span class="material-symbols-outlined text-xl text-white/60">close</span>
@@ -143,7 +143,7 @@
         <main class="flex-1 flex flex-col pt-2 w-full min-h-0 overflow-y-auto no-scrollbar pb-32">
             <!-- Popular Now Carousel -->
             <div class="w-full pl-6 pr-0 mb-6 shrink-0 relative initial-hidden animate-on-load slide-in-left" style="animation-delay: 0.2s;">
-                <h3 class="text-sm font-light tracking-widest uppercase text-white/50 pr-6 mb-3">Popular Now</h3>
+                <h3 id="label-popular-now" class="text-sm font-light tracking-widest uppercase text-white/50 pr-6 mb-3">Popular Now</h3>
                 <div id="popular-now-carousel" class="flex gap-4 overflow-x-auto no-scrollbar pr-6">
                     <!-- Popular items will be injected here -->
                 </div>
@@ -223,12 +223,20 @@
                         </div>
                     </div>
 
-                    <!-- Description -->
-                    <div class="mb-10">
-                        <h3 id="label-desc" class="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold mb-3">Description</h3>
-                        <p id="modal-desc" class="text-lg text-white/70 font-light leading-relaxed">
-                            <!-- Description -->
-                        </p>
+                    <!-- Dynamic Attributes Grid -->
+                    <div id="modal-attributes" class="grid grid-cols-2 gap-y-6 gap-x-4 mb-10 border-t border-white/5 pt-8">
+                        <div id="attr-portion" class="flex flex-col gap-1.5">
+                            <span id="label-portion" class="text-[9px] uppercase tracking-[0.2em] text-white/30 font-bold">Portion</span>
+                            <span class="text-sm text-white font-medium" id="val-portion">-</span>
+                        </div>
+                        <div id="attr-secondary" class="flex flex-col gap-1.5">
+                            <span id="label-secondary" class="text-[9px] uppercase tracking-[0.2em] text-white/30 font-bold">Calories/Strength</span>
+                            <span class="text-sm text-white font-medium" id="val-secondary">-</span>
+                        </div>
+                        <div id="attr-taste" class="flex flex-col gap-1.5">
+                            <span id="label-taste" class="text-[9px] uppercase tracking-[0.2em] text-white/30 font-bold">Taste</span>
+                            <span class="text-sm text-white font-medium capitalize" id="val-taste">-</span>
+                        </div>
                     </div>
 
                     <!-- Ingredients -->
@@ -239,27 +247,19 @@
                         </p>
                     </div>
 
-                    <!-- Attributes (Strength, Volume, Taste) -->
+                    <!-- Description -->
+                    <div class="mb-10">
+                        <h3 id="label-description" class="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold mb-3">Description</h3>
+                        <p id="modal-desc" class="text-lg text-white/70 font-light leading-relaxed">
+                            <!-- Description -->
+                        </p>
+                    </div>
 
                     <!-- Recommendations -->
                     <div class="mb-10">
-                        <h3 class="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold mb-3">You might also like</h3>
+                        <h3 id="label-recommendations" class="text-[10px] uppercase tracking-[0.2em] text-white/30 font-bold mb-3">You might also like</h3>
                         <div id="recommendations-section" class="flex flex-col gap-3">
                             <!-- Recommendations will be injected here -->
-                        </div>
-                    </div>
-<div id="modal-attributes" class="grid grid-cols-3 gap-4 border-t border-white/5 pt-8">
-                        <div id="attr-strength" class="flex flex-col gap-1.5">
-                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 font-bold">Strength</span>
-                            <span class="text-sm text-white font-medium" id="val-strength">-</span>
-                        </div>
-                        <div id="attr-volume" class="flex flex-col gap-1.5">
-                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 font-bold">Volume</span>
-                            <span class="text-sm text-white font-medium" id="val-volume">-</span>
-                        </div>
-                        <div id="attr-taste" class="flex flex-col gap-1.5">
-                            <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 font-bold">Taste</span>
-                            <span class="text-sm text-white font-medium capitalize" id="val-taste">-</span>
                         </div>
                     </div>
                 </div>
@@ -277,7 +277,7 @@
         <!-- Modal Content -->
         <div class="relative z-20 w-[90%] max-w-[400px] bg-black/50 backdrop-blur-2xl rounded-3xl border border-white/10 p-6 flex flex-col gap-4">
             <div class="flex items-center justify-between">
-                <h2 class="text-lg font-semibold text-white/90">Reviews & Tips</h2>
+                <h2 id="label-reviews-title" class="text-lg font-semibold text-white/90">Reviews & Tips</h2>
                 <button id="reviews-modal-close-button" class="w-8 h-8 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/10 transition-colors">
                     <span class="material-symbols-outlined text-md text-white/60">close</span>
                 </button>
@@ -285,14 +285,14 @@
 
             <!-- Google Maps Link -->
             <a href="https://www.google.com/search?q=drunk+owl+bar+%D0%BE%D1%82%D0%B7%D1%8B%D0%B2%D1%8B&oq=&gs_lcrp=EgZjaHJvbWUqCQgAEEUYOxjCAzIJCAAQRRg7GMIDMgkIARBFGDsYwgMyCQgCEEUYOxjCAzIJCAMQRRg7GMIDMgkIBBBFGDsYwgMyCQgFEEUYOxjCAzIJCAYQRRg7GMIDMgkIBxBFGDsYwgMyCQgIEEUYOxjCAzIJCAkQRRg7GMIDMgkIChBFGDsYwgMyCQgLEEUYOxjCAzIJCAwQRRg7GMIDMgkIDRBFGDsYwgMyCQgOEEUYOxjCA9IBBi0xajBqN6gCD7ACAQ&client=ms-android-zte&sourceid=chrome-mobile&ie=UTF-8#ebo=3" target="_blank" class="flex items-center justify-between p-3 bg-black/20 rounded-lg border border-white/10 hover:bg-white/5 transition-colors">
-                <span class="text-white/80">Leave a public review on Google</span>
+                <span id="label-public-review" class="text-white/80">Leave a public review on Google</span>
                 <span class="material-symbols-outlined text-white/50">open_in_new</span>
             </a>
 
             <!-- Anonymous Review Form -->
             <form id="feedback-form" action="https://script.google.com/macros/s/AKfycbwjXc-EG7xuea6mw8HM7i1Kh7QSuBCALsKEUV5gxwcsDyI_sBvebsGWjTFOnOAYnPNI/exec" method="POST">
                 <div class="border-t border-b border-white/5 py-4">
-                    <label for="review-text" class="text-sm font-light text-white/50 mb-2 block">Or leave an anonymous review for the owner</label>
+                    <label id="label-anonymous-review" for="review-text" class="text-sm font-light text-white/50 mb-2 block">Or leave an anonymous review for the owner</label>
                     <div id="rating-container" class="flex items-center gap-2 mb-3">
                         <!-- Rating owls will be injected here -->
                     </div>
@@ -304,7 +304,7 @@
             </form>
 
             <div>
-                <h3 class="text-sm font-light text-white/50 mb-2">Leave a tip</h3>
+                <h3 id="label-leave-tip" class="text-sm font-light text-white/50 mb-2">Leave a tip</h3>
                 <div class="flex items-start gap-4">
                     <div class="w-24 h-24 rounded-lg bg-white p-1 flex items-center justify-center">
                         <img id="tip-qr-code" src="img/qr-code-placeholder.svg" alt="QR Code for Tips" class="w-full h-full object-contain">

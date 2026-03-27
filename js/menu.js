@@ -6,6 +6,8 @@ let activeMenuType = 'bar'; // 'bar' or 'food'
 let currentItemIndex = -1;
 let currentCategoryItems = [];
 let currentRating = 0;
+let swipeReadyToClose = false;
+
 
 // --- Constants ---
 const bankAccountDetails = "GE75CD0360000050090787";
@@ -179,10 +181,17 @@ function setupModal() {
     let startY, startX;
     let currentY;
 
+
     modalContent.addEventListener('touchstart', (e) => {
         startY = e.touches[0].clientY;
         startX = e.touches[0].clientX;
         modalContent.style.transition = 'none';
+
+        // Reset readiness if we are not at the top when starting a new touch
+        const scrollableArea = modalContent.querySelector('.overflow-y-auto');
+        if (scrollableArea && scrollableArea.scrollTop > 0) {
+            swipeReadyToClose = false;
+        }
     }, { passive: true });
 
     modalContent.addEventListener('touchmove', (e) => {
@@ -211,10 +220,24 @@ function setupModal() {
         const diffX = e.changedTouches[0].clientX - startX;
         const swipeThreshold = 100;
 
+        const scrollableArea = modalContent.querySelector('.overflow-y-auto');
+        const isAtTop = scrollableArea ? scrollableArea.scrollTop <= 0 : true;
+
         modalContent.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
 
-        if (diffY > swipeThreshold && Math.abs(diffY) > Math.abs(diffX)) {
-            closeModal();
+        if (isAtTop && diffY > swipeThreshold && Math.abs(diffY) > Math.abs(diffX)) {
+            if (swipeReadyToClose) {
+                closeModal();
+                swipeReadyToClose = false; // Reset for next time
+            } else {
+                // First swipe completed at top, now ready for second one
+                swipeReadyToClose = true;
+                // Bounce back effect to indicate readiness
+                modalContent.style.transform = 'translateY(0)';
+                overlay.style.backgroundColor = '';
+                // Optional: visual feedback
+                // console.log("Swipe again to close");
+            }
         } else if (Math.abs(diffX) > swipeThreshold && Math.abs(diffX) > Math.abs(diffY)) {
             // Horizontal swipe for navigation
             if (diffX > 0) { // Swipe right
@@ -264,24 +287,42 @@ function displayModalData(item) {
         });
     }
 
-    // Handle Attributes (Strength, Volume, Taste)
-    const valStrength = document.getElementById('val-strength');
-    const valVolume = document.getElementById('val-volume');
+    // Handle Dynamic Attributes
+    const valPortion = document.getElementById('val-portion');
+    const valSecondary = document.getElementById('val-secondary');
     const valTaste = document.getElementById('val-taste');
+    const labelPortion = document.getElementById('label-portion');
+    const labelSecondary = document.getElementById('label-secondary');
+    const labelTaste = document.getElementById('label-taste');
 
-    if (valStrength) valStrength.textContent = item.strength || '-';
-    if (valVolume) valVolume.textContent = item.volume || '-';
+    if (item.type === 'food') {
+        if (labelPortion) labelPortion.textContent = configData.ui.portion;
+        if (valPortion) valPortion.textContent = item.portion_size || '-';
+        if (labelSecondary) labelSecondary.textContent = configData.ui.calories;
+        if (valSecondary) valSecondary.textContent = item.calories || '-';
+    } else {
+        if (labelPortion) labelPortion.textContent = configData.ui.volume;
+        if (valPortion) valPortion.textContent = item.volume || '-';
+        if (labelSecondary) labelSecondary.textContent = configData.ui.strength;
+        if (valSecondary) valSecondary.textContent = item.strength || '-';
+    }
+
+    if (labelTaste) labelTaste.textContent = configData.ui.taste;
     if (valTaste) valTaste.textContent = item.taste || '-';
 
-    // Update Labels
-    const labelDesc = document.getElementById('label-desc');
+    // Update Section Labels
     const labelIngredients = document.getElementById('label-ingredients');
-    if (labelDesc && configData.ui.description) labelDesc.textContent = configData.ui.description;
-    if (labelIngredients && configData.ui.ingredients) labelIngredients.textContent = configData.ui.ingredients;
+    const labelDescription = document.getElementById('label-description');
+    const labelRecommendations = document.getElementById('label-recommendations');
+
+    if (labelIngredients) labelIngredients.textContent = configData.ui.ingredients;
+    if (labelDescription) labelDescription.textContent = configData.ui.description;
+    if (labelRecommendations) labelRecommendations.textContent = configData.ui.recommendations;
 
     // Reset scroll position to top
     const scrollableArea = document.querySelector('#modal-content .overflow-y-auto');
     if (scrollableArea) scrollableArea.scrollTop = 0;
+    swipeReadyToClose = false;
 
     // Handle Recommendations
     const recommendationsSection = document.getElementById('recommendations-section');
@@ -348,6 +389,7 @@ function openModal(item) {
     currentItemIndex = currentCategoryItems.findIndex(i => i.name === item.name);
 
     displayModalData(item);
+    swipeReadyToClose = false;
 
     modal.classList.remove('hidden');
     // Force reflow
@@ -378,6 +420,7 @@ function initMenu() {
         configData = langData;
         imageData = images.images;
 
+        updateUILabels();
         renderPopularItems();
         renderCategoryGrid(activeMenuType);
 
@@ -430,7 +473,9 @@ function getItemImage(item) {
 
 function renderPopularItems() {
     const container = document.getElementById('popular-now-carousel');
+    const labelPopular = document.getElementById('label-popular-now');
     if (!container) return;
+    if (labelPopular) labelPopular.textContent = configData.ui.popularNow;
 
     const popularItems = configData.menu.items.filter(item =>
         item.popular === true || (item.tags && item.tags.some(t => t.toLowerCase() === 'popular'))
@@ -458,7 +503,10 @@ function renderPopularItems() {
 function renderCategoryItems(category) {
     const container = document.getElementById('selected-category-grid');
     const title = document.getElementById('selected-category-title');
+    const backBtn = document.getElementById('back-to-categories');
     if (!container || !title) return;
+
+    if (backBtn) backBtn.textContent = configData.ui.backToCategories;
 
     const translatedCategory = configData.ui.categoryTranslations[category]?.[currentLang] || category;
     title.textContent = translatedCategory;
@@ -663,6 +711,35 @@ function updateSwitcherUI() {
         foodButton.classList.add('neon-flicker', 'bg-accent-yellow/10', 'border', 'border-accent-yellow/30', 'text-accent-yellow');
         barButton.classList.remove('neon-flicker', 'bg-accent-yellow/10', 'border', 'border-accent-yellow/30', 'text-accent-yellow');
     }
+}
+
+
+function updateUILabels() {
+    const labels = {
+        'label-welcome': configData.ui.welcome,
+        'label-location-name': configData.location.name,
+        'label-popular-now': configData.ui.popularNow,
+        'selected-category-title': configData.ui.menu,
+        'label-reviews-title': configData.ui.reviewsTips,
+        'label-public-review': configData.ui.publicReview,
+        'label-anonymous-review': configData.ui.anonymousReview,
+        'label-leave-tip': configData.ui.leaveTip,
+        'copy-details-button': configData.ui.copyAccount,
+        'send-feedback-button': configData.ui.sendFeedback,
+        'bar-button': configData.ui.bar,
+        'food-button': configData.ui.food
+    };
+
+    for (const [id, text] of Object.entries(labels)) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+    }
+
+    const feedbackTextarea = document.getElementById('review-text');
+    if (feedbackTextarea) feedbackTextarea.placeholder = configData.ui.feedbackPlaceholder;
+
+    const copySuccess = document.getElementById('copy-success-message');
+    if (copySuccess) copySuccess.textContent = configData.ui.copied;
 }
 
 
