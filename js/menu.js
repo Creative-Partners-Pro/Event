@@ -231,14 +231,18 @@ function formatPrice(price) {
     if (isNaN(numericPrice)) {
         return price; // Return original if not a number
     }
-    return `${numericPrice.toFixed(1)} GEL`;
+    // If it's an integer, don't show decimals. If it has decimals, show 2.
+    if (Number.isInteger(numericPrice)) {
+        return `${numericPrice} GEL`;
+    }
+    return `${numericPrice.toFixed(2)} GEL`;
 }
 
 function displayModalData(item) {
     document.getElementById('modal-image').src = getItemImage(item);
     document.getElementById('modal-name').textContent = item.name.replace(/(<br>|<\/br>)/g, ' ');
     document.getElementById('modal-price').textContent = formatPrice(item.price);
-    document.getElementById('modal-desc').textContent = item.desc || '';
+    document.getElementById('modal-desc').textContent = item.description || item.desc || '';
     document.getElementById('modal-ingredients').textContent = item.ingredients || '-';
 
     // Handle tags
@@ -267,6 +271,35 @@ function displayModalData(item) {
     const labelIngredients = document.getElementById('label-ingredients');
     if (labelDesc && configData.ui.description) labelDesc.textContent = configData.ui.description;
     if (labelIngredients && configData.ui.ingredients) labelIngredients.textContent = configData.ui.ingredients;
+    // Handle Recommendations
+    const recommendationsSection = document.getElementById('recommendations-section');
+    if (recommendationsSection) {
+        recommendationsSection.innerHTML = '';
+        const recType = item.type === 'bar' ? 'food' : 'bar';
+        const recommendations = configData.menu.items
+            .filter(i => i.type === recType && i.popular)
+            .slice(0, 3);
+
+        if (recommendations.length > 0) {
+            recommendationsSection.classList.remove('hidden');
+            recommendations.forEach(rec => {
+                const recEl = document.createElement('div');
+                recEl.className = 'flex items-center gap-3 p-2 bg-white/5 rounded-xl cursor-pointer';
+                recEl.innerHTML = `
+                    <img src="${getItemImage(rec)}" class="w-12 h-12 rounded-lg object-cover">
+                    <div>
+                        <div class="text-xs font-bold">${rec.name}</div>
+                        <div class="text-[10px] text-primary">${formatPrice(rec.price)}</div>
+                    </div>
+                `;
+                recEl.onclick = () => displayModalData(rec);
+                recommendationsSection.appendChild(recEl);
+            });
+        } else {
+            recommendationsSection.classList.add('hidden');
+        }
+    }
+
 }
 
 function openModal(item) {
@@ -329,7 +362,7 @@ function getItemImage(item) {
         return imageData.menu[item.image];
     }
     // Remove emojis first, then trim, then replace spaces with underscores
-    const cleanedName = item.name.replace(/🍺/g, '').trim();
+    const cleanedName = item.name.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E6}-\u{1F1FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '').trim();
     const nameKey = cleanedName.toLowerCase().replace(/ /g, '_');
     return imageData.menu[nameKey] || 'img/placeholder.png';
 }
@@ -338,7 +371,9 @@ function renderPopularItems() {
     const container = document.getElementById('popular-now-carousel');
     if (!container) return;
 
-    const popularItems = configData.menu.items.filter(item => item.popular);
+    const popularItems = configData.menu.items.filter(item =>
+        item.popular === true || (item.tags && item.tags.some(t => t.toLowerCase() === 'popular'))
+    );
     container.innerHTML = ''; // Clear existing content
     popularItems.forEach(item => {
         const imageUrl = getItemImage(item);

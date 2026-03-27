@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 test.describe('Menu Integration Test', () => {
   test('should navigate to menu.html when menu button is clicked', async ({ page }) => {
     // 1. Открыть главную страницу
-    await page.goto('http://localhost:8000/index.html');
+    await page.goto('http://localhost:3000/index.html');
 
     // 2. Найти и кликнуть на кнопку меню
     const menuButton = page.locator('#menu-btn');
