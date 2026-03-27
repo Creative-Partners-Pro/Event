@@ -113,8 +113,8 @@
         "tags": [
           "popular"
         ],
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Balanced",
         "ingredients": "Premium spirits, fresh juices, house-made syrups"
       },
@@ -128,8 +128,8 @@
           "hot",
           "popular"
         ],
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Rich",
         "ingredients": "Premium spirits, fresh juices, house-made syrups"
       },
@@ -139,8 +139,8 @@
         "price": "23.00",
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "bar",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Smooth",
         "ingredients": "Premium spirits, fresh juices, house-made syrups"
       },
@@ -151,8 +151,8 @@
         "desc": "Tonic. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Spicy"
       },
       {
@@ -163,8 +163,8 @@
         "type": "bar",
         "subcategory": "Whiskey",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Vivid"
       },
       {
@@ -174,8 +174,8 @@
         "desc": "Good after a meal. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Hops, malt, artesian water, brewer's yeast",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Balanced"
       },
       {
@@ -186,8 +186,8 @@
         "type": "bar",
         "subcategory": "Whiskey",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Rich"
       },
       {
@@ -199,7 +199,7 @@
         "subcategory": "Soft Drinks",
         "ingredients": "Natural components of the highest quality",
         "strength": "0%",
-        "volume": "330ml",
+        "volume": "330 ml",
         "taste": "Smooth"
       },
       {
@@ -211,7 +211,7 @@
         "subcategory": "Soft Drinks",
         "ingredients": "Natural components of the highest quality",
         "strength": "0%",
-        "volume": "330ml",
+        "volume": "330 ml",
         "taste": "Spicy"
       },
       {
@@ -222,8 +222,8 @@
         "type": "bar",
         "subcategory": "Vodka",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Vivid"
       },
       {
@@ -235,7 +235,7 @@
         "subcategory": "Soft Drinks",
         "ingredients": "Natural components of the highest quality",
         "strength": "0%",
-        "volume": "330ml",
+        "volume": "330 ml",
         "taste": "Balanced"
       },
       {
@@ -247,7 +247,7 @@
         "subcategory": "Soft Drinks",
         "ingredients": "Natural components of the highest quality",
         "strength": "0%",
-        "volume": "330ml",
+        "volume": "330 ml",
         "taste": "Rich"
       },
       {
@@ -259,7 +259,7 @@
         "subcategory": "Soft Drinks",
         "ingredients": "Natural components of the highest quality",
         "strength": "0%",
-        "volume": "330ml",
+        "volume": "330 ml",
         "taste": "Smooth"
       },
       {
@@ -271,7 +271,7 @@
         "subcategory": "Soft Drinks",
         "ingredients": "Natural components of the highest quality",
         "strength": "0%",
-        "volume": "330ml",
+        "volume": "330 ml",
         "taste": "Spicy"
       },
       {
@@ -283,7 +283,7 @@
         "subcategory": "Soft Drinks",
         "ingredients": "Natural components of the highest quality",
         "strength": "0%",
-        "volume": "330ml",
+        "volume": "330 ml",
         "taste": "Vivid"
       },
       {
@@ -294,8 +294,8 @@
         "type": "bar",
         "subcategory": "Vodka",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Balanced"
       },
       {
@@ -306,8 +306,8 @@
         "type": "bar",
         "subcategory": "Tequila",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Rich"
       },
       {
@@ -318,8 +318,8 @@
         "type": "bar",
         "subcategory": "Rum",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Smooth"
       },
       {
@@ -330,8 +330,8 @@
         "type": "bar",
         "subcategory": "Rum",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Spicy"
       },
       {
@@ -341,8 +341,8 @@
         "desc": "Helps forget the past. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Natural components of the highest quality",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "30%",
+        "volume": "50 ml",
         "taste": "Vivid"
       },
       {
@@ -352,8 +352,8 @@
         "desc": "Uplifting. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Hops, malt, artesian water, brewer's yeast",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Balanced"
       },
       {
@@ -364,8 +364,8 @@
         "type": "bar",
         "subcategory": "Whiskey",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Rich"
       },
       {
@@ -376,8 +376,8 @@
         "type": "bar",
         "subcategory": "Whiskey",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Smooth"
       },
       {
@@ -387,8 +387,8 @@
         "desc": "Invigorating. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Hops, malt, artesian water, brewer's yeast",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Spicy"
       },
       {
@@ -398,8 +398,8 @@
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Hops, malt, artesian water, brewer's yeast",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Vivid"
       },
       {
@@ -410,8 +410,8 @@
         "type": "bar",
         "subcategory": "Whiskey",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Balanced"
       },
       {
@@ -423,7 +423,7 @@
         "subcategory": "Soft Drinks",
         "ingredients": "Natural components of the highest quality",
         "strength": "0%",
-        "volume": "330ml",
+        "volume": "330 ml",
         "taste": "Rich"
       },
       {
@@ -432,8 +432,8 @@
         "price": "23.00",
         "desc": "Good after a meal. A unique taste that brings special moments.",
         "type": "bar",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Smooth",
         "ingredients": "Premium spirits, fresh juices, house-made syrups"
       },
@@ -444,8 +444,8 @@
         "desc": "Inspiring. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Hops, malt, artesian water, brewer's yeast",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Spicy"
       },
       {
@@ -455,8 +455,8 @@
         "desc": "For lovers. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Hops, malt, artesian water, brewer's yeast",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Vivid"
       },
       {
@@ -465,8 +465,8 @@
         "price": "25.00",
         "desc": "Helps forget the past. A unique taste that brings special moments.",
         "type": "bar",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Balanced",
         "ingredients": "Premium spirits, fresh juices, house-made syrups"
       },
@@ -477,8 +477,8 @@
         "desc": "Uplifting. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Rich"
       },
       {
@@ -488,8 +488,8 @@
         "desc": "Fun-filled. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Natural components of the highest quality",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "30%",
+        "volume": "50 ml",
         "taste": "Smooth"
       },
       {
@@ -499,8 +499,8 @@
         "desc": "Refreshing. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Spicy"
       },
       {
@@ -510,8 +510,8 @@
         "desc": "Invigorating. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Vivid"
       },
       {
@@ -521,8 +521,8 @@
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Natural components of the highest quality",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "30%",
+        "volume": "50 ml",
         "taste": "Balanced"
       },
       {
@@ -532,8 +532,8 @@
         "desc": "Tonic. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Rich"
       },
       {
@@ -543,8 +543,8 @@
         "desc": "Appetizing. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Smooth"
       },
       {
@@ -554,8 +554,8 @@
         "desc": "Good after a meal. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Spicy"
       },
       {
@@ -565,8 +565,8 @@
         "desc": "Inspiring. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Vivid"
       },
       {
@@ -576,8 +576,8 @@
         "desc": "For lovers. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Balanced"
       },
       {
@@ -587,8 +587,8 @@
         "desc": "Helps forget the past. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Rich"
       },
       {
@@ -598,8 +598,8 @@
         "desc": "Uplifting. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Smooth"
       },
       {
@@ -609,8 +609,8 @@
         "desc": "Fun-filled. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Spicy"
       },
       {
@@ -620,8 +620,8 @@
         "desc": "Refreshing. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Vivid"
       },
       {
@@ -631,8 +631,8 @@
         "desc": "Invigorating. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Balanced"
       },
       {
@@ -643,8 +643,8 @@
         "type": "bar",
         "subcategory": "Vodka",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Rich"
       },
       {
@@ -655,8 +655,8 @@
         "type": "bar",
         "subcategory": "Gin",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Smooth"
       },
       {
@@ -667,8 +667,8 @@
         "type": "bar",
         "subcategory": "Gin",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Spicy"
       },
       {
@@ -679,8 +679,8 @@
         "type": "bar",
         "subcategory": "Tequila",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Vivid"
       },
       {
@@ -690,8 +690,8 @@
         "desc": "Inspiring. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Balanced"
       },
       {
@@ -702,8 +702,8 @@
         "type": "bar",
         "subcategory": "Rum",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Rich"
       },
       {
@@ -714,8 +714,8 @@
         "type": "bar",
         "subcategory": "Liqueur",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "17-35%",
+        "volume": "50 ml",
         "taste": "Smooth"
       },
       {
@@ -725,8 +725,8 @@
         "desc": "Uplifting. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Spicy"
       },
       {
@@ -736,8 +736,8 @@
         "desc": "Fun-filled. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Vivid"
       },
       {
@@ -747,8 +747,8 @@
         "desc": "Refreshing. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Natural components of the highest quality",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "30%",
+        "volume": "50 ml",
         "taste": "Balanced"
       },
       {
@@ -758,8 +758,8 @@
         "desc": "Invigorating. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Rich"
       },
       {
@@ -769,8 +769,8 @@
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Smooth"
       },
       {
@@ -780,8 +780,8 @@
         "desc": "Tonic. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Spicy"
       },
       {
@@ -791,8 +791,8 @@
         "desc": "Appetizing. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Vivid"
       },
       {
@@ -802,8 +802,8 @@
         "desc": "Good after a meal. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Balanced"
       },
       {
@@ -813,8 +813,8 @@
         "desc": "Inspiring. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Rich"
       },
       {
@@ -825,8 +825,8 @@
         "type": "bar",
         "subcategory": "Whiskey",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Smooth"
       },
       {
@@ -836,8 +836,8 @@
         "desc": "Helps forget the past. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Spicy"
       },
       {
@@ -849,7 +849,7 @@
         "subcategory": "Soft Drinks",
         "ingredients": "Natural components of the highest quality",
         "strength": "0%",
-        "volume": "330ml",
+        "volume": "330 ml",
         "taste": "Vivid"
       },
       {
@@ -860,8 +860,8 @@
         "type": "bar",
         "subcategory": "Whiskey",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Balanced"
       },
       {
@@ -872,8 +872,8 @@
         "type": "bar",
         "subcategory": "Whiskey",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "40%",
+        "volume": "50 ml",
         "taste": "Rich"
       },
       {
@@ -884,8 +884,8 @@
         "type": "bar",
         "subcategory": "Liqueur",
         "ingredients": "Pure distillate, aged in oak barrels",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "17-35%",
+        "volume": "50 ml",
         "taste": "Smooth"
       },
       {
@@ -895,8 +895,8 @@
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Spicy"
       },
       {
@@ -906,8 +906,8 @@
         "desc": "Tonic. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Vivid"
       },
       {
@@ -917,8 +917,8 @@
         "desc": "Appetizing. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Natural components of the highest quality",
-        "strength": "Medium",
-        "volume": "50ml",
+        "strength": "30%",
+        "volume": "50 ml",
         "taste": "Balanced"
       },
       {
@@ -928,8 +928,8 @@
         "desc": "Good after a meal. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Selected Georgian grapes, centuries-old winemaking traditions",
-        "strength": "Medium",
-        "volume": "150ml",
+        "strength": "12%",
+        "volume": "150 ml",
         "taste": "Rich"
       },
       {
@@ -939,8 +939,8 @@
         "desc": "Inspiring. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Selected Georgian grapes, centuries-old winemaking traditions",
-        "strength": "Medium",
-        "volume": "150ml",
+        "strength": "12%",
+        "volume": "150 ml",
         "taste": "Smooth"
       },
       {
@@ -950,8 +950,8 @@
         "desc": "For lovers. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Selected Georgian grapes, centuries-old winemaking traditions",
-        "strength": "Medium",
-        "volume": "150ml",
+        "strength": "12%",
+        "volume": "150 ml",
         "taste": "Spicy"
       },
       {
@@ -961,8 +961,8 @@
         "desc": "Helps forget the past. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Selected Georgian grapes, centuries-old winemaking traditions",
-        "strength": "Medium",
-        "volume": "150ml",
+        "strength": "12%",
+        "volume": "150 ml",
         "taste": "Vivid"
       },
       {
@@ -972,8 +972,8 @@
         "desc": "Uplifting. A unique taste that brings special moments.",
         "popular": true,
         "type": "bar",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Balanced",
         "ingredients": "Hops, malt, artesian water, brewer's yeast"
       },
@@ -984,8 +984,8 @@
         "desc": "Fun-filled. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Rich"
       },
       {
@@ -996,8 +996,8 @@
         "popular": true,
         "type": "bar",
         "ingredients": "Hops, malt, artesian water, brewer's yeast",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Smooth"
       },
       {
@@ -1009,7 +1009,7 @@
         "subcategory": "Hot Drinks",
         "ingredients": "Natural components of the highest quality",
         "strength": "0%",
-        "volume": "330ml",
+        "volume": "330 ml",
         "taste": "Spicy"
       },
       {
@@ -1019,8 +1019,8 @@
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Hops, malt, artesian water, brewer's yeast",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Vivid"
       },
       {
@@ -1030,8 +1030,8 @@
         "desc": "Tonic. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Hops, malt, artesian water, brewer's yeast",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Balanced"
       },
       {
@@ -1041,8 +1041,8 @@
         "desc": "Appetizing. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Premium spirits, fresh juices, house-made syrups",
-        "strength": "Medium",
-        "volume": "250ml",
+        "strength": "18%",
+        "volume": "250 ml",
         "taste": "Rich"
       },
       {
@@ -1052,8 +1052,8 @@
         "desc": "Good after a meal. A unique taste that brings special moments.",
         "type": "bar",
         "ingredients": "Hops, malt, artesian water, brewer's yeast",
-        "strength": "Medium",
-        "volume": "500ml",
+        "strength": "5%",
+        "volume": "500 ml",
         "taste": "Smooth"
       },
       {
@@ -1064,8 +1064,8 @@
         "type": "food",
         "image": "assorted_pkhali",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "260 kcal",
+        "volume": "150 g",
         "taste": "Spicy"
       },
       {
@@ -1076,8 +1076,8 @@
         "type": "food",
         "image": "eggplant_with_walnuts",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "200 kcal",
+        "volume": "150 g",
         "taste": "Vivid"
       },
       {
@@ -1088,8 +1088,8 @@
         "type": "food",
         "image": "georgian_cheese_platter",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "260 kcal",
+        "volume": "150 g",
         "taste": "Balanced"
       },
       {
@@ -1100,8 +1100,8 @@
         "type": "food",
         "image": "assorted_pickles",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "240 kcal",
+        "volume": "150 g",
         "taste": "Rich"
       },
       {
@@ -1112,8 +1112,8 @@
         "type": "food",
         "image": "olives",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "260 kcal",
+        "volume": "150 g",
         "taste": "Smooth"
       },
       {
@@ -1124,8 +1124,8 @@
         "type": "food",
         "image": "chikhirtma",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "340 kcal",
+        "volume": "300 ml",
         "taste": "Spicy"
       },
       {
@@ -1136,8 +1136,8 @@
         "type": "food",
         "image": "soup_kharcho",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "280 kcal",
+        "volume": "300 ml",
         "taste": "Vivid"
       },
       {
@@ -1147,8 +1147,8 @@
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "370 kcal",
+        "volume": "300 ml",
         "taste": "Balanced"
       },
       {
@@ -1158,8 +1158,8 @@
         "desc": "Tonic. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "370 kcal",
+        "volume": "300 ml",
         "taste": "Rich"
       },
       {
@@ -1170,8 +1170,8 @@
         "type": "food",
         "image": "pumpkin_cream_soup",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "250 kcal",
+        "volume": "300 ml",
         "taste": "Smooth"
       },
       {
@@ -1182,8 +1182,8 @@
         "type": "food",
         "image": "tomato_cream_soup",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "250 kcal",
+        "volume": "300 ml",
         "taste": "Spicy"
       },
       {
@@ -1194,8 +1194,8 @@
         "type": "food",
         "image": "mushroom_cream_soup",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "340 kcal",
+        "volume": "300 ml",
         "taste": "Vivid"
       },
       {
@@ -1206,8 +1206,8 @@
         "type": "food",
         "image": "tomato_and_cucumber_salad",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "200 kcal",
+        "volume": "250 g",
         "taste": "Balanced"
       },
       {
@@ -1217,8 +1217,8 @@
         "desc": "Helps forget the past. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "360 kcal",
+        "volume": "250 g",
         "taste": "Rich"
       },
       {
@@ -1229,8 +1229,8 @@
         "type": "food",
         "image": "chicken_caesar",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "240 kcal",
+        "volume": "250 g",
         "taste": "Smooth"
       },
       {
@@ -1241,8 +1241,8 @@
         "type": "food",
         "image": "caesar_with_bacon",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "200 kcal",
+        "volume": "250 g",
         "taste": "Spicy"
       },
       {
@@ -1253,8 +1253,8 @@
         "type": "food",
         "image": "greek_salad",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "200 kcal",
+        "volume": "250 g",
         "taste": "Vivid"
       },
       {
@@ -1265,8 +1265,8 @@
         "type": "food",
         "image": "chicken_salad",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "360 kcal",
+        "volume": "250 g",
         "taste": "Balanced"
       },
       {
@@ -1277,8 +1277,8 @@
         "type": "food",
         "image": "green_salad",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "280 kcal",
+        "volume": "250 g",
         "taste": "Rich"
       },
       {
@@ -1289,8 +1289,8 @@
         "type": "food",
         "image": "vegetable_salad",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "280 kcal",
+        "volume": "250 g",
         "taste": "Smooth"
       },
       {
@@ -1301,8 +1301,8 @@
         "type": "food",
         "image": "ajarian_khachapuri",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "460 kcal",
+        "volume": "300 g",
         "taste": "Spicy"
       },
       {
@@ -1313,8 +1313,8 @@
         "type": "food",
         "image": "imeretian_khachapuri",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "640 kcal",
+        "volume": "300 g",
         "taste": "Vivid"
       },
       {
@@ -1325,8 +1325,8 @@
         "type": "food",
         "image": "megrelian_khachapuri",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "400 kcal",
+        "volume": "300 g",
         "taste": "Balanced"
       },
       {
@@ -1337,8 +1337,8 @@
         "type": "food",
         "image": "lazuri_khachapuri",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "580 kcal",
+        "volume": "300 g",
         "taste": "Rich"
       },
       {
@@ -1349,8 +1349,8 @@
         "type": "food",
         "image": "lobiani",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "640 kcal",
+        "volume": "300 g",
         "taste": "Smooth"
       },
       {
@@ -1361,8 +1361,8 @@
         "type": "food",
         "image": "mchadi",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "640 kcal",
+        "volume": "300 g",
         "taste": "Spicy"
       },
       {
@@ -1373,8 +1373,8 @@
         "type": "food",
         "image": "chvishtari",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "640 kcal",
+        "volume": "300 g",
         "taste": "Vivid"
       },
       {
@@ -1385,8 +1385,8 @@
         "type": "food",
         "image": "shotis_puri_bread",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "520 kcal",
+        "volume": "300 g",
         "taste": "Balanced"
       },
       {
@@ -1400,8 +1400,8 @@
           "hot"
         ],
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "650 kcal",
+        "volume": "350 g",
         "taste": "Rich"
       },
       {
@@ -1412,8 +1412,8 @@
         "type": "food",
         "image": "khinkali_with_cheese",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "600 kcal",
+        "volume": "350 g",
         "taste": "Smooth"
       },
       {
@@ -1424,8 +1424,8 @@
         "type": "food",
         "image": "khinkali_with_mushroom",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "500 kcal",
+        "volume": "350 g",
         "taste": "Spicy"
       },
       {
@@ -1436,8 +1436,8 @@
         "type": "food",
         "image": "pelmeni_in_clay_pot",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "650 kcal",
+        "volume": "350 g",
         "taste": "Vivid"
       },
       {
@@ -1447,8 +1447,8 @@
         "desc": "Good after a meal. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "500 kcal",
+        "volume": "350 g",
         "taste": "Balanced"
       },
       {
@@ -1458,8 +1458,8 @@
         "desc": "Inspiring. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "700 kcal",
+        "volume": "350 g",
         "taste": "Rich"
       },
       {
@@ -1469,8 +1469,8 @@
         "desc": "For lovers. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "500 kcal",
+        "volume": "350 g",
         "taste": "Smooth"
       },
       {
@@ -1480,8 +1480,8 @@
         "desc": "Helps forget the past. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "500 kcal",
+        "volume": "350 g",
         "taste": "Spicy"
       },
       {
@@ -1491,8 +1491,8 @@
         "desc": "Uplifting. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "650 kcal",
+        "volume": "350 g",
         "taste": "Vivid"
       },
       {
@@ -1502,8 +1502,8 @@
         "desc": "Fun-filled. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "700 kcal",
+        "volume": "350 g",
         "taste": "Balanced"
       },
       {
@@ -1513,8 +1513,8 @@
         "desc": "Refreshing. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "700 kcal",
+        "volume": "350 g",
         "taste": "Rich"
       },
       {
@@ -1524,8 +1524,8 @@
         "desc": "Invigorating. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "700 kcal",
+        "volume": "350 g",
         "taste": "Smooth"
       },
       {
@@ -1535,8 +1535,8 @@
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "550 kcal",
+        "volume": "350 g",
         "taste": "Spicy"
       },
       {
@@ -1546,8 +1546,8 @@
         "desc": "Tonic. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "500 kcal",
+        "volume": "350 g",
         "taste": "Vivid"
       },
       {
@@ -1557,8 +1557,8 @@
         "desc": "Appetizing. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "700 kcal",
+        "volume": "350 g",
         "taste": "Balanced"
       },
       {
@@ -1568,8 +1568,8 @@
         "desc": "Good after a meal. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "500 kcal",
+        "volume": "350 g",
         "taste": "Rich"
       },
       {
@@ -1579,8 +1579,8 @@
         "desc": "Inspiring. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "550 kcal",
+        "volume": "350 g",
         "taste": "Smooth"
       },
       {
@@ -1590,8 +1590,8 @@
         "desc": "For lovers. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "550 kcal",
+        "volume": "350 g",
         "taste": "Spicy"
       },
       {
@@ -1601,8 +1601,8 @@
         "desc": "Helps forget the past. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "500 kcal",
+        "volume": "350 g",
         "taste": "Vivid"
       },
       {
@@ -1612,8 +1612,8 @@
         "desc": "Uplifting. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "600 kcal",
+        "volume": "350 g",
         "taste": "Balanced"
       },
       {
@@ -1623,8 +1623,8 @@
         "desc": "Fun-filled. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "600 kcal",
+        "volume": "350 g",
         "taste": "Rich"
       },
       {
@@ -1634,8 +1634,8 @@
         "desc": "Refreshing. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "500 kcal",
+        "volume": "350 g",
         "taste": "Smooth"
       },
       {
@@ -1645,8 +1645,8 @@
         "desc": "Invigorating. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "600 kcal",
+        "volume": "350 g",
         "taste": "Spicy"
       },
       {
@@ -1656,8 +1656,8 @@
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "550 kcal",
+        "volume": "350 g",
         "taste": "Vivid"
       },
       {
@@ -1667,8 +1667,8 @@
         "desc": "Tonic. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "700 kcal",
+        "volume": "350 g",
         "taste": "Balanced"
       },
       {
@@ -1678,8 +1678,8 @@
         "desc": "Appetizing. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "700 kcal",
+        "volume": "350 g",
         "taste": "Rich"
       },
       {
@@ -1691,8 +1691,8 @@
         "type": "food",
         "image": "pizza_margarita",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "900 kcal",
+        "volume": "450 g",
         "taste": "Smooth"
       },
       {
@@ -1703,8 +1703,8 @@
         "type": "food",
         "image": "pizza_4_cheese",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "900 kcal",
+        "volume": "450 g",
         "taste": "Spicy"
       },
       {
@@ -1715,8 +1715,8 @@
         "type": "food",
         "image": "pizza_peperone",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "1000 kcal",
+        "volume": "450 g",
         "taste": "Vivid"
       },
       {
@@ -1727,8 +1727,8 @@
         "type": "food",
         "image": "pizza_with_vegetables",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "800 kcal",
+        "volume": "450 g",
         "taste": "Balanced"
       },
       {
@@ -1739,8 +1739,8 @@
         "type": "food",
         "image": "club_sandwich",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "1100 kcal",
+        "volume": "450 g",
         "taste": "Rich"
       },
       {
@@ -1751,8 +1751,8 @@
         "type": "food",
         "image": "spaghetti_bolognese",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "800 kcal",
+        "volume": "450 g",
         "taste": "Smooth"
       },
       {
@@ -1763,8 +1763,8 @@
         "type": "food",
         "image": "spaghetti_carbonara",
         "ingredients": "Farm-to-table products, Georgian spices, chef's secret touch",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "900 kcal",
+        "volume": "450 g",
         "taste": "Spicy"
       },
       {
@@ -1774,8 +1774,8 @@
         "desc": "Invigorating. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "120 kcal",
+        "volume": "150 g",
         "taste": "Vivid"
       },
       {
@@ -1785,8 +1785,8 @@
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "120 kcal",
+        "volume": "150 g",
         "taste": "Balanced"
       },
       {
@@ -1796,8 +1796,8 @@
         "desc": "Tonic. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "160 kcal",
+        "volume": "150 g",
         "taste": "Rich"
       },
       {
@@ -1807,8 +1807,8 @@
         "desc": "Appetizing. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "140 kcal",
+        "volume": "150 g",
         "taste": "Smooth"
       },
       {
@@ -1818,8 +1818,8 @@
         "desc": "Good after a meal. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "100 kcal",
+        "volume": "150 g",
         "taste": "Spicy"
       },
       {
@@ -1829,8 +1829,8 @@
         "desc": "Inspiring. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "100 kcal",
+        "volume": "150 g",
         "taste": "Vivid"
       },
       {
@@ -1840,8 +1840,8 @@
         "desc": "For lovers. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "140 kcal",
+        "volume": "150 g",
         "taste": "Balanced"
       },
       {
@@ -1851,8 +1851,8 @@
         "desc": "Helps forget the past. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "100 kcal",
+        "volume": "150 g",
         "taste": "Rich"
       },
       {
@@ -1862,8 +1862,8 @@
         "desc": "Uplifting. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "400 kcal",
+        "volume": "180 g",
         "taste": "Smooth"
       },
       {
@@ -1873,8 +1873,8 @@
         "desc": "Fun-filled. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "550 kcal",
+        "volume": "180 g",
         "taste": "Spicy"
       },
       {
@@ -1884,8 +1884,8 @@
         "desc": "Refreshing. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "500 kcal",
+        "volume": "180 g",
         "taste": "Vivid"
       },
       {
@@ -1895,8 +1895,8 @@
         "desc": "Invigorating. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "350 kcal",
+        "volume": "180 g",
         "taste": "Balanced"
       },
       {
@@ -1906,8 +1906,8 @@
         "desc": "Calming. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "550 kcal",
+        "volume": "180 g",
         "taste": "Rich"
       },
       {
@@ -1917,8 +1917,8 @@
         "desc": "Tonic. A unique taste that brings special moments.",
         "type": "food",
         "ingredients": "Natural components of the highest quality",
-        "strength": "0%",
-        "volume": "Portion",
+        "strength": "550 kcal",
+        "volume": "180 g",
         "taste": "Smooth"
       }
     ]
@@ -1960,7 +1960,7 @@
       },
       "SPIRITS": {
         "en": "Spirits",
-        "ru": "Кრепкий აлкоголь",
+        "ru": "Крепкий алкоголь",
         "ka": "ძლიერი ალკოჰოლი"
       },
       "SHOTS": {
@@ -1970,12 +1970,12 @@
       },
       "NON-ALCOHOLIC": {
         "en": "Non-Alcoholic",
-        "ru": "Безაлкогольное",
+        "ru": "Безалкогольное",
         "ka": "უალკოჰოლო"
       },
       "APPETIZERS": {
         "en": "Appetizers",
-        "ru": "Зაкуски",
+        "ru": "Закуски",
         "ka": "აპეტაიზერი"
       },
       "SOUPS": {
@@ -1985,32 +1985,32 @@
       },
       "SALADS": {
         "en": "Salads",
-        "ru": "Сაлაты",
+        "ru": "Салаты",
         "ka": "სალათები"
       },
       "HOT DISHES": {
         "en": "Main Dishes",
-        "ru": "Гоრячие блюдა",
+        "ru": "Горячие блюда",
         "ka": "ცხელი კერძები"
       },
       "PASTRY": {
         "en": "Pastry",
-        "ru": "Выпечкა",
+        "ru": "Выпечка",
         "ka": "ცომეული"
       },
       "PIZZA & PASTA": {
         "en": "Pizza & Pasta",
-        "ru": "Пиццა и пაстა",
+        "ru": "Пицца и паста",
         "ka": "პიცა და პასტა"
       },
       "GARNISH & SAUCES": {
         "en": "Sides",
-        "ru": "Гარниრы",
+        "ru": "Гарниры",
         "ka": "გარნირი"
       },
       "DESSERTS": {
         "en": "Desserts",
-        "ru": "Десеრты",
+        "ru": "Десерты",
         "ka": "დესერტი"
       }
     },
@@ -2022,12 +2022,12 @@
       },
       "Vodka": {
         "en": "Vodka",
-        "ru": "Водкა",
+        "ru": "Водка",
         "ka": "არაყი"
       },
       "Tequila": {
         "en": "Tequila",
-        "ru": "Текилა",
+        "ru": "Текила",
         "ka": "ტეკილა"
       },
       "Gin": {
@@ -2042,26 +2042,30 @@
       },
       "Liqueur": {
         "en": "Liqueur",
-        "ru": "Ликеრ",
+        "ru": "Ликер",
         "ka": "ლიქიორი"
       },
       "Brandy": {
         "en": "Brandy",
-        "ru": "Бრенди",
+        "ru": "Бренди",
         "ka": "ბრენდი"
       },
       "Hot Drinks": {
         "en": "Hot Drinks",
-        "ru": "Гоრячие нაпитки",
+        "ru": "Горячие напитки",
         "ka": "ცხელი სასმელები"
       },
       "Soft Drinks": {
         "en": "Soft Drinks",
-        "ru": "Безაлкогольные нაпитки",
+        "ru": "Безалкогольные напитки",
         "ka": "გამაგრილებელი სასმელები"
       }
     },
     "description": "Description",
-    "ingredients": "Ingredients"
+    "ingredients": "Ingredients",
+    "calories": "Calories",
+    "strength_label": "Strength",
+    "volume_label": "Volume",
+    "taste_label": "Taste"
   }
 }

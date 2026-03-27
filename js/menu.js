@@ -265,8 +265,22 @@ function displayModalData(item) {
     // Update Labels
     const labelDesc = document.getElementById('label-desc');
     const labelIngredients = document.getElementById('label-ingredients');
+    const labelStrength = document.getElementById('label-strength');
+    const labelVolume = document.getElementById('label-volume');
+    const labelTaste = document.getElementById('label-taste');
+
     if (labelDesc && configData.ui.description) labelDesc.textContent = configData.ui.description;
     if (labelIngredients && configData.ui.ingredients) labelIngredients.textContent = configData.ui.ingredients;
+    if (labelVolume && configData.ui.volume_label) labelVolume.textContent = configData.ui.volume_label;
+    if (labelTaste && configData.ui.taste_label) labelTaste.textContent = configData.ui.taste_label;
+
+    if (labelStrength) {
+        if (item.type === 'food') {
+            labelStrength.textContent = configData.ui.calories || 'Calories';
+        } else {
+            labelStrength.textContent = configData.ui.strength_label || 'Strength';
+        }
+    }
 }
 
 function openModal(item) {
