@@ -190,14 +190,21 @@ function setupModal() {
         const diffY = currentY - startY;
         const diffX = e.touches[0].clientX - startX;
 
-        // If swiping down and not primarily swiping horizontally
-        if (diffY > 0 && Math.abs(diffY) > Math.abs(diffX)) {
+        // Only allow swipe down if we are at the top of the modal scroll
+        const scrollableArea = modalContent.querySelector('.overflow-y-auto');
+        const isAtTop = scrollableArea ? scrollableArea.scrollTop <= 0 : true;
+
+        // If swiping down and not primarily swiping horizontally, and at the top
+        if (isAtTop && diffY > 10 && Math.abs(diffY) > Math.abs(diffX)) {
+            // Prevent default browser scroll behavior if we're swiping down the modal
+            if (e.cancelable) e.preventDefault();
+
             modalContent.style.transform = `translateY(${diffY}px)`;
             // Fade overlay as we drag down
             const opacity = 0.6 * (1 - diffY / (window.innerHeight * 0.8));
             overlay.style.backgroundColor = `rgba(0, 0, 0, ${Math.max(0, opacity)})`;
         }
-    }, { passive: true });
+    }, { passive: false });
 
     modalContent.addEventListener('touchend', (e) => {
         const diffY = e.changedTouches[0].clientY - startY;
@@ -271,6 +278,11 @@ function displayModalData(item) {
     const labelIngredients = document.getElementById('label-ingredients');
     if (labelDesc && configData.ui.description) labelDesc.textContent = configData.ui.description;
     if (labelIngredients && configData.ui.ingredients) labelIngredients.textContent = configData.ui.ingredients;
+
+    // Reset scroll position to top
+    const scrollableArea = document.querySelector('#modal-content .overflow-y-auto');
+    if (scrollableArea) scrollableArea.scrollTop = 0;
+
     // Handle Recommendations
     const recommendationsSection = document.getElementById('recommendations-section');
     if (recommendationsSection) {
