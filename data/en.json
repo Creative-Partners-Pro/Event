@@ -108,1204 +108,1818 @@
         "category": "COCKTAILS",
         "name": "Neon Spritz",
         "price": "22.00",
-        "desc": "A refreshing mix of prosecco, Aperol, and a splash of citrus.",
+        "desc": "Tonic. A perfect drink for your mood.",
         "type": "bar",
         "tags": [
           "popular"
         ],
-        "strength": "Low",
+        "strength": "Medium",
         "volume": "250ml",
-        "taste": "Bitter-Sweet"
+        "taste": "Refreshing",
+        "ingredients": "Alcohol mix, Juice, Syrup"
       },
       {
         "category": "COCKTAILS",
         "name": "Red Owl",
         "price": "24.00",
-        "desc": "A bold blend of whiskey, sweet vermouth, and a hint of cherry.",
+        "desc": "Calming. A perfect drink for your mood.",
         "type": "bar",
         "tags": [
           "hot",
           "popular"
         ],
-        "strength": "Strong",
-        "volume": "150ml",
-        "taste": "Sweet & Bold"
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Bitter",
+        "ingredients": "Alcohol mix, Juice, Syrup"
       },
       {
         "category": "COCKTAILS",
         "name": "Golden Hour",
         "price": "23.00",
-        "desc": "A smooth mix of gin, elderflower liqueur, and grapefruit juice.",
+        "desc": "Calming. A perfect drink for your mood.",
         "type": "bar",
         "strength": "Medium",
-        "volume": "200ml",
-        "taste": "Floral"
+        "volume": "250ml",
+        "taste": "Sour",
+        "ingredients": "Alcohol mix, Juice, Syrup"
       },
       {
         "category": "COCKTAILS",
         "name": "Long Iceland",
         "price": "25.00",
-        "desc": "Rum, tequila, vodka, gin, tripple sec, cola",
-        "type": "bar"
+        "desc": "Uplifting. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Bitter"
       },
       {
         "category": "SPIRITS",
         "name": "Red Label",
         "price": "12.00",
-        "desc": null,
+        "desc": "Uplifting. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Whiskey"
+        "subcategory": "Whiskey",
+        "ingredients": "Fresh ingredients",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sour"
       },
       {
         "category": "BEER",
         "name": "Black Lion Ipa",
         "price": "12.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Helps forget the past. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Refreshing"
       },
       {
         "category": "SPIRITS",
         "name": "Black Label",
         "price": "16.00",
-        "desc": null,
+        "desc": "Invigorating. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Whiskey"
+        "subcategory": "Whiskey",
+        "ingredients": "Fresh ingredients",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sweet"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Tonic Water",
         "price": "6.00",
-        "desc": null,
+        "desc": "Calming. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Soft Drinks"
+        "subcategory": "Soft Drinks",
+        "ingredients": "Fresh ingredients",
+        "strength": "None",
+        "volume": "330ml",
+        "taste": "Refreshing"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Coca-cola plastic",
         "price": "6.00",
-        "desc": "500ml",
+        "desc": "Fun-filled. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Soft Drinks"
+        "subcategory": "Soft Drinks",
+        "ingredients": "Fresh ingredients",
+        "strength": "None",
+        "volume": "330ml",
+        "taste": "Sweet"
       },
       {
         "category": "SPIRITS",
         "name": "Absolut vodka",
         "price": "8.00",
-        "desc": "Absolut 50ml",
+        "desc": "Invigorating. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Vodka"
+        "subcategory": "Vodka",
+        "ingredients": "Distilled alcohol, Water",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Bitter"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Coca-cola can",
         "price": "4.00",
-        "desc": "330ml",
+        "desc": "Helps forget the past. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Soft Drinks"
+        "subcategory": "Soft Drinks",
+        "ingredients": "Fresh ingredients",
+        "strength": "None",
+        "volume": "330ml",
+        "taste": "Sour"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "XL Energy Drink",
         "price": "7.00",
-        "desc": null,
+        "desc": "Invigorating. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Soft Drinks"
+        "subcategory": "Soft Drinks",
+        "ingredients": "Fresh ingredients",
+        "strength": "None",
+        "volume": "330ml",
+        "taste": "Refreshing"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Ginger Ale",
         "price": "6.00",
-        "desc": null,
+        "desc": "For lovers. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Soft Drinks"
+        "subcategory": "Soft Drinks",
+        "ingredients": "Juniper spirit, Botanicals",
+        "strength": "None",
+        "volume": "330ml",
+        "taste": "Sour"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Sparkling Water",
         "price": "4.00",
-        "desc": null,
+        "desc": "For lovers. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Soft Drinks"
+        "subcategory": "Soft Drinks",
+        "ingredients": "Fresh ingredients",
+        "strength": "None",
+        "volume": "330ml",
+        "taste": "Bitter"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Mineral Water",
         "price": "3.00",
-        "desc": null,
+        "desc": "Inspiring. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Soft Drinks"
+        "subcategory": "Soft Drinks",
+        "ingredients": "Fresh ingredients",
+        "strength": "None",
+        "volume": "330ml",
+        "taste": "Bitter"
       },
       {
         "category": "SPIRITS",
         "name": "Beluga Vodka",
         "price": "24.00",
-        "desc": null,
+        "desc": "For lovers. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Vodka"
+        "subcategory": "Vodka",
+        "ingredients": "Distilled alcohol, Water",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Bitter"
       },
       {
         "category": "SPIRITS",
         "name": "Olmeca Tequila",
         "price": "12.00",
-        "desc": null,
+        "desc": "Invigorating. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Tequila"
+        "subcategory": "Tequila",
+        "ingredients": "Agave spirit",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sour"
       },
       {
         "category": "SPIRITS",
         "name": "Bacardi Rum",
         "price": "12.00",
-        "desc": null,
+        "desc": "For lovers. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Rum"
+        "subcategory": "Rum",
+        "ingredients": "Cane spirit, Molasses",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sour"
       },
       {
         "category": "SPIRITS",
         "name": "Capitan Morgan Black",
         "price": "12.00",
-        "desc": null,
+        "desc": "Fun-filled. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Rum"
+        "subcategory": "Rum",
+        "ingredients": "Cane spirit, Molasses",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Refreshing"
       },
       {
         "category": "SHOTS",
         "name": "Brain Cancer",
         "price": "14.00",
-        "desc": "Baileys, Banana liquor, Kahlua",
-        "type": "bar"
+        "desc": "For lovers. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "-",
+        "volume": "50ml",
+        "taste": "Refreshing"
       },
       {
         "category": "BEER",
         "name": "Kayki Lager",
         "price": "10.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Fun-filled. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Bitter"
       },
       {
         "category": "SPIRITS",
         "name": "Chivas 12y.",
         "price": "15.00",
-        "desc": null,
+        "desc": "Helps forget the past. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Whiskey"
+        "subcategory": "Whiskey",
+        "ingredients": "Grain spirit, Water",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Refreshing"
       },
       {
         "category": "SPIRITS",
         "name": "Tullamore Dew",
         "price": "12.00",
-        "desc": null,
+        "desc": "Calming. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Whiskey"
+        "subcategory": "Whiskey",
+        "ingredients": "Fresh ingredients",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sweet"
       },
       {
         "category": "BEER",
         "name": "Black Lion Apa",
         "price": "14.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Uplifting. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Bitter"
       },
       {
         "category": "BEER",
         "name": "Corona",
         "price": "12.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Tonic. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Fresh ingredients",
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Bitter"
       },
       {
         "category": "SPIRITS",
         "name": "Jack Daniels",
         "price": "14.00",
-        "desc": null,
+        "desc": "Tonic. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Whiskey"
+        "subcategory": "Whiskey",
+        "ingredients": "Grain spirit, Water",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sour"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Juice",
         "price": "6.00",
-        "desc": "250ml",
+        "desc": "Refreshing. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Soft Drinks"
+        "subcategory": "Soft Drinks",
+        "ingredients": "Fresh ingredients",
+        "strength": "None",
+        "volume": "330ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Mojito",
         "price": "23.00",
-        "desc": "Rum, Brown Sugar Mint, Lime, Soda Water",
+        "desc": "Inspiring. A perfect drink for your mood.",
         "type": "bar",
         "strength": "Medium",
-        "volume": "300ml",
-        "taste": "Minty & Refreshing"
+        "volume": "250ml",
+        "taste": "Bitter",
+        "ingredients": "Alcohol mix, Juice, Syrup"
       },
       {
         "category": "BEER",
         "name": "Black Lion Porter",
         "price": "14.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Inspiring. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Bitter"
       },
       {
         "category": "BEER",
         "name": "ALcraft Lager",
         "price": "10.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Helps forget the past. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Aperol Spritz",
         "price": "25.00",
-        "desc": "Aperol,Sprk.wine,orange,soda water",
+        "desc": "Fun-filled. A perfect drink for your mood.",
         "type": "bar",
-        "strength": "Low",
+        "strength": "Medium",
         "volume": "250ml",
-        "taste": "Bitter-Sweet"
+        "taste": "Bitter",
+        "ingredients": "Alcohol mix, Juice, Syrup"
       },
       {
         "category": "COCKTAILS",
         "name": "Bloody Mary",
         "price": "18.00",
-        "desc": "Vodka, tomato juice, salt, pepper, Worcestershire sauce, Tabasco",
-        "type": "bar"
+        "desc": "Helps forget the past. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sour"
       },
       {
         "category": "SHOTS",
         "name": "B-52",
         "price": "16.00",
-        "desc": "Kahlua,Bailyes,Cointreau",
-        "type": "bar"
+        "desc": "For lovers. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "-",
+        "volume": "50ml",
+        "taste": "Refreshing"
       },
       {
         "category": "COCKTAILS",
         "name": "Black Occupant",
         "price": "17.00",
-        "desc": "Kahlua, Vodka",
-        "type": "bar"
+        "desc": "Calming. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Refreshing"
       },
       {
         "category": "COCKTAILS",
         "name": "Tequila Sunrise",
         "price": "20.00",
-        "desc": "Tequila,Orange juice,Grenadine",
-        "type": "bar"
+        "desc": "Tonic. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Agave spirit",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Refreshing"
       },
       {
         "category": "SHOTS",
         "name": "Blow Job",
         "price": "12.00",
-        "desc": "Kahlua, bailey's, Musetop",
-        "type": "bar"
+        "desc": "Tonic. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "-",
+        "volume": "50ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Gin&Tonic",
         "price": "20.00",
-        "desc": "Beefeater,Tonic water",
-        "type": "bar"
+        "desc": "Inspiring. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Juniper spirit, Botanicals",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "White Russuian",
         "price": "18.00",
-        "desc": "kahlua,Vodka, Cream",
-        "type": "bar"
+        "desc": "Tonic. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Bitter"
       },
       {
         "category": "COCKTAILS",
         "name": "Negroni",
         "price": "20.00",
-        "desc": "Gin, Campari Bitter, Rosso",
-        "type": "bar"
+        "desc": "Uplifting. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Refreshing"
       },
       {
         "category": "COCKTAILS",
         "name": "Dr.Pepper",
         "price": "20.00",
-        "desc": "Beer, amaretto liquer, Coke",
-        "type": "bar"
+        "desc": "Invigorating. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Long Energy",
         "price": "26.00",
-        "desc": "Vodka,gin,rum,coiuntreau,tequila,energy drink,blue curacao",
-        "type": "bar"
+        "desc": "Calming. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sweet"
       },
       {
         "category": "COCKTAILS",
         "name": "Moscow Mule",
         "price": "18.00",
-        "desc": "Vodka, GigerAle",
-        "type": "bar"
+        "desc": "Calming. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sweet"
       },
       {
         "category": "COCKTAILS",
         "name": "JagerBomb",
         "price": "22.00",
-        "desc": "Jagermaister,Energy Drink",
-        "type": "bar"
+        "desc": "Refreshing. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Cherry Lady",
         "price": "18.00",
-        "desc": "Rum, Cherry tincture,moraschinno cherry jam, soft drink top",
-        "type": "bar"
+        "desc": "For lovers. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Cosmopolitan",
         "price": "18.00",
-        "desc": "Vodka, cranberry juice, Orange liquer",
-        "type": "bar"
+        "desc": "Helps forget the past. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sweet"
       },
       {
         "category": "COCKTAILS",
         "name": "Whiskey Sour",
         "price": "20.00",
-        "desc": "Bourbon whiskey, egg white",
-        "type": "bar"
+        "desc": "For lovers. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Grain spirit, Water",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sour"
       },
       {
         "category": "SPIRITS",
         "name": "Koskenkorva vodka",
         "price": "6.00",
-        "desc": "Vodka 50ml",
+        "desc": "Inspiring. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Vodka"
+        "subcategory": "Vodka",
+        "ingredients": "Distilled alcohol, Water",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Bitter"
       },
       {
         "category": "SPIRITS",
         "name": "Gin Beefeater",
         "price": "12.00",
-        "desc": "50ml",
+        "desc": "For lovers. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Gin"
+        "subcategory": "Gin",
+        "ingredients": "Juniper spirit, Botanicals",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sweet"
       },
       {
         "category": "SPIRITS",
         "name": "Gin Bombay Sapphire",
         "price": "16.00",
-        "desc": "50ml",
+        "desc": "Tonic. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Gin"
+        "subcategory": "Gin",
+        "ingredients": "Juniper spirit, Botanicals",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Refreshing"
       },
       {
         "category": "SPIRITS",
         "name": "Tequila Sierra",
         "price": "12.00",
-        "desc": "50ml",
+        "desc": "Inspiring. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Tequila"
+        "subcategory": "Tequila",
+        "ingredients": "Agave spirit",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Mai Tai",
         "price": "20.00",
-        "desc": "White Rum, Dark Rum, Orange liquor, Juice, Syrup",
-        "type": "bar"
+        "desc": "Uplifting. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sour"
       },
       {
         "category": "SPIRITS",
         "name": "Capitan Morgan Spiced Gold",
         "price": "13.00",
-        "desc": null,
+        "desc": "Calming. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Rum"
+        "subcategory": "Rum",
+        "ingredients": "Cane spirit, Molasses",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sour"
       },
       {
         "category": "SPIRITS",
         "name": "Jagermeister",
         "price": "12.00",
-        "desc": null,
+        "desc": "Invigorating. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Liqueur"
+        "subcategory": "Liqueur",
+        "ingredients": "Fresh ingredients",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Bitter"
       },
       {
         "category": "COCKTAILS",
         "name": "Pina Colada",
         "price": "21.00",
-        "desc": "Rum, Malibu, Cream, syrup, juice",
-        "type": "bar"
+        "desc": "Calming. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Refreshing"
       },
       {
         "category": "COCKTAILS",
         "name": "Vodka Energy",
         "price": "18.00",
-        "desc": "Vodka, Energy Drink",
-        "type": "bar"
+        "desc": "Invigorating. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Distilled alcohol, Water",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Refreshing"
       },
       {
         "category": "SHOTS",
         "name": "R.I.P.",
         "price": "14.00",
-        "desc": "Bourbon, Blavod Vodka, Tequila",
-        "type": "bar"
+        "desc": "Invigorating. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "-",
+        "volume": "50ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Screwdriver",
         "price": "17.00",
-        "desc": "Vodka, Orange juice",
-        "type": "bar"
+        "desc": "Uplifting. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sweet"
       },
       {
         "category": "COCKTAILS",
         "name": "Cuba Libre",
         "price": "18.00",
-        "desc": "Rum, Coca-cola",
-        "type": "bar"
+        "desc": "Invigorating. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Jack&Ginger",
         "price": "20.00",
-        "desc": "Jack Daniel's, Ginger Ale",
-        "type": "bar"
+        "desc": "Tonic. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Grain spirit, Water",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "007",
         "price": "18.00",
-        "desc": "Gin, Dry Vermouth",
-        "type": "bar"
+        "desc": "Fun-filled. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sweet"
       },
       {
         "category": "COCKTAILS",
         "name": "Jager Juice",
         "price": "20.00",
-        "desc": "Jägermeister, juice",
-        "type": "bar"
+        "desc": "Calming. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Sapphire Fizz",
         "price": "21.00",
-        "desc": "Bombay Gin, Tonic",
-        "type": "bar"
+        "desc": "Uplifting. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Bitter"
       },
       {
         "category": "SPIRITS",
         "name": "Jameson",
         "price": "12.00",
-        "desc": null,
+        "desc": "Invigorating. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Whiskey"
+        "subcategory": "Whiskey",
+        "ingredients": "Fresh ingredients",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Bitter"
       },
       {
         "category": "COCKTAILS",
         "name": "Blue Hawai",
         "price": "22.00",
-        "desc": "Rum, blue curacao, juice",
-        "type": "bar"
+        "desc": "Fun-filled. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Bitter"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Sprite",
         "price": "4.00",
-        "desc": null,
+        "desc": "Invigorating. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Soft Drinks"
+        "subcategory": "Soft Drinks",
+        "ingredients": "Fresh ingredients",
+        "strength": "None",
+        "volume": "330ml",
+        "taste": "Refreshing"
       },
       {
         "category": "SPIRITS",
         "name": "Jim Beam White",
         "price": "14.00",
-        "desc": null,
+        "desc": "Tonic. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Whiskey"
+        "subcategory": "Whiskey",
+        "ingredients": "Grain spirit, Water",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sweet"
       },
       {
         "category": "SPIRITS",
         "name": "Jim Beam Red Stag",
         "price": "16.00",
-        "desc": null,
+        "desc": "For lovers. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Whiskey"
+        "subcategory": "Whiskey",
+        "ingredients": "Grain spirit, Water",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sweet"
       },
       {
         "category": "SPIRITS",
         "name": "Baileys",
         "price": "12.00",
-        "desc": null,
+        "desc": "Refreshing. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Liqueur"
+        "subcategory": "Liqueur",
+        "ingredients": "Fresh ingredients",
+        "strength": "High",
+        "volume": "50ml",
+        "taste": "Sour"
       },
       {
         "category": "COCKTAILS",
         "name": "Corona Sunrise",
         "price": "22.00",
-        "desc": "Corona beer, Tequila, Triple sec. lime, Grenadine, Orange juice",
-        "type": "bar"
+        "desc": "Calming. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Bitter"
       },
       {
         "category": "COCKTAILS",
         "name": "Lynchburg Lemonade",
         "price": "22.00",
-        "desc": "Bourbon, Orange liquor, Ginger ale",
-        "type": "bar"
+        "desc": "Tonic. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Bitter"
       },
       {
         "category": "SHOTS",
         "name": "Mad Dog",
         "price": "16.00",
-        "desc": "Vodka, Grenadine, Tabasco",
-        "type": "bar"
+        "desc": "For lovers. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "-",
+        "volume": "50ml",
+        "taste": "Bitter"
       },
       {
         "category": "WINE",
         "name": "Kindzmarauli",
         "price": "18.00",
-        "desc": "Semi_Sweet Red Wine",
-        "type": "bar"
+        "desc": "Inspiring. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "150ml",
+        "taste": "Sweet"
       },
       {
         "category": "WINE",
         "name": "Tsinandali",
         "price": "17.00",
-        "desc": "White Dry",
-        "type": "bar"
+        "desc": "Tonic. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "150ml",
+        "taste": "Bitter"
       },
       {
         "category": "WINE",
         "name": "Khvanchkara",
         "price": "23.00",
-        "desc": "Semi_Sweet Red",
-        "type": "bar"
+        "desc": "Inspiring. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "150ml",
+        "taste": "Sweet"
       },
       {
         "category": "WINE",
         "name": "Tvishi",
         "price": "17.00",
-        "desc": "White Semi Sweet",
-        "type": "bar"
+        "desc": "Helps forget the past. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "150ml",
+        "taste": "Refreshing"
       },
       {
         "category": "BEER",
         "name": "Arriba Draft Beer 🍺",
         "price": "10.00",
-        "desc": "Local draft beer with a smooth finish.",
+        "desc": "Helps forget the past. A perfect drink for your mood.",
         "popular": true,
         "type": "bar",
-        "strength": "4.5%",
-        "volume": "400ml",
-        "taste": "Crisp"
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Sweet",
+        "ingredients": "Water, Malt, Hops"
       },
       {
         "category": "COCKTAILS",
         "name": "Adios MTF",
         "price": "26.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Fun-filled. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Bitter"
       },
       {
         "category": "BEER",
         "name": "Unfiltered Draft Beer",
         "price": "10.00",
-        "desc": null,
+        "desc": "Calming. A perfect drink for your mood.",
         "popular": true,
-        "type": "bar"
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Sweet"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Glintwein seasonal",
         "price": "12.00",
-        "desc": null,
+        "desc": "Tonic. A perfect drink for your mood.",
         "type": "bar",
-        "subcategory": "Hot Drinks"
+        "subcategory": "Hot Drinks",
+        "ingredients": "Fresh ingredients",
+        "strength": "None",
+        "volume": "330ml",
+        "taste": "Refreshing"
       },
       {
         "category": "BEER",
         "name": "Guinness draft",
         "price": "20.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Invigorating. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Fresh ingredients",
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Refreshing"
       },
       {
         "category": "BEER",
         "name": "Cider N4",
         "price": "13.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Refreshing. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Fresh ingredients",
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Refreshing"
       },
       {
         "category": "COCKTAILS",
         "name": "Margirita",
         "price": "20.00",
-        "desc": "Tequila, aguave suryp,  triple sec, lime squzee",
-        "type": "bar"
+        "desc": "Fun-filled. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Juice, Syrup",
+        "strength": "Medium",
+        "volume": "250ml",
+        "taste": "Sweet"
       },
       {
         "category": "BEER",
         "name": "Draft Lager",
         "price": "9.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "For lovers. A perfect drink for your mood.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Low",
+        "volume": "500ml",
+        "taste": "Bitter"
       },
       {
         "category": "APPETIZERS",
         "name": "Assorted Pkhali",
         "price": "29",
-        "desc": null,
+        "desc": "Traditional. Freshly prepared for you.",
         "type": "food",
-        "image": "assorted_pkhali"
+        "image": "assorted_pkhali",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "APPETIZERS",
         "name": "Eggplant with walnuts",
         "price": "17",
-        "desc": null,
+        "desc": "Tender. Freshly prepared for you.",
         "type": "food",
-        "image": "eggplant_with_walnuts"
+        "image": "eggplant_with_walnuts",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "APPETIZERS",
         "name": "Georgian Cheese Platter",
         "price": "24",
-        "desc": null,
+        "desc": "Traditional. Freshly prepared for you.",
         "type": "food",
-        "image": "georgian_cheese_platter"
+        "image": "georgian_cheese_platter",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "APPETIZERS",
         "name": "Assorted pickles",
         "price": "14",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "type": "food",
-        "image": "assorted_pickles"
+        "image": "assorted_pickles",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "APPETIZERS",
         "name": "Olives",
         "price": "14",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "type": "food",
-        "image": "olives"
+        "image": "olives",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "SOUPS",
         "name": "Chikhirtma",
         "price": "14",
-        "desc": null,
+        "desc": "Tender. Freshly prepared for you.",
         "type": "food",
-        "image": "chikhirtma"
+        "image": "chikhirtma",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "SOUPS",
         "name": "Soup-kharcho",
         "price": "23",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "type": "food",
-        "image": "soup_kharcho"
+        "image": "soup_kharcho",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "SOUPS",
         "name": "Akroshka (seasonal)",
         "price": "14",
-        "desc": null,
-        "type": "food"
+        "desc": "Spicy. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "SOUPS",
         "name": "Spinach cream-soup",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Hearty. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "SOUPS",
         "name": "Pumpkin cream soup",
         "price": "23",
-        "desc": null,
+        "desc": "Tender. Freshly prepared for you.",
         "type": "food",
-        "image": "pumpkin_cream_soup"
+        "image": "pumpkin_cream_soup",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "SOUPS",
         "name": "Tomato cream-soup",
         "price": "23",
-        "desc": null,
+        "desc": "Traditional. Freshly prepared for you.",
         "type": "food",
-        "image": "tomato_cream_soup"
+        "image": "tomato_cream_soup",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "SOUPS",
         "name": "Mushroom cream soup",
         "price": "23",
-        "desc": null,
+        "desc": "Hearty. Freshly prepared for you.",
         "type": "food",
-        "image": "mushroom_cream_soup"
+        "image": "mushroom_cream_soup",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "SALADS",
         "name": "Tomato and cucumber salad",
         "price": "14",
-        "desc": null,
+        "desc": "Hearty. Freshly prepared for you.",
         "type": "food",
-        "image": "tomato_and_cucumber_salad"
+        "image": "tomato_and_cucumber_salad",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "SALADS",
         "name": "Salad with walnuts",
         "price": "17",
-        "desc": null,
-        "type": "food"
+        "desc": "Traditional. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "SALADS",
         "name": "Chicken Caesar",
         "price": "29",
-        "desc": null,
+        "desc": "Spicy. Freshly prepared for you.",
         "type": "food",
-        "image": "chicken_caesar"
+        "image": "chicken_caesar",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "SALADS",
         "name": "Caesar with bacon",
         "price": "32",
-        "desc": null,
+        "desc": "Hearty. Freshly prepared for you.",
         "type": "food",
-        "image": "caesar_with_bacon"
+        "image": "caesar_with_bacon",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "SALADS",
         "name": "Greek salad",
         "price": "29",
-        "desc": null,
+        "desc": "Spicy. Freshly prepared for you.",
         "type": "food",
-        "image": "greek_salad"
+        "image": "greek_salad",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "SALADS",
         "name": "Chicken salad with apple",
         "price": "32",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "type": "food",
-        "image": "chicken_salad"
+        "image": "chicken_salad",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "SALADS",
         "name": "Green salad",
         "price": "19",
-        "desc": null,
+        "desc": "Tender. Freshly prepared for you.",
         "type": "food",
-        "image": "green_salad"
+        "image": "green_salad",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "SALADS",
         "name": "Vegetable salad",
         "price": "19",
-        "desc": null,
+        "desc": "Spicy. Freshly prepared for you.",
         "type": "food",
-        "image": "vegetable_salad"
+        "image": "vegetable_salad",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "PASTRY",
         "name": "Ajarian Khachapuri",
         "price": "23",
-        "desc": null,
+        "desc": "Tender. Freshly prepared for you.",
         "type": "food",
-        "image": "ajarian_khachapuri"
+        "image": "ajarian_khachapuri",
+        "ingredients": "Dough, Cheese",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "PASTRY",
         "name": "Imeretian Khachapuri",
         "price": "23",
-        "desc": null,
+        "desc": "Tender. Freshly prepared for you.",
         "type": "food",
-        "image": "imeretian_khachapuri"
+        "image": "imeretian_khachapuri",
+        "ingredients": "Dough, Cheese",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "PASTRY",
         "name": "Megrelian Khachapuri",
         "price": "29",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "type": "food",
-        "image": "megrelian_khachapuri"
+        "image": "megrelian_khachapuri",
+        "ingredients": "Dough, Cheese",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "PASTRY",
         "name": "Lazuri Khachapuri",
         "price": "39",
-        "desc": null,
+        "desc": "Hearty. Freshly prepared for you.",
         "type": "food",
-        "image": "lazuri_khachapuri"
+        "image": "lazuri_khachapuri",
+        "ingredients": "Dough, Cheese",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "PASTRY",
         "name": "Lobiani",
         "price": "21",
-        "desc": null,
+        "desc": "Traditional. Freshly prepared for you.",
         "type": "food",
-        "image": "lobiani"
+        "image": "lobiani",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "PASTRY",
         "name": "Mchadi",
         "price": "6",
-        "desc": null,
+        "desc": "Hearty. Freshly prepared for you.",
         "type": "food",
-        "image": "mchadi"
+        "image": "mchadi",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "PASTRY",
         "name": "Chvishtari",
         "price": "12",
-        "desc": null,
+        "desc": "Spicy. Freshly prepared for you.",
         "type": "food",
-        "image": "chvishtari"
+        "image": "chvishtari",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "PASTRY",
         "name": "Shotis Puri Bread",
         "price": "5",
-        "desc": null,
+        "desc": "Tender. Freshly prepared for you.",
         "type": "food",
-        "image": "shotis_puri_bread"
+        "image": "shotis_puri_bread",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "HOT DISHES",
         "name": "Khinkali Kalakuri",
         "price": "2.30",
-        "desc": null,
+        "desc": "Tender. Freshly prepared for you.",
         "type": "food",
         "image": "khinkali_kalakuri",
         "tags": [
           "hot"
-        ]
+        ],
+        "ingredients": "Dough, Meat, Spices",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "HOT DISHES",
         "name": "Khinkali with cheese",
         "price": "2.30",
-        "desc": null,
+        "desc": "Hearty. Freshly prepared for you.",
         "type": "food",
-        "image": "khinkali_with_cheese"
+        "image": "khinkali_with_cheese",
+        "ingredients": "Dough, Meat, Spices",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "HOT DISHES",
         "name": "Khinkali with mushroom",
         "price": "2.30",
-        "desc": null,
+        "desc": "Traditional. Freshly prepared for you.",
         "type": "food",
-        "image": "khinkali_with_mushroom"
+        "image": "khinkali_with_mushroom",
+        "ingredients": "Dough, Meat, Spices",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "HOT DISHES",
         "name": "Pelmeni in clay pot",
         "price": "23",
-        "desc": null,
+        "desc": "Traditional. Freshly prepared for you.",
         "type": "food",
-        "image": "pelmeni_in_clay_pot"
+        "image": "pelmeni_in_clay_pot",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "HOT DISHES",
         "name": "Veal Kebab",
         "price": "21",
-        "desc": null,
-        "type": "food"
+        "desc": "Tender. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "HOT DISHES",
         "name": "Pork Ojakhuri",
         "price": "26",
-        "desc": null,
-        "type": "food"
+        "desc": "Traditional. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "HOT DISHES",
         "name": "Veal Ojakhuri",
         "price": "32",
-        "desc": null,
-        "type": "food"
+        "desc": "Traditional. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "HOT DISHES",
         "name": "Braised veal",
         "price": "26",
-        "desc": null,
-        "type": "food"
+        "desc": "Tender. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "HOT DISHES",
         "name": "Veal Chakapuli",
         "price": "28",
-        "desc": null,
-        "type": "food"
+        "desc": "Hearty. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "HOT DISHES",
         "name": "Lamb Chakapuli",
         "price": "28",
-        "desc": null,
-        "type": "food"
+        "desc": "Spicy. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "HOT DISHES",
         "name": "Lamb barbecue",
         "price": "41",
-        "desc": null,
-        "type": "food"
+        "desc": "Hearty. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "HOT DISHES",
         "name": "Veal barbecue on ketsi",
         "price": "35",
-        "desc": null,
-        "type": "food"
+        "desc": "Tender. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "HOT DISHES",
         "name": "Pork barbecue",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Hearty. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "HOT DISHES",
         "name": "Chicken barbecue",
         "price": "22",
-        "desc": null,
-        "type": "food"
+        "desc": "Spicy. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "HOT DISHES",
         "name": "Abkhazura (sausage)",
         "price": "25",
-        "desc": null,
-        "type": "food"
+        "desc": "Traditional. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "HOT DISHES",
         "name": "Chicken Shkmeruli (500g)",
         "price": "25",
-        "desc": null,
-        "type": "food"
+        "desc": "Appetizing. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "HOT DISHES",
         "name": "Chicken Shkmeruli (Full)",
         "price": "40",
-        "desc": null,
-        "type": "food"
+        "desc": "Appetizing. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "HOT DISHES",
         "name": "Chicken in Pomegranate sauce",
         "price": "25",
-        "desc": null,
-        "type": "food"
+        "desc": "Hearty. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "HOT DISHES",
         "name": "Tabaka",
         "price": "35",
-        "desc": null,
-        "type": "food"
+        "desc": "Great after a meal. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "HOT DISHES",
         "name": "Mushroom on ketsi",
         "price": "18",
-        "desc": null,
-        "type": "food"
+        "desc": "Tender. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "HOT DISHES",
         "name": "Mushroom with Sulguni",
         "price": "25",
-        "desc": null,
-        "type": "food"
+        "desc": "Appetizing. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "HOT DISHES",
         "name": "Cheese Sulguni on ketsi",
         "price": "18",
-        "desc": null,
-        "type": "food"
+        "desc": "Spicy. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "HOT DISHES",
         "name": "Beans in a pot",
         "price": "18",
-        "desc": null,
-        "type": "food"
+        "desc": "Tender. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "HOT DISHES",
         "name": "Adjabsandali",
         "price": "18",
-        "desc": null,
-        "type": "food"
+        "desc": "Traditional. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "HOT DISHES",
         "name": "Pork with bacon & cheese",
         "price": "44",
-        "desc": null,
-        "type": "food"
+        "desc": "Spicy. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "HOT DISHES",
         "name": "Trout with Pomegranate sauce",
         "price": "32",
-        "desc": null,
-        "type": "food"
+        "desc": "Traditional. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Pizza Margarita",
         "price": "35",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "popular": true,
         "type": "food",
-        "image": "pizza_margarita"
+        "image": "pizza_margarita",
+        "ingredients": "Dough, Cheese, Tomato sauce",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Pizza 4 Cheese",
         "price": "46",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "type": "food",
-        "image": "pizza_4_cheese"
+        "image": "pizza_4_cheese",
+        "ingredients": "Dough, Cheese, Tomato sauce",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Pizza Peperone",
         "price": "40",
-        "desc": null,
+        "desc": "Traditional. Freshly prepared for you.",
         "type": "food",
-        "image": "pizza_peperone"
+        "image": "pizza_peperone",
+        "ingredients": "Dough, Cheese, Tomato sauce",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Pizza with vegetables",
         "price": "35",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "type": "food",
-        "image": "pizza_with_vegetables"
+        "image": "pizza_with_vegetables",
+        "ingredients": "Dough, Cheese, Tomato sauce",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Club Sandwich",
         "price": "29",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "type": "food",
-        "image": "club_sandwich"
+        "image": "club_sandwich",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Spaghetti Bolognese",
         "price": "34",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "type": "food",
-        "image": "spaghetti_bolognese"
+        "image": "spaghetti_bolognese",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Spaghetti Carbonara",
         "price": "34",
-        "desc": null,
+        "desc": "Appetizing. Freshly prepared for you.",
         "type": "food",
-        "image": "spaghetti_carbonara"
+        "image": "spaghetti_carbonara",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "French fries",
         "price": "12",
-        "desc": null,
-        "type": "food"
+        "desc": "Traditional. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Mexican Potatoes",
         "price": "18",
-        "desc": null,
-        "type": "food"
+        "desc": "Tender. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Stewed vegetables",
         "price": "14",
-        "desc": null,
-        "type": "food"
+        "desc": "Traditional. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Rice with vegetables",
         "price": "14",
-        "desc": null,
-        "type": "food"
+        "desc": "Spicy. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Tomato sauce",
         "price": "7",
-        "desc": null,
-        "type": "food"
+        "desc": "Hearty. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Adjika",
         "price": "7",
-        "desc": null,
-        "type": "food"
+        "desc": "Great after a meal. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Tkemali",
         "price": "6",
-        "desc": null,
-        "type": "food"
+        "desc": "Great after a meal. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Mushroom sauce",
         "price": "17",
-        "desc": null,
-        "type": "food"
+        "desc": "Tender. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "DESSERTS",
         "name": "Lava Cake",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Great after a meal. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "DESSERTS",
         "name": "Cheese Cake",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Spicy. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Rich"
       },
       {
         "category": "DESSERTS",
         "name": "Fruit assorted",
         "price": "29",
-        "desc": null,
-        "type": "food"
+        "desc": "Hearty. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "DESSERTS",
         "name": "Pancakes with banana",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Appetizing. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Balanced"
       },
       {
         "category": "DESSERTS",
         "name": "Apple Strudel",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Traditional. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Delicate"
       },
       {
         "category": "DESSERTS",
         "name": "Vanilla ice cream",
         "price": "9",
-        "desc": null,
-        "type": "food"
+        "desc": "Appetizing. Freshly prepared for you.",
+        "type": "food",
+        "ingredients": "Fresh ingredients",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Spicy"
       }
     ]
   },
@@ -1446,6 +2060,8 @@
         "ru": "Безалкогольные напитки",
         "ka": "გამაგრილებელი სასმელები"
       }
-    }
+    },
+    "description": "Description",
+    "ingredients": "Ingredients"
   }
 }
