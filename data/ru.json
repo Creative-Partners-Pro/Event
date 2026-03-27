@@ -106,1104 +106,1820 @@
     "items": [
       {
         "category": "COCKTAILS",
+        "name": "Neon Spritz",
+        "price": "22.00",
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "tags": [
+          "popular"
+        ],
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Освежающий",
+        "ingredients": "Alcohol mix, Сок, Сироп"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Red Owl",
+        "price": "24.00",
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "tags": [
+          "hot",
+          "popular"
+        ],
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Горький",
+        "ingredients": "Alcohol mix, Сок, Сироп"
+      },
+      {
+        "category": "COCKTAILS",
+        "name": "Golden Hour",
+        "price": "23.00",
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый",
+        "ingredients": "Alcohol mix, Сок, Сироп"
+      },
+      {
+        "category": "COCKTAILS",
         "name": "Long Iceland",
         "price": "25.00",
-        "desc": "Rum, tequila, vodka, gin, tripple sec, cola",
-        "type": "bar"
+        "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Горький"
       },
       {
         "category": "SPIRITS",
         "name": "Red Label",
         "price": "12.00",
-        "desc": null,
+        "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Whiskey",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Кислый"
       },
       {
         "category": "BEER",
         "name": "Black Lion Ipa",
         "price": "12.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Освежающий"
       },
       {
         "category": "SPIRITS",
         "name": "Black Label",
         "price": "16.00",
-        "desc": null,
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Whiskey",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Сладкий"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Tonic Water",
         "price": "6.00",
-        "desc": null,
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Soft Drinks",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Отсутствует",
+        "volume": "330ml",
+        "taste": "Освежающий"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Coca-cola plastic",
         "price": "6.00",
-        "desc": "500ml",
+        "desc": "Веселящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Soft Drinks",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Отсутствует",
+        "volume": "330ml",
+        "taste": "Сладкий"
       },
       {
         "category": "SPIRITS",
         "name": "Absolut vodka",
         "price": "8.00",
-        "desc": "Absolut 50ml",
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Vodka",
-        "type": "bar"
+        "ingredients": "Distilled alcohol, Water",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Горький"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Coca-cola can",
         "price": "4.00",
-        "desc": "330ml",
+        "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Soft Drinks",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Отсутствует",
+        "volume": "330ml",
+        "taste": "Кислый"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "XL Energy Drink",
         "price": "7.00",
-        "desc": null,
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Soft Drinks",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Отсутствует",
+        "volume": "330ml",
+        "taste": "Освежающий"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Ginger Ale",
         "price": "6.00",
-        "desc": null,
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Soft Drinks",
-        "type": "bar"
+        "ingredients": "Juniper spirit, Botanicals",
+        "strength": "Отсутствует",
+        "volume": "330ml",
+        "taste": "Кислый"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Sparkling Water",
         "price": "4.00",
-        "desc": null,
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Soft Drinks",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Отсутствует",
+        "volume": "330ml",
+        "taste": "Горький"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Mineral Water",
         "price": "3.00",
-        "desc": null,
+        "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Soft Drinks",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Отсутствует",
+        "volume": "330ml",
+        "taste": "Горький"
       },
       {
         "category": "SPIRITS",
         "name": "Beluga Vodka",
         "price": "24.00",
-        "desc": null,
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Vodka",
-        "type": "bar"
+        "ingredients": "Distilled alcohol, Water",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Горький"
       },
       {
         "category": "SPIRITS",
         "name": "Olmeca Tequila",
         "price": "12.00",
-        "desc": null,
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Tequila",
-        "type": "bar"
+        "ingredients": "Agave spirit",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Кислый"
       },
       {
         "category": "SPIRITS",
         "name": "Bacardi Rum",
         "price": "12.00",
-        "desc": null,
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Rum",
-        "type": "bar"
+        "ingredients": "Cane spirit, Molasses",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Кислый"
       },
       {
         "category": "SPIRITS",
         "name": "Capitan Morgan Black",
         "price": "12.00",
-        "desc": null,
+        "desc": "Веселящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Rum",
-        "type": "bar"
+        "ingredients": "Cane spirit, Molasses",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Освежающий"
       },
       {
         "category": "SHOTS",
         "name": "Brain Cancer",
         "price": "14.00",
-        "desc": "Baileys, Banana liquor, Kahlua",
-        "type": "bar"
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "-",
+        "volume": "50ml",
+        "taste": "Освежающий"
       },
       {
         "category": "BEER",
         "name": "Kayki Lager",
         "price": "10.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Веселящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Горький"
       },
       {
         "category": "SPIRITS",
         "name": "Chivas 12y.",
         "price": "15.00",
-        "desc": null,
+        "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Whiskey",
-        "type": "bar"
+        "ingredients": "Grain spirit, Water",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Освежающий"
       },
       {
         "category": "SPIRITS",
         "name": "Tullamore Dew",
         "price": "12.00",
-        "desc": null,
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Whiskey",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Сладкий"
       },
       {
         "category": "BEER",
         "name": "Black Lion Apa",
         "price": "14.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Горький"
       },
       {
         "category": "BEER",
         "name": "Corona",
         "price": "12.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Горький"
       },
       {
         "category": "SPIRITS",
         "name": "Jack Daniels",
         "price": "14.00",
-        "desc": null,
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Whiskey",
-        "type": "bar"
+        "ingredients": "Grain spirit, Water",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Кислый"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Juice",
         "price": "6.00",
-        "desc": "250ml",
+        "desc": "Освежающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Soft Drinks",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Отсутствует",
+        "volume": "330ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Mojito",
         "price": "23.00",
-        "desc": "Rum, Brown Sugar Mint, Lime, Soda Water",
-        "type": "bar"
+        "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Горький",
+        "ingredients": "Alcohol mix, Сок, Сироп"
       },
       {
         "category": "BEER",
         "name": "Black Lion Porter",
         "price": "14.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Горький"
       },
       {
         "category": "BEER",
         "name": "ALcraft Lager",
         "price": "10.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Aperol Spritz",
         "price": "25.00",
-        "desc": "Aperol,Sprk.wine,orange,soda water",
-        "type": "bar"
+        "desc": "Веселящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Горький",
+        "ingredients": "Alcohol mix, Сок, Сироп"
       },
       {
         "category": "COCKTAILS",
         "name": "Bloody Mary",
         "price": "18.00",
-        "desc": "Vodka, tomato juice, salt, pepper, Worcestershire sauce, Tabasco",
-        "type": "bar"
+        "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый"
       },
       {
         "category": "SHOTS",
         "name": "B-52",
         "price": "16.00",
-        "desc": "Kahlua,Bailyes,Cointreau",
-        "type": "bar"
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "-",
+        "volume": "50ml",
+        "taste": "Освежающий"
       },
       {
         "category": "COCKTAILS",
         "name": "Black Occupant",
         "price": "17.00",
-        "desc": "Kahlua, Vodka",
-        "type": "bar"
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Освежающий"
       },
       {
         "category": "COCKTAILS",
         "name": "Tequila Sunrise",
         "price": "20.00",
-        "desc": "Tequila,Orange juice,Grenadine",
-        "type": "bar"
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Agave spirit",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Освежающий"
       },
       {
         "category": "SHOTS",
         "name": "Blow Job",
         "price": "12.00",
-        "desc": "Kahlua, bailey's, Musetop",
-        "type": "bar"
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "-",
+        "volume": "50ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Gin&Tonic",
         "price": "20.00",
-        "desc": "Beefeater,Tonic water",
-        "type": "bar"
+        "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Juniper spirit, Botanicals",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "White Russuian",
         "price": "18.00",
-        "desc": "kahlua,Vodka, Cream",
-        "type": "bar"
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Горький"
       },
       {
         "category": "COCKTAILS",
         "name": "Negroni",
         "price": "20.00",
-        "desc": "Gin, Campari Bitter, Rosso",
-        "type": "bar"
+        "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Освежающий"
       },
       {
         "category": "COCKTAILS",
         "name": "Dr.Pepper",
         "price": "20.00",
-        "desc": "Beer, amaretto liquer, Coke",
-        "type": "bar"
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Long Energy",
         "price": "26.00",
-        "desc": "Vodka,gin,rum,coiuntreau,tequila,energy drink,blue curacao",
-        "type": "bar"
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Сладкий"
       },
       {
         "category": "COCKTAILS",
         "name": "Moscow Mule",
         "price": "18.00",
-        "desc": "Vodka, GigerAle",
-        "type": "bar"
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Сладкий"
       },
       {
         "category": "COCKTAILS",
         "name": "JagerBomb",
         "price": "22.00",
-        "desc": "Jagermaister,Energy Drink",
-        "type": "bar"
+        "desc": "Освежающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Cherry Lady",
         "price": "18.00",
-        "desc": "Rum, Cherry tincture,moraschinno cherry jam, soft drink top",
-        "type": "bar"
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Cosmopolitan",
         "price": "18.00",
-        "desc": "Vodka, cranberry juice, Orange liquer",
-        "type": "bar"
+        "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Сладкий"
       },
       {
         "category": "COCKTAILS",
         "name": "Whiskey Sour",
         "price": "20.00",
-        "desc": "Bourbon whiskey, egg white",
-        "type": "bar"
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Grain spirit, Water",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый"
       },
       {
         "category": "SPIRITS",
         "name": "Koskenkorva vodka",
         "price": "6.00",
-        "desc": "Vodka 50ml",
+        "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Vodka",
-        "type": "bar"
+        "ingredients": "Distilled alcohol, Water",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Горький"
       },
       {
         "category": "SPIRITS",
         "name": "Gin Beefeater",
         "price": "12.00",
-        "desc": "50ml",
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Gin",
-        "type": "bar"
+        "ingredients": "Juniper spirit, Botanicals",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Сладкий"
       },
       {
         "category": "SPIRITS",
         "name": "Gin Bombay Sapphire",
         "price": "16.00",
-        "desc": "50ml",
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Gin",
-        "type": "bar"
+        "ingredients": "Juniper spirit, Botanicals",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Освежающий"
       },
       {
         "category": "SPIRITS",
         "name": "Tequila Sierra",
         "price": "12.00",
-        "desc": "50ml",
+        "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Tequila",
-        "type": "bar"
+        "ingredients": "Agave spirit",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Mai Tai",
         "price": "20.00",
-        "desc": "White Rum, Dark Rum, Orange liquor, Juice, Syrup",
-        "type": "bar"
+        "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый"
       },
       {
         "category": "SPIRITS",
         "name": "Capitan Morgan Spiced Gold",
         "price": "13.00",
-        "desc": null,
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Rum",
-        "type": "bar"
+        "ingredients": "Cane spirit, Molasses",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Кислый"
       },
       {
         "category": "SPIRITS",
         "name": "Jagermeister",
         "price": "12.00",
-        "desc": null,
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Liqueur",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Горький"
       },
       {
         "category": "COCKTAILS",
         "name": "Pina Colada",
         "price": "21.00",
-        "desc": "Rum, Malibu, Cream, syrup, juice",
-        "type": "bar"
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Освежающий"
       },
       {
         "category": "COCKTAILS",
         "name": "Vodka Energy",
         "price": "18.00",
-        "desc": "Vodka, Energy Drink",
-        "type": "bar"
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Distilled alcohol, Water",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Освежающий"
       },
       {
         "category": "SHOTS",
         "name": "R.I.P.",
         "price": "14.00",
-        "desc": "Bourbon, Blavod Vodka, Tequila",
-        "type": "bar"
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "-",
+        "volume": "50ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Screwdriver",
         "price": "17.00",
-        "desc": "Vodka, Orange juice",
-        "type": "bar"
+        "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Сладкий"
       },
       {
         "category": "COCKTAILS",
         "name": "Cuba Libre",
         "price": "18.00",
-        "desc": "Rum, Coca-cola",
-        "type": "bar"
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Jack&Ginger",
         "price": "20.00",
-        "desc": "Jack Daniel's, Ginger Ale",
-        "type": "bar"
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Grain spirit, Water",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "007",
         "price": "18.00",
-        "desc": "Gin, Dry Vermouth",
-        "type": "bar"
+        "desc": "Веселящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Сладкий"
       },
       {
         "category": "COCKTAILS",
         "name": "Jager Juice",
         "price": "20.00",
-        "desc": "Jägermeister, juice",
-        "type": "bar"
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Sapphire Fizz",
         "price": "21.00",
-        "desc": "Bombay Gin, Tonic",
-        "type": "bar"
+        "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Горький"
       },
       {
         "category": "SPIRITS",
         "name": "Jameson",
         "price": "12.00",
-        "desc": null,
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Whiskey",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Горький"
       },
       {
         "category": "COCKTAILS",
         "name": "Blue Hawai",
         "price": "22.00",
-        "desc": "Rum, blue curacao, juice",
-        "type": "bar"
+        "desc": "Веселящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Горький"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Sprite",
         "price": "4.00",
-        "desc": null,
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Soft Drinks",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Отсутствует",
+        "volume": "330ml",
+        "taste": "Освежающий"
       },
       {
         "category": "SPIRITS",
         "name": "Jim Beam White",
         "price": "14.00",
-        "desc": null,
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Whiskey",
-        "type": "bar"
+        "ingredients": "Grain spirit, Water",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Сладкий"
       },
       {
         "category": "SPIRITS",
         "name": "Jim Beam Red Stag",
         "price": "16.00",
-        "desc": null,
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Whiskey",
-        "type": "bar"
+        "ingredients": "Grain spirit, Water",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Сладкий"
       },
       {
         "category": "SPIRITS",
         "name": "Baileys",
         "price": "12.00",
-        "desc": null,
+        "desc": "Освежающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
         "subcategory": "Liqueur",
-        "type": "bar"
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Высокая",
+        "volume": "50ml",
+        "taste": "Кислый"
       },
       {
         "category": "COCKTAILS",
         "name": "Corona Sunrise",
         "price": "22.00",
-        "desc": "Corona beer, Tequila, Triple sec. lime, Grenadine, Orange juice",
-        "type": "bar"
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Горький"
       },
       {
         "category": "COCKTAILS",
         "name": "Lynchburg Lemonade",
         "price": "22.00",
-        "desc": "Bourbon, Orange liquor, Ginger ale",
-        "type": "bar"
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Горький"
       },
       {
         "category": "SHOTS",
         "name": "Mad Dog",
         "price": "16.00",
-        "desc": "Vodka, Grenadine, Tabasco",
-        "type": "bar"
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "-",
+        "volume": "50ml",
+        "taste": "Горький"
       },
       {
         "category": "WINE",
         "name": "Kindzmarauli",
         "price": "18.00",
-        "desc": "Semi_Sweet Red Wine",
-        "type": "bar"
+        "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "150ml",
+        "taste": "Сладкий"
       },
       {
         "category": "WINE",
         "name": "Tsinandali",
         "price": "17.00",
-        "desc": "White Dry",
-        "type": "bar"
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "150ml",
+        "taste": "Горький"
       },
       {
         "category": "WINE",
         "name": "Khvanchkara",
         "price": "23.00",
-        "desc": "Semi_Sweet Red",
-        "type": "bar"
+        "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "150ml",
+        "taste": "Сладкий"
       },
       {
         "category": "WINE",
         "name": "Tvishi",
         "price": "17.00",
-        "desc": "White Semi Sweet",
-        "type": "bar"
+        "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "150ml",
+        "taste": "Освежающий"
       },
       {
         "category": "BEER",
         "name": "Arriba Draft Beer 🍺",
         "price": "10.00",
-        "desc": "400ml",
-        "type": "bar"
+        "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
+        "popular": true,
+        "type": "bar",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Сладкий",
+        "ingredients": "Water, Malt, Hops"
       },
       {
         "category": "COCKTAILS",
         "name": "Adios MTF",
         "price": "26.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Веселящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Горький"
       },
       {
         "category": "BEER",
         "name": "Unfiltered Draft Beer",
         "price": "10.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
+        "popular": true,
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Сладкий"
       },
       {
         "category": "NON-ALCOHOLIC",
         "name": "Glintwein seasonal",
         "price": "12.00",
-        "desc": null,
-        "subcategory": "Soft Drinks",
-        "type": "bar"
+        "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "subcategory": "Hot Drinks",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Отсутствует",
+        "volume": "330ml",
+        "taste": "Освежающий"
       },
       {
         "category": "BEER",
         "name": "Guinness draft",
         "price": "20.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Освежающий"
       },
       {
         "category": "BEER",
         "name": "Cider N4",
         "price": "13.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Освежающий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Освежающий"
       },
       {
         "category": "COCKTAILS",
         "name": "Margirita",
         "price": "20.00",
-        "desc": "Tequila, aguave suryp,  triple sec, lime squzee",
-        "type": "bar"
+        "desc": "Веселящий. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Alcohol mix, Сок, Сироп",
+        "strength": "Средняя",
+        "volume": "250ml",
+        "taste": "Сладкий"
       },
       {
         "category": "BEER",
         "name": "Draft Lager",
         "price": "9.00",
-        "desc": null,
-        "type": "bar"
+        "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
+        "type": "bar",
+        "ingredients": "Water, Malt, Hops",
+        "strength": "Низкая",
+        "volume": "500ml",
+        "taste": "Горький"
       },
       {
         "category": "APPETIZERS",
         "name": "Ассорти пхали",
         "price": "29",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "assorted_pkhali",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "APPETIZERS",
         "name": "Баклажаны с орехами",
         "price": "17",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "eggplant_with_walnuts",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "APPETIZERS",
         "name": "Ассорти грузинских сыров",
         "price": "24",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "georgian_cheese_platter",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "APPETIZERS",
         "name": "Ассорти солений",
         "price": "14",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "assorted_pickles",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "APPETIZERS",
         "name": "Оливки",
         "price": "14",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "olives",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "SOUPS",
         "name": "Чихиртма",
         "price": "14",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "chikhirtma",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "SOUPS",
         "name": "Суп-харчо",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "soup_kharcho",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "SOUPS",
         "name": "Окрошка (сезонная)",
         "price": "14",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "SOUPS",
         "name": "Крем-суп из шпината",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "SOUPS",
         "name": "Тыквенный крем-суп",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "pumpkin_cream_soup",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "SOUPS",
         "name": "Томатный крем-суп",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "tomato_cream_soup",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "SOUPS",
         "name": "Грибной крем-суп",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "mushroom_cream_soup",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "SALADS",
         "name": "Салат из огурцов и помидоров",
         "price": "14",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "tomato_and_cucumber_salad",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "SALADS",
         "name": "Салат с орехами",
         "price": "17",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "SALADS",
         "name": "Цезарь с курицей",
         "price": "29",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "chicken_caesar",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "SALADS",
         "name": "Цезарь с беконом",
         "price": "32",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "caesar_with_bacon",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "SALADS",
         "name": "Греческий салат",
         "price": "29",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "greek_salad",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "SALADS",
         "name": "Куриный салат с яблоком",
         "price": "32",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "chicken_salad",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "SALADS",
         "name": "Зеленый салат",
         "price": "19",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "green_salad",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "SALADS",
         "name": "Овощной салат",
         "price": "19",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "vegetable_salad",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "PASTRY",
         "name": "Хачапури по-аджарски",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "ajarian_khachapuri",
+        "ingredients": "Dough, Cheese",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "PASTRY",
         "name": "Хачапури по-имеретински",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "imeretian_khachapuri",
+        "ingredients": "Dough, Cheese",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "PASTRY",
         "name": "Хачапури по-мегрельски",
         "price": "29",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "megrelian_khachapuri",
+        "ingredients": "Dough, Cheese",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "PASTRY",
         "name": "Лазурский хачапури",
         "price": "39",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "lazuri_khachapuri",
+        "ingredients": "Dough, Cheese",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "PASTRY",
         "name": "Лобиани",
         "price": "21",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "lobiani",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "PASTRY",
         "name": "Мчади",
         "price": "6",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "mchadi",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "PASTRY",
         "name": "Чвиштари",
         "price": "12",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "chvishtari",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "PASTRY",
         "name": "Хлеб",
         "price": "5",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "shotis_puri_bread",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
-        "category": "PASTRY",
+        "category": "HOT DISHES",
         "name": "Хинкали",
         "price": "2.30",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "khinkali_kalakuri",
+        "tags": [
+          "hot"
+        ],
+        "ingredients": "Dough, Meat, Spices",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
-        "category": "PASTRY",
+        "category": "HOT DISHES",
+        "name": "Хинкали с сыром",
+        "price": "2.30",
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "khinkali_with_cheese",
+        "ingredients": "Dough, Meat, Spices",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
+      },
+      {
+        "category": "HOT DISHES",
+        "name": "Хинкали с грибами",
+        "price": "2.30",
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "khinkali_with_mushroom",
+        "ingredients": "Dough, Meat, Spices",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
+      },
+      {
+        "category": "HOT DISHES",
         "name": "Пельмени в горшочке",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "pelmeni_in_clay_pot",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "HOT DISHES",
         "name": "Люля-кебаб из говядины",
         "price": "21",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "HOT DISHES",
         "name": "Оджахури из свинины",
         "price": "26",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "HOT DISHES",
         "name": "Оджахури из телятины",
         "price": "32",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "HOT DISHES",
         "name": "Чашушули из телятины",
         "price": "26",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "HOT DISHES",
         "name": "Чакапули из телятины",
         "price": "28",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "HOT DISHES",
         "name": "Чакапули из баранины",
         "price": "28",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "HOT DISHES",
         "name": "Шашлык из баранины",
         "price": "41",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "HOT DISHES",
         "name": "Шашлык из телятины на кеци",
         "price": "35",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "HOT DISHES",
         "name": "Шашлык из свинины",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "HOT DISHES",
         "name": "Шашлык из курицы",
         "price": "22",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "HOT DISHES",
         "name": "Абхазура (купаты)",
         "price": "25",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "HOT DISHES",
         "name": "Цыпленок шкмерули (500г)",
         "price": "25",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "HOT DISHES",
         "name": "Цыпленок шкмерули (целый)",
         "price": "40",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "HOT DISHES",
         "name": "Цыпленок в гранатовом соусе",
         "price": "25",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "HOT DISHES",
         "name": "Цыпленок табака",
         "price": "35",
-        "desc": null,
-        "type": "food"
+        "desc": "Хорошо после еды. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "HOT DISHES",
         "name": "Грибы на кеци",
         "price": "18",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "HOT DISHES",
         "name": "Грибы с сулугуни",
         "price": "25",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "HOT DISHES",
         "name": "Сулугуни на кеци",
         "price": "18",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "HOT DISHES",
         "name": "Лобио в горшочке",
         "price": "18",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "HOT DISHES",
         "name": "Аджапсандали",
         "price": "18",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "HOT DISHES",
         "name": "Свиная вырезка с беконом",
         "price": "44",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "HOT DISHES",
         "name": "Форель в соусе",
         "price": "32",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Пицца Маргарита",
         "price": "35",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "popular": true,
+        "type": "food",
+        "image": "pizza_margarita",
+        "ingredients": "Dough, Cheese, Tomato sauce",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Пицца 4 сыра",
         "price": "46",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "pizza_4_cheese",
+        "ingredients": "Dough, Cheese, Tomato sauce",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Пицца Пепперони",
         "price": "40",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "pizza_peperone",
+        "ingredients": "Dough, Cheese, Tomato sauce",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Пицца с овощами",
         "price": "35",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "pizza_with_vegetables",
+        "ingredients": "Dough, Cheese, Tomato sauce",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Клаб-сэндвич",
         "price": "29",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "club_sandwich",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Спагетти Болоньезе",
         "price": "34",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "spaghetti_bolognese",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "PIZZA & PASTA",
         "name": "Спагетти Карбонара",
         "price": "34",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "image": "spaghetti_carbonara",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Картофель фри",
         "price": "12",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Картофель по-мексикански",
         "price": "18",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Тушеные овощи",
         "price": "14",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Рис с овощами",
         "price": "14",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Сацебели",
         "price": "7",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Аджика",
         "price": "7",
-        "desc": null,
-        "type": "food"
+        "desc": "Хорошо после еды. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Ткемали",
         "price": "6",
-        "desc": null,
-        "type": "food"
+        "desc": "Хорошо после еды. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "GARNISH & SAUCES",
         "name": "Грибной соус",
         "price": "17",
-        "desc": null,
-        "type": "food"
+        "desc": "Нежный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "DESSERTS",
         "name": "Шоколадный фондан",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Хорошо после еды. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "DESSERTS",
         "name": "Чизкейк",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Пикантный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Насыщенный"
       },
       {
         "category": "DESSERTS",
         "name": "Фруктовое ассорти",
         "price": "29",
-        "desc": null,
-        "type": "food"
+        "desc": "Сытный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "DESSERTS",
         "name": "Блины с бананом",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Сбалансированный"
       },
       {
         "category": "DESSERTS",
         "name": "Яблочный штрудель",
         "price": "23",
-        "desc": null,
-        "type": "food"
+        "desc": "Традиционный. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Нежный"
       },
       {
         "category": "DESSERTS",
         "name": "Ванильное мороженое",
         "price": "9",
-        "desc": null,
-        "type": "food"
+        "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
+        "type": "food",
+        "ingredients": "Свежие ингредиенты",
+        "strength": "-",
+        "volume": "-",
+        "taste": "Острый"
       }
     ]
   },
@@ -1344,6 +2060,8 @@
         "ru": "Безалкогольные напитки",
         "ka": "გამაგრილებელი სასმელები"
       }
-    }
+    },
+    "description": "Описание",
+    "ingredients": "Ингредиенты"
   }
 }

@@ -239,6 +239,7 @@ function displayModalData(item) {
     document.getElementById('modal-name').textContent = item.name.replace(/(<br>|<\/br>)/g, ' ');
     document.getElementById('modal-price').textContent = formatPrice(item.price);
     document.getElementById('modal-desc').textContent = item.desc || '';
+    document.getElementById('modal-ingredients').textContent = item.ingredients || '-';
 
     // Handle tags
     const tagsContainer = document.getElementById('modal-tags');
@@ -260,6 +261,12 @@ function displayModalData(item) {
     if (valStrength) valStrength.textContent = item.strength || '-';
     if (valVolume) valVolume.textContent = item.volume || '-';
     if (valTaste) valTaste.textContent = item.taste || '-';
+
+    // Update Labels
+    const labelDesc = document.getElementById('label-desc');
+    const labelIngredients = document.getElementById('label-ingredients');
+    if (labelDesc && configData.ui.description) labelDesc.textContent = configData.ui.description;
+    if (labelIngredients && configData.ui.ingredients) labelIngredients.textContent = configData.ui.ingredients;
 }
 
 function openModal(item) {
