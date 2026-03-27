@@ -373,10 +373,16 @@ function getItemImage(item) {
     if (item.image && imageData.menu[item.image]) {
         return imageData.menu[item.image];
     }
-    // Remove emojis first, then trim, then replace spaces with underscores
+    // Remove emojis first, then trim, then replace spaces with underscores.
+    // Also handle special characters that might be in names but snake_cased in keys.
     const cleanedName = item.name.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E6}-\u{1F1FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '').trim();
-    const nameKey = cleanedName.toLowerCase().replace(/ /g, '_');
-    return imageData.menu[nameKey] || 'img/placeholder.png';
+    const nameKey = cleanedName.toLowerCase()
+        .replace(/ /g, '_')
+        .replace(/&/g, '')
+        .replace(/\./g, '')
+        .replace(/-/g, '_');
+
+    return imageData.menu[nameKey] || imageData.menu[cleanedName.toLowerCase().replace(/ /g, '_')] || 'img/placeholder.png';
 }
 
 function renderPopularItems() {
