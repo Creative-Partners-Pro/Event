@@ -116,7 +116,7 @@
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "გამაგრილებელი",
-        "ingredients": "Alcohol mix, წვენი, სიროფი"
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი"
       },
       {
         "category": "COCKTAILS",
@@ -131,7 +131,7 @@
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მწარე",
-        "ingredients": "Alcohol mix, წვენი, სიროფი"
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი"
       },
       {
         "category": "COCKTAILS",
@@ -142,7 +142,7 @@
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე",
-        "ingredients": "Alcohol mix, წვენი, სიროფი"
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი"
       },
       {
         "category": "COCKTAILS",
@@ -150,7 +150,7 @@
         "price": "25.00",
         "desc": "ფრთების მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მწარე"
@@ -173,7 +173,7 @@
         "price": "12.00",
         "desc": "გეხმარებათ წარსულის დავიწყებაში. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "წყალი, ალაო, სვია",
         "strength": "დაბალი",
         "volume": "500ml",
         "taste": "გამაგრილებელი"
@@ -221,7 +221,7 @@
         "desc": "ენერგიული. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Vodka",
-        "ingredients": "Distilled alcohol, Water",
+        "ingredients": "დისტილირებული სპირტი, წყალი",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "მწარე"
@@ -257,7 +257,7 @@
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Soft Drinks",
-        "ingredients": "Juniper spirit, Botanicals",
+        "ingredients": "ღვიის სპირტი, ბოტანიკური საშუალებები",
         "strength": "არ არის",
         "volume": "330ml",
         "taste": "მჟავე"
@@ -293,7 +293,7 @@
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Vodka",
-        "ingredients": "Distilled alcohol, Water",
+        "ingredients": "დისტილირებული სპირტი, წყალი",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "მწარე"
@@ -305,7 +305,7 @@
         "desc": "ენერგიული. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Tequila",
-        "ingredients": "Agave spirit",
+        "ingredients": "აგავას სპირტი",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "მჟავე"
@@ -317,7 +317,7 @@
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Rum",
-        "ingredients": "Cane spirit, Molasses",
+        "ingredients": "ლერწმის სპირტი, მელასა",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "მჟავე"
@@ -329,7 +329,7 @@
         "desc": "გამამხიარულებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Rum",
-        "ingredients": "Cane spirit, Molasses",
+        "ingredients": "ლერწმის სპირტი, მელასა",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "გამაგრილებელი"
@@ -340,7 +340,7 @@
         "price": "14.00",
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "-",
         "volume": "50ml",
         "taste": "გამაგრილებელი"
@@ -351,7 +351,7 @@
         "price": "10.00",
         "desc": "გამამხიარულებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "წყალი, ალაო, სვია",
         "strength": "დაბალი",
         "volume": "500ml",
         "taste": "მწარე"
@@ -363,7 +363,7 @@
         "desc": "გეხმარებათ წარსულის დავიწყებაში. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Whiskey",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "მარცვლეულის სპირტი, წყალი",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "გამაგრილებელი"
@@ -386,7 +386,7 @@
         "price": "14.00",
         "desc": "ფრთების მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "წყალი, ალაო, სვია",
         "strength": "დაბალი",
         "volume": "500ml",
         "taste": "მწარე"
@@ -409,7 +409,7 @@
         "desc": "ტონუსის მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Whiskey",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "მარცვლეულის სპირტი, წყალი",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "მჟავე"
@@ -435,7 +435,7 @@
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მწარე",
-        "ingredients": "Alcohol mix, წვენი, სიროფი"
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი"
       },
       {
         "category": "BEER",
@@ -443,7 +443,7 @@
         "price": "14.00",
         "desc": "შთამაგონებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "წყალი, ალაო, სვია",
         "strength": "დაბალი",
         "volume": "500ml",
         "taste": "მწარე"
@@ -454,7 +454,7 @@
         "price": "10.00",
         "desc": "გეხმარებათ წარსულის დავიწყებაში. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "წყალი, ალაო, სვია",
         "strength": "დაბალი",
         "volume": "500ml",
         "taste": "მჟავე"
@@ -468,7 +468,7 @@
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მწარე",
-        "ingredients": "Alcohol mix, წვენი, სიროფი"
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი"
       },
       {
         "category": "COCKTAILS",
@@ -476,7 +476,7 @@
         "price": "18.00",
         "desc": "გეხმარებათ წარსულის დავიწყებაში. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე"
@@ -487,7 +487,7 @@
         "price": "16.00",
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "-",
         "volume": "50ml",
         "taste": "გამაგრილებელი"
@@ -498,7 +498,7 @@
         "price": "17.00",
         "desc": "დამამშვიდებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "გამაგრილებელი"
@@ -509,7 +509,7 @@
         "price": "20.00",
         "desc": "ტონუსის მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Agave spirit",
+        "ingredients": "აგავას სპირტი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "გამაგრილებელი"
@@ -520,7 +520,7 @@
         "price": "12.00",
         "desc": "ტონუსის მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "-",
         "volume": "50ml",
         "taste": "მჟავე"
@@ -531,7 +531,7 @@
         "price": "20.00",
         "desc": "შთამაგონებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Juniper spirit, Botanicals",
+        "ingredients": "ღვიის სპირტი, ბოტანიკური საშუალებები",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე"
@@ -542,7 +542,7 @@
         "price": "18.00",
         "desc": "ტონუსის მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მწარე"
@@ -553,7 +553,7 @@
         "price": "20.00",
         "desc": "ფრთების მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "გამაგრილებელი"
@@ -564,7 +564,7 @@
         "price": "20.00",
         "desc": "ენერგიული. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე"
@@ -575,7 +575,7 @@
         "price": "26.00",
         "desc": "დამამშვიდებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "ტკბილი"
@@ -586,7 +586,7 @@
         "price": "18.00",
         "desc": "დამამშვიდებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "ტკბილი"
@@ -597,7 +597,7 @@
         "price": "22.00",
         "desc": "გამაგრილებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე"
@@ -608,7 +608,7 @@
         "price": "18.00",
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე"
@@ -619,7 +619,7 @@
         "price": "18.00",
         "desc": "გეხმარებათ წარსულის დავიწყებაში. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "ტკბილი"
@@ -630,7 +630,7 @@
         "price": "20.00",
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "მარცვლეულის სპირტი, წყალი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე"
@@ -642,7 +642,7 @@
         "desc": "შთამაგონებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Vodka",
-        "ingredients": "Distilled alcohol, Water",
+        "ingredients": "დისტილირებული სპირტი, წყალი",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "მწარე"
@@ -654,7 +654,7 @@
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Gin",
-        "ingredients": "Juniper spirit, Botanicals",
+        "ingredients": "ღვიის სპირტი, ბოტანიკური საშუალებები",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "ტკბილი"
@@ -666,7 +666,7 @@
         "desc": "ტონუსის მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Gin",
-        "ingredients": "Juniper spirit, Botanicals",
+        "ingredients": "ღვიის სპირტი, ბოტანიკური საშუალებები",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "გამაგრილებელი"
@@ -678,7 +678,7 @@
         "desc": "შთამაგონებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Tequila",
-        "ingredients": "Agave spirit",
+        "ingredients": "აგავას სპირტი",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "მჟავე"
@@ -689,7 +689,7 @@
         "price": "20.00",
         "desc": "ფრთების მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე"
@@ -701,7 +701,7 @@
         "desc": "დამამშვიდებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Rum",
-        "ingredients": "Cane spirit, Molasses",
+        "ingredients": "ლერწმის სპირტი, მელასა",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "მჟავე"
@@ -724,7 +724,7 @@
         "price": "21.00",
         "desc": "დამამშვიდებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "გამაგრილებელი"
@@ -735,7 +735,7 @@
         "price": "18.00",
         "desc": "ენერგიული. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Distilled alcohol, Water",
+        "ingredients": "დისტილირებული სპირტი, წყალი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "გამაგრილებელი"
@@ -746,7 +746,7 @@
         "price": "14.00",
         "desc": "ენერგიული. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "-",
         "volume": "50ml",
         "taste": "მჟავე"
@@ -757,7 +757,7 @@
         "price": "17.00",
         "desc": "ფრთების მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "ტკბილი"
@@ -768,7 +768,7 @@
         "price": "18.00",
         "desc": "ენერგიული. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე"
@@ -779,7 +779,7 @@
         "price": "20.00",
         "desc": "ტონუსის მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "მარცვლეულის სპირტი, წყალი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე"
@@ -790,7 +790,7 @@
         "price": "18.00",
         "desc": "გამამხიარულებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "ტკბილი"
@@ -801,7 +801,7 @@
         "price": "20.00",
         "desc": "დამამშვიდებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მჟავე"
@@ -812,7 +812,7 @@
         "price": "21.00",
         "desc": "ფრთების მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მწარე"
@@ -835,7 +835,7 @@
         "price": "22.00",
         "desc": "გამამხიარულებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მწარე"
@@ -859,7 +859,7 @@
         "desc": "ტონუსის მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Whiskey",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "მარცვლეულის სპირტი, წყალი",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "ტკბილი"
@@ -871,7 +871,7 @@
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
         "subcategory": "Whiskey",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "მარცვლეულის სპირტი, წყალი",
         "strength": "მაღალი",
         "volume": "50ml",
         "taste": "ტკბილი"
@@ -894,7 +894,7 @@
         "price": "22.00",
         "desc": "დამამშვიდებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მწარე"
@@ -905,7 +905,7 @@
         "price": "22.00",
         "desc": "ტონუსის მომცემი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მწარე"
@@ -916,7 +916,7 @@
         "price": "16.00",
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "-",
         "volume": "50ml",
         "taste": "მწარე"
@@ -975,7 +975,7 @@
         "strength": "დაბალი",
         "volume": "500ml",
         "taste": "ტკბილი",
-        "ingredients": "Water, Malt, Hops"
+        "ingredients": "წყალი, ალაო, სვია"
       },
       {
         "category": "COCKTAILS",
@@ -983,7 +983,7 @@
         "price": "26.00",
         "desc": "გამამხიარულებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "მწარე"
@@ -995,7 +995,7 @@
         "desc": "დამამშვიდებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "popular": true,
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "წყალი, ალაო, სვია",
         "strength": "დაბალი",
         "volume": "500ml",
         "taste": "ტკბილი"
@@ -1040,7 +1040,7 @@
         "price": "20.00",
         "desc": "გამამხიარულებელი. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Alcohol mix, წვენი, სიროფი",
+        "ingredients": "ალკოჰოლის მიქსი, წვენი, სიროფი",
         "strength": "საშუალო",
         "volume": "250ml",
         "taste": "ტკბილი"
@@ -1051,7 +1051,7 @@
         "price": "9.00",
         "desc": "შეყვარებულებისთვის. შესანიშნავი სასმელი თქვენი განწყობისთვის.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "წყალი, ალაო, სვია",
         "strength": "დაბალი",
         "volume": "500ml",
         "taste": "მწარე"
@@ -1300,7 +1300,7 @@
         "desc": "ნაზი. ახლად მომზადებული თქვენთვის.",
         "type": "food",
         "image": "ajarian_khachapuri",
-        "ingredients": "Dough, Cheese",
+        "ingredients": "ცომი, ყველი",
         "strength": "-",
         "volume": "-",
         "taste": "მდიდარი"
@@ -1312,7 +1312,7 @@
         "desc": "ნაზი. ახლად მომზადებული თქვენთვის.",
         "type": "food",
         "image": "imeretian_khachapuri",
-        "ingredients": "Dough, Cheese",
+        "ingredients": "ცომი, ყველი",
         "strength": "-",
         "volume": "-",
         "taste": "ცხარე"
@@ -1324,7 +1324,7 @@
         "desc": "მადისაღმძვრელი. ახლად მომზადებული თქვენთვის.",
         "type": "food",
         "image": "megrelian_khachapuri",
-        "ingredients": "Dough, Cheese",
+        "ingredients": "ცომი, ყველი",
         "strength": "-",
         "volume": "-",
         "taste": "მდიდარი"
@@ -1336,7 +1336,7 @@
         "desc": "ნოყიერი. ახლად მომზადებული თქვენთვის.",
         "type": "food",
         "image": "lazuri_khachapuri",
-        "ingredients": "Dough, Cheese",
+        "ingredients": "ცომი, ყველი",
         "strength": "-",
         "volume": "-",
         "taste": "ნაზი"
@@ -1399,7 +1399,7 @@
         "tags": [
           "hot"
         ],
-        "ingredients": "Dough, Meat, Spices",
+        "ingredients": "ცომი, ხორცი, სანელებლები",
         "strength": "-",
         "volume": "-",
         "taste": "ნაზი"
@@ -1411,7 +1411,7 @@
         "desc": "ნოყიერი. ახლად მომზადებული თქვენთვის.",
         "type": "food",
         "image": "khinkali_with_cheese",
-        "ingredients": "Dough, Meat, Spices",
+        "ingredients": "ცომი, ხორცი, სანელებლები",
         "strength": "-",
         "volume": "-",
         "taste": "ცხარე"
@@ -1423,7 +1423,7 @@
         "desc": "ტრადიციული. ახლად მომზადებული თქვენთვის.",
         "type": "food",
         "image": "khinkali_with_mushroom",
-        "ingredients": "Dough, Meat, Spices",
+        "ingredients": "ცომი, ხორცი, სანელებლები",
         "strength": "-",
         "volume": "-",
         "taste": "მდიდარი"
@@ -1690,7 +1690,7 @@
         "popular": true,
         "type": "food",
         "image": "pizza_margarita",
-        "ingredients": "Dough, Cheese, Tomato sauce",
+        "ingredients": "ცომი, ყველი, ტომატის სოუსი",
         "strength": "-",
         "volume": "-",
         "taste": "ნაზი"
@@ -1702,7 +1702,7 @@
         "desc": "მადისაღმძვრელი. ახლად მომზადებული თქვენთვის.",
         "type": "food",
         "image": "pizza_4_cheese",
-        "ingredients": "Dough, Cheese, Tomato sauce",
+        "ingredients": "ცომი, ყველი, ტომატის სოუსი",
         "strength": "-",
         "volume": "-",
         "taste": "ბალანსირებული"
@@ -1714,7 +1714,7 @@
         "desc": "ტრადიციული. ახლად მომზადებული თქვენთვის.",
         "type": "food",
         "image": "pizza_peperone",
-        "ingredients": "Dough, Cheese, Tomato sauce",
+        "ingredients": "ცომი, ყველი, ტომატის სოუსი",
         "strength": "-",
         "volume": "-",
         "taste": "ნაზი"
@@ -1726,7 +1726,7 @@
         "desc": "მადისაღმძვრელი. ახლად მომზადებული თქვენთვის.",
         "type": "food",
         "image": "pizza_with_vegetables",
-        "ingredients": "Dough, Cheese, Tomato sauce",
+        "ingredients": "ცომი, ყველი, ტომატის სოუსი",
         "strength": "-",
         "volume": "-",
         "taste": "ნაზი"

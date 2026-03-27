@@ -116,7 +116,7 @@
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Освежающий",
-        "ingredients": "Alcohol mix, Сок, Сироп"
+        "ingredients": "Алкогольный микс, сок, сироп"
       },
       {
         "category": "COCKTAILS",
@@ -131,7 +131,7 @@
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Горький",
-        "ingredients": "Alcohol mix, Сок, Сироп"
+        "ingredients": "Алкогольный микс, сок, сироп"
       },
       {
         "category": "COCKTAILS",
@@ -142,7 +142,7 @@
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый",
-        "ingredients": "Alcohol mix, Сок, Сироп"
+        "ingredients": "Алкогольный микс, сок, сироп"
       },
       {
         "category": "COCKTAILS",
@@ -150,7 +150,7 @@
         "price": "25.00",
         "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Горький"
@@ -173,7 +173,7 @@
         "price": "12.00",
         "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "Вода, солод, хмель",
         "strength": "Низкая",
         "volume": "500ml",
         "taste": "Освежающий"
@@ -221,7 +221,7 @@
         "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Vodka",
-        "ingredients": "Distilled alcohol, Water",
+        "ingredients": "Дистиллированный спирт, вода",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Горький"
@@ -257,7 +257,7 @@
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Soft Drinks",
-        "ingredients": "Juniper spirit, Botanicals",
+        "ingredients": "Можжевеловый спирт, растительные компоненты",
         "strength": "Отсутствует",
         "volume": "330ml",
         "taste": "Кислый"
@@ -293,7 +293,7 @@
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Vodka",
-        "ingredients": "Distilled alcohol, Water",
+        "ingredients": "Дистиллированный спирт, вода",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Горький"
@@ -305,7 +305,7 @@
         "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Tequila",
-        "ingredients": "Agave spirit",
+        "ingredients": "Спирт из агавы",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Кислый"
@@ -317,7 +317,7 @@
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Rum",
-        "ingredients": "Cane spirit, Molasses",
+        "ingredients": "Тростниковый спирт, патока",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Кислый"
@@ -329,7 +329,7 @@
         "desc": "Веселящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Rum",
-        "ingredients": "Cane spirit, Molasses",
+        "ingredients": "Тростниковый спирт, патока",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Освежающий"
@@ -340,7 +340,7 @@
         "price": "14.00",
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "-",
         "volume": "50ml",
         "taste": "Освежающий"
@@ -351,7 +351,7 @@
         "price": "10.00",
         "desc": "Веселящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "Вода, солод, хмель",
         "strength": "Низкая",
         "volume": "500ml",
         "taste": "Горький"
@@ -363,7 +363,7 @@
         "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Whiskey",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "Зерновой спирт, вода",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Освежающий"
@@ -386,7 +386,7 @@
         "price": "14.00",
         "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "Вода, солод, хмель",
         "strength": "Низкая",
         "volume": "500ml",
         "taste": "Горький"
@@ -409,7 +409,7 @@
         "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Whiskey",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "Зерновой спирт, вода",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Кислый"
@@ -435,7 +435,7 @@
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Горький",
-        "ingredients": "Alcohol mix, Сок, Сироп"
+        "ingredients": "Алкогольный микс, сок, сироп"
       },
       {
         "category": "BEER",
@@ -443,7 +443,7 @@
         "price": "14.00",
         "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "Вода, солод, хмель",
         "strength": "Низкая",
         "volume": "500ml",
         "taste": "Горький"
@@ -454,7 +454,7 @@
         "price": "10.00",
         "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "Вода, солод, хмель",
         "strength": "Низкая",
         "volume": "500ml",
         "taste": "Кислый"
@@ -468,7 +468,7 @@
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Горький",
-        "ingredients": "Alcohol mix, Сок, Сироп"
+        "ingredients": "Алкогольный микс, сок, сироп"
       },
       {
         "category": "COCKTAILS",
@@ -476,7 +476,7 @@
         "price": "18.00",
         "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый"
@@ -487,7 +487,7 @@
         "price": "16.00",
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "-",
         "volume": "50ml",
         "taste": "Освежающий"
@@ -498,7 +498,7 @@
         "price": "17.00",
         "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Освежающий"
@@ -509,7 +509,7 @@
         "price": "20.00",
         "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Agave spirit",
+        "ingredients": "Спирт из агавы",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Освежающий"
@@ -520,7 +520,7 @@
         "price": "12.00",
         "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "-",
         "volume": "50ml",
         "taste": "Кислый"
@@ -531,7 +531,7 @@
         "price": "20.00",
         "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Juniper spirit, Botanicals",
+        "ingredients": "Можжевеловый спирт, растительные компоненты",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый"
@@ -542,7 +542,7 @@
         "price": "18.00",
         "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Горький"
@@ -553,7 +553,7 @@
         "price": "20.00",
         "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Освежающий"
@@ -564,7 +564,7 @@
         "price": "20.00",
         "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый"
@@ -575,7 +575,7 @@
         "price": "26.00",
         "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Сладкий"
@@ -586,7 +586,7 @@
         "price": "18.00",
         "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Сладкий"
@@ -597,7 +597,7 @@
         "price": "22.00",
         "desc": "Освежающий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый"
@@ -608,7 +608,7 @@
         "price": "18.00",
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый"
@@ -619,7 +619,7 @@
         "price": "18.00",
         "desc": "Помогает забыть прошлое. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Сладкий"
@@ -630,7 +630,7 @@
         "price": "20.00",
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "Зерновой спирт, вода",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый"
@@ -642,7 +642,7 @@
         "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Vodka",
-        "ingredients": "Distilled alcohol, Water",
+        "ingredients": "Дистиллированный спирт, вода",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Горький"
@@ -654,7 +654,7 @@
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Gin",
-        "ingredients": "Juniper spirit, Botanicals",
+        "ingredients": "Можжевеловый спирт, растительные компоненты",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Сладкий"
@@ -666,7 +666,7 @@
         "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Gin",
-        "ingredients": "Juniper spirit, Botanicals",
+        "ingredients": "Можжевеловый спирт, растительные компоненты",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Освежающий"
@@ -678,7 +678,7 @@
         "desc": "Вдохновляющий. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Tequila",
-        "ingredients": "Agave spirit",
+        "ingredients": "Спирт из агавы",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Кислый"
@@ -689,7 +689,7 @@
         "price": "20.00",
         "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый"
@@ -701,7 +701,7 @@
         "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Rum",
-        "ingredients": "Cane spirit, Molasses",
+        "ingredients": "Тростниковый спирт, патока",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Кислый"
@@ -724,7 +724,7 @@
         "price": "21.00",
         "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Освежающий"
@@ -735,7 +735,7 @@
         "price": "18.00",
         "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Distilled alcohol, Water",
+        "ingredients": "Дистиллированный спирт, вода",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Освежающий"
@@ -746,7 +746,7 @@
         "price": "14.00",
         "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "-",
         "volume": "50ml",
         "taste": "Кислый"
@@ -757,7 +757,7 @@
         "price": "17.00",
         "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Сладкий"
@@ -768,7 +768,7 @@
         "price": "18.00",
         "desc": "Бодрящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый"
@@ -779,7 +779,7 @@
         "price": "20.00",
         "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "Зерновой спирт, вода",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый"
@@ -790,7 +790,7 @@
         "price": "18.00",
         "desc": "Веселящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Сладкий"
@@ -801,7 +801,7 @@
         "price": "20.00",
         "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Кислый"
@@ -812,7 +812,7 @@
         "price": "21.00",
         "desc": "Окрыляющий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Горький"
@@ -835,7 +835,7 @@
         "price": "22.00",
         "desc": "Веселящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Горький"
@@ -859,7 +859,7 @@
         "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Whiskey",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "Зерновой спирт, вода",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Сладкий"
@@ -871,7 +871,7 @@
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
         "subcategory": "Whiskey",
-        "ingredients": "Grain spirit, Water",
+        "ingredients": "Зерновой спирт, вода",
         "strength": "Высокая",
         "volume": "50ml",
         "taste": "Сладкий"
@@ -894,7 +894,7 @@
         "price": "22.00",
         "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Горький"
@@ -905,7 +905,7 @@
         "price": "22.00",
         "desc": "Тонизирующий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Горький"
@@ -916,7 +916,7 @@
         "price": "16.00",
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "-",
         "volume": "50ml",
         "taste": "Горький"
@@ -975,7 +975,7 @@
         "strength": "Низкая",
         "volume": "500ml",
         "taste": "Сладкий",
-        "ingredients": "Water, Malt, Hops"
+        "ingredients": "Вода, солод, хмель"
       },
       {
         "category": "COCKTAILS",
@@ -983,7 +983,7 @@
         "price": "26.00",
         "desc": "Веселящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Горький"
@@ -995,7 +995,7 @@
         "desc": "Успокаивающий. Идеальный напиток для вашего настроения.",
         "popular": true,
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "Вода, солод, хмель",
         "strength": "Низкая",
         "volume": "500ml",
         "taste": "Сладкий"
@@ -1040,7 +1040,7 @@
         "price": "20.00",
         "desc": "Веселящий. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Alcohol mix, Сок, Сироп",
+        "ingredients": "Алкогольный микс, сок, сироп",
         "strength": "Средняя",
         "volume": "250ml",
         "taste": "Сладкий"
@@ -1051,7 +1051,7 @@
         "price": "9.00",
         "desc": "Для влюбленных. Идеальный напиток для вашего настроения.",
         "type": "bar",
-        "ingredients": "Water, Malt, Hops",
+        "ingredients": "Вода, солод, хмель",
         "strength": "Низкая",
         "volume": "500ml",
         "taste": "Горький"
@@ -1300,7 +1300,7 @@
         "desc": "Нежный. Свежеприготовлено для вас.",
         "type": "food",
         "image": "ajarian_khachapuri",
-        "ingredients": "Dough, Cheese",
+        "ingredients": "Тесто, сыр",
         "strength": "-",
         "volume": "-",
         "taste": "Насыщенный"
@@ -1312,7 +1312,7 @@
         "desc": "Нежный. Свежеприготовлено для вас.",
         "type": "food",
         "image": "imeretian_khachapuri",
-        "ingredients": "Dough, Cheese",
+        "ingredients": "Тесто, сыр",
         "strength": "-",
         "volume": "-",
         "taste": "Острый"
@@ -1324,7 +1324,7 @@
         "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
         "type": "food",
         "image": "megrelian_khachapuri",
-        "ingredients": "Dough, Cheese",
+        "ingredients": "Тесто, сыр",
         "strength": "-",
         "volume": "-",
         "taste": "Насыщенный"
@@ -1336,7 +1336,7 @@
         "desc": "Сытный. Свежеприготовлено для вас.",
         "type": "food",
         "image": "lazuri_khachapuri",
-        "ingredients": "Dough, Cheese",
+        "ingredients": "Тесто, сыр",
         "strength": "-",
         "volume": "-",
         "taste": "Нежный"
@@ -1399,7 +1399,7 @@
         "tags": [
           "hot"
         ],
-        "ingredients": "Dough, Meat, Spices",
+        "ingredients": "Тесто, мясо, специи",
         "strength": "-",
         "volume": "-",
         "taste": "Нежный"
@@ -1411,7 +1411,7 @@
         "desc": "Сытный. Свежеприготовлено для вас.",
         "type": "food",
         "image": "khinkali_with_cheese",
-        "ingredients": "Dough, Meat, Spices",
+        "ingredients": "Тесто, мясо, специи",
         "strength": "-",
         "volume": "-",
         "taste": "Острый"
@@ -1423,7 +1423,7 @@
         "desc": "Традиционный. Свежеприготовлено для вас.",
         "type": "food",
         "image": "khinkali_with_mushroom",
-        "ingredients": "Dough, Meat, Spices",
+        "ingredients": "Тесто, мясо, специи",
         "strength": "-",
         "volume": "-",
         "taste": "Насыщенный"
@@ -1690,7 +1690,7 @@
         "popular": true,
         "type": "food",
         "image": "pizza_margarita",
-        "ingredients": "Dough, Cheese, Tomato sauce",
+        "ingredients": "Тесто, сыр, томатный соус",
         "strength": "-",
         "volume": "-",
         "taste": "Нежный"
@@ -1702,7 +1702,7 @@
         "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
         "type": "food",
         "image": "pizza_4_cheese",
-        "ingredients": "Dough, Cheese, Tomato sauce",
+        "ingredients": "Тесто, сыр, томатный соус",
         "strength": "-",
         "volume": "-",
         "taste": "Сбалансированный"
@@ -1714,7 +1714,7 @@
         "desc": "Традиционный. Свежеприготовлено для вас.",
         "type": "food",
         "image": "pizza_peperone",
-        "ingredients": "Dough, Cheese, Tomato sauce",
+        "ingredients": "Тесто, сыр, томатный соус",
         "strength": "-",
         "volume": "-",
         "taste": "Нежный"
@@ -1726,7 +1726,7 @@
         "desc": "Вызывающий аппетит. Свежеприготовлено для вас.",
         "type": "food",
         "image": "pizza_with_vegetables",
-        "ingredients": "Dough, Cheese, Tomato sauce",
+        "ingredients": "Тесто, сыр, томатный соус",
         "strength": "-",
         "volume": "-",
         "taste": "Нежный"
